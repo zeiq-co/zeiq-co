@@ -1,19 +1,22 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
+import WorkList from '../components/WorkList';
+
 export default class IndexPage extends React.Component {
   render() {
-    return (
-      <div>
-        <h1>Hi people</h1>
-        <p>Welcome to your new Gatsby site.</p>
-        <p>Now go build something great.</p>
-        <Link to="/posts">Blog</Link>
-        <br />
-        <Link to="/about">About</Link>
-        <br />
-        <Link to="/contact">Contact</Link>
-      </div>
-    );
+    // const Title = (
+    //   <div>
+    //     <h1>
+    //       Hi! We're <span className="text-color">SAULT</span>. A full service
+    //       digital agency who helps brands stand out. Checkout our work.
+    //     </h1>
+    //     <a href="about.html" className="button big">
+    //       All that we do&hellip;
+    //     </a>
+    //   </div>
+    // );
+
+    return <WorkList />;
   }
 }
