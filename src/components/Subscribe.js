@@ -12,7 +12,7 @@ const Subscribe = () => (
         <p>We’ll keep you weekly updated about the latest buzz.</p>
         <form className="subscribe-form" method="post">
           <p className="one-line">
-            <label for="subscribe_email" className="sr-only">
+            <label htmlFor="subscribe_email" className="sr-only">
               Subscribtion Email
             </label>
             <input

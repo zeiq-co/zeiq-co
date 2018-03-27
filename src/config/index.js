@@ -1,8 +1,8 @@
 module.exports = {
-  siteName: 'Zeiq',
+  siteName: 'Zeiq.co',
   author: 'Parminder Klair',
-  description: 'Zeiq.co',
-  siteUrl: 'http://kickoff-gatsbyjs.netlify.com',
+  description: 'Official Website for Zeiq.co',
+  siteUrl: 'https://www.zeiq.co',
   googleAnalytics: '',
   backgroundColor: '#e0e0e0',
   themeColor: '#c62828',
