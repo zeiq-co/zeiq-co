@@ -17,11 +17,7 @@ const TeamGallery = () => (
       </div>
       <div className="col-md-6 col-lg-4">
         <div className="team-member">
-          <img
-            src="tmp/sample-team.png"
-            style={{ width: 800, height: 600 }}
-            alt=""
-          />
+          <img src="tmp/sample-team.png" alt="" />
           <div className="team-member-details">
             <h4>Ed Holmes</h4>
             <p>Founder, CEO</p>
@@ -41,11 +37,7 @@ const TeamGallery = () => (
       </div>
       <div className="col-md-6 col-lg-4">
         <div className="team-member">
-          <img
-            src="tmp/sample-team.png"
-            style={{ width: 800, height: 600 }}
-            alt=""
-          />
+          <img src="tmp/sample-team.png" alt="" />
           <div className="team-member-details">
             <h4>Tom Friedman</h4>
             <p>Co-Founder, Director</p>
@@ -65,11 +57,7 @@ const TeamGallery = () => (
       </div>
       <div className="col-md-6 col-lg-4">
         <div className="team-member">
-          <img
-            src="tmp/sample-team.png"
-            style={{ width: 800, height: 600 }}
-            alt=""
-          />
+          <img src="tmp/sample-team.png" alt="" />
           <div className="team-member-details">
             <h4>Anita Gibbs</h4>
             <p>CTO, Tech Head</p>
@@ -86,11 +74,7 @@ const TeamGallery = () => (
       </div>
       <div className="col-md-6 col-lg-4">
         <div className="team-member">
-          <img
-            src="tmp/sample-team.png"
-            style={{ width: 800, height: 600 }}
-            alt=""
-          />
+          <img src="tmp/sample-team.png" alt="" />
           <div className="team-member-details">
             <h4>Mike Spencer</h4>
             <p>Design Director</p>
@@ -110,11 +94,7 @@ const TeamGallery = () => (
       </div>
       <div className="col-md-6 col-lg-4">
         <div className="team-member">
-          <img
-            src="tmp/sample-team.png"
-            style={{ width: 800, height: 600 }}
-            alt=""
-          />
+          <img src="tmp/sample-team.png" alt="" />
           <div className="team-member-details">
             <h4>Sasha Taylor</h4>
             <p>Marketing Head</p>

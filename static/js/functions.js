@@ -112,21 +112,21 @@ jQuery(document).ready(function() {
     e.preventDefault();
   });
 
-  jQuery('.tab-links a').on('click', function(e) {
-    var $this = jQuery(this),
-      $parent = $this.parent();
-    e.preventDefault();
-    if ($this.hasClass('active')) {
-      return;
-    }
-    $parent.siblings('li').each(function() {
-      var $link = jQuery('a', this);
-      $link.removeClass('active');
-      jQuery($link.attr('href')).removeClass('active');
-    });
-    $this.addClass('active');
-    jQuery($this.attr('href')).addClass('active');
-  });
+  // jQuery('.tab-links a').on('click', function(e) {
+  //   var $this = jQuery(this),
+  //     $parent = $this.parent();
+  //   e.preventDefault();
+  //   if ($this.hasClass('active')) {
+  //     return;
+  //   }
+  //   $parent.siblings('li').each(function() {
+  //     var $link = jQuery('a', this);
+  //     $link.removeClass('active');
+  //     jQuery($link.attr('href')).removeClass('active');
+  //   });
+  //   $this.addClass('active');
+  //   jQuery($this.attr('href')).addClass('active');
+  // });
 
   jQuery('#address-selector .bottom-button').on('click', function(e) {
     e.preventDefault();

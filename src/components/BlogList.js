@@ -8,13 +8,9 @@ const BlogList = () => (
       data-masonry="{ &quot;itemSelector&quot;: &quot;.grid-item&quot;, &quot;columnWidth&quot;: &quot;.grid-sizer&quot;, &quot;gutter&quot;: &quot;.gutter-sizer&quot;, &quot;percentPosition&quot;: true, &quot;transitionDuration&quot;: &quot;0.3s&quot; }"
     >
       <article className="grid-item post has-thumbnail">
-        <a href="post.html" className="feature-image-link">
-          <img
-            src="tmp/sample-post.png"
-            style={{ width: 730, height: 500 }}
-            alt=""
-          />
-        </a>
+        <Link to="/post" className="feature-image-link">
+          <img src="tmp/sample-post.png" alt="" />
+        </Link>
         <div className="post-details">
           <h4>
             <a href="post.html">
@@ -37,11 +33,7 @@ const BlogList = () => (
       </article>
       <article className="grid-item post has-thumbnail">
         <a href="post.html" className="feature-image-link">
-          <img
-            src="tmp/sample-post.png"
-            style={{ width: 730, height: 500 }}
-            alt=""
-          />
+          <img src="tmp/sample-post.png" alt="" />
         </a>
         <div className="post-details">
           <h4>
@@ -63,11 +55,7 @@ const BlogList = () => (
       </article>
       <article className="grid-item post has-thumbnail">
         <a href="post.html" className="feature-image-link">
-          <img
-            src="tmp/sample-post.png"
-            style={{ width: 730, height: 500 }}
-            alt=""
-          />
+          <img src="tmp/sample-post.png" alt="" />
         </a>
         <div className="post-details">
           <h4>
@@ -89,7 +77,10 @@ const BlogList = () => (
           </p>
         </div>
       </article>
-      <article className="grid-item post">
+      <article className="grid-item post has-thumbnail">
+        <a href="post.html" className="feature-image-link">
+          <img src="tmp/sample-post.png" alt="" />
+        </a>
         <div className="post-details">
           <h4>
             <a href="post.html">
@@ -112,11 +103,7 @@ const BlogList = () => (
       </article>
       <article className="grid-item post has-thumbnail">
         <a href="post.html" className="feature-image-link">
-          <img
-            src="tmp/sample-post.png"
-            style={{ width: 730, height: 500 }}
-            alt=""
-          />
+          <img src="tmp/sample-post.png" alt="" />
         </a>
         <div className="post-details">
           <h4>
@@ -141,11 +128,7 @@ const BlogList = () => (
       </article>
       <article className="grid-item post has-thumbnail">
         <a href="post.html" className="feature-image-link">
-          <img
-            src="tmp/sample-post.png"
-            style={{ width: 730, height: 500 }}
-            alt=""
-          />
+          <img src="tmp/sample-post.png" alt="" />
         </a>
         <div className="post-details">
           <h4>
@@ -169,11 +152,7 @@ const BlogList = () => (
       </article>
       <article className="grid-item post has-thumbnail">
         <a href="post.html" className="feature-image-link">
-          <img
-            src="tmp/sample-post.png"
-            style={{ width: 730, height: 500 }}
-            alt=""
-          />
+          <img src="tmp/sample-post.png" alt="" />
         </a>
         <div className="post-details">
           <h4>
@@ -195,11 +174,7 @@ const BlogList = () => (
       </article>
       <article className="grid-item post has-thumbnail">
         <a href="post.html" className="feature-image-link">
-          <img
-            src="tmp/sample-post.png"
-            style={{ width: 730, height: 500 }}
-            alt=""
-          />
+          <img src="tmp/sample-post.png" alt="" />
         </a>
         <div className="post-details">
           <h4>
@@ -221,7 +196,10 @@ const BlogList = () => (
           </p>
         </div>
       </article>
-      <article className="grid-item post">
+      <article className="grid-item post has-thumbnail">
+        <a href="post.html" className="feature-image-link">
+          <img src="tmp/sample-post.png" alt="" />
+        </a>
         <div className="post-details">
           <h4>
             <a href="post.html">

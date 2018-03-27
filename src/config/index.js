@@ -1,7 +1,7 @@
 module.exports = {
-  siteName: 'Kickoff GatsbyJs',
+  siteName: 'Zeiq',
   author: 'Parminder Klair',
-  description: 'A starting point using ReactJs, bundled with awesome GatsbyJs.',
+  description: 'Zeiq.co',
   siteUrl: 'http://kickoff-gatsbyjs.netlify.com',
   googleAnalytics: '',
   backgroundColor: '#e0e0e0',

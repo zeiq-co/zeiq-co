@@ -7,13 +7,13 @@ const Header = () => (
       <div className="inner">
         <div className="site-title">
           <h1>
-            <a href="index.html">
+            <Link to="/">
               <img
                 src="tmp/logo.svg"
                 alt="Sault"
                 style={{ width: 144, height: 33 }}
               />
-            </a>
+            </Link>
           </h1>
           <a href="#site-menu" className="site-menu-toggle">
             <span className="sr-only">Toggle navigation</span>
@@ -23,48 +23,23 @@ const Header = () => (
         <div id="site-menu">
           <nav>
             <ul>
-              <li className="current-menu-item">
-                <a href="index.html">Home</a>
+              <li>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <a href="about.html">About</a>
+                <Link to="/about">About</Link>
               </li>
-              <li className="menu-item-has-children">
-                <a href="work.html">Work</a>
-                <a href="#" className="menu-expand" />
-                {/* <ul>
-                  <li>
-                    <a href="work.html">classNameic Gallery</a>
-                  </li>
-                  <li>
-                    <a href="work-categories.html">Category Based</a>
-                  </li>
-                  <li>
-                    <a href="project.html">Single Project</a>
-                  </li>
-                </ul> */}
+              <li>
+                <Link to="/work">Work</Link>
               </li>
-              <li className="menu-item-has-children">
-                <a href="blog.html">Blog</a>
-                <a href="#" className="menu-expand" />
-                {/* <ul>
-                  <li>
-                    <a href="blog.html"> Fullpage Blog</a>
-                  </li>
-                  <li>
-                    <a href="blog-sidebar.html">Blog with Sidebar</a>
-                  </li>
-                  <li>
-                    <a href="post.html">Single Blog Post</a>
-                  </li>
-                </ul> */}
+              <li>
+                <Link to="/blog">Blog</Link>
               </li>
-              <li className="menu-item-has-children">
-                <a href="services.html">Services</a>
-                <a href="#" className="menu-expand" />
+              <li>
+                <Link to="/services">Services</Link>
               </li>
-              <li className="">
-                <a href="contact.html">Contact</a>
+              <li>
+                <Link to="/contact">Contact</Link>
               </li>
             </ul>
           </nav>

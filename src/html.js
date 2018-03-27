@@ -29,7 +29,7 @@ module.exports = class HTML extends React.Component {
             href="/css/bootstrap-grid.css"
             type="text/css"
           />
-          <link rel="stylesheet" href="/css/style-dark.css" type="text/css" />
+
           <link
             rel="stylesheet"
             href="/css/style-personal.css"

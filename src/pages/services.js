@@ -6,6 +6,23 @@ import AllServices from '../components/AllServices';
 import WhatYouNeedIsNotListed from '../components/WhatYouNeedIsNotListed';
 
 export default class Services extends React.Component {
+  componentDidMount() {
+    jQuery('.tab-links a').on('click', function(e) {
+      var $this = jQuery(this),
+        $parent = $this.parent();
+      e.preventDefault();
+      if ($this.hasClass('active')) {
+        return;
+      }
+      $parent.siblings('li').each(function() {
+        var $link = jQuery('a', this);
+        $link.removeClass('active');
+        jQuery($link.attr('href')).removeClass('active');
+      });
+      $this.addClass('active');
+      jQuery($this.attr('href')).addClass('active');
+    });
+  }
   render() {
     return (
       <main id="content" className="white-background">

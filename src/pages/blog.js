@@ -10,7 +10,6 @@ export default class Blog extends React.Component {
         <div className="container">
           <div className="row blog-listing no-sidebar">
             <BlogFeaturedImage />
-
             <BlogList />
           </div>
         </div>
