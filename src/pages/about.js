@@ -31,3 +31,60 @@ export default class About extends React.Component {
     );
   }
 }
+
+export const query = graphql`
+  query AboutQuery {
+    contentfulAbout {
+      id
+      featuredImage {
+        file {
+          url
+        }
+      }
+      title
+      description {
+        description
+      }
+    }
+    allContentfulCarouselItem {
+      edges {
+        node {
+          id
+          title
+          description {
+            description
+          }
+        }
+      }
+    }
+    allContentfulTeamMember {
+      edges {
+        node {
+          id
+          image {
+            id
+          }
+          name
+          position
+          facebookId
+          instagramId
+          twitterId
+          linkedInId
+        }
+      }
+    }
+    allContentfulBrand {
+      edges {
+        node {
+          id
+          image {
+            file {
+              url
+            }
+          }
+          name
+        }
+      }
+    }
+  }
+`;

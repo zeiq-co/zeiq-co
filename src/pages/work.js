@@ -21,3 +21,19 @@ export default class Work extends React.Component {
     );
   }
 }
+
+export const query = graphql`
+  query WorkQuery {
+    allContentfulHome {
+      edges {
+        node {
+          id
+          title
+          description {
+            description
+          }
+        }
+      }
+    }
+  }
+`;

@@ -26,3 +26,18 @@ export default class Contact extends React.Component {
     );
   }
 }
+
+export const query = graphql`
+  query ContactQuery {
+    contentfulContact {
+      id
+      address
+      telephone
+      email
+      facebookId
+      twitterId
+      instagramId
+      linkedInId
+    }
+  }
+`;

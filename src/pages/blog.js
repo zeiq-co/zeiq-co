@@ -17,3 +17,35 @@ export default class Blog extends React.Component {
     );
   }
 }
+
+export const query = graphql`
+  query BlogQuery {
+    contentfulBlog {
+      featuredImage {
+        file {
+          url
+        }
+      }
+      title
+      description {
+        description
+      }
+    }
+    allContentfulBlogItem {
+      edges {
+        node {
+          id
+          image {
+            file {
+              url
+            }
+          }
+          title
+          description {
+            description
+          }
+        }
+      }
+    }
+  }
+`;

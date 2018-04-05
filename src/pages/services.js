@@ -42,3 +42,20 @@ export default class Services extends React.Component {
     );
   }
 }
+
+export const query = graphql`
+  query ServicesQuery {
+    allContentfulService {
+      edges {
+        node {
+          id
+          title
+          description {
+            description
+          }
+          shortDescription
+        }
+      }
+    }
+  }
+`;
