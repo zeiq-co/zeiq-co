@@ -9,7 +9,7 @@ const WriteToUs = () => (
         <form className="contact-form" action="contact.html">
           <div className="row">
             <div className="col-xl-6">
-              <label for="name" className="sr-only">
+              <label htmlFor="name" className="sr-only">
                 Name
               </label>
               <input
@@ -21,7 +21,7 @@ const WriteToUs = () => (
               />
             </div>
             <div className="col-xl-6">
-              <label for="email" className="sr-only">
+              <label htmlFor="email" className="sr-only">
                 Email
               </label>
               <input
@@ -33,7 +33,7 @@ const WriteToUs = () => (
               />
             </div>
             <div className="col-12">
-              <label for="message" className="sr-only">
+              <label htmlFor="message" className="sr-only">
                 Message
               </label>
               <textarea

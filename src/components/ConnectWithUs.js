@@ -20,7 +20,7 @@ const ConnectWithUs = () => (
           <a href="#" className="social-link saulticon">
             twitter
           </a>{' '}
-          <i class="fab fa-linkedin-in" />
+          <i className="fab fa-linkedin-in" />
           <a href="#" className="social-link saulticon">
             instagram
           </a>
