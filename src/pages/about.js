@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import AboutTitle from '../components/AboutTitle';
-import AboutFeaturedImage from '../components/AboutFeaturedImage';
+
+import AboutHero from '../components/AboutHero';
 import Carousel from '../components/Carousel';
 import AboutButtons from '../components/AboutButtons';
 import TeamGallery from '../components/TeamGallery';
@@ -11,18 +11,23 @@ import CallToAction from '../components/CallToAction';
 
 export default class About extends React.Component {
   render() {
+    const { data } = this.props;
+    const { contentfulAbout: about } = data;
+    const { edges: carousel } = data.allContentfulCarouselItem;
+    const { edges: team } = data.allContentfulTeamMember;
+    const { edges: brand } = data.allContentfulBrand;
+    console.log(brand);
     return (
       <main id="content" className="white-background">
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <AboutFeaturedImage />
-              <AboutTitle />
-              <Carousel />
+              <AboutHero about={about} />
+              <Carousel carousel={carousel} />
               <AboutButtons />
-              <TeamGallery />
+              <TeamGallery team={team} />
               <BlockQuote />
-              <BrandGallery />
+              <BrandGallery brand={brand} />
               <CallToAction />
             </div>
           </div>
@@ -62,7 +67,9 @@ export const query = graphql`
         node {
           id
           image {
-            id
+            file {
+              url
+            }
           }
           name
           position

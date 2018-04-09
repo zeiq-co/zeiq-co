@@ -1,7 +1,8 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import TeamMember from './TeamMember';
 
-const TeamGallery = () => (
+const TeamGallery = ({ team }) => (
   <div className="team-gallery">
     <div className="row">
       <div className="col-md-6 col-lg-4">
@@ -15,100 +16,9 @@ const TeamGallery = () => (
           CHA-CHING!<br /> <a href="#">We’re Hiring!!!</a>
         </p>
       </div>
-      <div className="col-md-6 col-lg-4">
-        <div className="team-member">
-          <img src="tmp/sample-team.png" alt="" />
-          <div className="team-member-details">
-            <h4>Ed Holmes</h4>
-            <p>Founder, CEO</p>
-            <p className="social-links">
-              <a href="#" className="social-link saulticon">
-                facebook
-              </a>
-              <a href="#" className="social-link saulticon">
-                twitter
-              </a>
-              <a href="#" className="social-link saulticon">
-                linkedin
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="col-md-6 col-lg-4">
-        <div className="team-member">
-          <img src="tmp/sample-team.png" alt="" />
-          <div className="team-member-details">
-            <h4>Tom Friedman</h4>
-            <p>Co-Founder, Director</p>
-            <p className="social-links">
-              <a href="#" className="social-link saulticon">
-                facebook
-              </a>
-              <a href="#" className="social-link saulticon">
-                twitter
-              </a>
-              <a href="#" className="social-link saulticon">
-                linkedin
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="col-md-6 col-lg-4">
-        <div className="team-member">
-          <img src="tmp/sample-team.png" alt="" />
-          <div className="team-member-details">
-            <h4>Anita Gibbs</h4>
-            <p>CTO, Tech Head</p>
-            <p className="social-links">
-              <a href="#" className="social-link saulticon">
-                instagram
-              </a>
-              <a href="#" className="social-link saulticon">
-                github
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="col-md-6 col-lg-4">
-        <div className="team-member">
-          <img src="tmp/sample-team.png" alt="" />
-          <div className="team-member-details">
-            <h4>Mike Spencer</h4>
-            <p>Design Director</p>
-            <p className="social-links">
-              <a href="#" className="social-link saulticon">
-                facebook
-              </a>
-              <a href="#" className="social-link saulticon">
-                twitter
-              </a>
-              <a href="#" className="social-link saulticon">
-                instagram
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="col-md-6 col-lg-4">
-        <div className="team-member">
-          <img src="tmp/sample-team.png" alt="" />
-          <div className="team-member-details">
-            <h4>Sasha Taylor</h4>
-            <p>Marketing Head</p>
-            <p className="social-links">
-              <a href="#" className="social-link saulticon">
-                twitter
-              </a>
-              <a href="#" className="social-link saulticon">
-                googleplus
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
+      {team.map(teamMember => (
+        <TeamMember key={teamMember.node.id} data={teamMember.node} />
+      ))}
     </div>
   </div>
 );
