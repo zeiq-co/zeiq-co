@@ -4,8 +4,8 @@ import Link from 'gatsby-link';
 import CarouselItem from './CarouselItem';
 
 class Carousel extends React.Component {
-  componentDidMount() {
-    jQuery('.owl-carousel.owl-thumbs-3').owlCarousel({
+  componentDidMount () {
+    jQuery ('.owl-carousel.owl-thumbs-3').owlCarousel ({
       items: 3,
       margin: 30,
       nav: true,
@@ -26,11 +26,11 @@ class Carousel extends React.Component {
     });
   }
 
-  render() {
-    const { carousel } = this.props;
+  render () {
+    const {carousel} = this.props;
     return (
       <div className="owl-carousel owl-thumbs-3">
-        {carousel.map(carouselItem => (
+        {carousel.map (carouselItem => (
           <CarouselItem key={carouselItem.node.id} data={carouselItem.node} />
         ))}
       </div>

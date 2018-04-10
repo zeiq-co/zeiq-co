@@ -11,7 +11,7 @@ const Header = () => (
               <img
                 src="tmp/logo.svg"
                 alt="Sault"
-                style={{ width: 144, height: 33 }}
+                style={{width: 144, height: 33}}
               />
             </Link>
           </h1>

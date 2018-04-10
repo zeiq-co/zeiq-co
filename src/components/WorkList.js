@@ -2,25 +2,25 @@ import React from 'react';
 import styled from 'styled-components';
 
 class WorkList extends React.Component {
-  componentDidMount() {
-    var $grid = jQuery('.project-listing .grid').masonry({
+  componentDidMount () {
+    var $grid = jQuery ('.project-listing .grid').masonry ({
       itemSelector: '.grid-item',
       columnWidth: '.grid-sizer',
       gutter: '.gutter-sizer',
       percentPosition: true,
       transitionDuration: '0.3s',
     });
-    $grid.imagesLoaded().progress(function() {
-      $grid.masonry('layout');
+    $grid.imagesLoaded ().progress (function () {
+      $grid.masonry ('layout');
     });
   }
 
-  render() {
-    const { introVisible } = this.props;
+  render () {
+    const {introVisible} = this.props;
     return (
       <div className="project-listing col-12">
         <div className="grid clearfix">
-          {introVisible && (
+          {introVisible &&
             <div className="grid-item grid-item-wide project-thumb welcome-message">
               <div className="inner">
                 <h1>
@@ -32,8 +32,7 @@ class WorkList extends React.Component {
                   All that we do&hellip;
                 </a>
               </div>
-            </div>
-          )}
+            </div>}
           <div className="grid-item project-thumb">
             <a href="project.html">
               <img
@@ -75,7 +74,8 @@ class WorkList extends React.Component {
                 width="900"
                 height="900"
                 alt=""
-              />{' '}
+              />
+              {' '}
               <span className="project-thumb-details">
                 <span className="title">Swiss</span>
                 <span className="description">

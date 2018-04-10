@@ -2,14 +2,8 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 class ContactDetails extends React.Component {
-  componentDidMount() {
-    jQuery('#address-selector .bottom-button').on('click', function(e) {
-      e.preventDefault();
-      jQuery('#address-selector').toggleClass('show-map');
-    });
-  }
-
-  render() {
+  render () {
+    const {contact} = this.props;
     return (
       <div className="col-md-6">
         <div
@@ -23,8 +17,8 @@ class ContactDetails extends React.Component {
             <div id="address-NLD" className="address-container active">
               <div className="address-details">
                 <h1>
-                  We’re @{' '}
-                  <a href="#" className="change-address">
+                  We’re Zeiq
+                  {/* <a href="#" className="change-address">
                     NLD<i className="saulticon-chevron-down" />
                     <span className="address-list">
                       <span
@@ -37,20 +31,18 @@ class ContactDetails extends React.Component {
                         BEL
                       </span>
                     </span>
-                  </a>
+                  </a> */}
                 </h1>
                 <ul className="ul-custom-bullet">
                   <li>
-                    <i className="saulticon-map" /> Jan van Galenstraat 107<br />{' '}
-                    1056 BK Amsterdam<br /> Netherlands
+                    <i className="saulticon-map" />
+                    {contact.address}
                   </li>
                   <li>
-                    <i className="saulticon-call" /> +31 23 456 7890<br /> +31
-                    09 876 5432
+                    <i className="saulticon-call" /> {contact.telephone}
                   </li>
                   <li>
-                    <i className="saulticon-mail" /> hello@sault.com<br />{' '}
-                    nld@sault.com
+                    <i className="saulticon-mail" /> {contact.email}
                   </li>
                 </ul>
               </div>
@@ -60,13 +52,13 @@ class ContactDetails extends React.Component {
                     width: 600,
                     height: 450,
                   }}
-                  style={{ border: 0 }}
+                  style={{border: 0}}
                   src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDf9LkuZPX10XENbqvaHQUi_30VHwCbmkI&q=52.3746634,4.8592912&zoom=15&maptype=roadmap"
                   allowFullScreen
                 />
               </div>
             </div>
-            <div id="address-BEL" className="address-container">
+            {/* <div id="address-BEL" className="address-container">
               <div className="address-details">
                 <h1>
                   We’re @{' '}
@@ -87,7 +79,11 @@ class ContactDetails extends React.Component {
                 </h1>
                 <ul className="ul-custom-bullet">
                   <li>
-                    <i className="saulticon-map" /> Sint-Jozefstraat 24<br />{' '}
+                    <i className="saulticon-map" />
+                    {' '}
+                    Sint-Jozefstraat 24
+                    <br />
+                    {' '}
                     2018 Antwerpen<br /> Belgium
                   </li>
                   <li>
@@ -106,12 +102,12 @@ class ContactDetails extends React.Component {
                     width: 600,
                     height: 450,
                   }}
-                  style={{ border: 0 }}
+                  style={{border: 0}}
                   src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDf9LkuZPX10XENbqvaHQUi_30VHwCbmkI&q=52.3746634,4.8592912&zoom=15&maptype=roadmap"
                   allowFullScreen=""
                 />
               </div>
-            </div>
+            </div> */}
             <a href="#" className="bottom-button">
               <span className="show-layer">
                 Locate on map <i className="saulticon-arrow-up" />

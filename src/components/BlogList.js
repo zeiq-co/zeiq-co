@@ -2,13 +2,13 @@ import React from 'react';
 import Link from 'gatsby-link';
 import BlogItem from './BlogItem';
 
-const BlogList = ({ blogs }) => (
+const BlogList = ({blogs}) => (
   <div className="col-12">
     <div
       className="grid clearfix"
       data-masonry="{ &quot;itemSelector&quot;: &quot;.grid-item&quot;, &quot;columnWidth&quot;: &quot;.grid-sizer&quot;, &quot;gutter&quot;: &quot;.gutter-sizer&quot;, &quot;percentPosition&quot;: true, &quot;transitionDuration&quot;: &quot;0.3s&quot; }"
     >
-      {blogs.map(blog => <BlogItem key={blog.node.id} data={blog.node} />)}
+      {blogs.map (blog => <BlogItem key={blog.node.id} data={blog.node} />)}
       {/* <article className="grid-item post has-thumbnail">
         <Link to="/post" className="feature-image-link">
           <img src="tmp/sample-post.png" alt="" />

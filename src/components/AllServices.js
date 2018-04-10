@@ -13,7 +13,7 @@ const AllServices = () => (
       <p className="extra-margin-bottom">
         <img
           src="tmp/sample-big.png"
-          style={{ width: 1180, height: 680 }}
+          style={{width: 1180, height: 680}}
           alt=""
         />
       </p>
@@ -26,7 +26,7 @@ const AllServices = () => (
       <p className="extra-margin-bottom">
         <img
           src="tmp/sample-big.png"
-          style={{ width: 1180, height: 680 }}
+          style={{width: 1180, height: 680}}
           alt=""
         />
       </p>
@@ -64,7 +64,7 @@ const AllServices = () => (
       <p className="extra-margin-bottom">
         <img
           src="tmp/sample-big.png"
-          style={{ width: 1180, height: 680 }}
+          style={{width: 1180, height: 680}}
           alt=""
         />
       </p>
@@ -111,7 +111,7 @@ const AllServices = () => (
             height: 315,
           }}
           src="https://www.youtube.com/embed/zez2Tv-bcXY?rel=0&amp;controls=0&amp;showinfo=0"
-          style={{ border: 0 }}
+          style={{border: 0}}
           allowFullScreen=""
         />
       </div>
@@ -156,7 +156,7 @@ const AllServices = () => (
       <p className="extra-margin-bottom">
         <img
           src="tmp/sample-big.png"
-          style={{ width: 1180, height: 680 }}
+          style={{width: 1180, height: 680}}
           alt=""
         />
       </p>
@@ -190,7 +190,7 @@ const AllServices = () => (
             height: 315,
           }}
           src="https://www.youtube.com/embed/03V5D2hS-h8?rel=0&amp;controls=0&amp;showinfo=0"
-          style={{ border: 0 }}
+          style={{border: 0}}
           allowFullScreen=""
         />
       </div>

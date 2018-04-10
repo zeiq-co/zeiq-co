@@ -3,14 +3,14 @@ import React from 'react';
 let stylesStr;
 if (process.env.NODE_ENV === `production`) {
   try {
-    stylesStr = require(`!raw-loader!../public/styles.css`); // eslint-disable-line
+    stylesStr = require (`!raw-loader!../public/styles.css`); // eslint-disable-line
   } catch (e) {
-    console.log(e); // eslint-disable-line
+    console.log (e); // eslint-disable-line
   }
 }
 
 module.exports = class HTML extends React.Component {
-  render() {
+  render () {
     return (
       <html lang="en" {...this.props.htmlAttributes}>
         <head>
@@ -43,7 +43,7 @@ module.exports = class HTML extends React.Component {
           <div
             key="body"
             id="___gatsby"
-            dangerouslySetInnerHTML={{ __html: this.props.body }}
+            dangerouslySetInnerHTML={{__html: this.props.body}}
           />
           {this.props.postBodyComponents}
           <script src="js/modernizr-custom.min.js" />

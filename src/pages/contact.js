@@ -8,16 +8,26 @@ import Subscribe from '../components/Subscribe';
 import Tweet from '../components/Tweet';
 
 export default class Contact extends React.Component {
-  render() {
+  componentDidMount () {
+    jQuery ('#address-selector .bottom-button').on ('click', function (e) {
+      e.preventDefault ();
+      jQuery ('#address-selector').toggleClass ('show-map');
+    });
+  }
+
+  render () {
+    const {data} = this.props;
+    const contact = data.contentfulContact;
+    // console.log (contact);
     return (
       <main id="content" className="white-background">
         <div className="container">
           <div className="row eq-height-container">
-            <ContactDetails />
+            <ContactDetails contact={contact} />
             <WriteToUs />
           </div>
           <div className="row eq-height-container">
-            <ConnectWithUs />
+            <ConnectWithUs social={contact} />
             <Subscribe />
             <Tweet />
           </div>

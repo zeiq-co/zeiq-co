@@ -13,7 +13,7 @@ const Footer = () => (
                     src="tmp/logo.svg"
                     width="144"
                     height="33"
-                    style={{ width: 144, height: 33 }}
+                    style={{width: 144, height: 33}}
                     alt="Sault"
                   />
                 </a>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-const BlogFeaturedImage = ({ blog }) => (
+const BlogFeaturedImage = ({blog}) => (
   <div className="col-12">
     <article className="post featured has-thumbnail">
       <a href="post.html" className="feature-image-link">

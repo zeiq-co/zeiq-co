@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-const BlogItem = ({ data }) => (
+const BlogItem = ({data}) => (
   <article className="grid-item post has-thumbnail">
     <Link to="/post" className="feature-image-link">
       <img src={data.image.file.url} alt="" />
