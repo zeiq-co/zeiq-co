@@ -23,19 +23,7 @@ module.exports = class HTML extends React.Component {
             href="https://fonts.googleapis.com/css?family=Merriweather:300,400%7CRubik:400,500,700"
             rel="stylesheet"
           />
-          <link rel="stylesheet" href="/css/bootstrap-grid.min.css" />
-          <link
-            rel="stylesheet"
-            href="/css/bootstrap-grid.css"
-            type="text/css"
-          />
-
-          <link
-            rel="stylesheet"
-            href="/css/style-personal.css"
-            type="text/css"
-          />
-          <link rel="stylesheet" href="/css/style.css" type="text/css" />
+          <link rel="stylesheet" href="/css/app.min.css" />
         </head>
 
         <body {...this.props.bodyAttributes}>
@@ -46,19 +34,14 @@ module.exports = class HTML extends React.Component {
             dangerouslySetInnerHTML={{__html: this.props.body}}
           />
           {this.props.postBodyComponents}
-          <script src="js/modernizr-custom.min.js" />
-          <script src="js/jquery.min.js" />
-          <script src="js/imagesloaded.pkgd.min.js" />
-          <script src="js/masonry.pkgd.min.js" />
-          <script src="js/functions.js" />
-          <script src="js/owl.carousel.min.js" />
-          <script src="js/jquery.matchheight-min.js" />
-          <script
+          <script src="js/app.min.js" />
+
+          {/* <script
             defer
             src="//use.fontawesome.com/releases/v5.0.8/js/all.js"
             integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
             crossorigin="anonymous"
-          />
+          /> */}
         </body>
       </html>
     );
