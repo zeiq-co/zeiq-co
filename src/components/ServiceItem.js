@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-const AllServices = () => (
+const ServiceItem = () => (
   <div className="col-md-8">
     <div id="risk-retention-analysis" className="tab-content" role="tabpanel">
       <h2>Risk &amp; Retention Analysis</h2>
@@ -205,4 +205,4 @@ const AllServices = () => (
   </div>
 );
 
-export default AllServices;
+export default ServiceItem;

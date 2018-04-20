@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import ServicesTitle from '../components/ServicesTitle';
 import ServicesNavigation from '../components/ServicesNavigation';
-import AllServices from '../components/AllServices';
+import ServiceItem from '../components/ServiceItem';
 import WhatYouNeedIsNotListed from '../components/WhatYouNeedIsNotListed';
 
 export default class Services extends React.Component {
@@ -32,7 +32,7 @@ export default class Services extends React.Component {
               <ServicesTitle />
               <div className="row">
                 <ServicesNavigation />
-                <AllServices />
+                <ServiceItem />
               </div>
               <WhatYouNeedIsNotListed />
             </div>

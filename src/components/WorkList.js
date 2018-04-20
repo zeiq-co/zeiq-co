@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Link from 'gatsby-link';
 
 class WorkList extends React.Component {
   componentDidMount() {
@@ -203,9 +204,9 @@ class WorkList extends React.Component {
         </div>
 
         <p className="extra-margin-top text-center">
-          <a href="work.html" className="button white big has-arrow">
-            View all our work
-          </a>
+          <Link to="/work">
+            <a className="button white big has-arrow">View all our work</a>
+          </Link>
         </p>
       </div>
     );

@@ -3,7 +3,7 @@ import Link from 'gatsby-link';
 
 import AboutHero from '../components/AboutHero';
 import Carousel from '../components/Carousel';
-import AboutButtons from '../components/AboutButtons';
+import Buttons from '../components/Buttons';
 import TeamGallery from '../components/TeamGallery';
 import BlockQuote from '../components/BlockQuote';
 import BrandGallery from '../components/BrandGallery';
@@ -24,7 +24,7 @@ export default class About extends React.Component {
             <div className="col-12">
               <AboutHero about={about} />
               <Carousel carousel={carousel} />
-              <AboutButtons />
+              <Buttons />
               <TeamGallery team={team} />
               <BlockQuote />
               <BrandGallery brand={brand} />
