@@ -3,10 +3,7 @@ import Link from 'gatsby-link';
 
 const Subscribe = () => (
   <div className="col-md-6">
-    <div
-      className="grey-box text-center"
-      style={{ backgroundColor: '#eff3f6' }}
-    >
+    <div className="grey-box text-center" style={{backgroundColor: '#eff3f6'}}>
       <div className="overlay eq-height">
         <h3>Subscribe &amp; never miss a thing</h3>
         <p>We’ll keep you weekly updated about the latest buzz.</p>

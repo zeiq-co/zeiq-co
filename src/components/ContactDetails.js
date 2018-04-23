@@ -58,7 +58,8 @@ class ContactDetails extends React.Component {
                   allowFullScreen=""
                 />
               </div>
-            </div>
+            </div>{' '}
+            */}
             <a href="#" className="bottom-button">
               <span className="show-layer">
                 Locate on map <i className="saulticon-arrow-up" />

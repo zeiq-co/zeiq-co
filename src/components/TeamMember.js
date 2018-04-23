@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TeamMember = ({ data }) => (
+const TeamMember = ({data}) => (
   <div className="col-md-6 col-lg-4">
     <div className="team-member">
       <img src={data.image.file.url} alt="member" />

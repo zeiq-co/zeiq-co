@@ -10,13 +10,13 @@ import BrandGallery from '../components/BrandGallery';
 import CallToAction from '../components/CallToAction';
 
 export default class About extends React.Component {
-  render() {
-    const { data } = this.props;
-    const { contentfulAbout: about } = data;
-    const { edges: carousel } = data.allContentfulCarouselItem;
-    const { edges: team } = data.allContentfulTeamMember;
-    const { edges: brand } = data.allContentfulBrand;
-    console.log(brand);
+  render () {
+    const {data} = this.props;
+    const {contentfulAbout: about} = data;
+    const {edges: carousel} = data.allContentfulCarouselItem;
+    const {edges: team} = data.allContentfulTeamMember;
+    const {edges: brand} = data.allContentfulBrand;
+    // console.log(brand);
     return (
       <main id="content" className="white-background">
         <div className="container">

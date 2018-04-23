@@ -8,6 +8,7 @@ import Subscribe from '../components/Subscribe';
 import Tweet from '../components/Tweet';
 
 export default class Contact extends React.Component {
+<<<<<<< HEAD
   componentDidMount() {
     jQuery('#address-selector .bottom-button').on('click', function(e) {
       e.preventDefault();
@@ -19,6 +20,19 @@ export default class Contact extends React.Component {
     const contact = data.contentfulContact;
     const social = data.contentfulContact;
     console.log(contact);
+=======
+  componentDidMount () {
+    jQuery ('#address-selector .bottom-button').on ('click', function (e) {
+      e.preventDefault ();
+      jQuery ('#address-selector').toggleClass ('show-map');
+    });
+  }
+
+  render () {
+    const {data} = this.props;
+    const contact = data.contentfulContact;
+    // console.log (contact);
+>>>>>>> eb7913540cd9fe2e0ec7b4ecd34f855c442a7736
     return (
       <main id="content" className="white-background">
         <div className="container">
@@ -27,7 +41,11 @@ export default class Contact extends React.Component {
             <WriteToUs />
           </div>
           <div className="row eq-height-container">
+<<<<<<< HEAD
             <ConnectWithUs social={social} />
+=======
+            <ConnectWithUs social={contact} />
+>>>>>>> eb7913540cd9fe2e0ec7b4ecd34f855c442a7736
             <Subscribe />
             <Tweet />
           </div>
