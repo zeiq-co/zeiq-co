@@ -10,7 +10,7 @@ const Header = () => (
           <h1>
             <Link to="/">
               <img
-                src="tmp/zeiq-logo-1.svg"
+                src="tmp/zeiq-logo-offblack.svg"
                 alt="Zeiq"
                 style={{ width: 144, height: 43 }}
               />
