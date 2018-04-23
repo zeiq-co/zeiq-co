@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import styled from 'styled-components';
 
 const Header = () => (
   <header id="top" className="navbar">
@@ -9,9 +10,9 @@ const Header = () => (
           <h1>
             <Link to="/">
               <img
-                src="tmp/logo.svg"
-                alt="Sault"
-                style={{ width: 144, height: 33 }}
+                src="tmp/zeiq-logo-1.svg"
+                alt="Zeiq"
+                style={{ width: 144, height: 43 }}
               />
             </Link>
           </h1>

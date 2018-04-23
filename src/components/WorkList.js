@@ -29,9 +29,9 @@ class WorkList extends React.Component {
                   service digital agency who helps brands stand out. Checkout
                   our work.
                 </h1>
-                <a href="about.html" className="button big">
-                  All that we do&hellip;
-                </a>
+                <Link to="/services">
+                  <a className="button big">All that we do&hellip;</a>
+                </Link>
               </div>
             </div>
           )}

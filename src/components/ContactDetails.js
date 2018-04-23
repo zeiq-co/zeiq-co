@@ -2,14 +2,8 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 class ContactDetails extends React.Component {
-  componentDidMount() {
-    jQuery('#address-selector .bottom-button').on('click', function(e) {
-      e.preventDefault();
-      jQuery('#address-selector').toggleClass('show-map');
-    });
-  }
-
   render() {
+    const { contact } = this.props;
     return (
       <div className="col-md-6">
         <div
@@ -25,32 +19,18 @@ class ContactDetails extends React.Component {
                 <h1>
                   We’re @{' '}
                   <a href="#" className="change-address">
-                    NLD<i className="saulticon-chevron-down" />
-                    <span className="address-list">
-                      <span
-                        className="address-code selected"
-                        data-address-code="NLD"
-                      >
-                        NLD
-                      </span>
-                      <span className="address-code" data-address-code="BEL">
-                        BEL
-                      </span>
-                    </span>
+                    ZEIQ
                   </a>
                 </h1>
                 <ul className="ul-custom-bullet">
                   <li>
-                    <i className="saulticon-map" /> Jan van Galenstraat 107<br />{' '}
-                    1056 BK Amsterdam<br /> Netherlands
+                    <i className="saulticon-map" /> {contact.address}
                   </li>
                   <li>
-                    <i className="saulticon-call" /> +31 23 456 7890<br /> +31
-                    09 876 5432
+                    <i className="saulticon-call" /> {contact.telephone}
                   </li>
                   <li>
-                    <i className="saulticon-mail" /> hello@sault.com<br />{' '}
-                    nld@sault.com
+                    <i className="saulticon-mail" /> {contact.email}
                   </li>
                 </ul>
               </div>
@@ -67,39 +47,6 @@ class ContactDetails extends React.Component {
               </div>
             </div>
             <div id="address-BEL" className="address-container">
-              <div className="address-details">
-                <h1>
-                  We’re @{' '}
-                  <a href="#" className="change-address">
-                    BEL<i className="saulticon-chevron-down" />
-                    <span className="address-list">
-                      <span className="address-code" data-address-code="NLD">
-                        NLD
-                      </span>
-                      <span
-                        className="address-code selected"
-                        data-address-code="BEL"
-                      >
-                        BEL
-                      </span>
-                    </span>
-                  </a>
-                </h1>
-                <ul className="ul-custom-bullet">
-                  <li>
-                    <i className="saulticon-map" /> Sint-Jozefstraat 24<br />{' '}
-                    2018 Antwerpen<br /> Belgium
-                  </li>
-                  <li>
-                    <i className="saulticon-call" /> +32 17 789 0456<br /> +32
-                    17 876 5432
-                  </li>
-                  <li>
-                    <i className="saulticon-mail" /> hello@sault.com<br />{' '}
-                    bel@sault.com
-                  </li>
-                </ul>
-              </div>
               <div className="map">
                 <iframe
                   style={{

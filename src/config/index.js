@@ -1,5 +1,5 @@
 module.exports = {
-  siteName: 'Zeiq.co',
+  siteName: 'Zeiq',
   author: 'Parminder Klair',
   description: 'Official Website for Zeiq.co',
   siteUrl: 'https://www.zeiq.co',

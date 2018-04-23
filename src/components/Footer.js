@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Footer = () => (
+const Footer = ({ social }) => (
   <footer id="footer">
     <div className="container">
       <div className="row">
@@ -10,10 +10,10 @@ const Footer = () => (
               <p>
                 <a href="index.html" className="mini-logo">
                   <img
-                    src="tmp/logo.svg"
+                    src="tmp/zeiq-logo-1.svg"
                     width="144"
-                    height="33"
-                    style={{ width: 144, height: 33 }}
+                    height="43"
+                    style={{ width: 144, height: 43 }}
                     alt="Sault"
                   />
                 </a>
@@ -23,19 +23,16 @@ const Footer = () => (
               <nav>
                 <ul>
                   <li>
-                    <a href="#">Facebook</a>
+                    <a href={social.facebookId}>Facebook</a>
                   </li>
                   <li>
-                    <a href="#">Twitter</a>
+                    <a href={social.twitterId}>Twitter</a>
                   </li>
                   <li>
-                    <a href="#">LinkedIn</a>
+                    <a href={social.linkedInId}>LinkedIn</a>
                   </li>
                   <li>
-                    <a href="#">Behance</a>
-                  </li>
-                  <li>
-                    <a href="#">Instagram</a>
+                    <a href={social.instagramId}>Instagram</a>
                   </li>
                 </ul>
               </nav>

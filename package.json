@@ -23,6 +23,7 @@
   "dependencies": {
     "gatsby": "^1.9.238",
     "gatsby-link": "^1.6.39",
+    "gatsby-plugin-favicon": "^2.1.1",
     "gatsby-plugin-google-analytics": "^1.0.24",
     "gatsby-plugin-manifest": "^1.0.15",
     "gatsby-plugin-nprogress": "^1.0.14",
