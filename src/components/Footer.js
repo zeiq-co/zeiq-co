@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'gatsby-link';
 
 const Footer = ({ social }) => (
   <footer id="footer">
@@ -8,15 +9,17 @@ const Footer = ({ social }) => (
           <div className="widget-area">
             <div className="widget widget_text">
               <p>
-                <a href="index.html" className="mini-logo">
-                  <img
-                    src="tmp/zeiq-logo-1.svg"
-                    width="144"
-                    height="43"
-                    style={{ width: 144, height: 43 }}
-                    alt="Sault"
-                  />
-                </a>
+                <Link to="/">
+                  <a className="mini-logo">
+                    <img
+                      src="tmp/zeiq-logo-1.svg"
+                      width="144"
+                      height="43"
+                      style={{ width: 144, height: 43 }}
+                      alt="Sault"
+                    />
+                  </a>
+                </Link>
               </p>
             </div>
             <div className="widget widget_nav_menu">

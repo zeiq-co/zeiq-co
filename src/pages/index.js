@@ -4,9 +4,9 @@ import Link from 'gatsby-link';
 import WorkList from '../components/WorkList';
 
 export default class IndexPage extends React.Component {
-  render () {
-    const {data} = this.props;
-    const {edges: works} = data.allContentfulHome;
+  render() {
+    const { data } = this.props;
+    const { edges: works } = data.allContentfulHome;
     // console.log(works);
     return (
       <main id="content" className="white-background">

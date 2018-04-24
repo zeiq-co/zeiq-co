@@ -34,39 +34,7 @@ class ContactDetails extends React.Component {
                   </li>
                 </ul>
               </div>
-              <div className="map">
-                <iframe
-                  style={{
-                    width: 600,
-                    height: 450,
-                  }}
-                  style={{ border: 0 }}
-                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDf9LkuZPX10XENbqvaHQUi_30VHwCbmkI&q=52.3746634,4.8592912&zoom=15&maptype=roadmap"
-                  allowFullScreen
-                />
-              </div>
             </div>
-            <div id="address-BEL" className="address-container">
-              <div className="map">
-                <iframe
-                  style={{
-                    width: 600,
-                    height: 450,
-                  }}
-                  style={{ border: 0 }}
-                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDf9LkuZPX10XENbqvaHQUi_30VHwCbmkI&q=52.3746634,4.8592912&zoom=15&maptype=roadmap"
-                  allowFullScreen=""
-                />
-              </div>
-            </div>
-            <a href="#" className="bottom-button">
-              <span className="show-layer">
-                Locate on map <i className="saulticon-arrow-up" />
-              </span>
-              <span className="hide-layer">
-                Close map <i className="saulticon-arrow-down" />
-              </span>
-            </a>
           </div>
         </div>
       </div>

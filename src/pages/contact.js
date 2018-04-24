@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import Helmet from 'react-helmet';
 
 import ContactDetails from '../components/ContactDetails';
 import WriteToUs from '../components/WriteToUs';
@@ -20,19 +21,22 @@ export default class Contact extends React.Component {
     const social = data.contentfulContact;
     console.log(contact);
     return (
-      <main id="content" className="white-background">
-        <div className="container">
-          <div className="row eq-height-container">
-            <ContactDetails contact={contact} />
-            <WriteToUs />
+      <div>
+        <Helmet title="contact" />
+        <main id="content" className="white-background">
+          <div className="container">
+            <div className="row eq-height-container">
+              <ContactDetails contact={contact} />
+              <WriteToUs />
+            </div>
+            <div className="row eq-height-container">
+              <ConnectWithUs social={social} />
+              <Subscribe />
+              <Tweet />
+            </div>
           </div>
-          <div className="row eq-height-container">
-            <ConnectWithUs social={social} />
-            <Subscribe />
-            <Tweet />
-          </div>
-        </div>
-      </main>
+        </main>
+      </div>
     );
   }
 }

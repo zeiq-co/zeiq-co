@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import Helmet from 'react-helmet';
 
 import AboutHero from '../components/AboutHero';
 import Carousel from '../components/Carousel';
@@ -10,29 +11,32 @@ import BrandGallery from '../components/BrandGallery';
 import CallToAction from '../components/CallToAction';
 
 export default class About extends React.Component {
-  render () {
-    const {data} = this.props;
-    const {contentfulAbout: about} = data;
-    const {edges: carousel} = data.allContentfulCarouselItem;
-    const {edges: team} = data.allContentfulTeamMember;
-    const {edges: brand} = data.allContentfulBrand;
+  render() {
+    const { data } = this.props;
+    const { contentfulAbout: about } = data;
+    const { edges: carousel } = data.allContentfulCarouselItem;
+    const { edges: team } = data.allContentfulTeamMember;
+    const { edges: brand } = data.allContentfulBrand;
     // console.log(brand);
     return (
-      <main id="content" className="white-background">
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <AboutHero about={about} />
-              <Carousel carousel={carousel} />
-              <Buttons />
-              <TeamGallery team={team} />
-              <BlockQuote />
-              <BrandGallery brand={brand} />
-              <CallToAction />
+      <div>
+        <Helmet title="about" />
+        <main id="content" className="white-background">
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
+                <AboutHero about={about} />
+                <Carousel carousel={carousel} />
+                <Buttons />
+                <TeamGallery team={team} />
+                <BlockQuote />
+                <BrandGallery brand={brand} />
+                <CallToAction />
+              </div>
             </div>
           </div>
-        </div>
-      </main>
+        </main>
+      </div>
     );
   }
 }

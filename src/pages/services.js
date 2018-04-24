@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import Helmet from 'react-helmet';
+
 import ServicesTitle from '../components/ServicesTitle';
 import ServicesNavigation from '../components/ServicesNavigation';
 import ServiceItem from '../components/ServiceItem';
@@ -25,20 +27,23 @@ export default class Services extends React.Component {
   }
   render() {
     return (
-      <main id="content" className="white-background">
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <ServicesTitle />
-              <div className="row">
-                <ServicesNavigation />
-                <ServiceItem />
+      <div>
+        <Helmet title="services" />
+        <main id="content" className="white-background">
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
+                <ServicesTitle />
+                <div className="row">
+                  <ServicesNavigation />
+                  <ServiceItem />
+                </div>
+                <WhatYouNeedIsNotListed />
               </div>
-              <WhatYouNeedIsNotListed />
             </div>
           </div>
-        </div>
-      </main>
+        </main>
+      </div>
     );
   }
 }
