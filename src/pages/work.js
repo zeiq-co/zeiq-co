@@ -6,6 +6,9 @@ import WorkList from '../components/WorkList';
 
 export default class Work extends React.Component {
   render() {
+    const { data } = this.props;
+    const { edges: work } = data.allContentfulHome;
+
     return (
       <div>
         <Helmet title="work" />
@@ -17,7 +20,7 @@ export default class Work extends React.Component {
                   <h2>Our Work</h2>
                 </div>
               </div>
-              <WorkList introVisible={false} />
+              <WorkList introVisible={false} workList={work} />
             </div>
           </div>
         </main>

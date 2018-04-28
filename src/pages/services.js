@@ -25,7 +25,12 @@ export default class Services extends React.Component {
       jQuery($this.attr('href')).addClass('active');
     });
   }
+
   render() {
+    const { data } = this.props;
+    const { edges: services } = data.allContentfulService;
+    console.log('services', services);
+
     return (
       <div>
         <Helmet title="services" />
@@ -35,8 +40,8 @@ export default class Services extends React.Component {
               <div className="col-12">
                 <ServicesTitle />
                 <div className="row">
-                  <ServicesNavigation />
-                  <ServiceItem />
+                  <ServicesNavigation services={services} />
+                  <ServiceItem services={services} />
                 </div>
                 <WhatYouNeedIsNotListed />
               </div>
@@ -55,10 +60,11 @@ export const query = graphql`
         node {
           id
           title
+          slug
+          shortDescription
           description {
             description
           }
-          shortDescription
         }
       }
     }

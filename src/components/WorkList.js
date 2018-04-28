@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Link from 'gatsby-link';
 
+import WorkItem from '../components/WorkItem';
+
 class WorkList extends React.Component {
   componentDidMount() {
     var $grid = jQuery('.project-listing .grid').masonry({
@@ -17,7 +19,10 @@ class WorkList extends React.Component {
   }
 
   render() {
-    const { introVisible } = this.props;
+    const { introVisible, workList } = this.props;
+    let activeItemIndex = 0;
+    // console.log('workList', workList);
+
     return (
       <div className="project-listing col-12">
         <div className="grid clearfix">
@@ -35,170 +40,15 @@ class WorkList extends React.Component {
               </div>
             </div>
           )}
-          <div className="grid-item project-thumb">
-            <a href="project.html">
-              <img
-                src="tmp/sample-square.png"
-                width="900"
-                height="900"
-                alt=""
-              />
-              <span className="project-thumb-details">
-                <span className="title">BON</span>
-                <span className="description">
-                  Create intrigue around aesthetically pleasing products
-                </span>
-              </span>
-              <i className="saulticon-arrow-forward" />
-            </a>
-          </div>
-          <div className="grid-item project-thumb">
-            <a href="project.html">
-              <img
-                src="tmp/sample-square.png"
-                width="900"
-                height="900"
-                alt=""
-              />
-              <span className="project-thumb-details">
-                <span className="title">FrockHub</span>
-                <span className="description">
-                  Luxury fashion resource by Saxon Campbell
-                </span>
-              </span>
-              <i className="saulticon-arrow-forward" />
-            </a>
-          </div>
-          <div className="grid-item grid-item-wide project-thumb">
-            <a href="project.html">
-              <img
-                src="tmp/sample-square.png"
-                width="900"
-                height="900"
-                alt=""
-              />{' '}
-              <span className="project-thumb-details">
-                <span className="title">Swiss</span>
-                <span className="description">
-                  The International Typographic Style, a modernist movement
-                  impacting many design-related fields
-                </span>
-              </span>
-              <i className="saulticon-arrow-forward" />
-            </a>
-          </div>
-          <div className="grid-item project-thumb">
-            <a href="project.html">
-              <img
-                src="tmp/sample-square.png"
-                width="900"
-                height="900"
-                alt=""
-              />
-              <span className="project-thumb-details">
-                <span className="title">Houdini Slab</span>
-              </span>
-              <i className="saulticon-arrow-forward" />
-            </a>
-          </div>
-          <div className="grid-item project-thumb">
-            <a href="project.html">
-              <img
-                src="tmp/sample-square.png"
-                width="900"
-                height="900"
-                alt=""
-              />
-              <span className="project-thumb-details">
-                <span className="title">Pexels</span>
-              </span>
-              <i className="saulticon-arrow-forward" />
-            </a>
-          </div>
-          <div className="grid-item grid-item-wide project-thumb">
-            <a href="project.html">
-              <img
-                src="tmp/sample-square.png"
-                width="900"
-                height="900"
-                alt=""
-              />
-              <span className="project-thumb-details">
-                <span className="title">Reppr</span>
-                <span className="description">
-                  We are for shortcuts as much as you are, but can the shortcuts
-                  help if the direction is wrong?
-                </span>
-              </span>
-              <i className="saulticon-arrow-forward" />
-            </a>
-          </div>
-          <div className="grid-item project-thumb">
-            <a href="project.html">
-              <img
-                src="tmp/sample-square.png"
-                width="900"
-                height="900"
-                alt=""
-              />
-              <span className="project-thumb-details">
-                <span className="title">Andras</span>
-                <span className="description">
-                  We are for shortcuts as much as you are, but can the shortcuts
-                  help?
-                </span>
-              </span>
-              <i className="saulticon-arrow-forward" />
-            </a>
-          </div>
-          <div className="grid-item project-thumb">
-            <a href="project.html">
-              <img
-                src="tmp/sample-square.png"
-                width="900"
-                height="900"
-                alt=""
-              />
-              <span className="project-thumb-details">
-                <span className="title">Scholar</span>
-                <span className="description">
-                  Scholar MFG, an artful neoluxury leather brand based in LA
-                </span>
-              </span>
-              <i className="saulticon-arrow-forward" />
-            </a>
-          </div>
-          <div className="grid-item project-thumb">
-            <a href="project.html">
-              <img
-                src="tmp/sample-square.png"
-                width="900"
-                height="900"
-                alt=""
-              />
-              <span className="project-thumb-details">
-                <span className="title">Samu</span>
-                <span className="description">
-                  Samurai Jack by Adam Whitcroft
-                </span>
-              </span>
-              <i className="saulticon-arrow-forward" />
-            </a>
-          </div>
-          <div className="grid-item project-thumb">
-            <a href="project.html">
-              <img
-                src="tmp/sample-square.png"
-                width="900"
-                height="900"
-                alt=""
-              />
-              <span className="project-thumb-details">
-                <span className="title">Mobile UI</span>
-              </span>
-              <i className="saulticon-arrow-forward" />
-            </a>
-          </div>
+          {workList.map(({ node }, index) => {
+            activeItemIndex++;
+            let size = '';
+            if (activeItemIndex === 3) {
+              size = 'large';
+              activeItemIndex = 0;
+            }
+            return <WorkItem key={node.id} size={size} item={node} />;
+          })}
           <div className="grid-sizer" />
           <div className="gutter-sizer" />
         </div>

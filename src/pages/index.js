@@ -6,13 +6,13 @@ import WorkList from '../components/WorkList';
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props;
-    const { edges: works } = data.allContentfulHome;
+    const { edges: work } = data.allContentfulHome;
     // console.log(works);
     return (
       <main id="content" className="white-background">
         <div className="container">
           <div className="row">
-            <WorkList introVisible={true} works={works} />
+            <WorkList introVisible={true} workList={work} />
           </div>
         </div>
       </main>
