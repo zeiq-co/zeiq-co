@@ -4,7 +4,7 @@ import Link from 'gatsby-link';
 const BlockQuote = () => (
   <blockquote>
     <p>
-      Going with SAULT for our Branding could easily be the most prominent step
+      Going with Zeiq for our Branding could easily be the most prominent step
       we’ve taken this year towards a better Product.
     </p>
     <cite>

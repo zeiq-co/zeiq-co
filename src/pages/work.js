@@ -7,7 +7,7 @@ import WorkList from '../components/WorkList';
 export default class Work extends React.Component {
   render() {
     const { data } = this.props;
-    const { edges: work } = data.allContentfulHome;
+    const { edges: work } = data.allContentfulWork;
 
     return (
       <div>
@@ -15,11 +15,6 @@ export default class Work extends React.Component {
         <main id="content" className="white-background">
           <div className="container">
             <div className="row">
-              <div className="col-12">
-                <div className="page-title-container">
-                  <h2>Our Work</h2>
-                </div>
-              </div>
               <WorkList introVisible={false} workList={work} />
             </div>
           </div>
@@ -31,14 +26,20 @@ export default class Work extends React.Component {
 
 export const query = graphql`
   query WorkQuery {
-    allContentfulHome {
+    allContentfulWork(sort: { fields: [order] }) {
       edges {
         node {
           id
           title
+          image {
+            file {
+              url
+            }
+          }
           description {
             description
           }
+          url
         }
       }
     }

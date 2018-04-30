@@ -30,7 +30,7 @@ class WorkList extends React.Component {
             <div className="grid-item grid-item-wide project-thumb welcome-message">
               <div className="inner">
                 <h1>
-                  Hi! We're <span className="text-color">SAULT</span>. A full
+                  Hi! We're <span className="text-color">ZEIQ</span>. A full
                   service digital agency who helps brands stand out. Checkout
                   our work.
                 </h1>

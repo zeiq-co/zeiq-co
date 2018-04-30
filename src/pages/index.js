@@ -6,8 +6,8 @@ import WorkList from '../components/WorkList';
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props;
-    const { edges: work } = data.allContentfulHome;
-    // console.log(works);
+    const { edges: work } = data.allContentfulWork;
+    console.log(work);
     return (
       <main id="content" className="white-background">
         <div className="container">
@@ -22,14 +22,20 @@ export default class IndexPage extends React.Component {
 
 export const query = graphql`
   query HomeQuery {
-    allContentfulHome {
+    allContentfulWork(sort: { fields: [order] }) {
       edges {
         node {
           id
           title
+          image {
+            file {
+              url
+            }
+          }
           description {
             description
           }
+          url
         }
       }
     }
