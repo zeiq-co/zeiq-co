@@ -29,7 +29,6 @@ export default class Services extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: services } = data.allContentfulService;
-    console.log('services', services);
 
     return (
       <div>

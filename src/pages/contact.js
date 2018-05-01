@@ -19,7 +19,6 @@ export default class Contact extends React.Component {
     const { data } = this.props;
     const contact = data.contentfulContact;
     const social = data.contentfulContact;
-    console.log(contact);
     return (
       <div>
         <Helmet title="contact" />
