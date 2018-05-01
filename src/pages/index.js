@@ -7,7 +7,6 @@ export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: work } = data.allContentfulWork;
-    console.log(work);
     return (
       <main id="content" className="white-background">
         <div className="container">
