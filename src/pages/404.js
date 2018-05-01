@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'gatsby-link';
 
 const NotFoundPage = () => (
   <main id="content" className="white-background">
@@ -16,9 +17,9 @@ const NotFoundPage = () => (
                     Perhaps searching will help find a related item or
                   </p>
                   <p>
-                    <a href="index.html" className="button has-arrow">
-                      Go Home
-                    </a>
+                    <Link to="/">
+                      <a className="button has-arrow">Go Home</a>
+                    </Link>
                   </p>
                 </div>
               </div>
@@ -32,9 +33,9 @@ const NotFoundPage = () => (
                 can hand us over your keys too.
               </p>
               <p>
-                <a href="contact.html" className="button dark has-arrow">
-                  Drop a message
-                </a>
+                <Link to="/contact">
+                  <a className="button dark has-arrow">Drop a message</a>
+                </Link>
               </p>
             </div>
           </div>
