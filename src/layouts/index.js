@@ -12,38 +12,31 @@ const IndexLayout = ({ children, data }) => {
   const social = data.contentfulContact;
   return (
     <div>
-      <Helmet
-        title={config.siteName}
-        meta={[
-          // Search Engine
-          { name: 'image', content: config.image },
-          { name: 'description', content: config.description },
-          { itemprop: 'description', content: config.description },
-          { itemprop: 'image', content: config.image },
-
-          // Twitter
-          { name: 'twitter:card', content: 'summary_large_image' },
-          { name: 'twitter:site', content: config.twitterSite },
-          { name: 'twitter:description', content: config.description },
-          { name: 'twitter:title', content: config.siteName },
-          { name: 'twitter:creator', content: config.twitterCreator },
-          { name: 'twitter:image:src', content: config.image },
-
-          // Open Graph general (Facebook, Linkdin & Google+)
-          { name: 'og:title', content: config.siteName },
-          { name: 'og:image', content: config.image },
-          { name: 'og:site_name', content: config.siteName },
-          { name: 'og:description', content: config.description },
-          { name: 'og:locale', content: config.locale },
-          { name: 'fb:admins', content: config.fbUserId },
-          { name: 'fb:app_id', content: config.fbAppId },
-          { name: 'og:type', content: config.type },
-          { name: 'og:url', content: config.siteUrl },
-        ]}
-      />
-
+      <Helmet>
+        {/* General tags */}
+        <meta name="description" content={config.description} />
+        <meta name="image" content={config.image} />
+        {/* Schema.org tags */}
+        {/* <script type="application/ld+json">
+          {JSON.stringify(schemaOrgJSONLD)}
+        </script> */}
+        {/* OpenGraph tags */}
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={config.siteName} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={config.image} />
+        {/* <meta
+          property="fb:app_id"
+          content={config.siteFBAppID ? config.siteFBAppID : ''} */}
+        />
+        {/* Twitter Card tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content={config.twitterCreator} />
+        <meta name="twitter:title" content={config.siteName} />
+        <meta name="twitter:description" content={config.description} />
+        <meta name="twitter:image" content={config.image} />
+      </Helmet>
       <Header />
-
       {/* meta={[
             // Search Engine
             { name: 'image', content: image },
