@@ -17,6 +17,14 @@ module.exports = class HTML extends React.Component {
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:creator" content="hkdajs" />
+          <meta name="twitter:title" content="vipin" />
+          <meta name="twitter:description" content="im best" />
+          <meta
+            name="twitter:image"
+            content="https://unsplash.com/photos/pRdgN2LvQ9o"
+          />
 
           <link rel="shortcut icon" href="img/favicon.png" />
           <link
