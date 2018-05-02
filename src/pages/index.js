@@ -8,13 +8,16 @@ export default class IndexPage extends React.Component {
     const { data } = this.props;
     const { edges: work } = data.allContentfulWork;
     return (
-      <main id="content" className="white-background">
-        <div className="container">
-          <div className="row">
-            <WorkList introVisible={true} workList={work} />
+      <div>
+        <Helmet title="zeiq" />
+        <main id="content" className="white-background">
+          <div className="container">
+            <div className="row">
+              <WorkList introVisible={true} workList={work} />
+            </div>
           </div>
-        </div>
-      </main>
+        </main>
+      </div>
     );
   }
 }

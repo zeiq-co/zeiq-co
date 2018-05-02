@@ -66,7 +66,7 @@ export const query = graphql`
         }
       }
     }
-    allContentfulTeamMember {
+    allContentfulTeamMember(sort: { fields: [order] }) {
       edges {
         node {
           id
