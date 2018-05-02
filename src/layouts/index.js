@@ -8,39 +8,41 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import './index.css';
 
-const IndexLayout = ({ children, data }) => {
-  const social = data.contentfulContact;
-  return (
-    <div>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* General tags */}
-        <meta name="description" content={config.description} />
-        <meta name="image" content={config.image} />
-        {/* Schema.org tags */}
-        {/* <script type="application/ld+json">
+class IndexLayout extends React.Component {
+  render() {
+    const { data, children } = this.props;
+    const social = data.contentfulContact;
+    return (
+      <div>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          {/* General tags */}
+          <meta name="description" content={config.description} />
+          <meta name="image" content={config.image} />
+          {/* Schema.org tags */}
+          {/* <script type="application/ld+json">
           {JSON.stringify(schemaOrgJSONLD)}
         </script> */}
-        {/* OpenGraph tags */}
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content={config.siteName} />
-        <meta property="og:description" content={config.description} />
-        <meta property="og:image" content={config.image} />
-        {/* <meta
+          {/* OpenGraph tags */}
+          <meta property="og:type" content="article" />
+          <meta property="og:title" content={config.siteName} />
+          <meta property="og:description" content={config.description} />
+          <meta property="og:image" content={config.image} />
+          {/* <meta
           property="fb:app_id"
           content={config.siteFBAppID ? config.siteFBAppID : ''} */}
-        />
-        {/* Twitter Card tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:creator" content={config.twitterCreator} />
-        <meta name="twitter:title" content={config.siteName} />
-        <meta name="twitter:description" content={config.description} />
-        <meta name="twitter:image" content={config.image} />
-      </Helmet>
-      <Header />
-      {/* meta={[
+          />
+          {/* Twitter Card tags */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:creator" content={config.twitterCreator} />
+          <meta name="twitter:title" content={config.siteName} />
+          <meta name="twitter:description" content={config.description} />
+          <meta name="twitter:image" content={config.image} />
+        </Helmet>
+        <Header />
+        {/* meta={[
             // Search Engine
             { name: 'image', content: image },
             { name: 'description', content: description },
@@ -67,11 +69,12 @@ const IndexLayout = ({ children, data }) => {
             { name: 'og:type', content: type },
             { name: 'og:url', content: SITE_URL },
           ]} */}
-      {children()}
-      <Footer social={social} />
-    </div>
-  );
-};
+        {children()}
+        <Footer social={social} />
+      </div>
+    );
+  }
+}
 IndexLayout.propTypes = {
   children: PropTypes.func.isRequired,
 };
