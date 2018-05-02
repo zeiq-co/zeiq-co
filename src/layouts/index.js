@@ -23,7 +23,7 @@ const IndexLayout = ({ children, data }) => {
         {/* OpenGraph tags */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content={config.siteName} />
-        <meta property="og:description" content={description} />
+        <meta property="og:description" content={config.description} />
         <meta property="og:image" content={config.image} />
         {/* <meta
           property="fb:app_id"

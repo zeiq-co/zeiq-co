@@ -4877,6 +4877,13 @@ svg:not(:root) {
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'couture';
+	src: url('../fonts/couture-bld.otf?liaese') format('truetype'), url('../fonts/couture-bld.otf?liaese') format('otf'), url('../fonts/logo-zeiq-with-alphabet.svg?liaese#couture') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 .saulticon,
 [class*="saulticon-"]:before {
 	font-family: 'saulticons' !important;
