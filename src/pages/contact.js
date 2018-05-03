@@ -21,7 +21,7 @@ export default class Contact extends React.Component {
     const social = data.contentfulContact;
     return (
       <div>
-        <Helmet title="contact" />
+        <Helmet title="Contact | Zeiq" />
         <main id="content" className="white-background">
           <div className="container">
             <div className="row eq-height-container">

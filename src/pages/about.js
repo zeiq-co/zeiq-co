@@ -20,7 +20,7 @@ export default class About extends React.Component {
     // console.log(brand);
     return (
       <div>
-        <Helmet title="about" />
+        <Helmet title="About | Zeiq" />
         <main id="content" className="white-background">
           <div className="container">
             <div className="row">

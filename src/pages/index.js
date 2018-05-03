@@ -10,7 +10,7 @@ export default class IndexPage extends React.Component {
     const { edges: work } = data.allContentfulWork;
     return (
       <div>
-        <Helmet title="zeiq" />
+        <Helmet title="Home | Zeiq" />
         <main id="content" className="white-background">
           <div className="container">
             <div className="row">

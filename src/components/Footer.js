@@ -12,11 +12,11 @@ const Footer = ({ social }) => (
                 <Link to="/">
                   <a className="mini-logo">
                     <img
-                      src="tmp/zeiq-logo-1.svg"
+                      src="/tmp/zeiq-logo-1.svg"
                       width="144"
                       height="43"
                       style={{ width: 144, height: 43 }}
-                      alt="Sault"
+                      alt="zeiq"
                     />
                   </a>
                 </Link>

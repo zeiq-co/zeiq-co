@@ -33,7 +33,7 @@ const NotFoundPage = () => (
                 can hand us over your keys too.
               </p>
               <p>
-                <Link to="/contact">
+                <Link to="/contact/">
                   <a className="button dark has-arrow">Drop a message</a>
                 </Link>
               </p>

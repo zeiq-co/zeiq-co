@@ -32,7 +32,7 @@ export default class Services extends React.Component {
 
     return (
       <div>
-        <Helmet title="services" />
+        <Helmet title="Services | Zeiq" />
         <main id="content" className="white-background">
           <div className="container">
             <div className="row">
