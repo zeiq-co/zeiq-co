@@ -3,14 +3,14 @@ import React from 'react';
 let stylesStr;
 if (process.env.NODE_ENV === `production`) {
   try {
-    stylesStr = require(`!raw-loader!../public/styles.css`); // eslint-disable-line
+    stylesStr = require (`!raw-loader!../public/styles.css`); // eslint-disable-line
   } catch (e) {
-    console.log(e); // eslint-disable-line
+    console.log (e); // eslint-disable-line
   }
 }
 
 module.exports = class HTML extends React.Component {
-  render() {
+  render () {
     return (
       <html lang="en" {...this.props.htmlAttributes}>
         <head>
@@ -23,8 +23,14 @@ module.exports = class HTML extends React.Component {
             href="//fonts.googleapis.com/css?family=Merriweather:300,400%7CRubik:400,500,700"
             rel="stylesheet"
           />
-          <link href="/fonts/couture-bld.otf" rel="stylesheet" />
-          <link rel="stylesheet" href="/css/app.min.css" />
+
+          <link
+            href="css/app.min.css"
+            rel="stylesheet"
+            type="text/css"
+            crossorigin="anonymous"
+          />
+
         </head>
 
         <body {...this.props.bodyAttributes}>
@@ -32,10 +38,11 @@ module.exports = class HTML extends React.Component {
           <div
             key="body"
             id="___gatsby"
-            dangerouslySetInnerHTML={{ __html: this.props.body }}
+            dangerouslySetInnerHTML={{__html: this.props.body}}
           />
           {this.props.postBodyComponents}
-          <script src="js/app.min.js" />
+          <script src="js/app.min.js" crossorigin="anonymous" />
+
           <script
             defer
             src="//use.fontawesome.com/releases/v5.0.8/js/all.js"

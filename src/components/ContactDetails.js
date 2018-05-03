@@ -2,17 +2,11 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 class ContactDetails extends React.Component {
-  render() {
-    const { contact } = this.props;
+  render () {
+    const {contact} = this.props;
     return (
       <div className="col-md-6">
-        <div
-          className="grey-box"
-          style={{
-            background: 'url(tmp/sample-square.png) center bottom no-repeat',
-            backgroundSize: 'cover',
-          }}
-        >
+        <div className="grey-box">
           <div id="address-selector" className="overlay eq-height">
             <div id="address-NLD" className="address-container active">
               <div className="address-details">
