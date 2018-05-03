@@ -35,11 +35,11 @@ class IndexLayout extends React.Component {
           content={config.siteFBAppID ? config.siteFBAppID : ''} */}
           />
           {/* Twitter Card tags */}
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:creator" content={config.twitterCreator} />
-          <meta name="twitter:title" content={config.siteName} />
-          <meta name="twitter:description" content={config.description} />
-          <meta name="twitter:image" content={config.image} />
+          <meta data-react-helmet="true" name="twitter:card" content="summary_large_image" />
+          <meta data-react-helmet="true" name="twitter:creator" content={config.twitterCreator} />
+          <meta data-react-helmet="true" name="twitter:title" content={config.siteName} />
+          <meta data-react-helmet="true" name="twitter:description" content={config.description} />
+          <meta data-react-helmet="true" name="twitter:image" content={config.image} />
         </Helmet>
         <Header />
         {/* meta={[
