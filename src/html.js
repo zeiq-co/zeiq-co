@@ -23,6 +23,7 @@ module.exports = class HTML extends React.Component {
             href="//fonts.googleapis.com/css?family=Merriweather:300,400%7CRubik:400,500,700"
             rel="stylesheet"
           />
+          <link href="/fonts/couture-bld.otf" rel="stylesheet" />
           <link rel="stylesheet" href="/css/app.min.css" />
         </head>
 

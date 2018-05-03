@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TeamMember = ({data}) => (
+const TeamMember = ({ data }) => (
   <div className="col-md-6 col-lg-4">
     <div className="team-member">
       <img src={data.image.file.url} alt="member" />
@@ -16,6 +16,9 @@ const TeamMember = ({data}) => (
           </a>
           <a href={data.linkedInId} className="social-link saulticon">
             linkedin
+          </a>
+          <a href={data.instagramId} className="social-link saulticon">
+            instagram
           </a>
         </p>
       </div>

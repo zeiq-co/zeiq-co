@@ -2195,7 +2195,7 @@ svg:not(:root) {
 }
 
 @font-face {
-	font-family: 'couture';
+	font-family: 'Couture-Bold';
 	src: url('../fonts/couture-bld.otf?liaese') format('truetype'), url('../fonts/couture-bld.otf?liaese') format('otf'), url('../fonts/logo-zeiq-with-alphabet.svg?liaese#couture') format('svg');
 	font-weight: normal;
 	font-style: normal;
