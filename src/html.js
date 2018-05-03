@@ -18,7 +18,7 @@ module.exports = class HTML extends React.Component {
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-          <link rel="shortcut icon" href="img/favicon.png" />
+          <link rel="shortcut icon" href="/img/favicon.png" />
           <link
             href="//fonts.googleapis.com/css?family=Merriweather:300,400%7CRubik:400,500,700"
             rel="stylesheet"
