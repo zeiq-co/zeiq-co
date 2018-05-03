@@ -6,7 +6,7 @@ const WorkItem = ({ item, size }) => (
     className={`grid-item ${size === 'large' &&
       'grid-item-wide'} project-thumb`}
   >
-    <a href={item.url}>
+    <a href={item.url} target="_blank">
       <img src={item.image.file.url} width="900" height="900" alt="" />
       <span className="project-thumb-details">
         <span className="title">{item.title}</span>
