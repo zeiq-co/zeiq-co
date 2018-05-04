@@ -3,20 +3,22 @@ import React from 'react';
 let stylesStr;
 if (process.env.NODE_ENV === `production`) {
   try {
-    stylesStr = require (`!raw-loader!../public/styles.css`); // eslint-disable-line
+    stylesStr = require(`!raw-loader!../public/styles.css`); // eslint-disable-line
   } catch (e) {
-    console.log (e); // eslint-disable-line
+    console.log(e); // eslint-disable-line
   }
 }
 
 module.exports = class HTML extends React.Component {
-  render () {
+  render() {
     return (
       <html lang="en" {...this.props.htmlAttributes}>
         <head>
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+          <base href="/" target="_blank" />
 
           <link rel="shortcut icon" href="/img/favicon.png" />
           <link
@@ -30,7 +32,6 @@ module.exports = class HTML extends React.Component {
             type="text/css"
             crossorigin="anonymous"
           />
-
         </head>
 
         <body {...this.props.bodyAttributes}>
@@ -38,7 +39,7 @@ module.exports = class HTML extends React.Component {
           <div
             key="body"
             id="___gatsby"
-            dangerouslySetInnerHTML={{__html: this.props.body}}
+            dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
           <script src="js/app.min.js" crossorigin="anonymous" />

@@ -6,9 +6,9 @@ const CallToAction = () => (
     <h4 className="text-color">Challange the Stable!</h4>
     <div className="vertical-middle">
       <h1>Let's see how we can help your business grow!</h1>
-      <a href="#" className="button big has-arrow">
-        Let's chat up
-      </a>
+      <Link to="/contact/">
+        <a className="button big has-arrow">Let's chat up</a>
+      </Link>
     </div>
   </div>
 );
