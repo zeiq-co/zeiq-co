@@ -10,10 +10,10 @@ import CallToAction from '../components/CallToAction';
 import WorkDetail from '../components/WorkDetail';
 
 class WorkTemplate extends React.Component {
-  render () {
+  render() {
     // console.log(brand);
-    const {data} = this.props;
-    console.log (data);
+    const { data } = this.props;
+    console.log(data);
     return (
       <div>
         <Helmet title="About | Zeiq" />
@@ -42,16 +42,16 @@ export const workQuery = graphql`
     contentfulWork(id: { eq: $id }) {
       id
       slug
-      image{
-        file{
+      image {
+        file {
           url
         }
       }
       title
       url
-      description{
+      description {
         description
       }
     }
   }
-  `;
+`;

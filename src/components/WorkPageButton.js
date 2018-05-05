@@ -3,12 +3,13 @@ import Link from 'gatsby-link';
 
 import GetInTouchButton from './GetInTouchButton';
 
-const WorkPageButton = ({url}) => (
+const WorkPageButton = ({ url }) => (
   <p className="text-center">
     <GetInTouchButton />
 
-    <a href={url} className="button white has-arrow">visit site</a>
-
+    <a href={url} className="button white has-arrow" target="_blank">
+      visit site
+    </a>
   </p>
 );
 

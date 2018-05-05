@@ -2,64 +2,22 @@ import React from 'react';
 import Link from 'gatsby-link';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
 export default class Subscribe extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      email: ``,
-    };
+  constructor(props) {
+    super(props);
+    this.state = { email: '' };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  // Update state each time user edits their email address
-  _handleEmailChange = e => {
-    this.setState({ email: e.target.value });
-  };
+  handleChange(event) {
+    this.setState({ email: event.target.value });
+  }
 
-  // Post to MC server & handle its response
-  _postEmailToMailchimp = email => {
-    addToMailchimp(email)
-      .then(result => {
-        // Mailchimp always returns a 200 response
-        // So we check the result for MC errors & failures
-        if (result.result !== `success`) {
-          this.setState({
-            status: `error`,
-            msg: result.msg,
-          });
-        } else {
-          // Email address succesfully subcribed to Mailchimp
-          this.setState({
-            status: `success`,
-            msg: result.msg,
-          });
-        }
-        console.log(result);
-      })
-
-      .catch(err => {
-        // Network failures, timeouts, etc
-        this.setState({
-          status: `error`,
-          msg: err,
-        });
-      });
-  };
-
-  _handleFormSubmit = e => {
-    e.preventDefault();
-    e.stopPropagation();
-
-    this.setState(
-      {
-        status: `sending`,
-        msg: null,
-        email: '',
-      },
-      // setState callback (subscribe email to MC)
-      this._postEmailToMailchimp(this.state.email, {
-        pathname: document.location.pathname,
-      }),
-    );
-  };
+  handleSubmit(event) {
+    event.preventDefault();
+    addToMailchimp(email);
+  }
 
   render() {
     return (
@@ -79,7 +37,8 @@ export default class Subscribe extends React.Component {
                 <input
                   type="email"
                   name="email"
-                  onClick={this._handleFormSubmit}
+                  value={this.state.email}
+                  onChange={this.handleChange}
                   id="email"
                   placeholder="Your email address..."
                   required=""

@@ -5,9 +5,9 @@ import Link from 'gatsby-link';
 import WorkList from '../components/WorkList';
 
 export default class IndexPage extends React.Component {
-  render () {
-    const {data} = this.props;
-    const {edges: work} = data.allContentfulWork;
+  render() {
+    const { data } = this.props;
+    const { edges: work } = data.allContentfulWork;
     return (
       <div>
         <Helmet title="Home | Zeiq" />

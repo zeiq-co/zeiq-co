@@ -5,9 +5,9 @@ import Helmet from 'react-helmet';
 import WorkList from '../components/WorkList';
 
 export default class Work extends React.Component {
-  render () {
-    const {data} = this.props;
-    const {edges: work} = data.allContentfulWork;
+  render() {
+    const { data } = this.props;
+    const { edges: work } = data.allContentfulWork;
 
     return (
       <div>
