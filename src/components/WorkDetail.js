@@ -13,7 +13,7 @@ const WorkDetail = ({ work }) => (
     <div className="col">
       <h4>Full column</h4>
       <p>
-        He slid back into his former position. "Getting up early all the time",
+        He slid back into his former positions. "Getting up early all the time",
         he thought, "it makes you stupid. You've got to get enough sleep.
         However hard he threw himself onto his right, he always rolled back to
         where he was. He must have tried it a hundred times, shut his eyes so
