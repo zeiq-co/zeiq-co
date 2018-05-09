@@ -52,6 +52,9 @@ export const workQuery = graphql`
       description {
         description
       }
+      content {
+        content
+      }
     }
   }
 `;

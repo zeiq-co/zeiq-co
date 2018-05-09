@@ -41,11 +41,12 @@
     "gatsby-source-filesystem": "^1.5.27",
     "gatsby-transformer-remark": "^1.7.37",
     "gatsby-transformer-sharp": "^1.6.22",
+    "lodash": "^4.16.4",
     "react-helmet": "^5.2.0",
     "react-load-script": "^0.0.6",
-    "styled-components": "^3.2.3",
+    "react-markdown": "^3.3.2",
     "slug": "^0.9.1",
-    "lodash": "^4.16.4"
+    "styled-components": "^3.2.3"
   },
   "devDependencies": {
     "babel-eslint": "7",
