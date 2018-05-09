@@ -8,7 +8,7 @@ const WorkDetail = ({ work }) => (
     </div>
     <div className="page-title-container">
       <h2>{work.title}</h2>
-      <p className="subtitle">{work.mainDescription.mainDescription}</p>
+      <p className="subtitle">{work.description.description}</p>
     </div>
     <div className="col">
       <h4>Full column</h4>
