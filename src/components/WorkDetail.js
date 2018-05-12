@@ -8,11 +8,11 @@ const WorkDetail = ({ work }) => (
       <img src={work.image.file.url} alt="featured" />
     </div>
     <div className="page-title-container">
-      <h2>{work.title}</h2>
+      <h1>{work.title}</h1>
       <p className="subtitle">{work.description.description}</p>
     </div>
     <div className="col">
-      <h4>About</h4>
+      <h2>About</h2>
       <p>
         {' '}
         <ReactMarkdown source={work.content.content} />
