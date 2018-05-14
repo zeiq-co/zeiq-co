@@ -59,6 +59,11 @@ export const query = graphql`
         node {
           id
           title
+          image {
+            file {
+              url
+            }
+          }
           slug
           shortDescription
           description {
