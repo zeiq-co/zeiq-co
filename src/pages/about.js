@@ -84,7 +84,7 @@ export const query = graphql`
         }
       }
     }
-    allContentfulBrand {
+    allContentfulBrand(sort: { fields: [order] }) {
       edges {
         node {
           id
