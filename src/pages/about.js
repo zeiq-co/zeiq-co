@@ -26,11 +26,11 @@ export default class About extends React.Component {
             <div className="row">
               <div className="col-12">
                 <AboutHero about={about} />
-                <Carousel carousel={carousel} />
+                <BrandGallery brand={brand} />
+                {/* <Carousel carousel={carousel} /> */}
                 <Buttons />
                 <TeamGallery team={team} />
                 <BlockQuote />
-                <BrandGallery brand={brand} />
                 <CallToAction />
               </div>
             </div>
