@@ -25,6 +25,7 @@
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-favicon": "^2.1.1",
     "gatsby-plugin-google-analytics": "^1.0.24",
+    "gatsby-plugin-mailchimp": "^2.2.3",
     "gatsby-plugin-manifest": "^1.0.15",
     "gatsby-plugin-nprogress": "^1.0.14",
     "gatsby-plugin-offline": "^1.0.15",
@@ -40,8 +41,11 @@
     "gatsby-source-filesystem": "^1.5.27",
     "gatsby-transformer-remark": "^1.7.37",
     "gatsby-transformer-sharp": "^1.6.22",
+    "lodash": "^4.16.4",
     "react-helmet": "^5.2.0",
     "react-load-script": "^0.0.6",
+    "react-markdown": "^3.3.2",
+    "slug": "^0.9.1",
     "styled-components": "^3.2.3"
   },
   "devDependencies": {

@@ -34,7 +34,7 @@ class WorkList extends React.Component {
                   service digital agency who helps brands stand out. Checkout
                   our work.
                 </h1>
-                <Link to="/services">
+                <Link to="/services/">
                   <a className="button big">All that we do&hellip;</a>
                 </Link>
               </div>
@@ -54,7 +54,7 @@ class WorkList extends React.Component {
         </div>
 
         <p className="extra-margin-top text-center">
-          <Link to="/work">
+          <Link to="/work/">
             <a className="button white big has-arrow">View all our work</a>
           </Link>
         </p>

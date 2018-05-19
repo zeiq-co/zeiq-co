@@ -8,38 +8,73 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import './index.css';
 
-const IndexLayout = ({ children, data }) => {
-  const social = data.contentfulContact;
-  return (
-    <div>
-      <Helmet
-        title={config.siteName}
-        meta={[
-          // Search Engine
-          { name: 'image', content: config.image },
-          { name: 'description', content: config.description },
+class IndexLayout extends React.Component {
+  render() {
+    const { data, children } = this.props;
+    const social = data.contentfulContact;
+    return (
+      <div>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          {/* General tags */}
+          <meta name="description" content={config.description} />
+          <meta name="image" content={config.image} />
+          {/* Schema.org tags */}
+          {/* <script type="application/ld+json">
+          {JSON.stringify(schemaOrgJSONLD)}
+        </script> */}
+          {/* OpenGraph tags */}
+          <meta property="og:type" content="article" />
+          <meta property="og:title" content={config.siteName} />
+          <meta property="og:description" content={config.description} />
+          <meta property="og:image" content={config.image} />
+          {/* <meta
+          property="fb:app_id"
+          content={config.siteFBAppID ? config.siteFBAppID : ''} */}
+          />
+          {/* Twitter Card tags */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:creator" content={config.twitterCreator} />
+          <meta name="twitter:title" content={config.siteName} />
+          <meta name="twitter:description" content={config.description} />
+          <meta name="twitter:image" content={config.image} />
+        </Helmet>
+        <Header />
+        {/* meta={[
+            // Search Engine
+            { name: 'image', content: image },
+            { name: 'description', content: description },
+            { itemprop: 'description', content: description },
+            { itemprop: 'image', content: image },
+            { name: 'author', content: APP_AUTHOR },
 
-          // Twitter
-          { name: 'twitter:site', content: config.twitterSite },
-          { name: 'twitter:creator', content: config.twitterCreator },
-          { name: 'twitter:image:src', content: config.image },
+            // Twitter
+            { name: 'twitter:card', content: 'summary_large_image' },
+            { name: 'twitter:site', content: twitter },
+            { name: 'twitter:description', content: description },
+            { name: 'twitter:title', content: APP_NAME },
+            { name: 'twitter:creator', content: APP_AUTHOR },
+            { name: 'twitter:image:src', content: image },
 
-          // Open Graph general (Facebook, Linkdin & Google+)
-
-          { name: 'og:image', content: config.image },
-          { name: 'og:site_name', content: config.siteName },
-          { name: 'og:locale', content: config.locale },
-          { name: 'fb:admins', content: config.fbUserId },
-          { name: 'fb:app_id', content: config.fbAppId },
-          { name: 'og:type', content: config.type },
-        ]}
-      />
-      <Header />
-      {children()}
-      <Footer social={social} />
-    </div>
-  );
-};
+            // Open Graph general (Facebook, Linkdin & Google+)
+            { name: 'og:title', content: APP_NAME },
+            { name: 'og:image', content: image },
+            { name: 'og:site_name', content: APP_NAME },
+            { name: 'og:description', content: description },
+            { name: 'og:locale', content: 'en_us' },
+            { name: 'fb:admins', content: fbUserId },
+            { name: 'fb:app_id', content: fbAppId },
+            { name: 'og:type', content: type },
+            { name: 'og:url', content: SITE_URL },
+          ]} */}
+        {children()}
+        <Footer social={social} />
+      </div>
+    );
+  }
+}
 IndexLayout.propTypes = {
   children: PropTypes.func.isRequired,
 };

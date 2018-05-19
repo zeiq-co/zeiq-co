@@ -9,20 +9,13 @@ import Subscribe from '../components/Subscribe';
 import Tweet from '../components/Tweet';
 
 export default class Contact extends React.Component {
-  componentDidMount() {
-    jQuery('#address-selector .bottom-button').on('click', function(e) {
-      e.preventDefault();
-      jQuery('#address-selector').toggleClass('show-map');
-    });
-  }
-  render() {
-    const { data } = this.props;
+  render () {
+    const {data} = this.props;
     const contact = data.contentfulContact;
     const social = data.contentfulContact;
-    console.log(contact);
     return (
       <div>
-        <Helmet title="contact" />
+        <Helmet title="Contact | Zeiq" />
         <main id="content" className="white-background">
           <div className="container">
             <div className="row eq-height-container">

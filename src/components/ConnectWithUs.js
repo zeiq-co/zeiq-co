@@ -21,6 +21,9 @@ const ConnectWithUs = ({ social }) => (
             twitter
           </a>{' '}
           <i className="fab fa-linkedin-in" />
+          <a href={social.linkedInId} className="social-link saulticon">
+            linkedin
+          </a>
           <a href={social.instagramId} className="social-link saulticon">
             instagram
           </a>

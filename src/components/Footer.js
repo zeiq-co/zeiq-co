@@ -12,11 +12,10 @@ const Footer = ({ social }) => (
                 <Link to="/">
                   <a className="mini-logo">
                     <img
-                      src="tmp/zeiq-logo-1.svg"
+                      src="/img/zeiq-logo-offblack.png"
                       width="144"
                       height="43"
-                      style={{ width: 144, height: 43 }}
-                      alt="Sault"
+                      alt="zeiq"
                     />
                   </a>
                 </Link>
@@ -26,16 +25,24 @@ const Footer = ({ social }) => (
               <nav>
                 <ul>
                   <li>
-                    <a href={social.facebookId}>Facebook</a>
+                    <a href={social.facebookId} target="_blank">
+                      Facebook
+                    </a>
                   </li>
                   <li>
-                    <a href={social.twitterId}>Twitter</a>
+                    <a href={social.twitterId} target="_blank">
+                      Twitter
+                    </a>
                   </li>
                   <li>
-                    <a href={social.linkedInId}>LinkedIn</a>
+                    <a href={social.linkedInId} target="_blank">
+                      LinkedIn
+                    </a>
                   </li>
                   <li>
-                    <a href={social.instagramId}>Instagram</a>
+                    <a href={social.instagramId} target="_blank">
+                      Instagram
+                    </a>
                   </li>
                 </ul>
               </nav>

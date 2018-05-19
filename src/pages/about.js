@@ -20,17 +20,17 @@ export default class About extends React.Component {
     // console.log(brand);
     return (
       <div>
-        <Helmet title="about" />
+        <Helmet title="About | Zeiq" />
         <main id="content" className="white-background">
           <div className="container">
             <div className="row">
               <div className="col-12">
                 <AboutHero about={about} />
-                <Carousel carousel={carousel} />
+                <BrandGallery brand={brand} />
+                {/* <Carousel carousel={carousel} /> */}
                 <Buttons />
                 <TeamGallery team={team} />
                 <BlockQuote />
-                <BrandGallery brand={brand} />
                 <CallToAction />
               </div>
             </div>
@@ -66,7 +66,7 @@ export const query = graphql`
         }
       }
     }
-    allContentfulTeamMember {
+    allContentfulTeamMember(sort: { fields: [order] }) {
       edges {
         node {
           id
@@ -84,7 +84,7 @@ export const query = graphql`
         }
       }
     }
-    allContentfulBrand {
+    allContentfulBrand(sort: { fields: [order] }) {
       edges {
         node {
           id

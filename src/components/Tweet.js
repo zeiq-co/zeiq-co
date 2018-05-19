@@ -5,11 +5,10 @@ const Tweet = () => (
   <div className="col-12">
     <div className="tweet">
       <p>
-        <a href="#">#SAULT</a> The Lorem Ipsum is already being used by{' '}
-        <a href="#">#Mordor</a> &amp; <a href="#">#Saruman</a> against humans
-        &amp; hobbits. Elves can’t beat it. It’s gotta go quick.
+        <a href="#">#ZEIQ</a> are already used by many global brands. Want
+        something innovative and awesome - hire them.{' '}
       </p>
-      <a href="#">@ipsumgenerator</a>
+      <a href="https://twitter.com/aesthytik">@aesthytik</a>
     </div>
   </div>
 );

@@ -13,7 +13,7 @@ export default class Blog extends React.Component {
     // console.log(blogs);
     return (
       <div>
-        <Helmet title="blog" />
+        <Helmet title="Blog | Zeiq" />
         <main id="content" className="white-background">
           <div className="container">
             <div className="row blog-listing no-sidebar">

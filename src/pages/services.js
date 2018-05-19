@@ -9,31 +9,30 @@ import WhatYouNeedIsNotListed from '../components/WhatYouNeedIsNotListed';
 
 export default class Services extends React.Component {
   componentDidMount() {
-    jQuery('.tab-links a').on('click', function(e) {
-      var $this = jQuery(this),
+    $('.tab-links a').on('click', function(e) {
+      var $this = $(this),
         $parent = $this.parent();
       e.preventDefault();
       if ($this.hasClass('active')) {
         return;
       }
       $parent.siblings('li').each(function() {
-        var $link = jQuery('a', this);
+        var $link = $('a', this);
         $link.removeClass('active');
-        jQuery($link.attr('href')).removeClass('active');
+        $($link.attr('href')).removeClass('active');
       });
       $this.addClass('active');
-      jQuery($this.attr('href')).addClass('active');
+      $($this.attr('href')).addClass('active');
     });
   }
 
   render() {
     const { data } = this.props;
     const { edges: services } = data.allContentfulService;
-    console.log('services', services);
 
     return (
       <div>
-        <Helmet title="services" />
+        <Helmet title="Services | Zeiq" />
         <main id="content" className="white-background">
           <div className="container">
             <div className="row">
@@ -60,6 +59,11 @@ export const query = graphql`
         node {
           id
           title
+          image {
+            file {
+              url
+            }
+          }
           slug
           shortDescription
           description {

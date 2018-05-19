@@ -4,12 +4,12 @@ import Link from 'gatsby-link';
 const BlockQuote = () => (
   <blockquote>
     <p>
-      Going with Zeiq for our Branding could easily be the most prominent step
+      Going with Zeiq for our project could easily be the most prominent step
       we’ve taken this year towards a better Product.
     </p>
     <cite>
-      <a href="#">Angel Lopez</a>
-      <br /> CEO, Lopez &amp; Dent
+      <a href="#">Kapil Bhatia</a>
+      <br /> Manager, LuxuryLImoLand
     </cite>
   </blockquote>
 );

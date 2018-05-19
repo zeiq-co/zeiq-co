@@ -1,4 +1,5 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 
 import WorkList from '../components/WorkList';
@@ -7,15 +8,17 @@ export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: work } = data.allContentfulWork;
-    console.log(work);
     return (
-      <main id="content" className="white-background">
-        <div className="container">
-          <div className="row">
-            <WorkList introVisible={true} workList={work} />
+      <div>
+        <Helmet title="Home | Zeiq" />
+        <main id="content" className="white-background">
+          <div className="container">
+            <div className="row">
+              <WorkList introVisible={true} workList={work} />
+            </div>
           </div>
-        </div>
-      </main>
+        </main>
+      </div>
     );
   }
 }
@@ -27,6 +30,7 @@ export const query = graphql`
         node {
           id
           title
+          slug
           image {
             file {
               url

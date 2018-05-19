@@ -18,12 +18,19 @@ module.exports = class HTML extends React.Component {
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-          <link rel="shortcut icon" href="img/favicon.png" />
+          <base href="/" target="_blank" />
+
+          <link rel="shortcut icon" href="/img/favicon.png" />
           <link
             href="//fonts.googleapis.com/css?family=Merriweather:300,400%7CRubik:400,500,700"
             rel="stylesheet"
           />
-          <link rel="stylesheet" href="/css/app.min.css" />
+          <link
+            href="css/app.min.css"
+            rel="stylesheet"
+            type="text/css"
+            crossorigin="anonymous"
+          />
         </head>
 
         <body {...this.props.bodyAttributes}>
@@ -34,7 +41,8 @@ module.exports = class HTML extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
-          <script src="js/app.min.js" />
+          <script src="js/app.min.js" crossorigin="anonymous" />
+
           <script
             defer
             src="//use.fontawesome.com/releases/v5.0.8/js/all.js"

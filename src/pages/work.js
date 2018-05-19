@@ -11,7 +11,7 @@ export default class Work extends React.Component {
 
     return (
       <div>
-        <Helmet title="work" />
+        <Helmet title="Work | Zeiq" />
         <main id="content" className="white-background">
           <div className="container">
             <div className="row">
@@ -31,6 +31,7 @@ export const query = graphql`
         node {
           id
           title
+          slug
           image {
             file {
               url

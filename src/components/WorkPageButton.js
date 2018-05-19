@@ -1,14 +1,16 @@
 import React from 'react';
 import Link from 'gatsby-link';
+
 import GetInTouchButton from './GetInTouchButton';
 
-const Buttons = () => (
+const WorkPageButton = ({ url }) => (
   <p className="text-center">
     <GetInTouchButton />
-    <Link to="/services/">
-      <a className="button white has-arrow">All our services</a>
-    </Link>
+
+    <a href={url} className="button white has-arrow" target="_blank">
+      visit site
+    </a>
   </p>
 );
 
-export default Buttons;
+export default WorkPageButton;

@@ -8,14 +8,33 @@ const TeamMember = ({data}) => (
         <h4>{data.name}</h4>
         <p>{data.position}</p>
         <p className="social-links">
-          <a href={data.facebookId} className="social-link saulticon">
+          <a
+            href={data.facebookId}
+            className="social-link saulticon"
+            target="_blank"
+          >
             facebook
           </a>
-          <a href={data.twitterId} className="social-link saulticon">
+          <a
+            href={data.twitterId}
+            className="social-link saulticon"
+            target="_blank"
+          >
             twitter
           </a>
-          <a href={data.linkedInId} className="social-link saulticon">
+          <a
+            href={data.linkedInId}
+            className="social-link saulticon"
+            target="_blank"
+          >
             linkedin
+          </a>
+          <a
+            href={data.instagramId}
+            className="social-link saulticon"
+            target="_blank"
+          >
+            instagram
           </a>
         </p>
       </div>

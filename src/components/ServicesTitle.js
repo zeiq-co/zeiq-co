@@ -8,7 +8,9 @@ const ServicesTitle = () => (
     <p>
       What you achieve with us is more than just the names of our services. If
       something you expect us to do is not listed here, do{' '}
-      <a href="contact.html">get in touch!</a>
+      <Link to="/contact/">
+        <a>get in touch!</a>
+      </Link>
     </p>
   </div>
 );

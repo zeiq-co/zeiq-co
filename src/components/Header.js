@@ -10,9 +10,9 @@ const Header = () => (
           <h1>
             <Link to="/">
               <img
-                src="tmp/zeiq-logo-offblack.svg"
+                src="/img/zeiq-logo-offblack.png"
                 alt="Zeiq"
-                style={{ width: 144, height: 43 }}
+                style={{ height: 43 }}
               />
             </Link>
           </h1>
@@ -28,19 +28,19 @@ const Header = () => (
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/about">About</Link>
+                <Link to="/about/">About</Link>
               </li>
               <li>
-                <Link to="/work">Work</Link>
+                <Link to="/work/">Work</Link>
               </li>
               <li>
-                <Link to="/blog">Blog</Link>
+                <Link to="/blog/">Blog</Link>
               </li>
               <li>
-                <Link to="/services">Services</Link>
+                <Link to="/services/">Services</Link>
               </li>
               <li>
-                <Link to="/contact">Contact</Link>
+                <Link to="/contact/">Contact</Link>
               </li>
             </ul>
           </nav>
