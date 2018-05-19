@@ -41,6 +41,7 @@ module.exports = class HTML extends React.Component {
             integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
             crossorigin="anonymous"
           />
+          <script src="/js/crisp.js" />
         </body>
       </html>
     );
