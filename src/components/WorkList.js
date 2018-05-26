@@ -19,7 +19,7 @@ class WorkList extends React.Component {
   }
 
   render() {
-    const { introVisible, workList } = this.props;
+    const { introVisible, workList, buttonVisible } = this.props;
     let activeItemIndex = 0;
     // console.log('workList', workList);
 
@@ -52,12 +52,15 @@ class WorkList extends React.Component {
           <div className="grid-sizer" />
           <div className="gutter-sizer" />
         </div>
-
-        <p className="extra-margin-top text-center">
-          <Link to="/work/">
-            <a className="button white big has-arrow">View all our work</a>
-          </Link>
-        </p>
+        {buttonVisible === true ? (
+          <p className="extra-margin-top text-center">
+            <Link to="/work/">
+              <a className="button white big has-arrow">View all our work</a>
+            </Link>
+          </p>
+        ) : (
+          <p className="extra-margin-top text-center" />
+        )}
       </div>
     );
   }

@@ -15,7 +15,11 @@ export default class Work extends React.Component {
         <main id="content" className="white-background">
           <div className="container">
             <div className="row">
-              <WorkList introVisible={false} workList={work} />
+              <WorkList
+                introVisible={false}
+                workList={work}
+                buttonVisible={false}
+              />
             </div>
           </div>
         </main>

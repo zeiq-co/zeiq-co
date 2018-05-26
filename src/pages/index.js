@@ -14,7 +14,11 @@ export default class IndexPage extends React.Component {
         <main id="content" className="white-background">
           <div className="container">
             <div className="row">
-              <WorkList introVisible={true} workList={work} />
+              <WorkList
+                introVisible={true}
+                workList={work}
+                buttonVisible={true}
+              />
             </div>
           </div>
         </main>
