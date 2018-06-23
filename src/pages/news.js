@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 import BlogFeaturedImage from '../components/BlogFeaturedImage';
 import BlogList from '../components/BlogList';
 
-export default class Blog extends React.Component {
+export default class News extends React.Component {
   render() {
     const { data } = this.props;
     const { contentfulBlog: blog } = data;
