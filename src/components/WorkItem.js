@@ -7,7 +7,7 @@ const WorkItem = ({ item, size }) => (
       'grid-item-wide'} project-thumb`}
   >
     <a href={`/work/${item.slug}/`} target="_self">
-      <img src={item.image.file.url} width="900" height="900" alt="" />
+      <img src={item.image.file.url} alt="" />
       <span className="project-thumb-details">
         <span className="title">{item.title}</span>
         <span className="description">{item.description.description}</span>

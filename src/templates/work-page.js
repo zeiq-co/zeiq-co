@@ -5,7 +5,6 @@ import Helmet from 'react-helmet';
 import AboutHero from '../components/AboutHero';
 import WorkPageButton from '../components/WorkPageButton';
 import BlockQuote from '../components/BlockQuote';
-import BrandGallery from '../components/BrandGallery';
 import CallToAction from '../components/CallToAction';
 import WorkDetail from '../components/WorkDetail';
 
@@ -16,7 +15,7 @@ class WorkTemplate extends React.Component {
     console.log(data);
     return (
       <div>
-        <Helmet title="About | Zeiq" />
+        <Helmet title={data.contentfulWork.title} />
         <main id="content" className="white-background">
           <div className="container">
             <div className="row">

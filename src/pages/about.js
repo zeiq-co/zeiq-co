@@ -7,8 +7,8 @@ import Carousel from '../components/Carousel';
 import Buttons from '../components/Buttons';
 import TeamGallery from '../components/TeamGallery';
 import BlockQuote from '../components/BlockQuote';
-import BrandGallery from '../components/BrandGallery';
 import CallToAction from '../components/CallToAction';
+import Tech from '../components/Tech';
 
 export default class About extends React.Component {
   render() {
@@ -16,7 +16,7 @@ export default class About extends React.Component {
     const { contentfulAbout: about } = data;
     const { edges: carousel } = data.allContentfulCarouselItem;
     const { edges: team } = data.allContentfulTeamMember;
-    const { edges: brand } = data.allContentfulBrand;
+    const { edges: brand } = data.allContentfulTech;
     // console.log(brand);
     return (
       <div>
@@ -26,7 +26,7 @@ export default class About extends React.Component {
             <div className="row">
               <div className="col-12">
                 <AboutHero about={about} />
-                <BrandGallery brand={brand} />
+                <Tech brand={brand} />
                 {/* <Carousel carousel={carousel} /> */}
                 <Buttons />
                 <TeamGallery team={team} />
@@ -84,10 +84,11 @@ export const query = graphql`
         }
       }
     }
-    allContentfulBrand(sort: { fields: [order] }) {
+    allContentfulTech(sort: { fields: [order] }) {
       edges {
         node {
           id
+          slug
           image {
             file {
               url

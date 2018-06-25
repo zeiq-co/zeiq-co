@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-const PostFeaturedImage = () => (
+const PostFeaturedImage = ({ image }) => (
   <div className="post-featured-image">
     <img src="tmp/sample-big.png" alt="" />
   </div>

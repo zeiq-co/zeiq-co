@@ -3,6 +3,8 @@ import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 
 import WorkList from '../components/WorkList';
+import Seo from '../components/Seo';
+import config from '../config';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -10,6 +12,11 @@ export default class IndexPage extends React.Component {
     const { edges: work } = data.allContentfulWork;
     return (
       <div>
+        <Seo
+          title="Home"
+          description="We are web development company"
+          url={config.siteUrl}
+        />
         <Helmet title="Home | Zeiq" />
         <main id="content" className="white-background">
           <div className="container">
@@ -29,7 +36,7 @@ export default class IndexPage extends React.Component {
 
 export const query = graphql`
   query HomeQuery {
-    allContentfulWork(sort: { fields: [order] }) {
+    allContentfulWork(sort: { fields: [order] }, limit: 11) {
       edges {
         node {
           id

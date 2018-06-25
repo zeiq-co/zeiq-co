@@ -8,7 +8,6 @@ if (process.env.NODE_ENV === `production`) {
     console.log(e); // eslint-disable-line
   }
 }
-
 module.exports = class HTML extends React.Component {
   render() {
     return (
@@ -17,9 +16,7 @@ module.exports = class HTML extends React.Component {
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-
           <base href="/" target="_blank" />
-
           <link rel="shortcut icon" href="/img/favicon.png" />
           <link
             href="//fonts.googleapis.com/css?family=Merriweather:300,400%7CRubik:400,500,700"
@@ -32,7 +29,6 @@ module.exports = class HTML extends React.Component {
             crossorigin="anonymous"
           />
         </head>
-
         <body {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}
           <div
@@ -42,7 +38,6 @@ module.exports = class HTML extends React.Component {
           />
           {this.props.postBodyComponents}
           <script src="js/app.min.js" crossorigin="anonymous" />
-
           <script
             defer
             src="//use.fontawesome.com/releases/v5.0.8/js/all.js"
