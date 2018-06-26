@@ -4,7 +4,7 @@ module.exports = {
   description: 'Official Website for Zeiq.co',
   siteUrl: 'https://www.zeiq.co',
   mediumPublicationUrl: 'https://medium.com/zeiq',
-  image: '/img/zeiq-logo.png',
+  image: './img/zeiq-logo.png',
   googleAnalytics: '',
   backgroundColor: '#e0e0e0',
   themeColor: '#c62828',

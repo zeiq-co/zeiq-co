@@ -36,8 +36,9 @@ export default class Services extends React.Component {
       <div>
         <Seo
           title="Services"
-          description="We are web development company"
+          description="Services which we provide"
           url={config.siteUrl}
+          image="http://www.zeiq.co/img/zeiq-logo-offblack.png"
         />
         <main id="content" className="white-background">
           <div className="container">

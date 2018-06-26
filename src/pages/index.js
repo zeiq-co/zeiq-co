@@ -15,7 +15,7 @@ export default class IndexPage extends React.Component {
           title="Home"
           description="We are web development company"
           url={config.siteUrl}
-          image="/img/zeiq-logo-offblack.png"
+          image="http://www.zeiq.co/img/zeiq-logo-offblack.png"
         />
         <main id="content" className="white-background">
           <div className="container">

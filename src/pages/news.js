@@ -17,8 +17,9 @@ export default class News extends React.Component {
       <div>
         <Seo
           title="News"
-          description="We are web development company"
+          description="Read about the techs we use!"
           url={config.siteUrl}
+          image="http://www.zeiq.co/img/zeiq-logo-offblack.png"
         />
         <main id="content" className="white-background">
           <div className="container">

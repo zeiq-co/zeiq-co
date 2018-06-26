@@ -19,7 +19,7 @@ export default class Contact extends React.Component {
       <div>
         <Seo
           title="Contact"
-          description="We are web development company"
+          description="Let's discuss how we can help you!"
           url={config.siteUrl}
         />
         <main id="content" className="white-background">
