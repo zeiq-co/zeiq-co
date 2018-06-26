@@ -36,7 +36,7 @@ export default class Services extends React.Component {
       <div>
         <Seo
           title="Services"
-          description="Services which we provide"
+          description="What you achieve with us is more than just the names of our services. If something you expect us to do is not listed here, do get in touch!"
           url={config.siteUrl}
           image="http://www.zeiq.co/img/zeiq-logo-offblack.png"
         />
