@@ -8,26 +8,43 @@ if (process.env.NODE_ENV === `production`) {
     console.log(e); // eslint-disable-line
   }
 }
+
 module.exports = class HTML extends React.Component {
   render() {
+    let css;
+    if (process.env.NODE_ENV === `production`) {
+      css = (
+        <style
+          id="gatsby-inlined-css"
+          dangerouslySetInnerHTML={{ __html: stylesStr }}
+        />
+      );
+    }
     return (
       <html lang="en" {...this.props.htmlAttributes}>
         <head>
-          <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <base href="/" target="_blank" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+          />
+          <meta charSet="UTF-8" />
+          <meta name="author" content="Parminder Klair" />
           <link rel="shortcut icon" href="/img/favicon.png" />
           <link
             href="//fonts.googleapis.com/css?family=Merriweather:300,400%7CRubik:400,500,700"
             rel="stylesheet"
           />
+          <base href="/" target="_blank" />
           <link
             href="css/app.min.css"
             rel="stylesheet"
             type="text/css"
             crossorigin="anonymous"
           />
+
+          {this.props.headComponents}
+          {css}
         </head>
         <body {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}

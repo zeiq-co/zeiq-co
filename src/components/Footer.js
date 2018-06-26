@@ -44,6 +44,11 @@ const Footer = ({ social }) => (
                       Instagram
                     </a>
                   </li>
+                  <li>
+                    <a href={social.mediumId} target="_blank">
+                      Medium
+                    </a>
+                  </li>
                 </ul>
               </nav>
             </div>

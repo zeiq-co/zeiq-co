@@ -9,6 +9,8 @@ import TeamGallery from '../components/TeamGallery';
 import BlockQuote from '../components/BlockQuote';
 import CallToAction from '../components/CallToAction';
 import Tech from '../components/Tech';
+import Seo from '../components/Seo';
+import config from '../config';
 
 export default class About extends React.Component {
   render() {
@@ -20,7 +22,11 @@ export default class About extends React.Component {
     // console.log(brand);
     return (
       <div>
-        <Helmet title="About | Zeiq" />
+        <Seo
+          title="About"
+          description="We are web development company"
+          url={config.siteUrl}
+        />
         <main id="content" className="white-background">
           <div className="container">
             <div className="row">

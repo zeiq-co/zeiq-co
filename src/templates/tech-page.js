@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import Helmet from 'react-helmet';
 
 import PostContent from '../components/PostContent';
 import PostFeaturedImage from '../components/PostFeaturedImage';
@@ -11,7 +10,6 @@ class TechTemplate extends React.Component {
     console.log(data);
     return (
       <div>
-        <Helmet title="Technology" />
         <main id="content" className="white-background">
           <div className="container">
             <div className="row">

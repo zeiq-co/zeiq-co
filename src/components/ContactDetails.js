@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 class ContactDetails extends React.Component {
-  render () {
-    const {contact} = this.props;
+  render() {
+    const { contact } = this.props;
     return (
       <div className="col-md-6">
         <div className="grey-box">
@@ -12,9 +12,9 @@ class ContactDetails extends React.Component {
               <div className="address-details">
                 <h1>
                   We’re @{' '}
-                  <a href="#" className="change-address">
-                    ZEIQ
-                  </a>
+                  <Link to="/">
+                    <a className="change-address">ZEIQ</a>
+                  </Link>
                 </h1>
                 <ul className="ul-custom-bullet">
                   <li>

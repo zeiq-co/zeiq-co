@@ -1,24 +1,41 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import Truncate from 'react-truncate';
 
-const BlogFeaturedImage = ({blog}) => (
-  <div className="col-12">
-    <article className="post featured has-thumbnail">
-      <a href="post.html" className="feature-image-link">
-        <img src={blog.featuredImage.file.url} alt="blog" />
-      </a>
-      <div className="post-details">
-        <h3>
-          <a href="post.html">{blog.title}</a>
-        </h3>
-        <hr />
-        <p>{blog.description.description}</p>
-        <Link to="/post" className="read-more">
-          Continue reading <i className="saulticon-arrow-forward" />
-        </Link>
-      </div>
-    </article>
-  </div>
-);
+import config from '../config';
+
+const BlogFeaturedImage = ({ blog }) => {
+  const url = `${config.mediumPublicationUrl}/${blog.uniqueSlug}`;
+  return (
+    <div className="col-12">
+      <article className="post featured has-thumbnail">
+        <a className="feature-image-link">
+          <img
+            src={
+              `https://cdn-images-1.medium.com/max/800/${
+                blog.virtuals.previewImage.imageId
+              }` || 'tmp/sample-big.png'
+            }
+            alt="blog"
+          />
+        </a>
+        <div className="post-details">
+          <h3>
+            <a>{blog.title}</a>
+          </h3>
+          <hr />
+          <p>
+            <Truncate lines={3} ellipsis="">
+              {blog.virtuals.subtitle}
+            </Truncate>
+          </p>
+          <a href={url} className="read-more">
+            Continue reading <i className="saulticon-arrow-forward" />
+          </a>
+        </div>
+      </article>
+    </div>
+  );
+};
 
 export default BlogFeaturedImage;

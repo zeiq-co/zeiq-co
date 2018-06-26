@@ -3,6 +3,8 @@ import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 
 import WorkList from '../components/WorkList';
+import Seo from '../components/Seo';
+import config from '../config';
 
 export default class Work extends React.Component {
   render() {
@@ -11,7 +13,11 @@ export default class Work extends React.Component {
 
     return (
       <div>
-        <Helmet title="Work | Zeiq" />
+        <Seo
+          title="Services"
+          description="We are web development company"
+          url={config.siteUrl}
+        />
         <main id="content" className="white-background">
           <div className="container">
             <div className="row">

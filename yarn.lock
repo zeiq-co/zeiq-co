@@ -440,7 +440,7 @@ aws4@^1.6.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.7.0.tgz#d4d0e9b9dbfca77bf08eeb0a8a471550fe39e289"
 
-axios@^0.16.1:
+axios@^0.16.1, axios@^0.16.2:
   version "0.16.2"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.16.2.tgz#ba4f92f17167dfbab40983785454b9ac149c3c6d"
   dependencies:
@@ -4454,6 +4454,13 @@ gatsby-source-filesystem@^1.5.27:
     pretty-bytes "^4.0.2"
     slash "^1.0.0"
     valid-url "^1.0.9"
+
+gatsby-source-medium@^1.0.14:
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/gatsby-source-medium/-/gatsby-source-medium-1.0.14.tgz#d8295075cc45883d16a5534abdf1d66f7303bb6b"
+  dependencies:
+    axios "^0.16.2"
+    babel-runtime "^6.26.0"
 
 gatsby-transformer-remark@^1.7.37:
   version "1.7.40"
@@ -8900,6 +8907,10 @@ react-side-effect@^1.1.0:
   dependencies:
     exenv "^1.2.1"
     shallowequal "^1.0.1"
+
+react-truncate@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/react-truncate/-/react-truncate-2.3.0.tgz#d469b355aff1f83ae9e0f2fed0d47dfd061e5d2e"
 
 react@^15.6.0:
   version "15.6.2"

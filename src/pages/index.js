@@ -1,5 +1,4 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 
 import WorkList from '../components/WorkList';
@@ -16,8 +15,8 @@ export default class IndexPage extends React.Component {
           title="Home"
           description="We are web development company"
           url={config.siteUrl}
+          image="/img/zeiq-logo-offblack.png"
         />
-        <Helmet title="Home | Zeiq" />
         <main id="content" className="white-background">
           <div className="container">
             <div className="row">

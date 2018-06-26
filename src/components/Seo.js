@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import config from '../config';
 
 const Seo = ({ title, description, url, image }) => {
-  const pageTitle = `${title} - ${config.siteName}`;
+  const pageTitle = `${title} | ${config.siteName}`;
 
   return (
     <Helmet>

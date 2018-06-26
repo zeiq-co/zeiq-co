@@ -7,15 +7,21 @@ import WriteToUs from '../components/WriteToUs';
 import ConnectWithUs from '../components/ConnectWithUs';
 import Subscribe from '../components/Subscribe';
 import Tweet from '../components/Tweet';
+import Seo from '../components/Seo';
+import config from '../config';
 
 export default class Contact extends React.Component {
-  render () {
-    const {data} = this.props;
+  render() {
+    const { data } = this.props;
     const contact = data.contentfulContact;
     const social = data.contentfulContact;
     return (
       <div>
-        <Helmet title="Contact | Zeiq" />
+        <Seo
+          title="Contact"
+          description="We are web development company"
+          url={config.siteUrl}
+        />
         <main id="content" className="white-background">
           <div className="container">
             <div className="row eq-height-container">

@@ -6,6 +6,8 @@ import ServicesTitle from '../components/ServicesTitle';
 import ServicesNavigation from '../components/ServicesNavigation';
 import ServiceItem from '../components/ServiceItem';
 import WhatYouNeedIsNotListed from '../components/WhatYouNeedIsNotListed';
+import Seo from '../components/Seo';
+import config from '../config';
 
 export default class Services extends React.Component {
   componentDidMount() {
@@ -32,7 +34,11 @@ export default class Services extends React.Component {
 
     return (
       <div>
-        <Helmet title="Services | Zeiq" />
+        <Seo
+          title="Services"
+          description="We are web development company"
+          url={config.siteUrl}
+        />
         <main id="content" className="white-background">
           <div className="container">
             <div className="row">
@@ -54,7 +60,7 @@ export default class Services extends React.Component {
 
 export const query = graphql`
   query ServicesQuery {
-    allContentfulService {
+    allContentfulService(sort: { fields: [createdAt] }) {
       edges {
         node {
           id

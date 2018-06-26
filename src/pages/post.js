@@ -12,7 +12,6 @@ export default class Post extends React.Component {
   render() {
     return (
       <div>
-        <Helmet title="Post | Zeiq" />
         <main id="content" className="white-background">
           <div className="container">
             <div className="row">
