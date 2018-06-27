@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'gatsby-link';
 
 const WorkItem = ({ item, size }) => (
   <div

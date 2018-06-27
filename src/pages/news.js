@@ -12,7 +12,7 @@ export default class News extends React.Component {
     const { data } = this.props;
     const { edges: blogs } = data.allMediumPost;
     const blog = data.mediumPost;
-    console.log(blogs);
+    // console.log(blogs);
     return (
       <div>
         <Seo

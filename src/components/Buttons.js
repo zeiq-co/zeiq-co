@@ -5,8 +5,8 @@ import GetInTouchButton from './GetInTouchButton';
 const Buttons = () => (
   <p className="text-center">
     <GetInTouchButton />
-    <Link to="/services/">
-      <a className="button white has-arrow">All our services</a>
+    <Link to="/services/" className="button white has-arrow">
+      All our services
     </Link>
   </p>
 );

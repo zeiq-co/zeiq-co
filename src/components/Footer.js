@@ -9,15 +9,13 @@ const Footer = ({ social }) => (
           <div className="widget-area">
             <div className="widget widget_text">
               <p>
-                <Link to="/">
-                  <a className="mini-logo">
-                    <img
-                      src="/img/zeiq-logo-offblack.png"
-                      width="144"
-                      height="43"
-                      alt="zeiq"
-                    />
-                  </a>
+                <Link to="/" className="mini-logo">
+                  <img
+                    src="/img/zeiq-logo-offblack.png"
+                    width="144"
+                    height="43"
+                    alt="zeiq"
+                  />
                 </Link>
               </p>
             </div>

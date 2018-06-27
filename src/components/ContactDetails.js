@@ -12,8 +12,8 @@ class ContactDetails extends React.Component {
               <div className="address-details">
                 <h1>
                   We’re @{' '}
-                  <Link to="/">
-                    <a className="change-address">ZEIQ</a>
+                  <Link to="/" className="change-address">
+                    ZEIQ
                   </Link>
                 </h1>
                 <ul className="ul-custom-bullet">

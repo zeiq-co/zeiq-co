@@ -34,8 +34,8 @@ class WorkList extends React.Component {
                   service digital agency who helps brands stand out. Checkout
                   our work.
                 </h1>
-                <Link to="/services/">
-                  <a className="button big">All that we do&hellip;</a>
+                <Link to="/services/" className="button big">
+                  All that we do&hellip;
                 </Link>
               </div>
             </div>
@@ -52,14 +52,14 @@ class WorkList extends React.Component {
           <div className="grid-sizer" />
           <div className="gutter-sizer" />
         </div>
-        {buttonVisible === true ? (
+        {buttonVisible ? (
           <p className="extra-margin-top text-center">
-            <Link to="/work/">
-              <a className="button white big has-arrow">View all our work</a>
+            <Link to="/work/" className="button white big has-arrow">
+              View all our work
             </Link>
           </p>
         ) : (
-          <p className="extra-margin-top text-center" />
+          ''
         )}
       </div>
     );

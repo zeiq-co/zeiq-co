@@ -7,7 +7,7 @@ import PostFeaturedImage from '../components/PostFeaturedImage';
 class TechTemplate extends React.Component {
   render() {
     const { data } = this.props;
-    console.log(data);
+    // console.log(data);
     return (
       <div>
         <main id="content" className="white-background">

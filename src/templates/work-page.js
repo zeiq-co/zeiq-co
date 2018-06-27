@@ -12,7 +12,7 @@ class WorkTemplate extends React.Component {
   render() {
     // console.log(brand);
     const { data } = this.props;
-    console.log(data);
+    // console.log(data);
     return (
       <div>
         <Helmet title={data.contentfulWork.title} />
