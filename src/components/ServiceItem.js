@@ -13,11 +13,7 @@ const ServiceItem = ({ services }) => (
         <h2>{node.title}</h2>
         <p className="extra-margin-bottom">{node.shortDescription}</p>
         <p className="extra-margin-bottom">
-          <img
-            src={node.image.file.url}
-            style={{ width: 1180, height: 680 }}
-            alt=""
-          />
+          <img src={node.image.file.url} alt="" style={{ width: '75%' }} />
         </p>
         <p className="extra-margin-bottom">{node.description.description}</p>
       </div>

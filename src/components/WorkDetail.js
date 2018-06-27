@@ -5,7 +5,11 @@ import ReactMarkdown from 'react-markdown';
 const WorkDetail = ({ work }) => (
   <div>
     <div className="post-featured-image">
-      <img src={work.image.file.url} alt="featured" />
+      <img
+        src={work.image.file.url}
+        alt="featured"
+        style={{ width: '60%', height: '60%' }}
+      />
     </div>
     <div className="page-title-container">
       <h1>{work.title}</h1>
