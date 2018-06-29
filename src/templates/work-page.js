@@ -20,7 +20,7 @@ class WorkTemplate extends React.Component {
           title={data.contentfulWork.title}
           description="Our works"
           url={config.siteUrl}
-          image="http://www.zeiq.co/img/favicon.png"
+          image={data.contentfulWork.image.file.url}
         />
         <main id="content" className="white-background">
           <div className="container">
