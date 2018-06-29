@@ -1,12 +1,13 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import Helmet from 'react-helmet';
 
 import AboutHero from '../components/AboutHero';
 import WorkPageButton from '../components/WorkPageButton';
 import BlockQuote from '../components/BlockQuote';
 import CallToAction from '../components/CallToAction';
 import WorkDetail from '../components/WorkDetail';
+import Seo from '../components/Seo';
+import config from '../config';
 
 class WorkTemplate extends React.Component {
   render() {
@@ -15,7 +16,12 @@ class WorkTemplate extends React.Component {
     // console.log(data);
     return (
       <div>
-        <Helmet title={data.contentfulWork.title} />
+        <Seo
+          title={data.contentfulWork.title}
+          description="Our works"
+          url={config.siteUrl}
+          image="http://www.zeiq.co/img/favicon.png"
+        />
         <main id="content" className="white-background">
           <div className="container">
             <div className="row">

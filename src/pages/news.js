@@ -19,7 +19,7 @@ export default class News extends React.Component {
           title="News"
           description="Read about the techs we use!"
           url={config.siteUrl}
-          image="http://www.zeiq.co/img/zeiq-logo-offblack.png"
+          image="http://www.zeiq.co/img/favicon.png"
         />
         <main id="content" className="white-background">
           <div className="container">

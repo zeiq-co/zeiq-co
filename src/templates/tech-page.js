@@ -3,6 +3,8 @@ import Link from 'gatsby-link';
 
 import PostContent from '../components/PostContent';
 import PostFeaturedImage from '../components/PostFeaturedImage';
+import Seo from '../components/Seo';
+import config from '../config';
 
 class TechTemplate extends React.Component {
   render() {
@@ -10,6 +12,12 @@ class TechTemplate extends React.Component {
     // console.log(data);
     return (
       <div>
+        <Seo
+          title={data.contentfulTech.name}
+          description="Tech we use"
+          url={config.siteUrl}
+          image="http://www.zeiq.co/img/favicon.png"
+        />
         <main id="content" className="white-background">
           <div className="container">
             <div className="row">

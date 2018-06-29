@@ -21,7 +21,7 @@ export default class Contact extends React.Component {
           title="Contact"
           description="Let's discuss how we can help you!"
           url={config.siteUrl}
-          image="http://www.zeiq.co/img/zeiq-logo-offblack.png"
+          image="http://www.zeiq.co/img/favicon.png"
         />
         <main id="content" className="white-background">
           <div className="container">

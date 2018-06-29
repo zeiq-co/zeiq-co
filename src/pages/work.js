@@ -14,10 +14,10 @@ export default class Work extends React.Component {
     return (
       <div>
         <Seo
-          title="Services"
+          title="Work"
           description="Some of our recent works"
           url={config.siteUrl}
-          image="http://www.zeiq.co/img/zeiq-logo-offblack.png"
+          image="http://www.zeiq.co/img/favicon.png"
         />
         <main id="content" className="white-background">
           <div className="container">
