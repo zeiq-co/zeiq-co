@@ -16,7 +16,7 @@ class TechTemplate extends React.Component {
           title={data.contentfulTech.name}
           description="Technologies"
           url={config.siteUrl}
-          image="http://www.zeiq.co/img/favicon.png"
+          image={data.contentfulTech.image.file.url}
         />
         <main id="content" className="white-background">
           <div className="container">
