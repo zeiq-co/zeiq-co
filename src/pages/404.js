@@ -17,8 +17,8 @@ const NotFoundPage = () => (
                     Perhaps searching will help find a related item or
                   </p>
                   <p>
-                    <Link to="/">
-                      <a className="button has-arrow">Go Home</a>
+                    <Link to="/" className="button has-arrow">
+                      Go Home
                     </Link>
                   </p>
                 </div>
@@ -33,8 +33,8 @@ const NotFoundPage = () => (
                 can hand us over your keys too.
               </p>
               <p>
-                <Link to="/contact/">
-                  <a className="button dark has-arrow">Drop a message</a>
+                <Link to="/contact/" className="button dark has-arrow">
+                  Drop a message
                 </Link>
               </p>
             </div>
