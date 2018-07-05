@@ -8,7 +8,7 @@ const BlockQuote = () => (
       we’ve taken this year towards a better Product.
     </p>
     <cite>
-      <a href="#">Kapil Bhatia</a>
+      <a>Kapil Bhatia</a>
       <br /> Manager, LuxuryLImoLand
     </cite>
   </blockquote>
