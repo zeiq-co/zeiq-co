@@ -7,7 +7,7 @@ module.exports = {
   image: './img/zeiq-logo.png',
   googleAnalytics: '',
   backgroundColor: '#e0e0e0',
-  themeColor: '#c62828',
+  themeColor: '#634ce9',
   twitter: '@Zeiqofficial',
   fbAppId: '@zeiq',
   locale: 'en_us',
