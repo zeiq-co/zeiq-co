@@ -52,6 +52,7 @@ export const query = graphql`
       twitterId
       instagramId
       linkedInId
+      mediumId
     }
   }
 `;

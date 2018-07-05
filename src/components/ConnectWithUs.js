@@ -20,12 +20,14 @@ const ConnectWithUs = ({ social }) => (
           <a href={social.twitterId} className="social-link saulticon">
             twitter
           </a>{' '}
-          <i className="fab fa-linkedin-in" />
           <a href={social.linkedInId} className="social-link saulticon">
             linkedin
           </a>
           <a href={social.instagramId} className="social-link saulticon">
             instagram
+          </a>
+          <a href={social.mediumId} className="social-link saulticon">
+            Medium
           </a>
         </p>
       </div>
