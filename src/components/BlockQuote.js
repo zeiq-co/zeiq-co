@@ -9,7 +9,7 @@ const BlockQuote = () => (
     </p>
     <cite>
       <a>Kapil Bhatia</a>
-      <br /> Manager, LuxuryLImoLand
+      <br /> Manager, Luxury LImo Land
     </cite>
   </blockquote>
 );
