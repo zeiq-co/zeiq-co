@@ -1,11 +1,17 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import Img from 'gatsby-image';
+
 import AboutTitle from './AboutTitle';
 
 const AboutHero = ({ about }) => (
   <div>
     <div className="post-featured-image">
-      <img src={about.featuredImage.file.url} alt="featured" />
+      <Img
+        sizes={about.featuredImage.sizes}
+        alt={about.featuredImage.title}
+        title={about.featuredImage.title}
+        backgroundColor="#f1f1f1"
+      />
     </div>
     <div className="page-title-container">
       <h2>{about.title}</h2>

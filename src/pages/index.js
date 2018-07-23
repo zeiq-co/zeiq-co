@@ -42,8 +42,9 @@ export const query = graphql`
           title
           slug
           image {
-            file {
-              url
+            title
+            sizes(maxWidth: 600) {
+              ...GatsbyContentfulSizes
             }
           }
           description {

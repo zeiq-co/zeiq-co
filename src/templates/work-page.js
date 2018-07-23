@@ -48,8 +48,9 @@ export const workQuery = graphql`
       id
       slug
       image {
-        file {
-          url
+        title
+        sizes(maxWidth: 550, maxHeight: 300) {
+          ...GatsbyContentfulSizes
         }
       }
       title

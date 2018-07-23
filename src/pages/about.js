@@ -53,8 +53,9 @@ export const query = graphql`
     contentfulAbout {
       id
       featuredImage {
-        file {
-          url
+        title
+        sizes(maxWidth: 1000) {
+          ...GatsbyContentfulSizes
         }
       }
       title
@@ -78,8 +79,9 @@ export const query = graphql`
         node {
           id
           image {
-            file {
-              url
+            title
+            sizes(maxWidth: 550) {
+              ...GatsbyContentfulSizes
             }
           }
           name
