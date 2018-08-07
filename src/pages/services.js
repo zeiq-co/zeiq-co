@@ -1,6 +1,4 @@
 import React from 'react';
-import Link from 'gatsby-link';
-import Helmet from 'react-helmet';
 
 import ServicesTitle from '../components/ServicesTitle';
 import ServicesNavigation from '../components/ServicesNavigation';
@@ -38,7 +36,7 @@ export default class Services extends React.Component {
           title="Services"
           description="What you achieve with us is more than just the names of our services. If something you expect us to do is not listed here, do get in touch!"
           url={config.siteUrl}
-          image="http://www.zeiq.co/img/favicon.png"
+          image="/img/favicon.png"
         />
         <main id="content" className="white-background">
           <div className="container">

@@ -11,13 +11,24 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: config.googleAnalytics,
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `tkw83zs4zp0s`,
+        accessToken: `3249c49d30079b537c4de9cb7c766ef9b776a5754be24e841faaaae8fe40c613`,
+      },
+    },
+    {
+      resolve: `gatsby-source-medium`,
+      options: {
+        username: `zeiq`,
       },
     },
     {
@@ -87,18 +98,6 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: `tkw83zs4zp0s`,
-        accessToken: `3249c49d30079b537c4de9cb7c766ef9b776a5754be24e841faaaae8fe40c613`,
-      },
-    },
-    {
-      resolve: `gatsby-source-medium`,
-      options: {
-        username: `zeiq`,
-      },
-    },
+    `gatsby-plugin-offline`,
   ],
 };

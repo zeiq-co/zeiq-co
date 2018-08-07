@@ -17,7 +17,7 @@ export default class Work extends React.Component {
           title="Work"
           description="Some of our recent works"
           url={config.siteUrl}
-          image="http://www.zeiq.co/img/favicon.png"
+          image="/img/favicon.png"
         />
         <main id="content" className="white-background">
           <div className="container">

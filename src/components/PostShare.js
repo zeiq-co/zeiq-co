@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'gatsby-link';
 
 const PostShare = () => (
   <div id="share-post" className="col-md-6">

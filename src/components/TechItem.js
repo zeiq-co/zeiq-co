@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'gatsby-link';
 
 const TechItem = ({ data }) => (
   <div className="col-6 col-md-4 col-lg-3">

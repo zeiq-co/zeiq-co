@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import Link from 'gatsby-link';
 
 import WorkItem from '../components/WorkItem';
@@ -13,6 +12,7 @@ class WorkList extends React.Component {
       percentPosition: true,
       transitionDuration: '0.3s',
     });
+
     $grid.imagesLoaded().progress(function() {
       $grid.masonry('layout');
     });

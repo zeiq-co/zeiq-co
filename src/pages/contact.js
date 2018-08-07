@@ -15,13 +15,14 @@ export default class Contact extends React.Component {
     const { data } = this.props;
     const contact = data.contentfulContact;
     const social = data.contentfulContact;
+
     return (
       <div>
         <Seo
           title="Contact"
           description="Let's discuss how we can help you!"
           url={config.siteUrl}
-          image="http://www.zeiq.co/img/favicon.png"
+          image="/img/favicon.png"
         />
         <main id="content" className="white-background">
           <div className="container">

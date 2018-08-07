@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import Truncate from 'react-truncate';
 
 import config from '../config';
@@ -13,7 +12,7 @@ const BlogItem = ({ data }) => {
           src={
             `https://cdn-images-1.medium.com/max/800/${
               data.virtuals.previewImage.imageId
-            }` || 'tmp/sample-post.png'
+            }` || '/img/sample-post.png'
           }
           alt=""
         />

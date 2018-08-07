@@ -4,6 +4,7 @@ import Link from 'gatsby-link';
 class ContactDetails extends React.Component {
   render() {
     const { contact } = this.props;
+
     return (
       <div className="col-md-6">
         <div className="grey-box">

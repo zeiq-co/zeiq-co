@@ -5,7 +5,7 @@ const AuthorInfo = () => (
   <div className="author-info col-12 extra-margin-bottom">
     <h5>About the author</h5>
     <div className="author-avatar">
-      <img src="tmp/sample-avatar.png" alt="" />
+      <img src="/img/sample-avatar.png" alt="" />
     </div>
     <h4>
       <a href="#">Rory Thompson</a>

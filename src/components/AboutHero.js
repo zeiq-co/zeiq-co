@@ -1,8 +1,6 @@
 import React from 'react';
 import Img from 'gatsby-image';
 
-import AboutTitle from './AboutTitle';
-
 const AboutHero = ({ about }) => (
   <div>
     <div className="post-featured-image">

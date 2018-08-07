@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import ReactMarkdown from 'react-markdown';
 import Img from 'gatsby-image';
 

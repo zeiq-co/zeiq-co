@@ -1,9 +1,8 @@
 import React from 'react';
-import Link from 'gatsby-link';
 
 const PostFeaturedImage = ({ image }) => (
   <div className="post-featured-image">
-    <img src="tmp/sample-big.png" alt="" />
+    <img src="/img/sample-big.png" alt="" />
   </div>
 );
 

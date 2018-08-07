@@ -1,6 +1,4 @@
 import React from 'react';
-import Link from 'gatsby-link';
-import Helmet from 'react-helmet';
 
 import BlogFeaturedImage from '../components/BlogFeaturedImage';
 import BlogList from '../components/BlogList';
@@ -13,13 +11,14 @@ export default class News extends React.Component {
     const { edges: blogs } = data.allMediumPost;
     const blog = data.mediumPost;
     // console.log(blogs);
+
     return (
       <div>
         <Seo
           title="News"
           description="Read about the techs we use!"
           url={config.siteUrl}
-          image="http://www.zeiq.co/img/favicon.png"
+          image="/img/favicon.png"
         />
         <main id="content" className="white-background">
           <div className="container">

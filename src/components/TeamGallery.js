@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import TeamMember from './TeamMember';
 
 const TeamGallery = ({ team }) => (

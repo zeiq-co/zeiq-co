@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'gatsby-link';
 
 import WorkList from '../components/WorkList';
 import Seo from '../components/Seo';
@@ -9,13 +8,14 @@ export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: work } = data.allContentfulWork;
+
     return (
       <div>
         <Seo
           title="Home"
           description="We are web development company"
           url={config.siteUrl}
-          image="http://www.zeiq.co/img/favicon.png"
+          image="/img/favicon.png"
         />
         <main id="content" className="white-background">
           <div className="container">

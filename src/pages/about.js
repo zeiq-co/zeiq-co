@@ -1,9 +1,6 @@
 import React from 'react';
-import Link from 'gatsby-link';
-import Helmet from 'react-helmet';
 
 import AboutHero from '../components/AboutHero';
-import Carousel from '../components/Carousel';
 import Buttons from '../components/Buttons';
 import TeamGallery from '../components/TeamGallery';
 import BlockQuote from '../components/BlockQuote';
@@ -16,17 +13,17 @@ export default class About extends React.Component {
   render() {
     const { data } = this.props;
     const { contentfulAbout: about } = data;
-    const { edges: carousel } = data.allContentfulCarouselItem;
     const { edges: team } = data.allContentfulTeamMember;
     const { edges: brand } = data.allContentfulTech;
     // console.log(brand);
+
     return (
       <div>
         <Seo
           title="About"
           description="We are web development company"
           url={config.siteUrl}
-          image="http://www.zeiq.co/img/favicon.png"
+          image="/img/favicon.png"
         />
         <main id="content" className="white-background">
           <div className="container">
@@ -34,7 +31,6 @@ export default class About extends React.Component {
               <div className="col-12">
                 <AboutHero about={about} />
                 <Tech brand={brand} />
-                {/* <Carousel carousel={carousel} /> */}
                 <Buttons />
                 <TeamGallery team={team} />
                 <BlockQuote />
@@ -61,17 +57,6 @@ export const query = graphql`
       title
       description {
         description
-      }
-    }
-    allContentfulCarouselItem {
-      edges {
-        node {
-          id
-          title
-          description {
-            description
-          }
-        }
       }
     }
     allContentfulTeamMember(sort: { fields: [order] }) {

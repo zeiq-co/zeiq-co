@@ -1,6 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link';
-import addToMailchimp from 'gatsby-plugin-mailchimp';
+
 export default class Subscribe extends React.Component {
   render() {
     return (

@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'gatsby-link';
 
 const ConnectWithUs = ({ social }) => (
   <div className="col-md-6">
