@@ -29,20 +29,19 @@ module.exports = class HTML extends React.Component {
             content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
           />
           <meta charSet="UTF-8" />
+          <base href="/" target="_blank" />
           <meta name="author" content="Parminder Klair" />
           <link rel="shortcut icon" href="/img/favicon.png" />
           <link
-            href="//fonts.googleapis.com/css?family=Merriweather:300,400%7CRubik:400,500,700"
+            href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Rubik:400,700"
             rel="stylesheet"
           />
-          <base href="/" target="_blank" />
           <link
             href="css/app.min.css"
             rel="stylesheet"
             type="text/css"
             crossorigin="anonymous"
           />
-
           {this.props.headComponents}
           {css}
         </head>
@@ -55,12 +54,6 @@ module.exports = class HTML extends React.Component {
           />
           {this.props.postBodyComponents}
           <script src="js/app.min.js" crossorigin="anonymous" />
-          <script
-            defer
-            src="//use.fontawesome.com/releases/v5.0.8/js/all.js"
-            integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
-            crossorigin="anonymous"
-          />
           <script src="/js/crisp.js" />
         </body>
       </html>
