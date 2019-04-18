@@ -29,11 +29,11 @@ class WorkList extends React.Component {
           {introVisible && (
             <div className="grid-item grid-item-wide project-thumb welcome-message">
               <div className="inner">
-                <h1>
+                <h2>
                   Hi! We're <span className="text-color">ZEIQ</span>. A full
-                  service digital agency who helps brands stand out. Checkout
+                  service digital agency which helps your brand stand out. Checkout
                   our work.
-                </h1>
+                </h2>
                 <Link to="/services/" className="button big">
                   All that we do&hellip;
                 </Link>
