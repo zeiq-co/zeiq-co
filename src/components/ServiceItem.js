@@ -14,7 +14,7 @@ const ServiceItem = ({ services }) => (
         <p className="extra-margin-bottom">
           <img src={node.image.file.url} alt="" style={{ width: '75%' }} />
         </p>
-        <p className="extra-margin-bottom">{node.description.description}</p>
+        {/* <p className="extra-margin-bottom">{node.description.description}</p> */}
       </div>
     ))}
   </div>
