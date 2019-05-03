@@ -1,8 +1,13 @@
 import React from 'react';
+import styled from 'styled-components'; 
+
+const List = styled.ul`
+  display: grid;
+`;
 
 const ServicesNavigation = ({ services }) => (
   <div className="col-md-4">
-    <ul className="tab-links" role="tablist">
+    <List className="tab-links" role="tablist">
       {services.map(({ node }, index) => (
         <li key={node.id}>
           <a
@@ -17,7 +22,7 @@ const ServicesNavigation = ({ services }) => (
           </a>
         </li>
       ))}
-    </ul>
+    </List>
   </div>
 );
 
