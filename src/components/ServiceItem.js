@@ -1,4 +1,12 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Subtitle = styled.p`
+  font-size: 1.3rem;
+  @media only screen and (max-width: 768px) {
+  font-size: 1.1rem;
+  text-align: justify;
+}`;
 
 const ServiceItem = ({ services }) => (
   <div className="col-md-8">
@@ -10,11 +18,11 @@ const ServiceItem = ({ services }) => (
         role="tabpanel"
       >
         <h2>{node.title}</h2>
-        <p className="extra-margin-bottom">{node.shortDescription}</p>
+        <Subtitle className="extra-margin-bottom ">{node.shortDescription}</Subtitle>
         <p className="extra-margin-bottom">
           <img src={node.image.file.url} alt="" style={{ width: '75%' }} />
         </p>
-        <p className="extra-margin-bottom">{node.description.description}</p>
+        {/* <p className="extra-margin-bottom">{node.description.description}</p> */}
       </div>
     ))}
   </div>

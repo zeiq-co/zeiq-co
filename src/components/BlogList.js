@@ -12,7 +12,7 @@ const BlogList = ({ blogs }) => (
       <div className="gutter-sizer" />
     </div>
     <p className="text-center">
-      <a href="#" className="button white big">
+      <a href="https://medium.com/zeiq" className="button white big">
         Load more posts&hellip;
       </a>
     </p>
