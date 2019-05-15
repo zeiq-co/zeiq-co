@@ -3,6 +3,16 @@ import Link from 'gatsby-link';
 
 import WorkItem from '../components/WorkItem';
 
+import styled from 'styled-components';
+
+const Contianer = styled.div`
+  @media screen and (max-width: 600px) {
+    position: relative !important;
+    top: 0px;
+    left: 0%;
+  }
+  `;
+
 class WorkList extends React.Component {
   componentDidMount() {
     var $grid = jQuery('.project-listing .grid').masonry({
@@ -27,7 +37,7 @@ class WorkList extends React.Component {
       <div className="project-listing col-12">
         <div className="grid clearfix">
           {introVisible && (
-            <div className="grid-item grid-item-wide project-thumb welcome-message">
+            <Contianer className="grid-item grid-item-wide project-thumb welcome-message">
               <div className="inner">
                 <h2>
                   Hi! We're <span className="text-color">ZEIQ</span>. A full
@@ -38,7 +48,7 @@ class WorkList extends React.Component {
                   All that we do&hellip;
                 </Link>
               </div>
-            </div>
+            </Contianer>
           )}
           {workList.map(({ node }, index) => {
             activeItemIndex++;
