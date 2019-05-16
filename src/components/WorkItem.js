@@ -1,8 +1,19 @@
 import React from 'react';
 import Img from 'gatsby-image';
 
+import styled from 'styled-components';
+
+const Container = styled.div`
+  @media screen and (max-width: 600px) {
+    position: relative !important;
+    top: 4px !important;
+    left: 0%;
+    bottom: 19px !important;
+  }
+  `;
+
 const WorkItem = ({ item, size }) => (
-  <div
+  <Container
     className={`grid-item ${size === 'large' &&
       'grid-item-wide'} project-thumb`}
   >
@@ -19,7 +30,7 @@ const WorkItem = ({ item, size }) => (
       </span>
       <i className="saulticon-arrow-forward" />
     </a>
-  </div>
+  </Container>
 );
 
 export default WorkItem;
