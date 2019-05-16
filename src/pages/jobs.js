@@ -1,32 +1,36 @@
 import React from 'react';
 
-import WhatYouNeedIsNotListed from '../components/WhatYouNeedIsNotListed';
 import Seo from '../components/Seo';
-import ServicesTitle from '../components/ServicesTitle';
+import JobsTitle from '../components/JobsTitle';
 import config from '../config';
-import ServicesNavigation from '../components/ServicesNavigation';
-
-export default class Jobs extends React.Component{
-    render(){
-        return(
-    <div>
+export default class Jobs extends React.Component {
+  render() {
+    return (
+      <div>
         <Seo
-            title="Services"
-            description="Zeiq offers a wide array of services related to developing a website.If something you expect us to do is not listed here,do get in touch!"
-            url={config.siteUrl}
-            image="/img/favicon.png"
+          title="Jobs"
+          description="Zeiq offers a wide array of services related to developing a website.If something you expect us to do is not listed here,do get in touch!"
+          url={config.siteUrl}
+          image="/img/favicon.png"
         />
         <main id="content" className="white-background">
-            <div className="container">
+          <div className="container">
             <div className="row">
-                <div className="col-12">
-                <ServicesTitle />
-                <WhatYouNeedIsNotListed />
+              <div className="col-12">
+                <JobsTitle />
+                <div className="call-to-action">
+                  <a
+                    href="https://www.zeiq.academy/joinUs"
+                    className="button has-arrow"
+                  >
+                    Join Now
+                  </a>
                 </div>
+              </div>
             </div>
-            </div>
+          </div>
         </main>
-    </div>
-        )
-    }
+      </div>
+    );
+  }
 }
