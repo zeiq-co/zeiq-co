@@ -47,6 +47,11 @@ const Footer = ({ social }) => (
                       Medium
                     </a>
                   </li>
+                  <li>
+                    <a href={social.githubId} target="_blank">
+                      Github
+                    </a>
+                  </li>
                 </ul>
               </nav>
             </div>

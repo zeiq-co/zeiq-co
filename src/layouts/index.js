@@ -33,6 +33,7 @@ export const query = graphql`
       instagramId
       linkedInId
       mediumId
+      githubId
     }
   }
 `;

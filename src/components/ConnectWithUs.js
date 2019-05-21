@@ -28,6 +28,9 @@ const ConnectWithUs = ({ social }) => (
           <a href={social.mediumId} className="social-link saulticon">
             Medium
           </a>
+          <a href={social.githubId} className="social-link saulticon">
+            Github
+          </a>
         </p>
       </div>
     </div>
