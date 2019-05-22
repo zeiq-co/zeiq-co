@@ -49,7 +49,7 @@ export const workQuery = graphql`
       slug
       image {
         title
-        sizes(maxWidth: 550, maxHeight: 300) {
+        sizes(maxWidth: 850) {
           ...GatsbyContentfulSizes
         }
       }
