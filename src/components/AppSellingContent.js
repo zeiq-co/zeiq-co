@@ -16,8 +16,7 @@ import account from '../../static/img/sell-app/account.jpg';
 const Description = styled.p`
   font-size: 1.2rem;
   @media only screen and (max-width: 768px) {
-  font-size: 1.1rem;
-  text-align: justify; 
+  font-size: 1.1rem; 
   }
   img {
     width: 45%;
