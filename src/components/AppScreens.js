@@ -81,38 +81,38 @@ const AppScreens = () => (
         <img src={home} alt="home screen" />
       </div>
       <div className="col-sm">
-        <img src={latestOffers} alt="login screen" />
+        <img src={latestOffers} alt="latest offers" />
       </div>
       <div className="col-sm">
-        <img src={location} alt="login screen" />
-      </div>
-    </div>
-    <div className="row">
-      <div className="col-sm">
-        <img src={itemsDelivered} alt="login screen" />
-      </div>
-      <div className="col-sm">
-        <img src={deliverDetails} alt="login screen" />
-      </div>
-      <div className="col-sm">
-        <img src={successDelivery} alt="login screen" />
-      </div>
-      <div className="col-sm">
-        <img src={deliveryOnSchedule} alt="login screen" />
+        <img src={location} alt="pickup and drop loaction" />
       </div>
     </div>
     <div className="row">
       <div className="col-sm">
-        <img src={deliveryMap} alt="login screen" />
+        <img src={itemsDelivered} alt="List of items to be delivered" />
       </div>
       <div className="col-sm">
-        <img src={deliveryHistory} alt="login screen" />
+        <img src={deliverDetails} alt="Delivery details" />
       </div>
       <div className="col-sm">
-        <img src={referralWallet} alt="login screen" />
+        <img src={successDelivery} alt="Delivery status screen" />
       </div>
       <div className="col-sm">
-        <img src={account} alt="login screen" />
+        <img src={deliveryOnSchedule} alt="On schedule delivery" />
+      </div>
+    </div>
+    <div className="row">
+      <div className="col-sm">
+        <img src={deliveryMap} alt="Live tracking" />
+      </div>
+      <div className="col-sm">
+        <img src={deliveryHistory} alt="Delivery History" />
+      </div>
+      <div className="col-sm">
+        <img src={referralWallet} alt="Cash Wallet" />
+      </div>
+      <div className="col-sm">
+        <img src={account} alt="User settings" />
       </div>
     </div>
   </Container>
