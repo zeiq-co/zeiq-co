@@ -19,13 +19,17 @@ const Wrapper = styled.div`
   text-align: left;
 `;
 
+const Sales = styled.p`
+  margin-bottom: auto;
+`;
+
 const ReactNativeAppContent = () => (
   <div className="container">
     <div className="row">
-      <div className="col-4">
+      <div className="col-sm">
         One of three columns
       </div>
-      <div className="col-8">
+      <div className="col-sm">
         <Wrapper className="page-title-container">
           <h2>React Native Delivery App</h2>
           <h3>Checkout cool stuff made by Zeiq</h3>
@@ -33,7 +37,7 @@ const ReactNativeAppContent = () => (
             Graphql, NodeJS, MongoDB NativeBase to build iOS and Android app for delivery services.
           </p>
           <p><strong>Note: This product is a pure React Native application.</strong></p>
-          <p>Total Sales: <strong>7</strong></p>
+          <Sales>Total Sales: <strong>7</strong></Sales>
           <p>LAST APP UPDATED: <strong>August 7, 2019</strong></p>
           <Link to="/contact/" className="button big">
             Enquiry Now

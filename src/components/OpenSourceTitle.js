@@ -6,7 +6,8 @@ const Description = styled.p`
   @media only screen and (max-width: 768px) {
   font-size: 1.1rem;
   text-align: justify; 
-}`;
+  }
+`;
 
 const Wrapper = styled.div`
   max-width: 85% !important;

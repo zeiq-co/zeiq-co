@@ -2,17 +2,35 @@ import React from 'react';
 import styled from 'styled-components';
 
 import login from '../../static/img/sell-app/login.jpg';
+import home from '../../static/img/sell-app/home.jpg';
+import latestOffers from '../../static/img/sell-app/latest-offers.jpg';
+import location from '../../static/img/sell-app/pickndroplocation.jpg';
+import itemsDelivered from '../../static/img/sell-app/itemsdelivered.jpg';
+import deliverDetails from '../../static/img/sell-app/deliverydetails.jpg';
+import successDelivery from '../../static/img/sell-app/successdelivery.jpg';
+import deliveryOnSchedule from '../../static/img/sell-app/deliveryonschedule.jpg';
+import deliveryMap from '../../static/img/sell-app/deliverymap.jpg';
+import deliveryHistory from '../../static/img/sell-app/deliveryhistory.jpg';
+import referralWallet from '../../static/img/sell-app/referralwallet.jpg';
+import account from '../../static/img/sell-app/account.jpg';
 
 const Container = styled.div`
   li {
     list-style-type: disc;
     font-size: 1.5rem;
   }
+  img {
+    margin-top: 2rem;
+    border-style: outset;
+  }
 `;
 
 const Header = styled.h2`
   justify-content: center;
   display: flex;
+  @media only screen and (max-width: 768px) {
+    font-size: 1rem !important; 
+  }
 `;
 const Content = styled.h3`
   font-size: 1.5rem;
@@ -57,7 +75,44 @@ const AppScreens = () => (
     </div>
     <div className="row">
       <div className="col-sm">
-        <img src={login} alt="React Native Delivery App" />
+        <img src={login} alt="login screen" />
+      </div>
+      <div className="col-sm">
+        <img src={home} alt="home screen" />
+      </div>
+      <div className="col-sm">
+        <img src={latestOffers} alt="login screen" />
+      </div>
+      <div className="col-sm">
+        <img src={location} alt="login screen" />
+      </div>
+    </div>
+    <div className="row">
+      <div className="col-sm">
+        <img src={itemsDelivered} alt="login screen" />
+      </div>
+      <div className="col-sm">
+        <img src={deliverDetails} alt="login screen" />
+      </div>
+      <div className="col-sm">
+        <img src={successDelivery} alt="login screen" />
+      </div>
+      <div className="col-sm">
+        <img src={deliveryOnSchedule} alt="login screen" />
+      </div>
+    </div>
+    <div className="row">
+      <div className="col-sm">
+        <img src={deliveryMap} alt="login screen" />
+      </div>
+      <div className="col-sm">
+        <img src={deliveryHistory} alt="login screen" />
+      </div>
+      <div className="col-sm">
+        <img src={referralWallet} alt="login screen" />
+      </div>
+      <div className="col-sm">
+        <img src={account} alt="login screen" />
       </div>
     </div>
   </Container>
