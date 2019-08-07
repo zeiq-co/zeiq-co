@@ -1,17 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
-// import login from '../../static/img/sell-app/login.jpg';
-// import home from '../../static/img/sell-app/home.jpg';
-// import location from '../../static/img/sell-app/pickndroplocation.jpg';
-// import itemsDelivered from '../../static/img/sell-app/itemsdelivered.jpg';
-// import deliverDetails from '../../static/img/sell-app/deliverydetails.jpg';
-// import successDelivery from '../../static/img/sell-app/successdelivery.jpg';
-// import deliveryOnSchedule from '../../static/img/sell-app/deliveryonschedule.jpg';
-// import deliveryMap from '../../static/img/sell-app/deliverymap.jpg';
-// import deliveryHistory from '../../static/img/sell-app/deliveryhistory.jpg';
-// import referralWallet from '../../static/img/sell-app/referralwallet.jpg';
-// import account from '../../static/img/sell-app/account.jpg';
+import Link from 'gatsby-link';
 
 const Description = styled.p`
   font-size: 1.2rem;
@@ -26,27 +15,33 @@ const Description = styled.p`
 
 const Wrapper = styled.div`
   max-width: 85% !important;
+  justify-content: left;
+  text-align: left;
 `;
 
 const ReactNativeAppContent = () => (
   <div className="container">
     <div className="row">
-      <div className="col-sm">
+      <div className="col-4">
         One of three columns
       </div>
-      <div className="col-sm">
+      <div className="col-8">
         <Wrapper className="page-title-container">
           <h2>React Native Delivery App</h2>
           <h3>Checkout cool stuff made by Zeiq</h3>
           <p>The real starter kit / app script with all the needed UI elements alongwith Redux,
-            Graphql, NodeJS, MongoDB NativeBase to build your iOS and Android delivery app.
+            Graphql, NodeJS, MongoDB NativeBase to build iOS and Android app for delivery services.
           </p>
+          <p><strong>Note: This product is a pure React Native application.</strong></p>
+          <p>Total Sales: <strong>7</strong></p>
+          <p>LAST APP UPDATED: <strong>August 7, 2019</strong></p>
+          <Link to="/contact/" className="button big">
+            Enquiry Now
+          </Link>
         </Wrapper>
       </div>
   </div>
 </div>
-
-  
 );
 
 export default ReactNativeAppContent;

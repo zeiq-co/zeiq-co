@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Seo from '../components/Seo';
 import config from '../config';
 import ReactNativeAppContent from '../components/ReactNativeAppContent';
+import AppScreens from '../components/AppScreens';
 
 const Wrapper = styled.div`
   background: #f6f5fd;
@@ -24,6 +25,7 @@ export default class ReactNativeApp extends React.Component {
           <Wrapper className="container">
             <div className="row">
               <ReactNativeAppContent />
+              <AppScreens />
             </div>
           </Wrapper>
         </main>
