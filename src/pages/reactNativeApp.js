@@ -3,27 +3,27 @@ import styled from 'styled-components';
 
 import Seo from '../components/Seo';
 import config from '../config';
-import AppSellingContent from '../components/AppSellingContent';
+import ReactNativeAppContent from '../components/ReactNativeAppContent';
 
 const Wrapper = styled.div`
   background: #f6f5fd;
 `;
 
-export default class AppForSale extends React.Component {
+export default class ReactNativeApp extends React.Component {
   render() {
 
     return (
       <div>
         <Seo
-          title="AppForSale"
-          description="We selling our Delivery App"
+          title="React-Native-App"
+          description="Our Delivery Service App"
           url={config.siteUrl}
           image="/img/favicon.png"
         />
         <main id="content" className="white-background">
           <Wrapper className="container">
             <div className="row">
-              <AppSellingContent />
+              <ReactNativeAppContent />
             </div>
           </Wrapper>
         </main>
