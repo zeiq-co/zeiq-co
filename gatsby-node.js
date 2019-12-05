@@ -1,5 +1,6 @@
 const { createFilePath } = require('gatsby-source-filesystem');
 const path = require('path');
+const _ = require('lodash');
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
@@ -33,6 +34,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             fields {
               slug
             }
+            frontmatter {
+              type
+            }
           }
         }
       }
@@ -41,8 +45,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   if (result.errors) {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query');
   }
+
+  const allMdx = result.data.allMdx.edges;
+
   // Create blog post pages.
-  const posts = result.data.allMdx.edges;
+  const posts = _.filter(allMdx, o => o.node.frontmatter.type === 'posts');
   // We'll call `createPage` for each result
   posts.forEach(({ node }, index) => {
     createPage({
@@ -51,6 +58,38 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       path: node.fields.slug,
       // This component will wrap our MDX content
       component: path.resolve(`./src/components/NewsLayout.js`),
+      // We can use the values in this context in
+      // our page layout component
+      context: { id: node.id },
+    });
+  });
+
+  // Create tech pages.
+  const tech = _.filter(allMdx, o => o.node.frontmatter.type === 'tech');
+  // We'll call `createPage` for each result
+  tech.forEach(({ node }, index) => {
+    createPage({
+      // This is the slug we created before
+      // (or `node.frontmatter.slug`)
+      path: `tech/${node.fields.slug}`,
+      // This component will wrap our MDX content
+      component: path.resolve(`./src/components/TechLayout.js`),
+      // We can use the values in this context in
+      // our page layout component
+      context: { id: node.id },
+    });
+  });
+
+  // Create work pages.
+  const work = _.filter(allMdx, o => o.node.frontmatter.type === 'work');
+  // We'll call `createPage` for each result
+  work.forEach(({ node }, index) => {
+    createPage({
+      // This is the slug we created before
+      // (or `node.frontmatter.slug`)
+      path: `work/${node.fields.slug}`,
+      // This component will wrap our MDX content
+      component: path.resolve(`./src/components/WorkLayout.js`),
       // We can use the values in this context in
       // our page layout component
       context: { id: node.id },

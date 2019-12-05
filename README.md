@@ -1,4 +1,4 @@
-# Kickoff GatsbyJs
+# Zeiq.co
 
 A starting point using ReactJs, bundled with awesome GatsbyJs v2.
 

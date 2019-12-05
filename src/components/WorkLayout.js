@@ -6,7 +6,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Seo from './Seo';
 import PageLayout from './PageLayout';
 
-export default function NewsLayout({ data: { mdx } }) {
+export default function WorkLayout({ data: { mdx } }) {
   return (
     <PageLayout>
       <Seo title={mdx.frontmatter.title} />
@@ -21,7 +21,7 @@ export default function NewsLayout({ data: { mdx } }) {
 }
 
 export const pageQuery = graphql`
-  query NewsPageQuery($id: String) {
+  query WorkPageQuery($id: String) {
     mdx(id: { eq: $id }) {
       id
       body

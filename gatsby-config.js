@@ -32,6 +32,27 @@ module.exports = {
         path: `${__dirname}/src/content/posts/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `tech`,
+        path: `${__dirname}/src/content/tech/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `work`,
+        path: `${__dirname}/src/content/work/`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint:
+          'https://media.us16.list-manage.com/subscribe/post?u=cc89738f5e13735361f5b9aa9&amp;id=3140e0e9f1',
+      },
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
