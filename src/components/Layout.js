@@ -23,7 +23,7 @@ const IndexLayout = ({ children }) => (
       <GlobalStyle />
       <Header />
       <Container>{children}</Container>
-      <Footer social={{}} />
+      <Footer />
     </>
   </ThemeProvider>
 );

@@ -1,6 +1,7 @@
 import React from 'react';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 const Container = styled.div`
   @media screen and (max-width: 600px) {
@@ -15,7 +16,7 @@ const WorkItem = ({ item, size }) => (
   <Container
     className={`grid-item ${size === 'large' &&
       'grid-item-wide'} project-thumb`}>
-    <a href={`/work/${item.slug}/`} target="_self">
+    <Link to={`/work/${item.fields.slug}/`}>
       {/* <Img
         sizes={item.image.sizes}
         alt={item.image.title}
@@ -23,11 +24,11 @@ const WorkItem = ({ item, size }) => (
         backgroundColor="#f1f1f1"
       /> */}
       <span className="project-thumb-details">
-        <span className="title">{item.title}</span>
-        {/* <span className="description">{item.description.description}</span> */}
+        <span className="title">{item.frontmatter.title}</span>
+        <span className="description">{item.excerpt}</span>
       </span>
       <i className="saulticon-arrow-forward" />
-    </a>
+    </Link>
   </Container>
 );
 
