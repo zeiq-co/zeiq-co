@@ -10,6 +10,7 @@ import BlockQuote from './BlockQuote';
 import CallToAction from './CallToAction';
 
 export default function WorkLayout({ data: { mdx } }) {
+  console.log('mdx', mdx);
   return (
     <PageLayout>
       <Seo title={mdx.frontmatter.title} />

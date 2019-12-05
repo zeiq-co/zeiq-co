@@ -35,22 +35,16 @@ const Container = styled.div`
 export default function PageTemplate({ children }) {
   return (
     <Layout>
-      <Container className="container">
-        <div className="columns is-centered">
-          <div className="column is-four-fifths">
-            <section className="section">
-              <MDXProvider
-                components={{
-                  h1: props => <h1 className="" {...props} />,
-                  h2: props => <h2 className="" {...props} />,
-                  h3: props => <h3 className="" {...props} />,
-                  p: props => <p className="" {...props} />,
-                }}>
-                {children}
-              </MDXProvider>
-            </section>
-          </div>
-        </div>
+      <Container>
+        <MDXProvider
+          components={{
+            h1: props => <h1 className="" {...props} />,
+            h2: props => <h2 className="" {...props} />,
+            h3: props => <h3 className="" {...props} />,
+            p: props => <p className="" {...props} />,
+          }}>
+          {children}
+        </MDXProvider>
       </Container>
     </Layout>
   );

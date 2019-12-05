@@ -30,7 +30,7 @@ const NewsItem = ({ post }) => (
         <span className="has-text-weight-bold has-text-warning is-uppercase category">
           {post.frontmatter.category}
         </span>
-        <Link to={post.fields.slug}>
+        <Link to={`/post/${post.fields.slug}`}>
           <h3 className="title is-3 has-text-weight-bold">
             {post.frontmatter.title}
           </h3>
@@ -39,7 +39,7 @@ const NewsItem = ({ post }) => (
       </div>
       <nav className="level is-mobile">
         <div className="level-left">
-          <Link to={post.fields.slug} className="level-item">
+          <Link to={`/post/${post.fields.slug}`} className="level-item">
             Read
           </Link>
         </div>
