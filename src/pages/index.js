@@ -1,30 +1,23 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
-
-const Container = styled.div`
-  margin-top: 2rem;
-  margin-bottom: 4rem;
-  text-align: center;
-  h1 {
-    color: ${props => props.theme.mainBrandColor} !important;
-  }
-`;
+import WorkList from '../components/WorkList';
 
 export default class IndexPage extends React.Component {
   render() {
+    const work = [];
+
     return (
       <Layout>
-        <Seo title="Home" description="Welcome to GatsbyJs v1" />
-        <section className="section">
-          <Container className="container">
-            <h1 className="title">Hi people</h1>
-            <p>Welcome to your new Gatsby site.</p>
-            <p>Now go build something great.</p>
-          </Container>
-        </section>
+        <Seo title="Home" description="We are web development company" />
+        <main id="content" className="white-background">
+          <div className="container">
+            <div className="row">
+              <WorkList introVisible workList={work} buttonVisible />
+            </div>
+          </div>
+        </main>
       </Layout>
     );
   }

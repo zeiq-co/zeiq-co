@@ -21,7 +21,7 @@ export default class HTML extends React.Component {
             rel="stylesheet"
           />
           <link
-            href="css/app.min.css"
+            href="/css/app.min.css"
             rel="stylesheet"
             type="text/css"
             crossOrigin="anonymous"
@@ -38,7 +38,7 @@ export default class HTML extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
-          <script src="js/app.min.js" crossOrigin="anonymous" />
+          <script src="/js/app.min.js" crossOrigin="anonymous" />
           <script src="/js/crisp.js" />
           <script src="/js/scripts.js" />
         </body>

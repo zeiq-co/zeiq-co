@@ -27,22 +27,22 @@ const Header = () => (
                 <Link to="/">Work</Link>
               </li>
               <li>
-                <Link to="/services/">Services</Link>
+                <Link to="/services">Services</Link>
               </li>
               <li>
-                <Link to="/about/">About</Link>
+                <Link to="/about">About</Link>
               </li>
               <li>
-                <Link to="/news/">News</Link>
+                <Link to="/news">News</Link>
               </li>
               <li>
-                <Link to="/contact/">Contact</Link>
+                <Link to="/contact">Contact</Link>
               </li>
               <li>
-                <Link to="/jobs/">Jobs</Link>
+                <Link to="/jobs">Jobs</Link>
               </li>
               <li>
-                <Link to="/openSource/">Open Source</Link>
+                <Link to="/open-source">Open Source</Link>
               </li>
             </ul>
           </nav>

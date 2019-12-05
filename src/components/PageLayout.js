@@ -10,12 +10,14 @@ const Container = styled.div`
   margin-top: 2rem;
   margin-bottom: 4rem;
   h1 {
-    margin-top: 2.5rem;
-    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  h2 {
+    color: #8b99a3;
+    text-align: center;
   }
   h3 {
-    margin-top: 2.5rem;
-    margin-bottom: 1.5rem;
+    text-align: center;
   }
   p {
     margin-bottom: 1rem;
@@ -39,12 +41,11 @@ export default function PageTemplate({ children }) {
             <section className="section">
               <MDXProvider
                 components={{
-                  h1: props => <h1 className="title is-1" {...props} />,
-                  h2: props => <h2 className="title is-2" {...props} />,
-                  h3: props => <h3 className="title is-3" {...props} />,
+                  h1: props => <h1 className="" {...props} />,
+                  h2: props => <h2 className="" {...props} />,
+                  h3: props => <h3 className="" {...props} />,
                   p: props => <p className="" {...props} />,
-                }}
-              >
+                }}>
                 {children}
               </MDXProvider>
             </section>
