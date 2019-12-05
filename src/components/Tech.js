@@ -14,8 +14,13 @@ const query = graphql`
           }
           frontmatter {
             title
-            order
-            image
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

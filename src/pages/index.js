@@ -8,7 +8,7 @@ export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: work } = data.allMdx;
-    console.log('work', work);
+    // console.log('work', work);
 
     return (
       <Layout>
@@ -39,7 +39,13 @@ export const pageQuery = graphql`
             title
             date
             category
-            image
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
           fields {
             slug

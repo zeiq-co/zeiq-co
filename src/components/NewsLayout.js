@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+import Img from 'gatsby-image';
 
 import Seo from './Seo';
 import PageLayout from './PageLayout';
@@ -11,6 +12,9 @@ export default function NewsLayout({ data: { mdx } }) {
     <PageLayout>
       <Seo title={mdx.frontmatter.title} />
       <div className="page-content">
+        {mdx.frontmatter.featuredImage && (
+          <Img fluid={mdx.frontmatter.featuredImage.childImageSharp.fluid} />
+        )}
         <h1 className="title is-1 has-text-centered has-text-weight-bold">
           {mdx.frontmatter.title}
         </h1>
@@ -27,6 +31,13 @@ export const pageQuery = graphql`
       body
       frontmatter {
         title
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

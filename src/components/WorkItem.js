@@ -17,12 +17,7 @@ const WorkItem = ({ item, size }) => (
     className={`grid-item ${size === 'large' &&
       'grid-item-wide'} project-thumb`}>
     <Link to={`/work/${item.fields.slug}/`}>
-      {/* <Img
-        sizes={item.image.sizes}
-        alt={item.image.title}
-        title={item.image.title}
-        backgroundColor="#f1f1f1"
-      /> */}
+      <Img fluid={item.frontmatter.featuredImage.childImageSharp.fluid} />
       <span className="project-thumb-details">
         <span className="title">{item.frontmatter.title}</span>
         <span className="description">{item.excerpt}</span>
