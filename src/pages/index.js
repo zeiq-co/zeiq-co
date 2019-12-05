@@ -6,7 +6,9 @@ import WorkList from '../components/WorkList';
 
 export default class IndexPage extends React.Component {
   render() {
-    const work = [];
+    const { data } = this.props;
+    const { edges: work } = data.allMdx;
+    console.log('work', work);
 
     return (
       <Layout>
@@ -22,3 +24,27 @@ export default class IndexPage extends React.Component {
     );
   }
 }
+
+export const pageQuery = graphql`
+  query homeIndex {
+    allMdx(
+      sort: { fields: frontmatter___date, order: DESC }
+      filter: { frontmatter: { type: { eq: "work" } } }
+    ) {
+      edges {
+        node {
+          id
+          excerpt
+          frontmatter {
+            title
+            date
+            category
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  }
+`;

@@ -5,6 +5,9 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Seo from './Seo';
 import PageLayout from './PageLayout';
+import WorkPageButton from './WorkPageButton';
+import BlockQuote from './BlockQuote';
+import CallToAction from './CallToAction';
 
 export default function WorkLayout({ data: { mdx } }) {
   return (
@@ -15,6 +18,9 @@ export default function WorkLayout({ data: { mdx } }) {
           {mdx.frontmatter.title}
         </h1>
         <MDXRenderer>{mdx.body}</MDXRenderer>
+        <WorkPageButton url="project-url" />
+        <BlockQuote />
+        <CallToAction />
       </div>
     </PageLayout>
   );
