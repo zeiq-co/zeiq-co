@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'gatsby-link';
 
 function encode(data) {
   return Object.keys(data)
@@ -40,8 +39,7 @@ class WriteToUs extends React.Component {
               method="post"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
-              onSubmit={this.handleSubmit}
-            >
+              onSubmit={this.handleSubmit}>
               <div className="row">
                 <div className="col-xl-6">
                   <label htmlFor="name" className="sr-only">

@@ -31,7 +31,7 @@ const query = graphql`
 const Tech = () => {
   const data = useStaticQuery(query);
   const result = data.allMdx.edges;
-  console.log('tech', result);
+  // console.log('tech', result);
 
   return (
     <div className="brand-gallery">

@@ -4,7 +4,7 @@ import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import WorkList from '../components/WorkList';
 
-export default class IndexPage extends React.Component {
+export default class WorkPage extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: work } = data.allMdx;
@@ -12,11 +12,15 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
-        <Seo title="Home" description="We are web development company" />
+        <Seo title="Work" description="Some of our recent works" />
         <main id="content" className="white-background">
           <div className="container">
             <div className="row">
-              <WorkList introVisible workList={work} buttonVisible />
+              <WorkList
+                introVisible={false}
+                workList={work}
+                buttonVisible={false}
+              />
             </div>
           </div>
         </main>
@@ -26,12 +30,10 @@ export default class IndexPage extends React.Component {
 }
 
 export const pageQuery = graphql`
-  query homeIndex {
+  query workQuery {
     allMdx(
       sort: { fields: frontmatter___date, order: DESC }
-      filter: {
-        frontmatter: { type: { eq: "work" }, isFeatured: { eq: true } }
-      }
+      filter: { frontmatter: { type: { eq: "work" } } }
     ) {
       edges {
         node {
