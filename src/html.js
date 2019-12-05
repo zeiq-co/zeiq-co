@@ -17,18 +17,15 @@ export default class HTML extends React.Component {
 
           {/* Add custom css or scripts here */}
           <link
+            href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Rubik:400,700"
             rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"
-          />
-          <script
-            defer
-            src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
           />
           <link
-            href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap"
+            href="css/app.min.css"
             rel="stylesheet"
+            type="text/css"
+            crossOrigin="anonymous"
           />
-          <script src="/js/scripts.js" />
           {/* Add custom css or scripts here */}
 
           {this.props.headComponents}
@@ -41,6 +38,9 @@ export default class HTML extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
+          <script src="js/app.min.js" crossOrigin="anonymous" />
+          <script src="/js/crisp.js" />
+          <script src="/js/scripts.js" />
         </body>
       </html>
     );

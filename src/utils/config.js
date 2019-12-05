@@ -1,21 +1,21 @@
 module.exports = {
   DEBUG: process.env.NODE_ENV === 'development',
 
-  siteName: 'Kickoff GatsbyJs',
+  siteName: 'Zeiq',
   author: 'Parminder Klair',
-  description: 'A starting point using ReactJs, bundled with awesome GatsbyJs.',
-  siteUrl: 'http://kickoff-gatsbyjs.netlify.com',
-  logo: '/images/logo-1024.png',
+  description: 'Official Website for Zeiq.co',
+  siteUrl: 'https://www.zeiq.co',
+  logo: './img/zeiq-logo.png',
 
   telephone: '+1-123-123-123',
   email: 'john@doe.com',
   location: 'California, USA',
-  twitter: '@NAME-HERE',
-  fbUserId: '@NAME-HERE',
+  twitter: '@Zeiqofficial',
+  fbUserId: '@zeiq',
   fbAppID: '@NAME-HERE',
 
   type: 'website',
-  googleAnalytics: '',
+  googleAnalytics: 'UA-1390187-41',
   backgroundColor: '#e0e0e0',
-  themeColor: '#c62828',
+  themeColor: '#634ce9',
 };

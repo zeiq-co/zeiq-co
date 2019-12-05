@@ -5,12 +5,13 @@ import styled, { ThemeProvider } from 'styled-components';
 import GlobalStyle, { theme } from '../utils/theme';
 import config from '../utils/config';
 import Header from './Header';
+import Footer from './Footer';
 
 const Container = styled.div`
-  min-height: 70vh;
+  min-height: 50vh;
 `;
 
-const IndexLayout = ({ children, hideHeader }) => (
+const IndexLayout = ({ children }) => (
   <ThemeProvider theme={theme}>
     <>
       <Helmet>
@@ -20,8 +21,9 @@ const IndexLayout = ({ children, hideHeader }) => (
         <meta description={config.description} />
       </Helmet>
       <GlobalStyle />
-      {!hideHeader && <Header />}
+      <Header />
       <Container>{children}</Container>
+      <Footer social={{}} />
     </>
   </ThemeProvider>
 );
