@@ -10,29 +10,31 @@ import ConnectWithUs from '../components/ConnectWithUs';
 import Subscribe from '../components/Subscribe';
 import Tweet from '../components/Tweet';
 
-const Contact = () => {
-  const data = useStaticQuery(graphql`
-    query ContactQuery {
-      allMdx(filter: { frontmatter: { type: { in: ["social", "contact"] } } }) {
-        edges {
-          node {
-            frontmatter {
-              type
-              facebookId
-              twitterId
-              linkedInId
-              instagramId
-              mediumId
-              githubId
-              address
-              telephone
-              email
-            }
+const query = graphql`
+  query ContactQuery {
+    allMdx(filter: { frontmatter: { type: { in: ["social", "contact"] } } }) {
+      edges {
+        node {
+          frontmatter {
+            type
+            facebookId
+            twitterId
+            linkedInId
+            instagramId
+            mediumId
+            githubId
+            address
+            telephone
+            email
           }
         }
       }
     }
-  `);
+  }
+`;
+
+const Contact = () => {
+  const data = useStaticQuery(query);
   const result = data.allMdx.edges;
 
   const contact = filter(result, o => o.node.frontmatter.type === 'contact');

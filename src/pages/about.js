@@ -10,10 +10,6 @@ import CallToAction from '../components/CallToAction';
 import Tech from '../components/Tech';
 
 const About = () => {
-  const about = {};
-  const brand = {};
-  const team = [];
-
   return (
     <Layout>
       <Seo title="About Us" />
@@ -21,10 +17,10 @@ const About = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <AboutHero about={about} />
-              <Tech brand={brand} />
+              <AboutHero />
+              <Tech />
               <Buttons />
-              <TeamGallery team={team} />
+              <TeamGallery />
               <BlockQuote />
               <CallToAction />
             </div>

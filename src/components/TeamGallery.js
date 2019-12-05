@@ -1,7 +1,19 @@
 import React from 'react';
 import TeamMember from './TeamMember';
 
-const TeamGallery = ({ team }) => (
+const team = [
+  {
+    id: 1,
+    name: '',
+    position: '',
+    twitterId: '',
+    linkedInId: '',
+    instagramId: '',
+    image: '',
+  },
+];
+
+const TeamGallery = () => (
   <div className="team-gallery">
     <div className="row">
       <div className="col-md-6 col-lg-4">
@@ -13,7 +25,7 @@ const TeamGallery = ({ team }) => (
         </p>
       </div>
       {team.map(teamMember => (
-        <TeamMember key={teamMember.node.id} data={teamMember.node} />
+        <TeamMember key={teamMember.id} data={teamMember} />
       ))}
     </div>
   </div>

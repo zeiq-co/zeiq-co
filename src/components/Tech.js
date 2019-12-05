@@ -1,14 +1,42 @@
 import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+
 import TechItem from './TechItem';
 
-const Tech = ({ brand }) => (
-  <div className="brand-gallery">
-    <div className="row eq-height-container">
-      {brand.map(brandItem => (
-        <TechItem key={brandItem.node.id} data={brandItem.node} />
-      ))}
+const query = graphql`
+  query TechQuery {
+    allMdx(filter: { frontmatter: { type: { eq: "tech" } } }) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            order
+            image
+          }
+        }
+      }
+    }
+  }
+`;
+
+const Tech = () => {
+  const data = useStaticQuery(query);
+  const result = data.allMdx.edges;
+  console.log('tech', result);
+
+  return (
+    <div className="brand-gallery">
+      <div className="row eq-height-container">
+        {result.map(item => (
+          <TechItem key={item.node.id} data={item.node} />
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Tech;
