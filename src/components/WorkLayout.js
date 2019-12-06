@@ -2,6 +2,9 @@
 
 import React from 'react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
+import styled from 'styled-components';
 
 import Seo from './Seo';
 import PageLayout from './PageLayout';
@@ -9,17 +12,26 @@ import WorkPageButton from './WorkPageButton';
 import BlockQuote from './BlockQuote';
 import CallToAction from './CallToAction';
 
+const FeaturedImage = styled.div`
+  padding: 0 22rem;
+`;
+
 export default function WorkLayout({ data: { mdx } }) {
-  console.log('mdx', mdx);
   return (
     <PageLayout>
       <Seo title={mdx.frontmatter.title} />
       <div className="page-content">
-        <h1 className="title is-1 has-text-centered has-text-weight-bold">
-          {mdx.frontmatter.title}
-        </h1>
+        <FeaturedImage className="post-featured-image">
+          <Img fluid={mdx.frontmatter.featuredImage.childImageSharp.fluid} />
+        </FeaturedImage>
+        <div className="page-title-container">
+          <h1>{mdx.frontmatter.title}</h1>
+          <p className="subtitle" data-reactid="44">
+            {mdx.frontmatter.info}
+          </p>
+        </div>
         <MDXRenderer>{mdx.body}</MDXRenderer>
-        <WorkPageButton url="project-url" />
+        <WorkPageButton url={mdx.frontmatter.url} />
         <BlockQuote />
         <CallToAction />
       </div>
@@ -34,6 +46,15 @@ export const pageQuery = graphql`
       body
       frontmatter {
         title
+        url
+        info
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

@@ -55,7 +55,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     createPage({
       // This is the slug we created before
       // (or `node.frontmatter.slug`)
-      path: `post/${node.fields.slug}`,
+      path: `post${node.fields.slug}`,
       // This component will wrap our MDX content
       component: path.resolve(`./src/components/NewsLayout.js`),
       // We can use the values in this context in
@@ -71,7 +71,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     createPage({
       // This is the slug we created before
       // (or `node.frontmatter.slug`)
-      path: `tech/${node.fields.slug}`,
+      path: `tech${node.fields.slug}`,
       // This component will wrap our MDX content
       component: path.resolve(`./src/components/TechLayout.js`),
       // We can use the values in this context in
@@ -87,7 +87,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     createPage({
       // This is the slug we created before
       // (or `node.frontmatter.slug`)
-      path: `work/${node.fields.slug}`,
+      path: `work${node.fields.slug}`,
       // This component will wrap our MDX content
       component: path.resolve(`./src/components/WorkLayout.js`),
       // We can use the values in this context in

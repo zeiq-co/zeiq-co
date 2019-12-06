@@ -10,7 +10,7 @@
     "graphql": true
   },
   "settings": {
-    "import/core-modules": ["prop-types", "react", "graphql", "jQuery"]
+    "import/core-modules": ["prop-types", "react", "jQuery"]
   },
   "rules": {
     "prettier/prettier": [
