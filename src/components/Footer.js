@@ -1,21 +1,23 @@
 import React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 
-const Footer = () => {
-  const data = useStaticQuery(graphql`
-    query FooterQuery {
-      mdx(frontmatter: { type: { eq: "social" } }) {
-        frontmatter {
-          facebookId
-          twitterId
-          linkedInId
-          instagramId
-          mediumId
-          githubId
-        }
+const query = graphql`
+  query FooterQuery {
+    mdx(frontmatter: { type: { eq: "social" } }) {
+      frontmatter {
+        facebookId
+        twitterId
+        linkedInId
+        instagramId
+        mediumId
+        githubId
       }
     }
-  `);
+  }
+`;
+
+const Footer = () => {
+  const data = useStaticQuery(query);
   const social = data.mdx.frontmatter;
 
   return (
