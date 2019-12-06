@@ -35,7 +35,7 @@ const Container = styled.div`
 export default function PageTemplate({ children }) {
   return (
     <Layout>
-      <Container>
+      <Container className="container">
         <MDXProvider
           components={{
             h1: props => <h1 className="" {...props} />,
