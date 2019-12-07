@@ -37,11 +37,11 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          excerpt
           frontmatter {
             title
             date
             category
+            info
             featuredImage {
               childImageSharp {
                 fluid(maxWidth: 800) {

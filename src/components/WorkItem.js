@@ -20,7 +20,7 @@ const WorkItem = ({ item, size }) => (
       <Img fluid={item.frontmatter.featuredImage.childImageSharp.fluid} />
       <span className="project-thumb-details">
         <span className="title">{item.frontmatter.title}</span>
-        <span className="description">{item.excerpt}</span>
+        <span className="description">{item.frontmatter.info}</span>
       </span>
       <i className="saulticon-arrow-forward" />
     </Link>

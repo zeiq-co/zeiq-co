@@ -1,8 +1,8 @@
 # Zeiq.co
 
-A starting point using ReactJs, bundled with awesome GatsbyJs v2.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3747f5de-39b5-4395-ad95-a0a53c0569c3/deploy-status)](https://app.netlify.com/sites/zeiq/deploys)
 
-[Demo](https://kickoff-gatsbyjs.netlify.com/)
+Official website
 
 ## Stack
 
