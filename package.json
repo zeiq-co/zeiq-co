@@ -1,17 +1,17 @@
 {
   "name": "zeiq.co",
-  "description": "A react starting point using GatsbyJS",
+  "description": "Official website code of www.zeiq.co",
   "version": "2.0.1",
   "author": "Parminder Klair",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/perminder-klair/kickoff-gatsbyjs.git"
+    "url": "git+https://github.com/zeiq-co/zeiq-co.git"
   },
   "bugs": {
-    "url": "https://github.com/perminder-klair/kickoff-gatsbyjs/issues"
+    "url": "https://github.com/zeiq-co/zeiq-co/issues"
   },
-  "homepage": "https://github.com/perminder-klair/kickoff-gatsbyjs#readme",
+  "homepage": "https://github.com/zeiq-co/zeiq-co#readme",
   "scripts": {
     "start": "npm run develop",
     "develop": "gatsby develop",
@@ -29,7 +29,7 @@
     "gatsby-plugin-mailchimp": "^5.1.2",
     "gatsby-plugin-manifest": "^2.2.14",
     "gatsby-plugin-mdx": "^1.0.39",
-    "gatsby-plugin-netlify-cms": "^4.1.31",
+    "gatsby-plugin-netlify": "^2.1.27",
     "gatsby-plugin-offline": "^3.0.3",
     "gatsby-plugin-react-helmet": "^3.1.6",
     "gatsby-plugin-sharp": "^2.2.20",
@@ -39,7 +39,6 @@
     "gatsby-transformer-remark": "^2.6.39",
     "gatsby-transformer-sharp": "^2.3.6",
     "lodash": "^4.17.15",
-    "netlify-cms-app": "^2.9.7",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
