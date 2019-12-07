@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
+  name: zeiq-co
+  repo: zeiq-co/zeiq-co
   branch: v2
+site_url: https://v2--zeiq.netlify.com
+publish_mode: editorial_workflow
 media_folder: 'images/uploads'
 collections:
   - name: 'posts' # Used in routes, e.g., /admin/collections/posts
