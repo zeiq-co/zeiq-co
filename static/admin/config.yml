@@ -1,5 +1,5 @@
 backend:
-  name: zeiq-co
+  name: github
   repo: zeiq-co/zeiq-co
   branch: v2
 site_url: https://v2--zeiq.netlify.com
