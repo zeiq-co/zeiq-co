@@ -22,7 +22,7 @@ export default function WorkLayout({ data: { mdx } }) {
       <Seo title={mdx.frontmatter.title} />
       <div className="page-content">
         <FeaturedImage className="post-featured-image">
-          <Img fluid={mdx.frontmatter.featuredImage.childImageSharp.fluid} />
+          <Img fluid={mdx.frontmatter.heroImage.childImageSharp.fluid} />
         </FeaturedImage>
         <div className="page-title-container">
           <h1>{mdx.frontmatter.title}</h1>
@@ -48,7 +48,7 @@ export const pageQuery = graphql`
         title
         url
         info
-        featuredImage {
+        heroImage {
           childImageSharp {
             fluid(maxWidth: 800) {
               ...GatsbyImageSharpFluid
