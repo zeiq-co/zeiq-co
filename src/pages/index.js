@@ -29,7 +29,7 @@ export default class IndexPage extends React.Component {
 export const pageQuery = graphql`
   query homeIndex {
     allMdx(
-      sort: { fields: frontmatter___date, order: DESC }
+      sort: { fields: frontmatter___order, order: ASC }
       filter: {
         frontmatter: { type: { eq: "work" }, isFeatured: { eq: true } }
       }

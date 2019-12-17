@@ -33,7 +33,7 @@ export default class WorkPage extends React.Component {
 export const pageQuery = graphql`
   query workQuery {
     allMdx(
-      sort: { fields: frontmatter___date, order: DESC }
+      sort: { fields: frontmatter___order, order: ASC }
       filter: { frontmatter: { type: { eq: "work" } } }
     ) {
       edges {

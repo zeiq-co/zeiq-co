@@ -5,7 +5,10 @@ import TeamMember from './TeamMember';
 
 const query = graphql`
   query TeamQuery {
-    allMdx(filter: { frontmatter: { type: { eq: "team" } } }) {
+    allMdx(
+      sort: { fields: frontmatter___order, order: ASC }
+      filter: { frontmatter: { type: { eq: "team" } } }
+    ) {
       edges {
         node {
           id

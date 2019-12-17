@@ -16,7 +16,7 @@ const query = graphql`
             title
             featuredImage {
               childImageSharp {
-                fluid(maxWidth: 800) {
+                fluid(maxHeight: 200) {
                   ...GatsbyImageSharpFluid
                 }
               }
