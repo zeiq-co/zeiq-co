@@ -8,7 +8,7 @@ const TechItem = ({ data }) => (
       title={data.frontmatter.title}
       to={`/tech/${data.fields.slug}/`}
       className="brand-item eq-height"
-      style={{ height: 197.875 }}>
+      >
       {data.frontmatter.featuredImage && (
         <Img fluid={data.frontmatter.featuredImage.childImageSharp.fluid} />
       )}
