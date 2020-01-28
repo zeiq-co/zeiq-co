@@ -1,7 +1,12 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Container = styled.div`
+  margin-top: 2rem;
+`;
 
 const FeaturesCard = () => (
-  <div className="col col-sm-6">
+  <Container className="col col-sm-6">
     <div className="card">
       <i className="fas fa-motorcycle" />
       <div className="card-body">
@@ -11,7 +16,7 @@ const FeaturesCard = () => (
         </p>
       </div>
     </div>
-  </div>
+  </Container>
 );
 
 export default FeaturesCard;

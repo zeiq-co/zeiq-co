@@ -4,12 +4,14 @@ import styled from 'styled-components';
 import FeaturesCard from './FeaturesCard';
 
 const Container = styled.div`
+  margin-top: 5rem;
+  margin-bottom: 3rem;
   img {
     height: 35rem;
   }
 `;
 
-const Features = () => (
+const Features = ({ heading }) => (
   <Container className="container">
     <div className="row">
       <div className="col">
@@ -21,7 +23,7 @@ const Features = () => (
       </div>
       <div className="col col-sm-8">
         <div className="container">
-          <h3>Bootstrap heading</h3>
+          <h3>{heading}</h3>
           <div className="row">
             <FeaturesCard />
             <FeaturesCard />
