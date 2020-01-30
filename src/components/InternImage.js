@@ -1,11 +1,18 @@
-/* eslint jsx-a11y/heading-has-content: 0 */
-
 import React from 'react';
+import styled from 'styled-components';
+
+const Image = styled.img`
+  width: 50%;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+`;
 
 const InternImage = () => (
-  <figure className="image is-128x128">
-    <img src="/images/content-writing.png" />
-  </figure>
+  <Image
+    className="img-thumbnail"
+    src="/images/content-writing.png"
+    alt="internship"
+  />
 );
 
 export default InternImage;
