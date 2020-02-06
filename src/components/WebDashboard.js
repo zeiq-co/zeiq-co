@@ -10,19 +10,25 @@ const Container = styled.div`
     margin-top: 2rem;
     height: 20rem;
   }
+  .row {
+    margin-top: 5rem;
+  }
 `;
 
-const WebDashboard = () => (
+const WebDashboard = ({ data }) => (
   <Container className="container">
     <h2 className="text-center">Web Dashboard</h2>
     <img src="/images/app/dashboard.jpg" alt="..." className="img-thumbnail" />
-    <div className="row">
-      <FeaturesCard />
-      <FeaturesCard />
-      <FeaturesCard />
-      <FeaturesCard />
-      <FeaturesCard />
-      <FeaturesCard />
+    <div className="container">
+      <div className="row">
+        {data.map(items => (
+          <FeaturesCard
+            icon={items.icon}
+            title={items.title}
+            text={items.text}
+          />
+        ))}
+      </div>
     </div>
   </Container>
 );

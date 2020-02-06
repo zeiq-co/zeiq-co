@@ -2,17 +2,26 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  margin-top: 2rem;
+  margin-top: 1rem;
+  .icon{
+    font-size: 2rem;
+    color: #33B769;
+  }
+  .card-text{
+    margin-top:0.5rem;
+  }
 `;
 
-const FeaturesCard = () => (
+const FeaturesCard = ({ icon, text,title }) => (
   <Container className="col col-sm-6">
     <div className="card">
-      <i className="fas fa-motorcycle" />
+      <span className="d-inline icon">
+        <i className={icon} />
+      </span>
       <div className="card-body">
+        <h4 className="d-inline">{title}</h4>
         <p className="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+         {text}
         </p>
       </div>
     </div>

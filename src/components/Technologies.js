@@ -18,9 +18,9 @@ const Technologies = () => (
   <Container className="container">
     <h3 className="text-center">Backend With Strong Technologies</h3>
     <div className="row">
-      <div className="col-6">
+      <div clasName="col">
         <div className="row">
-          <div className="col col-sm-12">
+          <div className="col col-sm-6">
             <h4>Application Program Interface (API) Server</h4>
             <ul className="list-inline">
               <li className="list-inline-item">Lorem ipsum</li>
@@ -45,13 +45,6 @@ const Technologies = () => (
             </ul>
           </div>
         </div>
-      </div>
-      <div className="col">
-        <img
-          src="/images/app/screen-1.png"
-          alt="..."
-          className="img-thumbnail"
-        />
       </div>
     </div>
   </Container>

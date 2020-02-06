@@ -4,38 +4,42 @@ import styled from 'styled-components';
 import FeaturesCard from './FeaturesCard';
 
 const Container = styled.div`
-  margin-top: 5rem;
-  margin-bottom: 3rem;
+  margin-top:1rem;
   img {
-    height: 35rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    height: 70%;
+  }
+
+  .row {
+    margin-top: 1rem;
   }
 `;
 
-const Features = ({ heading }) => (
-  <Container className="container">
+const Features = ({ heading, img, alt,direction,data}) => {
+  data.map(items=>(
+    console.log(items.icon)
+  ))
+  return (
+  <Container className="container" >
+    <h2 className="text-center">{heading}</h2>
     <div className="row">
       <div className="col">
-        <img
-          src="/images/app/screen-1.png"
-          alt="..."
-          className="img-thumbnail"
-        />
+        <img src={img} alt={alt} className="img-thumbnail" />
       </div>
       <div className="col col-sm-8">
         <div className="container">
-          <h3>{heading}</h3>
           <div className="row">
-            <FeaturesCard />
-            <FeaturesCard />
-            <FeaturesCard />
-            <FeaturesCard />
-            <FeaturesCard />
-            <FeaturesCard />
+          {
+            data.map(items=>(
+              <FeaturesCard icon={items.icon} title={items.title} text={items.text}/>
+            ))
+          }
           </div>
         </div>
       </div>
     </div>
   </Container>
-);
+)};
 
 export default Features;
