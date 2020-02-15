@@ -22,10 +22,14 @@ class ContactDetails extends React.Component {
                     <i className="saulticon-map" /> {contact.address}
                   </li>
                   <li>
-                    <i className="saulticon-call" /> {contact.telephone}
+                    <a href="tel:{contact.telephone}">
+                      <i className="saulticon-call" /> {contact.telephone}
+                    </a>
                   </li>
                   <li>
-                    <i className="saulticon-mail" /> {contact.email}
+                    <a href="mailto:{contact.email}">
+                      <i className="saulticon-mail" /> {contact.email}
+                    </a>
                   </li>
                 </ul>
               </div>
