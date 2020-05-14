@@ -1,4 +1,9 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Section = styled.div`
+  padding: 3rem 1.5rem;
+`;
 
 const data = [
   {
@@ -70,15 +75,17 @@ const data = [
 ];
 
 const DeliveryContent = () => (
-  <div className="container">
-    {data.map((item) => (
-      <dl className="row">
-        <dt className="col-sm-2">
-          <h5 className="font-weight-bold">{item.title} </h5>
-        </dt>
-        <dd className="col-sm-10">{item.Content}</dd>
-      </dl>
-    ))}
+  <div className="section">
+    <div className="container">
+      {data.map((item) => (
+        <dl className="row">
+          <dt className="col-sm-2">
+            <h5 className="font-weight-bold">{item.title} </h5>
+          </dt>
+          <dd className="col-sm-10">{item.Content}</dd>
+        </dl>
+      ))}
+    </div>
   </div>
 );
 
