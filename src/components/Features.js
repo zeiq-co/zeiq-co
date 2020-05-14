@@ -15,31 +15,31 @@ const Main = styled.div`
 const data = [
   {
     id: 1,
-    title: 'Browse categories and their Menu items',
+    points: 'Browse categories and their Menu items',
   },
   {
     id: 2,
-    title: 'Add to cart Menu items',
+    points: 'Add to cart Menu items',
   },
   {
     id: 3,
-    title: 'Live order tracking',
+    points: 'Live order tracking',
   },
   {
     id: 4,
-    title: 'Manage Address and Checkout features',
+    points: 'Manage Address and Checkout features',
   },
   {
     id: 6,
-    title: 'Online store locator',
+    points: 'Online store locator',
   },
   {
     id: 7,
-    title: 'Developed on React-Native',
+    points: 'Developed on React-Native',
   },
   {
     id: 8,
-    title: 'Search Delivery items',
+    points: 'Search Delivery items',
   },
 ];
 
