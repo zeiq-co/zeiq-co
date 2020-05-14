@@ -5,6 +5,7 @@ const Main = styled.div`
   img {
     height: 520px;
     width: 66%;
+    margin-right: unset !important;
   }
 `;
 
@@ -26,7 +27,7 @@ const GroceryHero = () => (
             </p>
             <p className="lead">
               <a className="button has-arrow" href="/services/">
-                Buy Now
+                $249 Buy Now
               </a>
               <a className="button has-arrow" href="/services/">
                 Live DEMO
