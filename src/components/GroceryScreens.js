@@ -14,7 +14,12 @@ const data = [
   },
   {
     title: 'Features',
-    points: ['Filter available', 'Profile', 'Order Tracking', 'Feature Two'],
+    points: [
+      'Filter available',
+      'Profile',
+      'Order Tracking',
+      'App source code',
+    ],
   },
   {
     title: 'Order Status',
@@ -23,12 +28,11 @@ const data = [
       'Order History',
       'Coupons',
       'Coupon offers',
-      'Order status',
       'Attributes of product',
     ],
   },
   {
-    title: 'Activites',
+    title: 'Activities',
     points: [
       'Create Product Item',
       'Edit Product Item',
