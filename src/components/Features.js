@@ -48,7 +48,7 @@ const Features = ({ flex }) => (
           </div>
         </div>
         <div className="col-lg-6 d-none d-lg-block aos-init aos-animate">
-          <img src="/images/zeiqPackrs.png" className="img-fluid" alt="" />
+          <img src="/images/smartOpen.jpg" className="img-fluid" alt="" />
         </div>
       </div>
     </div>
