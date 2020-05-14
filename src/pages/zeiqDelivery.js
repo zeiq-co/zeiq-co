@@ -15,8 +15,8 @@ export default class ZeiqDelivery extends React.Component {
         <GroceryHero />
         <GroceryScreens />
         <GrocerySlider />
-        <Features image="/images/smartOpen.jpg" />
-        <Features flex image="/images/smartDownload.jpg" />
+        <Features image="/images/smartDownload.jpg" />
+        <Features flex image="/images/smartOpen.jpg" />
         <div className="container">
           <dl className="row">
             <dt className="col-sm-2">

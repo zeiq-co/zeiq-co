@@ -21,8 +21,7 @@ const GroceryHero = () => (
               Build your next project faster with SB UI Kit Pro
             </h1>
             <p className="lead page-header-text mb-5">
-              Welcome to SB UI Kit Pro, a toolkit for building beautiful web
-              interfaces, created by the developmet team at Start Bootstrap
+             Are you looking to launch your online Food Shop, Grocery Shop, or an eCommerce mobile app for your supermarket business? Then this readymade flutter app will help you to build your business with your own mobile app in just
             </p>
             <p className="lead">
               <a className="button has-arrow" href="/services/">

@@ -9,15 +9,15 @@ const Row = styled.div`
 
 const data = [
   {
-    title: 'Night life',
+    title: 'Category',
     points: ['Grocery by category', 'Notifications', 'Store Locator'],
   },
   {
-    title: 'Safari',
+    title: 'Features',
     points: ['Filter available', 'Profile', 'Order Tracking', 'Feature Two'],
   },
   {
-    title: 'Feature Two',
+    title: 'Order Status',
     points: [
       'Search grocery items',
       'Order History',
@@ -43,12 +43,12 @@ const GroceryScreens = () => (
       <div className="row justify-content-center ">
         <div className="col-lg-8">
           <div className="text-center mb-10">
-            <h2 className="page-header-title">
-              Build your next project faster with SB UI
-            </h2>
+            <h2 className="page-header-title">APP ORDERING SYSTEM SCREENS</h2>
             <p className="lead page-header-text mb-5">
-              Welcome to SB UI Kit Pro, a toolkit for building beautiful web
-              interfaces, created by the developmet team at Start Bootstrap
+              Fully customizable, functional, ready-to-use by the end-users with
+              easily configurable Online Zeiq delivery Mobile
+              Application/Software built on the latest leading technology
+              Flutter. You Should check out with app features.
             </p>
           </div>
         </div>
