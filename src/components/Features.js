@@ -61,6 +61,11 @@ const Features = ({ flex, image, title }) => (
           <img src={image} className="img-fluid" alt="" />
         </div>
       </div>
+      <div class="text-center">
+        <button type="button" class="btn">
+          Centered button
+        </button>
+      </div>
     </div>
   </Main>
 );
