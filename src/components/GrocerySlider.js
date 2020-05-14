@@ -18,7 +18,7 @@ const Section = styled.div`
     box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 18px;
     margin: 0px auto;
     overflow: hidden;
-    padding: 8px;
+    padding: 23px;
     border-radius: 61px;
   }
   .slick-slider::before {
@@ -38,6 +38,24 @@ const Section = styled.div`
     transform: translateZ(0);
   }
 `;
+const data = [
+  {
+    id: 1,
+    screen: '/images/FoodApp/Categories.png',
+  },
+  {
+    id: 2,
+    screen: '/images/FoodApp/Categories.png',
+  },
+  {
+    id: 3,
+    screen: '/images/FoodApp/Categories.png',
+  },
+  {
+    id: 4,
+    screen: '/images/FoodApp/Categories.png',
+  },
+];
 
 export default class GrocerySlider extends Component {
   render() {
@@ -54,30 +72,11 @@ export default class GrocerySlider extends Component {
       <Section className="">
         <div className="container">
           <Slider {...settings}>
-            <div>
-              <img
-                src="https://www.packrs.co/images/app-screens/screen-4.png"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                src="https://www.packrs.co/images/app-screens/screen-4.png"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                src="https://www.packrs.co/images/app-screens/screen-4.png"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                src="https://www.packrs.co/images/app-screens/screen-4.png"
-                alt=""
-              />
-            </div>
+            {data.map((item) => (
+              <div>
+                <img src={item.screen} alt="" />
+              </div>
+            ))}
           </Slider>
         </div>
       </Section>
