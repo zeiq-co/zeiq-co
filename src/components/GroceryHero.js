@@ -1,7 +1,15 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Main = styled.div`
+  img {
+    height: 501px;
+    width: 66%;
+  }
+`;
 
 const GroceryHero = () => (
-  <main
+  <Main
     id="content"
     className="white-background page-header-content pt-10 pb-10"
   >
@@ -31,7 +39,7 @@ const GroceryHero = () => (
         </div>
       </div>
     </div>
-  </main>
+  </Main>
 );
 
 export default GroceryHero;
