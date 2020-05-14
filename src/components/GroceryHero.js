@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Main = styled.div`
   img {
-    height: 501px;
+    height: 520px;
     width: 66%;
   }
 `;
