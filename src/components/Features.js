@@ -12,6 +12,10 @@ const Main = styled.div`
   }
 `;
 
+const ButtonWrapper = styled.div`
+  margin-top: 3rem;
+`;
+
 const data = [
   {
     id: 1,
@@ -43,7 +47,7 @@ const data = [
   },
 ];
 
-const Features = ({ flex, image, title }) => (
+const Features = ({ flex, image, title, buttonName }) => (
   <Main id="content" className="page-header-content pt-10 pb-10" flex={flex}>
     <div className="container pt-10 pb-10">
       <div className="row">
@@ -61,11 +65,13 @@ const Features = ({ flex, image, title }) => (
           <img src={image} className="img-fluid" alt="" />
         </div>
       </div>
-      <div class="text-center">
-        <button type="button" class="btn">
-          Centered button
-        </button>
-      </div>
+      <ButtonWrapper class="container">
+        <div class="row">
+          <div class="col text-center">
+            <button class="btn btn-default">{buttonName}</button>
+          </div>
+        </div>
+      </ButtonWrapper>
     </div>
   </Main>
 );

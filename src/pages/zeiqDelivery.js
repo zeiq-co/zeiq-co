@@ -19,11 +19,13 @@ export default class ZeiqDelivery extends React.Component {
         <Features
           image="/images/smartDownload.jpg"
           title="ZEIQ DELIVERY MOBILE APP FEATURES"
+          buttonName="DOWNLOAD USER APP"
         />
         <Features
           flex
           image="/images/smartOpen.jpg"
           title="ZEIQ DELIVERY APP DASHBOARD FEATURES"
+          buttonName="APP LIVE DEMO"
         />
         <DeliveryContent />
       </Layout>
