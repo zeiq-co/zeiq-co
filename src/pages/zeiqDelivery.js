@@ -16,7 +16,10 @@ export default class ZeiqDelivery extends React.Component {
         <GroceryHero />
         <GroceryScreens />
         <GrocerySlider />
-        <Features image="/images/smartDownload.jpg" />
+        <Features
+          image="/images/smartDownload.jpg"
+          title="ZEIQ DELIVERY MOBILE APP FEATURES"
+        />
         <Features flex image="/images/smartOpen.jpg" />
         <DeliveryContent />
       </Layout>
