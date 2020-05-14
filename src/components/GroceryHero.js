@@ -20,10 +20,13 @@ const GroceryHero = () => (
           <div className="jumbotron">
             <h1 className="page-header-title">ZEIQ DELIVERY APP</h1>
             <p className="lead page-header-text mb-5">
-              Are you looking to launch your online Food Shop, Grocery Shop, or
-              an eCommerce mobile app for your supermarket business? Then this
+              Are you looking to launch your online Food Shop, Delivery Shop, or
+              an ECommerce mobile app for your supermarket business? Then this
               readymade flutter app will help you to build your business with
-              your own mobile app in just
+              your own mobile app in just few days.The mobile application offers
+              amazing features to build a powerful online ordering system or app
+              for your Zeiq shop. So what are you waiting for? Start your online
+              business with your Mobile app today!
             </p>
             <p className="lead">
               <a className="button has-arrow" href="/services/">
