@@ -22,7 +22,7 @@ class WorkList extends React.Component {
       transitionDuration: '0.3s',
     });
 
-    $grid.imagesLoaded().progress(function() {
+    $grid.imagesLoaded().progress(function () {
       $grid.masonry('layout');
     });
   }
