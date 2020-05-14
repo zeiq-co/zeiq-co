@@ -45,15 +45,40 @@ const data = [
   },
   {
     id: 2,
-    screen: '/images/FoodApp/Categories.png',
+    screen: '/images/FoodApp/Checkout_Scroll View.png',
   },
   {
     id: 3,
-    screen: '/images/FoodApp/Categories.png',
+    screen: '/images/FoodApp/Checkout.png',
   },
   {
     id: 4,
-    screen: '/images/FoodApp/Categories.png',
+    screen: '/images/FoodApp/Delivery panel.png',
+  },
+  {
+    id: 5,
+    screen: '/images/FoodApp/My Orders.png',
+  },
+  {
+    id: 6,
+    screen: '/images/FoodApp/My Profile.png',
+  },
+
+  {
+    id: 7,
+    screen: '/images/FoodApp/My Profile-2.png',
+  },
+  {
+    id: 8,
+    screen: '/images/FoodApp/My Profile-1.png',
+  },
+  {
+    id: 9,
+    screen: '/images/FoodApp/Order accept.png',
+  },
+  {
+    id: 10,
+    screen: '/images/FoodApp/Vegetables.png',
   },
 ];
 
