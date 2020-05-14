@@ -30,13 +30,13 @@ const data = [
     id: 5,
     title: 'Online Payment:',
     Content:
-      'This Flutter Grocery application has online payment gateway integration   so user can do online payment while placing their order.',
+      'This Zeiq Delivery application has online payment gateway integration so user can do online payment while placing their order.',
   },
   {
     id: 6,
     title: 'Address Management:',
     Content:
-      'This Flutter Grocery application has online payment gateway integration   so user can do online payment while placing their order.',
+      'This feature allows users to manage multiple address so they can choose their address based on their availability. For example: If they order some product but on that time they were not at their home then then can set their address where they will available or they can order behalf of others at their place.',
   },
   {
     id: 7,
@@ -49,6 +49,24 @@ const data = [
     title: 'Order History:',
     Content:
       'This feature allows user to track their all order so they can analyse their expense as well as based on their order history they can repeat their previous order and save their time and energy.',
+  },
+  {
+    id: 9,
+    title: 'Terms & Conditions:',
+    Content:
+      'Here user can read about your Zeiq Store Shopping App terms and conditions. So get aware about all your Zeiq delivery app business so they can make their decision and do happy shopping with your Zeiq delivery app',
+  },
+  {
+    id: 10,
+    title: 'Help:',
+    Content:
+      'Here user will get guide or help articles. Like How to change address, how to shop, how to change information etc. It is fully customization feature so you can add question based on users or customer requirements.',
+  },
+  {
+    id: 11,
+    title: 'FAQ:',
+    Content:
+      'Here user will see all information like, does your charge extra for delivery, How secure is your app for do online payment and more. This section is fully customization, So you can add question based on your business and Zeiq Delivery shopper requirements.',
   },
 ];
 
