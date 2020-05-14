@@ -12,7 +12,7 @@ const Main = styled.div`
   }
 `;
 
-const Features = ({ flex }) => (
+const Features = ({ flex, image }) => (
   <Main id="content" className="page-header-content pt-10 pb-10" flex={flex}>
     <div className="container pt-10 pb-10s">
       <div className="row">
@@ -48,7 +48,7 @@ const Features = ({ flex }) => (
           </div>
         </div>
         <div className="col-lg-6 d-none d-lg-block aos-init aos-animate">
-          <img src="/images/smartOpen.jpg" className="img-fluid" alt="" />
+          <img src={image} className="img-fluid" alt="" />
         </div>
       </div>
     </div>
