@@ -4,8 +4,8 @@ import styled from 'styled-components';
 const Main = styled.div`
   padding: 3rem 1.5rem;
   img {
-    height: 501px;
-    width: 66%;
+    height: 400px;
+    width: 100%;
   }
   .row {
     flex-direction: ${(props) => (props.flex ? 'row-reverse' : '')};
