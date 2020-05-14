@@ -27,11 +27,7 @@ const GroceryHero = () => (
           </div>
         </div>
         <div className="col-lg-6 d-none d-lg-block aos-init aos-animate">
-          <img
-            src="https://sb-ui-kit-pro-angular.startbootstrap.com/assets/img/drawkit/color/drawkit-content-man-color.svg"
-            className="img-fluid"
-            alt=""
-          />
+          <img src="/images/zeiqPackrs.png" className="img-fluid" alt="" />
         </div>
       </div>
     </div>
