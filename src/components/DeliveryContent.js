@@ -7,7 +7,6 @@ const data = [
     Content:
       'This feature allow users to do sign up with their personal details  information for future help and keep your application secure.  After sign up user can sign in with their  credential and start doing online grocery shopping with secure data. And their personal information will be secure with your Grocery Store Shopping application',
   },
-
   {
     id: 2,
     title: 'Geo Location:',

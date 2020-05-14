@@ -33,7 +33,7 @@ const GroceryHero = () => (
                 $249 Buy Now
               </a>
               <a className="button has-arrow" href="/services/">
-                Live DEMO
+                VIEW DEMO
               </a>
             </p>
           </div>
