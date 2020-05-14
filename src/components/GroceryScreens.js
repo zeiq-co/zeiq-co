@@ -38,7 +38,7 @@ const data = [
   },
 ];
 
-const GrocerySecreens = () => (
+const GroceryScreens = () => (
   <main id="content" className="white-background page-header-content pt-10">
     <div className="container">
       <div className="row justify-content-center ">
@@ -73,4 +73,4 @@ const GrocerySecreens = () => (
   </main>
 );
 
-export default GrocerySecreens;
+export default GroceryScreens;

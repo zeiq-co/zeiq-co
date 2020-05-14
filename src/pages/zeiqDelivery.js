@@ -3,17 +3,17 @@ import React from 'react';
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import GroceryHero from '../components/GroceryHero';
-import GrocerySecreens from '../components/GrocerySecreens';
+import GroceryScreens from '../components/GroceryScreens';
 import GrocerySlider from '../components/GrocerySlider';
 import Features from '../components/Features';
 
-export default class GroceryPage extends React.Component {
+export default class ZeiqDelivery extends React.Component {
   render() {
     return (
       <Layout>
         <Seo title="Home" description="We are web development company" />
         <GroceryHero />
-        <GrocerySecreens />
+        <GroceryScreens />
         <GrocerySlider />
         <Features />
         <div className="container">
