@@ -10,31 +10,30 @@ const Row = styled.div`
 const data = [
   {
     title: 'Night life',
-    points: ['Long Feature One', 'Feature Two', 'Long Feature Three'],
+    points: ['Grocery by category', 'Notifications', 'Store Locator'],
   },
   {
     title: 'Safari',
-    points: [
-      'Long Feature One',
-      'Feature Two',
-      'Long Feature Three',
-      'Feature Two',
-    ],
+    points: ['Filter available', 'Profile', 'Order Tracking', 'Feature Two'],
   },
   {
     title: 'Feature Two',
     points: [
-      'Long Feature One',
-      'Feature Two',
-      'Long Feature Three',
-      'Long Feature One',
-      'Long Feature One',
-      'Long Feature One',
+      'Search grocery items',
+      'Order History',
+      'Coupons',
+      'Coupon offers',
+      'Order status',
+      'Attributes of product',
     ],
   },
   {
     title: 'Activites',
-    points: ['Long Feature One', 'Feature Two', 'Long Feature Three'],
+    points: [
+      'Create Product Item',
+      'Edit Product Item',
+      'Delete Product Item ',
+    ],
   },
 ];
 
