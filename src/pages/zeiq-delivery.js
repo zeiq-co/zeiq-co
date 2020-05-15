@@ -12,7 +12,7 @@ export default class ZeiqDelivery extends React.Component {
   render() {
     return (
       <Layout>
-        <Seo title="Home" description="We are web development company" />
+        <Seo title="Zeiq Delivery" description="Zeiq Delivery App" />
         <GroceryHero />
         <GroceryScreens />
         <GrocerySlider />
