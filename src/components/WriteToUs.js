@@ -33,7 +33,11 @@ class WriteToUs extends React.Component {
       <div className="col-md-6">
         <div className="grey-box">
           <div className="overlay eq-height">
-            <h1>Write to us</h1>
+            <h3>
+              We created this form for your feedback and related issues. Your
+              opinions are pretty much of value to us. We assume in your
+              feedback that would help us to improve our services.
+            </h3>
             <form
               className="contact-form"
               method="post"

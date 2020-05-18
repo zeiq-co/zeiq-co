@@ -18,12 +18,20 @@ class ContactDetails extends React.Component {
                   </Link>
                 </h1>
                 <ul className="ul-custom-bullet">
-                  <li>
-                    <i className="saulticon-map" /> {contact.address}
+                  {/* <li>
+                    <i className="saulticon-map" /> {contact.ukAddress}
                   </li>
                   <li>
                     <a href="tel:{contact.telephone}">
-                      <i className="saulticon-call" /> {contact.telephone}
+                      <i className="saulticon-call" /> {contact.ukTelephone}
+                    </a>
+                  </li> */}
+                  <li>
+                    <i className="saulticon-map" /> {contact.indiaAddress}
+                  </li>
+                  <li>
+                    <a href="tel:{contact.telephone}">
+                      <i className="saulticon-call" /> {contact.indiaTelephone}
                     </a>
                   </li>
                   <li>

@@ -13,7 +13,10 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
-        <Seo title="Home" description="We are web development company" />
+        <Seo
+          title="Top Web and Mobile Apps Development Company"
+          description="E-commerce projects , india nic, indianic ,unity 3d game developer, hire mobile apps developers,hire android developers india, shopify ecommerce development"
+        />
         <main id="content" className="white-background">
           <div className="container">
             <div className="row">

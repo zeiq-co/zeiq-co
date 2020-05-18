@@ -23,8 +23,10 @@ const query = graphql`
             instagramId
             mediumId
             githubId
-            address
-            telephone
+            ukAddress
+            ukTelephone
+            indiaAddress
+            indiaTelephone
             email
           }
         }

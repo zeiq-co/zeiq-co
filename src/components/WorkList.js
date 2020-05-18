@@ -22,7 +22,7 @@ class WorkList extends React.Component {
       transitionDuration: '0.3s',
     });
 
-    $grid.imagesLoaded().progress(function () {
+    $grid.imagesLoaded().progress(function() {
       $grid.masonry('layout');
     });
   }
@@ -39,9 +39,9 @@ class WorkList extends React.Component {
             <Contianer className="grid-item grid-item-wide project-thumb welcome-message">
               <div className="inner">
                 <h2>
-                  Hi! We're <span className="text-color">ZEIQ</span>. A full
-                  service digital agency which helps your brand stand out.
-                  Checkout our work.
+                  We are a friendly bunch of thinkers, designers, and techies
+                  constantly delivering great Websites, Mobile Applications &
+                  Ecommerce Websites.
                 </h2>
                 <Link to="/services/" className="button big">
                   All that we do&hellip;

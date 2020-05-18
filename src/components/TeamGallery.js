@@ -44,11 +44,13 @@ const TeamGallery = () => {
     <div className="team-gallery">
       <div className="row">
         <div className="col-md-6 col-lg-4">
-          <h1 className="no-bottom">We guys</h1>
-          <h3>are always game</h3>
+          <h3>
+            The people who work at Zeiq share the vision and values of our
+            community.
+          </h3>
           <p>
-            A small closely knit team of cool folks. We’re professionals,
-            although we dont wear ties.
+            We’re driven by the idea that the best work is born from diligence,
+            craftsmanship and fun.
           </p>
         </div>
         {result.map(teamMember => (
