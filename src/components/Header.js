@@ -26,15 +26,15 @@ const Header = () => (
               <li>
                 <Link to="/work">Work</Link>
               </li>
-              <li>
+              {/*<li>
                 <Link to="/services">Services</Link>
-              </li>
+              </li>*/}
               <li>
                 <Link to="/about">About</Link>
               </li>
-              <li>
+  {/*<li>
                 <Link to="/news">News</Link>
-              </li>
+              </li>*/}
               <li>
                 <Link to="/contact">Contact</Link>
               </li>
