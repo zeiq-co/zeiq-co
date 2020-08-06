@@ -56,7 +56,6 @@ class PortfolioList extends Component {
                     <a className="rn-btn" href="/portfolio-details">
                       View Details
                     </a>
-                    View Details
                   </div>
                 </div>
               </div>

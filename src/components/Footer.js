@@ -1,10 +1,16 @@
 import React from 'react';
+import styled from 'styled-components';
 import {
   FaTwitter,
   FaInstagram,
   FaFacebookF,
   FaLinkedinIn,
 } from 'react-icons/fa';
+
+const Logo = styled.img`
+  height: 40px;
+  width: auto;
+`;
 
 const SocialShare = [
   { Social: <FaFacebookF />, link: 'https://www.facebook.com/' },
@@ -24,7 +30,7 @@ const Footer = () => {
             <div className="inner">
               <div className="logo text-center text-sm-left mb_sm--20">
                 <a href="/home-one">
-                  <img src="/assets/images/logo/logo.png" alt="Logo images" />
+                  <Logo src="/assets/images/logo/logo.png" alt="Logo images" />
                 </a>
               </div>
             </div>
@@ -43,7 +49,7 @@ const Footer = () => {
           <div className="col-lg-4 col-md-12 col-sm-12 col-12">
             <div className="inner text-lg-right text-center mt_md--20 mt_sm--20">
               <div className="text">
-                <p>Copyright © 2020 Rainbow-Themes. All Rights Reserved.</p>
+                <p>Copyright © 2020 Zeiq.co. All Rights Reserved.</p>
               </div>
             </div>
           </div>

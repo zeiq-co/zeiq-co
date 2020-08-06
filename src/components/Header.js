@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import { FiX, FiMenu } from 'react-icons/fi';
+import styled from 'styled-components';
+
+const Logo = styled.img`
+  width: 200px;
+  height: auto;
+`;
 
 class Header extends Component {
   constructor(props) {
@@ -37,28 +43,30 @@ class Header extends Component {
     let logoUrl;
     if (logo === 'light') {
       logoUrl = (
-        <img src="/assets/images/logo/logo-light.png" alt="Digital Agency" />
+        <Logo src="/assets/images/logo/logo-light.png" alt="Digital Agency" />
       );
     } else if (logo === 'dark') {
       logoUrl = (
-        <img src="/assets/images/logo/logo-dark.png" alt="Digital Agency" />
+        <Logo src="/assets/images/logo/logo-dark.png" alt="Digital Agency" />
       );
     } else if (logo === 'symbol-dark') {
       logoUrl = (
-        <img
+        <Logo
           src="/assets/images/logo/logo-symbol-dark.png"
           alt="Digital Agency"
         />
       );
     } else if (logo === 'symbol-light') {
       logoUrl = (
-        <img
+        <Logo
           src="/assets/images/logo/logo-symbol-light.png"
           alt="Digital Agency"
         />
       );
     } else {
-      logoUrl = <img src="/assets/images/logo/logo.png" alt="Digital Agency" />;
+      logoUrl = (
+        <Logo src="/assets/images/logo/logo.png" alt="Digital Agency" />
+      );
     }
 
     return (
