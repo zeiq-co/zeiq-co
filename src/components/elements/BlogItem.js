@@ -1,25 +1,28 @@
 import React from 'react';
+import Img from 'gatsby-image';
 
-const BlogItem = ({ value }) => (
+const BlogItem = ({ data }) => (
   <div className="col-lg-4 col-md-6 col-12">
     <div className="blog blog-style--1">
-      <div className="thumbnail">
-        <a href="/blog-details">
-          <img
-            className="w-100"
-            src={`/assets/images/blog/blog-${value.images}.jpg`}
-            alt="Blog Images"
-          />
-        </a>
-      </div>
+      {data.frontmatter.featuredImage !== null && (
+        <div className="thumbnail">
+          <a href={data.fields.slug}>
+            <Img
+              className="w-100"
+              alt={data.frontmatter.title}
+              fluid={data.frontmatter.featuredImage.childImageSharp.fluid}
+            />
+          </a>
+        </div>
+      )}
       <div className="content">
-        <p className="blogtype">{value.category}</p>
+        <p className="blogtype">{data.frontmatter.category}</p>
         <h4 className="title">
-          <a href="/blog-details">{value.title}</a>
+          <a href={data.fields.slug}>{data.frontmatter.title}</a>
         </h4>
 
         <div className="blog-btn">
-          <a className="rn-btn text-white" href="/blog-details">
+          <a className="rn-btn text-white" href={data.fields.slug}>
             Read More
           </a>
         </div>

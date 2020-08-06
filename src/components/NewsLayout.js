@@ -3,17 +3,28 @@
 import React from 'react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { graphql } from 'gatsby';
-import { FiClock, FiUser, FiMessageCircle, FiHeart } from 'react-icons/fi';
+import { FiClock, FiUser } from 'react-icons/fi';
+import dayjs from 'dayjs';
+import styled from 'styled-components';
 
 import Seo from './Seo';
 import PageLayout from './PageLayout';
+
+const Container = styled.div`
+  background-image: ${(props) => `url(${props.bgImage}) !important`};
+`;
 
 export default function PageTemplate({ data: { mdx } }) {
   return (
     <PageLayout>
       <Seo title={mdx.frontmatter.title} />
-      <div
-        className="rn-page-title-area pt--120 pb--190 bg_image bg_image--7"
+      <Container
+        bgImage={
+          mdx.frontmatter.featuredImage !== null
+            ? mdx.frontmatter.featuredImage.childImageSharp.fluid.base64
+            : undefined
+        }
+        className="rn-page-title-area pt--120 pb--190 bg_image"
         data-black-overlay="7">
         <div className="container">
           <div className="row">
@@ -25,28 +36,18 @@ export default function PageTemplate({ data: { mdx } }) {
                 <ul className="blog-meta d-flex justify-content-center align-items-center">
                   <li>
                     <FiClock />
-                    May 18, 2020
+                    {dayjs(mdx.frontmatter.date).format('D MMM YYYY')}
                   </li>
                   <li>
                     <FiUser />
-                    NipaBali
-                  </li>
-                  <li>
-                    <FiMessageCircle />
-                    15 Comments
-                  </li>
-                  <li>
-                    <FiHeart />
-                    Like
-                    <FiHeart />
-                    Like
+                    Zeiq
                   </li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </Container>
       <div className="rn-blog-details pt--110 pb--70 bg_color--1">
         <div className="container">
           <div className="row">
@@ -71,6 +72,14 @@ export const pageQuery = graphql`
       body
       frontmatter {
         title
+        date
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 1600) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

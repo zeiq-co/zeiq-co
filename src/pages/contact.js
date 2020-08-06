@@ -1,12 +1,14 @@
 import React from 'react';
 import { FiHeadphones, FiMail, FiMapPin } from 'react-icons/fi';
-import ContactForm from '../components/elements/ContactForm';
+import { graphql } from 'gatsby';
 
+import ContactForm from '../components/elements/ContactForm';
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 
-const Contact = () => (
+const Contact = ({ data: { contactYaml: contact } }) => (
   <Layout>
+    {console.log('contact', contact)}
     <Seo title="Contact Us" />
     <div
       className="rn-page-title-area pt--120 pb--190 bg_image bg_image--17"
@@ -15,7 +17,7 @@ const Contact = () => (
         <div className="row">
           <div className="col-lg-12">
             <div className="rn-page-title text-center pt--100">
-              <h2 className="title theme-gradient">Cntact With Us</h2>
+              <h2 className="title theme-gradient">Contact With Us</h2>
               <p>
                 Contrary to popular belief, Lorem Ipsum is not simply random
                 text.
@@ -38,10 +40,14 @@ const Contact = () => (
               <div className="inner">
                 <h4 className="title">Contact With Phone Number</h4>
                 <p>
-                  <a href="tel:+057 254 365 456">+057 254 365 456</a>
+                  <a href={`tel:${contact.telephoneUk}`}>
+                    {contact.telephoneUk}
+                  </a>
                 </p>
                 <p>
-                  <a href="tel:+856 325 652 984">+856 325 652 984</a>
+                  <a href={`tel:${contact.telephoneIndia}`}>
+                    {contact.telephoneIndia}
+                  </a>
                 </p>
               </div>
             </div>
@@ -57,10 +63,14 @@ const Contact = () => (
               <div className="inner">
                 <h4 className="title">Email Address</h4>
                 <p>
-                  <a href="mailto:admin@gmail.com">admin@gmail.com</a>
+                  <a href={`mailto:${contact.emailSales}`}>
+                    {contact.emailSales}
+                  </a>
                 </p>
                 <p>
-                  <a href="mailto:example@gmail.com">example@gmail.com</a>
+                  <a href={`mailto:${contact.emailSupport}`}>
+                    {contact.emailSupport}
+                  </a>
                 </p>
               </div>
             </div>
@@ -76,8 +86,8 @@ const Contact = () => (
               <div className="inner">
                 <h4 className="title">Location</h4>
                 <p>
-                  5678 Bangla Main Road, cities 580 <br /> GBnagla, example
-                  54786
+                  {contact.locationUk} <br />
+                  {contact.locationIndia}
                 </p>
               </div>
             </div>
@@ -93,3 +103,16 @@ const Contact = () => (
 );
 
 export default Contact;
+
+export const pageQuery = graphql`
+  query contactIndex {
+    contactYaml {
+      emailSales
+      emailSupport
+      locationIndia
+      locationUk
+      telephoneIndia
+      telephoneUk
+    }
+  }
+`;

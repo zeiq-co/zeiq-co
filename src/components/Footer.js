@@ -1,25 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
-import {
-  FaTwitter,
-  FaInstagram,
-  FaFacebookF,
-  FaLinkedinIn,
-} from 'react-icons/fa';
+import { FaTwitter, FaInstagram, FaFacebookF, FaGithub } from 'react-icons/fa';
 
 const Logo = styled.img`
   height: 40px;
   width: auto;
 `;
 
-const SocialShare = [
-  { Social: <FaFacebookF />, link: 'https://www.facebook.com/' },
-  { Social: <FaLinkedinIn />, link: 'https://www.linkedin.com/' },
-  { Social: <FaInstagram />, link: 'https://www.instagram.com/' },
-  { Social: <FaTwitter />, link: 'https://twitter.com/' },
-];
+const Footer = ({ data }) => {
+  const SocialShare = [
+    { Social: <FaFacebookF />, link: data.facebook },
+    { Social: <FaGithub />, link: data.github },
+    { Social: <FaInstagram />, link: data.instagram },
+    { Social: <FaTwitter />, link: data.twitter },
+  ];
 
-const Footer = () => {
   return (
     <div
       className="footer-style-2 ptb--30 bg_image bg_image--1"

@@ -5,11 +5,10 @@ import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import Breadcrumb from '../components/elements/Breadcrumb';
 import BlogItem from '../components/elements/BlogItem';
-import BlogContent from '../components/elements/BlogContent';
 
 const NewsUpdates = ({ data }) => {
   const { edges: posts } = data.allMdx;
-  const PostList = BlogContent.slice(0, 3);
+  // console.log('posts', posts);
 
   return (
     <Layout>
@@ -18,8 +17,8 @@ const NewsUpdates = ({ data }) => {
       <div className="rn-blog-area ptb--120 bg_color--1">
         <div className="container">
           <div className="row mt--60 mt_sm--40">
-            {PostList.map((value, i) => (
-              <BlogItem key={i} value={value} />
+            {posts.map(({ node: post }) => (
+              <BlogItem key={post.id} data={post} />
             ))}
           </div>
         </div>
@@ -32,7 +31,10 @@ export default NewsUpdates;
 
 export const pageQuery = graphql`
   query newsIndex {
-    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
+    allMdx(
+      sort: { fields: frontmatter___date, order: DESC }
+      filter: { frontmatter: { type: { eq: "post" } } }
+    ) {
       edges {
         node {
           id
@@ -41,6 +43,13 @@ export const pageQuery = graphql`
             title
             date
             category
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 400) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
           fields {
             slug
