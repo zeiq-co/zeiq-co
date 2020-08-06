@@ -88,10 +88,18 @@ class Header extends Component {
                   <Link to="/service">Service</Link>
                   <ul className="submenu">
                     <li>
-                      <Link to="/service">Service</Link>
+                      <Link to="/website-development">Website Development</Link>
                     </li>
                     <li>
-                      <Link to="/service-details">Service Details</Link>
+                      <Link to="/mobile-app-development">
+                        Mobile App Development
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/marketing">Marketing</Link>
+                    </li>
+                    <li>
+                      <Link to="/graphic-designing">Graphic Designing</Link>
                     </li>
                   </ul>
                 </li>
@@ -99,7 +107,7 @@ class Header extends Component {
                   <Link to="/about">About</Link>
                 </li>
                 <li>
-                  <Link to="/new">Blog</Link>
+                  <Link to="/news">Blog</Link>
                 </li>
               </ul>
             </nav>

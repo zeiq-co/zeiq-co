@@ -7,8 +7,6 @@ import { MDXProvider } from '@mdx-js/react';
 import Layout from './Layout';
 
 const Container = styled.div`
-  margin-top: 2rem;
-  margin-bottom: 4rem;
   h1 {
     margin-top: 2.5rem;
     margin-bottom: 1.5rem;
@@ -21,11 +19,20 @@ const Container = styled.div`
     margin-bottom: 1rem;
     font-size: 18px;
   }
+  .mdx-content {
+    margin: 4rem 10rem;
+  }
+  .about-area {
+    margin-top: 15rem;
+  }
+  .rn-finding-us-area {
+    margin-bottom: 8rem;
+  }
   .page-content {
     img {
       display: flex;
       margin: 3rem auto 4rem auto;
-      box-shadow: ${props => props.theme.boxShadow};
+      box-shadow: ${(props) => props.theme.boxShadow};
     }
   }
 `;
@@ -33,23 +40,16 @@ const Container = styled.div`
 export default function PageTemplate({ children }) {
   return (
     <Layout>
-      <Container className="container">
-        <div className="columns is-centered">
-          <div className="column is-four-fifths">
-            <section className="section">
-              <MDXProvider
-                components={{
-                  h1: props => <h1 className="title is-1" {...props} />,
-                  h2: props => <h2 className="title is-2" {...props} />,
-                  h3: props => <h3 className="title is-3" {...props} />,
-                  p: props => <p className="" {...props} />,
-                }}
-              >
-                {children}
-              </MDXProvider>
-            </section>
-          </div>
-        </div>
+      <Container>
+        <MDXProvider
+          components={{
+            h1: (props) => <h1 {...props} />,
+            h2: (props) => <h2 {...props} />,
+            h3: (props) => <h3 {...props} />,
+            p: (props) => <p {...props} />,
+          }}>
+          {children}
+        </MDXProvider>
       </Container>
     </Layout>
   );
