@@ -6,6 +6,8 @@ import GlobalStyle, { theme } from '../utils/theme';
 import config from '../utils/config';
 import Header from './Header';
 
+import '../index.scss';
+
 const Container = styled.div`
   min-height: 70vh;
 `;
@@ -20,7 +22,13 @@ const IndexLayout = ({ children, hideHeader }) => (
         <meta description={config.description} />
       </Helmet>
       <GlobalStyle />
-      {!hideHeader && <Header />}
+      {!hideHeader && (
+        <Header
+          headertransparent="header--transparent"
+          colorblack="color--black"
+          logoname="logo.png"
+        />
+      )}
       <Container>{children}</Container>
     </>
   </ThemeProvider>

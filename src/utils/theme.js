@@ -1,6 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import reset from 'styled-reset-advanced';
-import { darken, lighten } from 'polished';
 
 const mainBrandColor = '#00D1B2';
 const lightShades = '#F5F5F5';
@@ -43,58 +41,6 @@ export const theme = {
   boxShadow: 'rgba(0,0,0,0.08) 0px 7px 18px',
 };
 
-const GlobalStyle = createGlobalStyle`
-  ${reset};
-
-  body {
-    font-family: ${theme.secondaryFontFamily};
-    color: ${theme.textColor};
-    letter-spacing: 0.03rem !important;
-    font-size: 17px;
-  }
-  .title {
-    font-family: ${theme.primaryFontFamily};
-  }
-  .button {
-    font-family: ${theme.primaryFontFamily};
-  }
-  p {
-    line-height: 1.5rem;
-  }
-  p, .title, .box {
-    color: ${theme.textColor} !important;
-  }
-  .subtitle {
-    color: ${lighten(0.06, theme.textColor)} !important;
-  }
-  .button.is-primary {
-    background-color: ${theme.mainBrandColor};
-    transition: background-color 0.2s ease;
-    :hover {
-      background-color: ${darken(0.06, theme.mainBrandColor)};
-    }
-  }
-  .button.is-secondary {
-    background-color: ${theme.lightAccent};
-    transition: background-color 0.2s ease;
-    color: #ffffff;
-    :hover {
-      background-color: ${darken(0.06, theme.lightAccent)};
-    }
-  }
-  .button.is-link {
-    background-color: ${theme.darkAccent};
-    transition: background-color 0.2s ease;
-    :hover {
-      background-color: ${darken(0.06, theme.darkAccent)};
-    }
-  }
-  .button, .input, .card {
-    box-shadow: ${theme.boxShadow};
-  }
-  .has-text-warning {
-    color: ${theme.lightAccent} !important;
-  }
-`;
+const GlobalStyle = createGlobalStyle``;
 
 export default GlobalStyle;

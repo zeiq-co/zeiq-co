@@ -1,112 +1,125 @@
-/* eslint global-require: 0 */
-
-import React from 'react';
-import styled from 'styled-components';
+import React, { Component } from 'react';
 import { Link } from 'gatsby';
+import { FiX, FiMenu } from 'react-icons/fi';
 
-const Section = styled.section`
-  padding: 1rem 1.5rem;
-  font-family: ${props => props.theme.primaryFontFamily};
-  .navbar {
-    background-color: transparent;
-  }
-  .navbar-brand {
-    margin-right: 20px;
-    .navbar-item img {
-      max-height: 3.75rem;
-    }
-  }
-  .navbar-menu {
-    @media screen and (max-width: 600px) {
-      position: absolute;
-      width: 100%;
-      transition: 0.6s;
-    }
-  }
-  .navbar-item {
-    font-weight: 700;
-    font-size: 1.2rem;
-    :hover {
-      color: ${props => props.theme.darkAccent};
-    }
-  }
-  .navbar-burger {
-    background-color: #1c1323;
-    color: #fff;
-    opacity: 0.6;
-    border-radius: 4px;
-  }
-`;
-
-export default class Header extends React.Component {
+class Header extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      isActive: false,
-    };
-  }
-
-  handleMobileMenu() {
-    const { isActive } = this.state;
-
-    this.setState({
-      isActive: !isActive,
+    this.menuTrigger = this.menuTrigger.bind(this);
+    this.CLoseMenuTrigger = this.CLoseMenuTrigger.bind(this);
+    //  this.subMetuTrigger = this.subMetuTrigger.bind(this);
+    window.addEventListener('load', function () {
+      console.log('All assets are loaded');
     });
   }
 
+  menuTrigger() {
+    document.querySelector('.header-wrapper').classList.toggle('menu-open');
+  }
+
+  CLoseMenuTrigger() {
+    document.querySelector('.header-wrapper').classList.remove('menu-open');
+  }
+
   render() {
-    const { isActive } = this.state;
+    const elements = document.querySelectorAll('.has-droupdown > a');
+    for (const i in elements) {
+      if (elements.hasOwnProperty(i)) {
+        elements[i].onclick = function () {
+          this.parentElement
+            .querySelector('.submenu')
+            .classList.toggle('active');
+          this.classList.toggle('open');
+        };
+      }
+    }
+    const { logo, color = 'default-color' } = this.props;
+    let logoUrl;
+    if (logo === 'light') {
+      logoUrl = (
+        <img src="/assets/images/logo/logo-light.png" alt="Digital Agency" />
+      );
+    } else if (logo === 'dark') {
+      logoUrl = (
+        <img src="/assets/images/logo/logo-dark.png" alt="Digital Agency" />
+      );
+    } else if (logo === 'symbol-dark') {
+      logoUrl = (
+        <img
+          src="/assets/images/logo/logo-symbol-dark.png"
+          alt="Digital Agency"
+        />
+      );
+    } else if (logo === 'symbol-light') {
+      logoUrl = (
+        <img
+          src="/assets/images/logo/logo-symbol-light.png"
+          alt="Digital Agency"
+        />
+      );
+    } else {
+      logoUrl = <img src="/assets/images/logo/logo.png" alt="Digital Agency" />;
+    }
 
     return (
-      <Section className="section">
-        <div className="container">
-          <nav
-            className="navbar"
-            role="navigation"
-            aria-label="main navigation"
-          >
-            <div className="navbar-brand">
-              <Link className="navbar-item" to="/">
-                <img src="/images/logo-1024.png" alt="site logo" />
+      <header
+        className={`header-area formobile-menu header--transparent ${color}`}
+      >
+        <div className="header-wrapper" id="header-wrapper">
+          <div className="header-left">
+            <div className="logo">
+              <a href="/">{logoUrl}</a>
+            </div>
+          </div>
+          <div className="header-right">
+            <nav className="mainmenunav d-lg-block">
+              <ul className="mainmenu">
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li>
+                  <Link to="/work">Work</Link>
+                </li>
+                <li className="has-droupdown">
+                  <Link to="/service">Service</Link>
+                  <ul className="submenu">
+                    <li>
+                      <Link to="/service">Service</Link>
+                    </li>
+                    <li>
+                      <Link to="/service-details">Service Details</Link>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <Link to="/about">About</Link>
+                </li>
+              </ul>
+            </nav>
+            <div className="header-btn">
+              <Link className="rn-btn" to="/contact">
+                <span>Contact</span>
               </Link>
-              <a
-                href="#"
-                role="button"
-                className={
-                  isActive
-                    ? 'navbar-burger burger mobile is-active'
-                    : 'navbar-burger burger mobile'
-                }
-                aria-label="menu"
-                aria-expanded="false"
-                data-target="navbarBasicExample"
-                onClick={() => this.handleMobileMenu()}
+            </div>
+            {/* Start Humberger Menu  */}
+            <div className="humberger-menu d-block d-lg-none pl--20">
+              <span
+                onClick={this.menuTrigger}
+                className="menutrigger text-white"
               >
-                <span aria-hidden="true" />
-                <span aria-hidden="true" />
-                <span aria-hidden="true" />
-              </a>
+                <FiMenu />
+              </span>
             </div>
-            <div className={isActive ? 'navbar-menu is-active' : 'navbar-menu'}>
-              <div className="navbar-start">
-                <Link to="/" className="navbar-item">
-                  Home
-                </Link>
-                <Link to="/about" className="navbar-item">
-                  About
-                </Link>
-                <Link to="/news" className="navbar-item">
-                  News
-                </Link>
-                <Link to="/contact" className="navbar-item">
-                  Contact
-                </Link>
-              </div>
+            {/* End Humberger Menu  */}
+            <div className="close-menu d-block d-lg-none">
+              <span onClick={this.CLoseMenuTrigger} className="closeTrigger">
+                <FiX />
+              </span>
             </div>
-          </nav>
+          </div>
         </div>
-      </Section>
+      </header>
     );
   }
 }
+export default Header;
