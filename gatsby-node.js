@@ -52,6 +52,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     let layout = 'NewsLayout';
     if (node.frontmatter.type === 'work') {
       layout = 'WorkLayout';
+    } else if (node.frontmatter.type === 'service') {
+      layout = 'ServiceLayout';
     }
 
     createPage({
