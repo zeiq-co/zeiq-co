@@ -63,8 +63,7 @@ class Header extends Component {
 
     return (
       <header
-        className={`header-area formobile-menu header--transparent ${color}`}
-      >
+        className={`header-area formobile-menu header--transparent ${color}`}>
         <div className="header-wrapper" id="header-wrapper">
           <div className="header-left">
             <div className="logo">
@@ -74,9 +73,6 @@ class Header extends Component {
           <div className="header-right">
             <nav className="mainmenunav d-lg-block">
               <ul className="mainmenu">
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
                 <li>
                   <Link to="/work">Work</Link>
                 </li>
@@ -94,19 +90,21 @@ class Header extends Component {
                 <li>
                   <Link to="/about">About</Link>
                 </li>
+                <li>
+                  <Link to="/new">Blog</Link>
+                </li>
               </ul>
             </nav>
             <div className="header-btn">
               <Link className="rn-btn" to="/contact">
-                <span>Contact</span>
+                <span>Contact Us</span>
               </Link>
             </div>
             {/* Start Humberger Menu  */}
             <div className="humberger-menu d-block d-lg-none pl--20">
               <span
                 onClick={this.menuTrigger}
-                className="menutrigger text-white"
-              >
+                className="menutrigger text-white">
                 <FiMenu />
               </span>
             </div>

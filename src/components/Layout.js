@@ -1,10 +1,14 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import styled, { ThemeProvider } from 'styled-components';
+import ScrollToTop from 'react-scroll-up';
+import { FiChevronUp } from 'react-icons/fi';
 
 import GlobalStyle, { theme } from '../utils/theme';
 import config from '../utils/config';
+import CallAction from './elements/CallAction';
 import Header from './Header';
+import Footer from './Footer';
 
 import '../index.scss';
 
@@ -30,6 +34,13 @@ const IndexLayout = ({ children, hideHeader }) => (
         />
       )}
       <Container>{children}</Container>
+      <CallAction />
+      <Footer />
+      <div className="backto-top">
+        <ScrollToTop showUnder={160}>
+          <FiChevronUp />
+        </ScrollToTop>
+      </div>
     </>
   </ThemeProvider>
 );
