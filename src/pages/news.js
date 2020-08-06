@@ -1,36 +1,29 @@
 import React from 'react';
-import styled from 'styled-components';
 import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
-import NewsItem from '../components/NewsItem';
-
-const Container = styled.div`
-  margin-top: 4rem;
-  margin-bottom: 6rem;
-`;
+import Breadcrumb from '../components/elements/Breadcrumb';
+import BlogItem from '../components/elements/BlogItem';
+import BlogContent from '../components/elements/BlogContent';
 
 const NewsUpdates = ({ data }) => {
   const { edges: posts } = data.allMdx;
+  const PostList = BlogContent.slice(0, 3);
 
   return (
     <Layout>
       <Seo title="News & Updates" />
-      <section className="section">
-        <Container className="container">
-          <h2 className="title is-2 has-text-centered has-text-weight-bold">
-            News & Updates
-          </h2>
-          <div className="columns is-centered">
-            <div className="column is-four-fifths">
-              {posts.map(({ node: post }) => (
-                <NewsItem key={post.id} post={post} />
-              ))}
-            </div>
+      <Breadcrumb title="News & Updates" />
+      <div className="rn-blog-area ptb--120 bg_color--1">
+        <div className="container">
+          <div className="row mt--60 mt_sm--40">
+            {PostList.map((value, i) => (
+              <BlogItem key={i} value={value} />
+            ))}
           </div>
-        </Container>
-      </section>
+        </div>
+      </div>
     </Layout>
   );
 };

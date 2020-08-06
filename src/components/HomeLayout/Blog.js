@@ -1,5 +1,6 @@
 import React from 'react';
 import BlogContent from '../elements/BlogContent';
+import BlogItem from '../elements/BlogItem';
 
 const Blog = () => {
   const PostList = BlogContent.slice(0, 3);
@@ -26,31 +27,7 @@ const Blog = () => {
       </div>
       <div className="row mt--60 mt_sm--40">
         {PostList.map((value, i) => (
-          <div className="col-lg-4 col-md-6 col-12" key={i}>
-            <div className="blog blog-style--1">
-              <div className="thumbnail">
-                <a href="/blog-details">
-                  <img
-                    className="w-100"
-                    src={`/assets/images/blog/blog-${value.images}.jpg`}
-                    alt="Blog Images"
-                  />
-                </a>
-              </div>
-              <div className="content">
-                <p className="blogtype">{value.category}</p>
-                <h4 className="title">
-                  <a href="/blog-details">{value.title}</a>
-                </h4>
-
-                <div className="blog-btn">
-                  <a className="rn-btn text-white" href="/blog-details">
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+          <BlogItem key={i} value={value} />
         ))}
       </div>
     </div>
