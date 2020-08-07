@@ -10,10 +10,10 @@ const Logo = styled.img`
 
 const Footer = ({ data }) => {
   const SocialShare = [
-    { Social: <FaFacebookF />, link: data.facebook },
-    { Social: <FaGithub />, link: data.github },
     { Social: <FaInstagram />, link: data.instagram },
     { Social: <FaTwitter />, link: data.twitter },
+    { Social: <FaFacebookF />, link: data.facebook },
+    { Social: <FaGithub />, link: data.github },
   ];
 
   return (

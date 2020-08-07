@@ -17,7 +17,7 @@ const BlogItem = ({ data }) => (
         </div>
       )}
       <div className="content">
-        <p className="blogtype">{data.frontmatter.category}</p>
+        <p className="blogtype text-uppercase">{data.frontmatter.category}</p>
         <h4 className="title">
           <Link to={data.fields.slug}>{data.frontmatter.title}</Link>
         </h4>

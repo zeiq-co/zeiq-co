@@ -1,5 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 const pageQuery = graphql`
   query AboutPageQuery {
@@ -7,7 +8,13 @@ const pageQuery = graphql`
       whatWeDo
       whoWeAre
       details
-      featuredImage
+      featuredImage {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   }
 `;
@@ -24,10 +31,9 @@ const About = () => {
           <div className="row row--35 align-items-center">
             <div className="col-lg-5 col-md-12">
               <div className="thumbnail">
-                <img
+                <Img
                   className="w-100"
-                  src={about.featuredImage}
-                  alt="About Images"
+                  fluid={about.featuredImage.childImageSharp.fluid}
                 />
               </div>
             </div>

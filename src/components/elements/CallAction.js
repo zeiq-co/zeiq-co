@@ -11,7 +11,7 @@ const CallAction = () => {
               <span>READY TO DO THIS</span>
               <h2>Lets get to work</h2>
               <Link className="rn-button-style--2" to="/contact">
-                <span>Contact Us</span>
+                <span>Make Enquiry</span>
               </Link>
             </div>
           </div>

@@ -45,6 +45,9 @@ const GlobalStyle = createGlobalStyle`
 .h-400 {
   height: 400px;
 }
+.text-uppercase {
+  text-transform: uppercase;
+}
 `;
 
 export default GlobalStyle;

@@ -14,7 +14,7 @@ const Blog = ({ posts }) => {
         </div>
         <div className="col-lg-6 col-md-12 col-sm-12 col-12">
           <div className="blog-btn text-left text-lg-right mt_sm--10 mt_md--10">
-            <Link className="btn-transparent rn-btn-dark" to="/news">
+            <Link className="btn-transparent rn-btn-dark" to="/blog">
               <span className="text">View All News</span>
             </Link>
           </div>

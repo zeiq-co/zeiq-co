@@ -24,8 +24,8 @@ const Contact = ({ data: { contactYaml: contact } }) => (
             <div className="rn-page-title text-center pt--100">
               <h2 className="title theme-gradient">Contact With Us</h2>
               <p>
-                Tell us about your project, get a quick estimate and a plan for
-                making it live.
+                Want to know more about what we do? Have a general query? We’ll
+                always do our best to help.
               </p>
             </div>
           </div>
@@ -42,7 +42,7 @@ const Contact = ({ data: { contactYaml: contact } }) => (
                 <FiHeadphones />
               </div>
               <div className="inner">
-                <h4 className="title">Contact With Phone Number</h4>
+                <h4 className="title">Contact via Phone</h4>
                 <p>
                   <a href={`tel:${contact.telephoneUk}`}>
                     {contact.telephoneUk}
