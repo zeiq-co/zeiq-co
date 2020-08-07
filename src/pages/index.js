@@ -103,6 +103,7 @@ export const pageQuery = graphql`
             info
             type
             author
+            icon
             featuredImage {
               childImageSharp {
                 fluid(maxWidth: 400) {
