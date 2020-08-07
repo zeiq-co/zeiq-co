@@ -1,5 +1,4 @@
 import React from 'react';
-import { FiCast, FiLayers, FiUsers, FiMonitor } from 'react-icons/fi';
 import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
@@ -7,48 +6,9 @@ import Seo from '../components/Seo';
 import Breadcrumb from '../components/elements/Breadcrumb';
 import ServiceItem from '../components/elements/ServiceItem';
 
-const ServiceList = [
-  {
-    icon: <FiCast />,
-    title: 'Business Stratagy',
-    description:
-      'I throw myself down among the tall grass by the stream as I lie close to the earth.',
-  },
-  {
-    icon: <FiLayers />,
-    title: 'Website Development',
-    description:
-      'I throw myself down among the tall grass by the stream as I lie close to the earth.',
-  },
-  {
-    icon: <FiUsers />,
-    title: 'Marketing & Reporting',
-    description:
-      'I throw myself down among the tall grass by the stream as I lie close to the earth.',
-  },
-  {
-    icon: <FiMonitor />,
-    title: 'Mobile App Development',
-    description:
-      'I throw myself down among the tall grass by the stream as I lie close to the earth.',
-  },
-  {
-    icon: <FiCast />,
-    title: 'Website Development',
-    description:
-      'I throw myself down among the tall grass by the stream as I lie close to the earth.',
-  },
-  {
-    icon: <FiMonitor />,
-    title: 'Marketing & Reporting',
-    description:
-      'I throw myself down among the tall grass by the stream as I lie close to the earth.',
-  },
-];
-
 const Services = ({ data }) => {
   const services = data.allMdx.edges;
-  console.log('services', services);
+  // console.log('services', services);
 
   return (
     <Layout>

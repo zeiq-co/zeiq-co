@@ -48,7 +48,7 @@ const pageQuery = graphql`
 
 const IndexLayout = ({ children, hideHeader }) => {
   const data = useStaticQuery(pageQuery);
-  console.log('data2', data);
+  // console.log('data2', data);
 
   return (
     <ThemeProvider theme={theme}>

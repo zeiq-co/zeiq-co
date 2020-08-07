@@ -21,7 +21,7 @@ const pageQuery = graphql`
 const Testimonial = () => {
   const data = useStaticQuery(pageQuery);
   const reviews = data.allReviewsYaml.edges;
-  console.log('testimonials', reviews);
+  // console.log('testimonials', reviews);
 
   return (
     <>

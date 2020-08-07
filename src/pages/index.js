@@ -13,7 +13,7 @@ import Testimonial from '../components/elements/Testimonial';
 import BrandsList from '../components/elements/BrandsList';
 
 const IndexPage = ({ data }) => {
-  console.log('data', data);
+  // console.log('data', data);
   const mdxData = data.allMdx.edges;
   const services = filter(mdxData, (o) => {
     return o.node.frontmatter.type === 'service';

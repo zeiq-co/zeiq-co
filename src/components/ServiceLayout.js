@@ -3,12 +3,17 @@
 import React from 'react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { graphql } from 'gatsby';
+import { filter } from 'lodash';
 
 import Seo from './Seo';
 import PageLayout from './PageLayout';
+import ServiceItem from './elements/ServiceItem';
 
 export default function ServiceTemplate({ data }) {
-  const { mdx } = data || {};
+  const mdx = data && data.mdx ? data.mdx : { frontmatter: {}, fields: {} };
+  const childServices = filter(data.allMdx.edges, (o) => {
+    return `/${o.node.frontmatter.parent}/` === mdx.fields.slug;
+  });
 
   return (
     <PageLayout>
@@ -122,6 +127,25 @@ export default function ServiceTemplate({ data }) {
               </div>
             </div>
           </div>
+          <div className="row service-one-wrapper pt--70">
+            {childServices.map(({ node: service }) => (
+              <ServiceItem key={service.id} service={service} />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="rn-blog-details pt--70 pb--70 bg_color--1">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="inner-wrapper">
+                <div className="inner">
+                  <MDXRenderer>{mdx.body}</MDXRenderer>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </PageLayout>
@@ -133,6 +157,9 @@ export const pageQuery = graphql`
     mdx(id: { eq: $id }) {
       id
       body
+      fields {
+        slug
+      }
       frontmatter {
         title
         date
@@ -141,6 +168,21 @@ export const pageQuery = graphql`
             fluid(maxWidth: 1600) {
               ...GatsbyImageSharpFluid
             }
+          }
+        }
+      }
+    }
+    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            parent
+            info
           }
         }
       }
