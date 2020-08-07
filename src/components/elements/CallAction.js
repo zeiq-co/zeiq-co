@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 const CallAction = () => {
   return (
@@ -9,9 +10,9 @@ const CallAction = () => {
             <div className="inner text-center">
               <span>READY TO DO THIS</span>
               <h2>Lets get to work</h2>
-              <a className="rn-button-style--2" href="/contact">
+              <Link className="rn-button-style--2" to="/contact">
                 <span>Contact Us</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -36,7 +36,7 @@ const IndexPage = ({ data }) => {
       </div>
       <div className="service-area ptb--80  bg_image bg_image--3">
         <div className="container">
-          <Services data={services} />
+          <Services services={services} />
         </div>
       </div>
       <div className="portfolio-area ptb--120">

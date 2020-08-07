@@ -9,7 +9,7 @@ const ServiceOne = ({ data }) => (
             <div className="icon">
               <img
                 src={`/assets/images/icons/icon-${val.icon}.png`}
-                alt="Digital Agency"
+                alt={val.title}
               />
             </div>
             <div className="content">

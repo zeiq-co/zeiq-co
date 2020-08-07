@@ -1,16 +1,20 @@
 import React from 'react';
+import { Link } from 'gatsby';
+import { FiCast, FiLayers, FiUsers, FiMonitor } from 'react-icons/fi';
 
-const ServiceItem = ({ val }) => (
+const ServiceItem = ({ service }) => (
   <div className="col-lg-6 col-md-6 col-sm-6 col-12">
-    <a href="/service-details">
+    <Link to={service.fields.slug}>
       <div className="service service__style--2">
-        <div className="icon">{val.icon}</div>
+        <div className="icon">
+          <FiCast />
+        </div>
         <div className="content">
-          <h3 className="title">{val.title}</h3>
-          <p>{val.description}</p>
+          <h3 className="title">{service.frontmatter.title}</h3>
+          <p>{service.frontmatter.info}</p>
         </div>
       </div>
-    </a>
+    </Link>
   </div>
 );
 

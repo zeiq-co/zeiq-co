@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 const Image = styled.div`
   &&& {
@@ -30,14 +31,14 @@ class PortfolioList extends Component {
                   <div className="inner">
                     <p>{project.frontmatter.category}</p>
                     <h4>
-                      <a href={project.fields.slug}>
+                      <Link to={project.fields.slug}>
                         {project.frontmatter.title}
-                      </a>
+                      </Link>
                     </h4>
                     <div className="portfolio-button">
-                      <a className="rn-btn" href={project.fields.slug}>
+                      <Link className="rn-btn" to={project.fields.slug}>
                         View Details
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
