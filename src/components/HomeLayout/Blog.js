@@ -1,10 +1,7 @@
 import React from 'react';
-import BlogContent from '../elements/BlogContent';
 import BlogItem from '../elements/BlogItem';
 
 const Blog = () => {
-  const PostList = BlogContent.slice(0, 3);
-
   return (
     <div className="container">
       <div className="row align-items-end">
@@ -25,11 +22,11 @@ const Blog = () => {
           </div>
         </div>
       </div>
-      <div className="row mt--60 mt_sm--40">
-        {PostList.map((value, i) => (
-          <BlogItem key={i} value={value} />
+      {/* <div className="row mt--60 mt_sm--40">
+        {[].map((value, i) => (
+          <BlogItem key={i} data={value} />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

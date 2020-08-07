@@ -1,0 +1,15 @@
+- home:
+  slogan: A digital agency.
+  features:
+    - one:
+      title: Business Stratagy
+      icon: '01'
+      details: There are many variations of passages of Lorem Ipsum available, but the majority have suffered.
+    - two:
+      title: Website Development
+      icon: '02'
+      details: There are many variations of passages of Lorem Ipsum available, but the majority have suffered.
+    - three:
+      title: Marketing & Reporting
+      icon: '03'
+      details: There are many variations of passages of Lorem Ipsum available, but the majority have suffered.

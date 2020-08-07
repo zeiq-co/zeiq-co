@@ -105,7 +105,7 @@ const Contact = ({ data: { contactYaml: contact } }) => (
 export default Contact;
 
 export const pageQuery = graphql`
-  query contactIndex {
+  query contactQuery {
     contactYaml {
       emailSales
       emailSupport

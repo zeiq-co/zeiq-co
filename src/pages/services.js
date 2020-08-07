@@ -1,5 +1,6 @@
 import React from 'react';
 import { FiCast, FiLayers, FiUsers, FiMonitor } from 'react-icons/fi';
+import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
