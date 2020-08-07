@@ -54,16 +54,7 @@ export const pageQuery = graphql`
           excerpt
           frontmatter {
             title
-            date
-            category
             info
-            featuredImage {
-              childImageSharp {
-                fluid(maxWidth: 400) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
           }
           fields {
             slug

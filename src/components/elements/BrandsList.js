@@ -4,7 +4,7 @@ const BrandsList = ({ data }) => (
   <>
     <ul className="brand-style-2">
       {data.map(({ node: item }) => (
-        <li>
+        <li key={item.title}>
           <img src={item.image} alt={item.title} />
         </li>
       ))}
