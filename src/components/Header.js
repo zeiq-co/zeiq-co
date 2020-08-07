@@ -14,21 +14,31 @@ class Header extends Component {
     this.menuTrigger = this.menuTrigger.bind(this);
     this.CLoseMenuTrigger = this.CLoseMenuTrigger.bind(this);
     //  this.subMetuTrigger = this.subMetuTrigger.bind(this);
-    window.addEventListener('load', function () {
-      console.log('All assets are loaded');
-    });
+    if (typeof window !== 'undefined' && window) {
+      window.addEventListener('load', function () {
+        console.log('All assets are loaded');
+      });
+    }
   }
 
   menuTrigger() {
-    document.querySelector('.header-wrapper').classList.toggle('menu-open');
+    if (typeof document !== 'undefined' && document) {
+      document.querySelector('.header-wrapper').classList.toggle('menu-open');
+    }
   }
 
   CLoseMenuTrigger() {
-    document.querySelector('.header-wrapper').classList.remove('menu-open');
+    if (typeof document !== 'undefined' && document) {
+      document.querySelector('.header-wrapper').classList.remove('menu-open');
+    }
   }
 
   render() {
-    const elements = document.querySelectorAll('.has-droupdown > a');
+    let elements;
+    if (typeof document !== 'undefined' && document) {
+      elements = document.querySelectorAll('.has-droupdown > a');
+    }
+
     for (const i in elements) {
       if (elements.hasOwnProperty(i)) {
         elements[i].onclick = function () {
@@ -39,6 +49,7 @@ class Header extends Component {
         };
       }
     }
+
     const { logo, services, color = 'default-color' } = this.props;
     let logoUrl;
     if (logo === 'light') {
