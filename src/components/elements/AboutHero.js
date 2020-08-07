@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 const AboutHero = () => (
   <div className="rn-finding-us-area rn-finding-us bg_color--1">
@@ -11,9 +12,9 @@ const AboutHero = () => (
             the readable content of a page when looking at its layout. The point
             of using Lorem Ipsum is that.
           </p>
-          <a className="rn-btn btn-white" href="/about">
+          <Link className="rn-btn btn-white" to="/contact">
             Get Started
-          </a>
+          </Link>
         </div>
       </div>
       <div className="thumbnail">

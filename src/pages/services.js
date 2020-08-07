@@ -46,7 +46,10 @@ const ServiceList = [
   },
 ];
 
-const Work = () => {
+const Services = ({ data }) => {
+  const services = data.allMdx.edges;
+  console.log('services', services);
+
   return (
     <Layout>
       <Seo title="News & Updates" />
@@ -65,8 +68,8 @@ const Work = () => {
             </div>
           </div>
           <div className="row service-one-wrapper">
-            {ServiceList.map((val, i) => (
-              <ServiceItem key={i} val={val} />
+            {services.map(({ node: service }) => (
+              <ServiceItem key={service.id} service={service} />
             ))}
           </div>
         </div>
@@ -75,4 +78,38 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Services;
+
+export const pageQuery = graphql`
+  query servicesQuery {
+    allMdx(
+      sort: { fields: frontmatter___listingOrder, order: ASC }
+      filter: {
+        frontmatter: { type: { eq: "service" }, isFeatured: { eq: true } }
+      }
+    ) {
+      edges {
+        node {
+          id
+          excerpt
+          frontmatter {
+            title
+            date
+            category
+            info
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 400) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  }
+`;

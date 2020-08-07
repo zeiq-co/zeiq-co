@@ -7,7 +7,7 @@ import Breadcrumb from '../components/elements/Breadcrumb';
 import Portfolio from '../components/HomeLayout/Portfolio';
 
 const Work = ({ data }) => {
-  console.log('projects', data);
+  // console.log('projects', data);
 
   return (
     <Layout>
@@ -26,9 +26,7 @@ export const pageQuery = graphql`
   query workQuery {
     allMdx(
       sort: { fields: frontmatter___listingOrder, order: ASC }
-      filter: {
-        frontmatter: { type: { eq: "work" }, isFeatured: { eq: true } }
-      }
+      filter: { frontmatter: { type: { eq: "work" } } }
     ) {
       edges {
         node {

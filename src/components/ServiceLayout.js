@@ -7,7 +7,9 @@ import { graphql } from 'gatsby';
 import Seo from './Seo';
 import PageLayout from './PageLayout';
 
-export default function ServiceTemplate({ data: { mdx } }) {
+export default function ServiceTemplate({ data }) {
+  const { mdx } = data || {};
+
   return (
     <PageLayout>
       <Seo title={mdx.frontmatter.title} />
@@ -125,3 +127,23 @@ export default function ServiceTemplate({ data: { mdx } }) {
     </PageLayout>
   );
 }
+
+export const pageQuery = graphql`
+  query ServicePageQuery($id: String) {
+    mdx(id: { eq: $id }) {
+      id
+      body
+      frontmatter {
+        title
+        date
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 1600) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+  }
+`;

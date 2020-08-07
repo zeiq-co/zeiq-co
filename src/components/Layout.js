@@ -25,11 +25,30 @@ const pageQuery = graphql`
       instagram
       twitter
     }
+    allMdx(
+      filter: {
+        frontmatter: { type: { eq: "service" }, isFeatured: { eq: true } }
+      }
+      sort: { fields: frontmatter___listingOrder, order: ASC }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
   }
 `;
 
 const IndexLayout = ({ children, hideHeader }) => {
   const data = useStaticQuery(pageQuery);
+  console.log('data2', data);
 
   return (
     <ThemeProvider theme={theme}>
@@ -46,6 +65,7 @@ const IndexLayout = ({ children, hideHeader }) => {
             headertransparent="header--transparent"
             colorblack="color--black"
             logoname="logo.png"
+            services={data.allMdx.edges}
           />
         )}
         <Container>{children}</Container>

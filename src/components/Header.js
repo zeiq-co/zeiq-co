@@ -39,7 +39,7 @@ class Header extends Component {
         };
       }
     }
-    const { logo, color = 'default-color' } = this.props;
+    const { logo, services, color = 'default-color' } = this.props;
     let logoUrl;
     if (logo === 'light') {
       logoUrl = (
@@ -75,7 +75,7 @@ class Header extends Component {
         <div className="header-wrapper" id="header-wrapper">
           <div className="header-left">
             <div className="logo">
-              <a href="/">{logoUrl}</a>
+              <Link to="/">{logoUrl}</Link>
             </div>
           </div>
           <div className="header-right">
@@ -87,20 +87,11 @@ class Header extends Component {
                 <li className="has-droupdown">
                   <Link to="/services">Services</Link>
                   <ul className="submenu">
-                    <li>
-                      <Link to="/website-development">Website Development</Link>
-                    </li>
-                    <li>
-                      <Link to="/mobile-app-development">
-                        Mobile App Development
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/marketing">Marketing</Link>
-                    </li>
-                    <li>
-                      <Link to="/graphic-designing">Graphic Designing</Link>
-                    </li>
+                    {services.map(({ node: o }) => (
+                      <li key={o.id}>
+                        <Link to={o.fields.slug}>{o.frontmatter.title}</Link>
+                      </li>
+                    ))}
                   </ul>
                 </li>
                 <li>

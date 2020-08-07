@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FaTwitter, FaInstagram, FaFacebookF, FaGithub } from 'react-icons/fa';
+import { Link } from 'gatsby';
 
 const Logo = styled.img`
   height: 40px;
@@ -24,9 +25,9 @@ const Footer = ({ data }) => {
           <div className="col-lg-4 col-md-6 col-sm-6 col-12">
             <div className="inner">
               <div className="logo text-center text-sm-left mb_sm--20">
-                <a href="/home-one">
+                <Link to="/">
                   <Logo src="/assets/images/logo/logo.png" alt="Logo images" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
