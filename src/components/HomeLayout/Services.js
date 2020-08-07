@@ -5,7 +5,7 @@ import ServiceItem from '../elements/ServiceItem';
 const Services = ({ services }) => {
   const title = 'Services';
   const description =
-    'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.';
+    'Website performance is what makes or breaks businesses nowadays. We can help you build a modern website, or PWA, that will bring you customers and and stay on top of your competition.';
 
   return (
     <>
@@ -15,8 +15,8 @@ const Services = ({ services }) => {
             <h2 className="title">{title}</h2>
             <p>{description}</p>
             <div className="service-btn">
-              <Link className="btn-transparent rn-btn-dark" to="/service">
-                <span className="text">Request Custom Service</span>
+              <Link className="btn-transparent rn-btn-dark" to="/contact">
+                <span className="text">Request a quote</span>
               </Link>
             </div>
           </div>

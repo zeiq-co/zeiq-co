@@ -19,11 +19,29 @@ export default function WorkTemplate({ data: { mdx } }) {
       ? mdx.frontmatter.featuredImage.childImageSharp.fluid.src
       : undefined;
 
-  const projectLinks = [
-    { Social: <FaChrome />, link: mdx.frontmatter.websiteUrl },
-    { Social: <FaApple />, link: mdx.frontmatter.iosAppUrl },
-    { Social: <FaAndroid />, link: mdx.frontmatter.androidAppUrl },
-  ];
+  const projectLinks = [];
+  if (mdx.frontmatter.websiteUrl.length > 5) {
+    projectLinks.push({
+      Social: <FaChrome />,
+      link: mdx.frontmatter.websiteUrl,
+    });
+  }
+  if (mdx.frontmatter.iosAppUrl.length > 5) {
+    projectLinks.push({
+      Social: <FaApple />,
+      link: mdx.frontmatter.iosAppUrl,
+    });
+  }
+  if (mdx.frontmatter.androidAppUrl.length > 5) {
+    projectLinks.push({
+      Social: <FaAndroid />,
+      link: mdx.frontmatter.androidAppUrl,
+    });
+  }
+
+  // { Social: <FaChrome />, link: mdx.frontmatter.websiteUrl },
+  //   { Social: <FaApple />, link: mdx.frontmatter.iosAppUrl },
+  //   { Social: <FaAndroid />, link: mdx.frontmatter.androidAppUrl },
 
   return (
     <PageLayout>
@@ -104,7 +122,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         info
-        projectTags
+        tags
         details
         category
         projectType

@@ -16,7 +16,7 @@ const Services = ({ data }) => {
       <Breadcrumb title="Services" />
       <div className="service-area ptb--120 bg_color--5">
         <div className="container">
-          <div className="row">
+          {/* <div className="row">
             <div className="col-lg-12">
               <div className="section-title text-center mb--30">
                 <h2>Digital Marketing</h2>
@@ -26,7 +26,7 @@ const Services = ({ data }) => {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="row service-one-wrapper">
             {services.map(({ node: service }) => (
               <ServiceItem key={service.id} service={service} />

@@ -2,20 +2,19 @@ import React from 'react';
 import { Link } from 'gatsby';
 import PortfolioList from '../elements/PortfolioList';
 
-const Portfolio = ({ projects, showMore }) => (
+const Portfolio = ({ projects, showMore, showHero }) => (
   <div className="portfolio-sacousel-inner">
     <div className="container">
-      <div className="row">
-        <div className="col-lg-12">
-          <div className="section-title text-center service-style--3 mb--15">
-            <h2 className="title">Our Work</h2>
-            <p>
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration.
-            </p>
+      {showHero && (
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="section-title text-center service-style--3 mb--15">
+              <h2 className="title">Our Work</h2>
+              <p>Projects that speak about our versatility</p>
+            </div>
           </div>
         </div>
-      </div>
+      )}
       <div className="row">
         <PortfolioList
           styevariation="text-center mt--40"

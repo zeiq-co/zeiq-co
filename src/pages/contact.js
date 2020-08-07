@@ -24,10 +24,9 @@ const Contact = ({ data: { contactYaml: contact } }) => (
             <div className="rn-page-title text-center pt--100">
               <h2 className="title theme-gradient">Contact With Us</h2>
               <p>
-                Contrary to popular belief, Lorem Ipsum is not simply random
-                text.
+                Tell us about your project, get a quick estimate and a plan for
+                making it live.
               </p>
-              text.
             </div>
           </div>
         </div>

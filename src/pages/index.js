@@ -27,7 +27,10 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <Seo title="Home" description="Welcome to GatsbyJs v1" />
+      <Seo
+        title="Website and Mobile App Development Agency"
+        description="React, React Native, GatsbyJs and Apollo GraphQL Development"
+      />
       <div className="slider-wrapper">
         <HomeSlider data={data.homeYaml} />
       </div>
@@ -40,7 +43,7 @@ const IndexPage = ({ data }) => {
         </div>
       </div>
       <div className="portfolio-area ptb--120">
-        <Portfolio projects={projects} showMore />
+        <Portfolio projects={projects} showMore showHero />
       </div>
       <div className="rn-testimonial-area bg_color--5 ptb--120">
         <div className="container">
