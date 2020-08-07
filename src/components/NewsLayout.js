@@ -21,7 +21,7 @@ export default function PageTemplate({ data: { mdx } }) {
       <Container
         bgImage={
           mdx.frontmatter.featuredImage !== null
-            ? mdx.frontmatter.featuredImage.childImageSharp.fluid.base64
+            ? mdx.frontmatter.featuredImage.childImageSharp.fluid.src
             : undefined
         }
         className="rn-page-title-area pt--120 pb--190 bg_image"

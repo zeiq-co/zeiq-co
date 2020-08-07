@@ -27,7 +27,7 @@ const Portfolio = ({ projects, showMore }) => (
         <div className="row">
           <div className="col-lg-12">
             <div className="view-more-btn mt--60 text-center">
-              <Link className="rn-button-style--2 btn-solid" to="/portfolio">
+              <Link className="rn-button-style--2 btn-solid" to="/work">
                 <span>View More</span>
               </Link>
             </div>

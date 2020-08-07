@@ -17,7 +17,7 @@ class PortfolioList extends Component {
         {projects.map(({ node: project }) => {
           const image =
             project.frontmatter.featuredImage !== null
-              ? project.frontmatter.featuredImage.childImageSharp.fluid.base64
+              ? project.frontmatter.featuredImage.childImageSharp.fluid.src
               : undefined;
 
           return (
