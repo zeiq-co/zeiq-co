@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { FiCast, FiLayers, FiUsers, FiMonitor } from 'react-icons/fi';
-import ServiceItem from './ServiceItem';
+import ServiceItem from '../elements/ServiceItem';
 
 const ServiceList = [
   {
@@ -29,7 +29,7 @@ const ServiceList = [
   },
 ];
 
-class ServiceTwo extends Component {
+class Services extends Component {
   render() {
     const title = 'Services';
     const description =
@@ -61,4 +61,4 @@ class ServiceTwo extends Component {
     );
   }
 }
-export default ServiceTwo;
+export default Services;

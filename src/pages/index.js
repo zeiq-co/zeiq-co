@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { filter } from 'lodash';
 
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
@@ -7,12 +8,22 @@ import HomeSlider from '../components/HomeSlider';
 import About from '../components/HomeLayout/About';
 import Portfolio from '../components/HomeLayout/Portfolio';
 import Blog from '../components/HomeLayout/Blog';
-import ServiceTwo from '../components/elements/ServiceTwo';
+import Services from '../components/HomeLayout/Services';
 import Testimonial from '../components/elements/Testimonial';
 import BrandsList from '../components/elements/BrandsList';
 
 const IndexPage = ({ data }) => {
   console.log('data', data);
+  const mdxData = data.allMdx.edges;
+  const services = filter(mdxData, (o) => {
+    return o.node.frontmatter.type === 'service';
+  });
+  const projects = filter(mdxData, (o) => {
+    return o.node.frontmatter.type === 'work';
+  });
+  const posts = filter(mdxData, (o) => {
+    return o.node.frontmatter.type === 'post';
+  });
 
   return (
     <Layout>
@@ -25,11 +36,11 @@ const IndexPage = ({ data }) => {
       </div>
       <div className="service-area ptb--80  bg_image bg_image--3">
         <div className="container">
-          <ServiceTwo />
+          <Services data={services} />
         </div>
       </div>
       <div className="portfolio-area ptb--120">
-        <Portfolio projects={[]} showMore />
+        <Portfolio projects={projects} showMore />
       </div>
       <div className="rn-testimonial-area bg_color--5 ptb--120">
         <div className="container">
@@ -37,13 +48,13 @@ const IndexPage = ({ data }) => {
         </div>
       </div>
       <div className="rn-blog-area pt--120 bg_color--1 mb-dec--30">
-        <Blog />
+        <Blog posts={posts} />
       </div>
       <div className="rn-brand-area brand-separation bg_color--5 pb--120">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <BrandsList />
+              <BrandsList data={data.allBrandsYaml.edges} />
             </div>
           </div>
         </div>
@@ -65,6 +76,15 @@ export const pageQuery = graphql`
         icon
       }
     }
+    allBrandsYaml {
+      edges {
+        node {
+          id
+          image
+          title
+        }
+      }
+    }
     allMdx(
       sort: { fields: frontmatter___date, order: DESC }
       filter: { frontmatter: { isFeatured: { eq: true } } }
@@ -77,6 +97,9 @@ export const pageQuery = graphql`
             title
             date
             category
+            info
+            type
+            author
             featuredImage {
               childImageSharp {
                 fluid(maxWidth: 400) {
