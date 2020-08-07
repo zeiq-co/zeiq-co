@@ -40,7 +40,7 @@ export default function PageTemplate({ data: { mdx } }) {
                   </li>
                   <li>
                     <FiUser />
-                    Zeiq
+                    {mdx.frontmatter.author}
                   </li>
                 </ul>
               </div>
@@ -73,6 +73,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date
+        author
         featuredImage {
           childImageSharp {
             fluid(maxWidth: 1600) {

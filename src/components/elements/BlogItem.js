@@ -9,7 +9,7 @@ const BlogItem = ({ data }) => (
         <div className="thumbnail">
           <Link to={data.fields.slug}>
             <Img
-              className="w-100"
+              className="w-100 h-400"
               alt={data.frontmatter.title}
               fluid={data.frontmatter.featuredImage.childImageSharp.fluid}
             />

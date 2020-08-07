@@ -41,6 +41,10 @@ export const theme = {
   boxShadow: 'rgba(0,0,0,0.08) 0px 7px 18px',
 };
 
-const GlobalStyle = createGlobalStyle``;
+const GlobalStyle = createGlobalStyle`
+.h-400 {
+  height: 400px;
+}
+`;
 
 export default GlobalStyle;

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 class ContactForm extends Component {
   render() {
+    const { contact } = this.props;
+
     return (
       <div className="contact-form--1">
         <div className="container">
@@ -10,8 +12,8 @@ class ContactForm extends Component {
               <div className="section-title text-left mb--50">
                 <h2 className="title">Contact Us.</h2>
                 <p className="description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Architecto cupiditate aperiam neque.
+                  Tell us about your project, get a quick estimate and a plan
+                  for making it live.
                 </p>
 
                 <div className="form-wrapper">
@@ -64,7 +66,7 @@ class ContactForm extends Component {
             </div>
             <div className="col-lg-6 order-1 order-lg-2">
               <div className="thumbnail mb_md--30 mb_sm--30">
-                <img src="/assets/images/about/about-6.jpg" alt="trydo" />
+                <img src={contact.rightSideImage} alt="Zeiq" />
               </div>
             </div>
           </div>

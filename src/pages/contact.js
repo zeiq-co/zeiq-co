@@ -1,17 +1,22 @@
 import React from 'react';
 import { FiHeadphones, FiMail, FiMapPin } from 'react-icons/fi';
 import { graphql } from 'gatsby';
+import styled from 'styled-components';
 
 import ContactForm from '../components/elements/ContactForm';
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 
+const Container = styled.div`
+  background-image: ${(props) => `url(${props.bgImage}) !important`};
+`;
+
 const Contact = ({ data: { contactYaml: contact } }) => (
   <Layout>
-    {console.log('contact', contact)}
     <Seo title="Contact Us" />
-    <div
-      className="rn-page-title-area pt--120 pb--190 bg_image bg_image--17"
+    <Container
+      bgImage={contact.coverImage}
+      className="rn-page-title-area pt--120 pb--190 bg_image"
       data-black-overlay="6">
       <div className="container">
         <div className="row">
@@ -27,7 +32,7 @@ const Contact = ({ data: { contactYaml: contact } }) => (
           </div>
         </div>
       </div>
-    </div>
+    </Container>
     <div className="rn-contact-top-area ptb--120 bg_color--5">
       <div className="container">
         <div className="row">
@@ -97,7 +102,7 @@ const Contact = ({ data: { contactYaml: contact } }) => (
       </div>
     </div>
     <div className="rn-contact-page ptb--120 bg_color--1">
-      <ContactForm />
+      <ContactForm contact={contact} />
     </div>
   </Layout>
 );
@@ -113,6 +118,8 @@ export const pageQuery = graphql`
       locationUk
       telephoneIndia
       telephoneUk
+      coverImage
+      rightSideImage
     }
   }
 `;

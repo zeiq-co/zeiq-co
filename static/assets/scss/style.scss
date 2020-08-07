@@ -1,12 +1,11 @@
 /*********************************************************************************
 
-	Template Name: Trydo React Degital Agency Template
 	Note: This is style css.
 
 **********************************************************************************/
 
 /**************************************************************
-	
+
 	STYLESHEET INDEXING
 	|
 	|
@@ -28,33 +27,33 @@
 	|
 	|
 	|___Inner Styles
-	|	|___ breadcrump 
-	|	|___ section-title 
+	|	|___ breadcrump
+	|	|___ section-title
 	|	|___ button
 	|	|___ pagination
 	|	|___ socialicon
 	|	|___ footer
 	|
 	|___Elements Styles
-	|	|___ portfolio 
-	|	|___ service 
-	|	|___ slider 
-	|	|___ counterup 
-	|	|___ testimonial 
-	|	|___ brand 
-	|	|___ team 
-	|	|___ callto-action 
-	|	|___ tab 
-	|	|___ accordion 
-	|	|___ list 
-	|	|___ contact 
+	|	|___ portfolio
+	|	|___ service
+	|	|___ slider
+	|	|___ counterup
+	|	|___ testimonial
+	|	|___ brand
+	|	|___ team
+	|	|___ callto-action
+	|	|___ tab
+	|	|___ accordion
+	|	|___ list
+	|	|___ contact
 	|
 	|___BLog Styles
-	|	|___ blog 
-	|	|___ blog-details 
+	|	|___ blog
+	|	|___ blog-details
 	|
 	|___Template Styles
-	|	|___ about 
+	|	|___ about
 	|	|___ portfolio-details
 	|	|___ service-details
 	|	|___ preview
@@ -63,7 +62,6 @@
 	|___ END STYLESHEET INDEXING
 
 ***************************************************************/
-
 
 /**************************************
     Default Styles
@@ -77,15 +75,12 @@
 @import 'default/shortcode';
 @import 'default/spacing';
 
-
-
 /**************************************
     Header Styles
 ***************************************/
 
 @import 'header/header';
 @import 'header/mainmenu';
-
 
 /**************************************
     Inner Styles
@@ -97,8 +92,6 @@
 @import 'common/pagination';
 @import 'common/socialicon';
 @import 'common/footer';
-
-
 
 /**************************************
     Elements Styles
@@ -121,16 +114,12 @@
 @import 'elements/404';
 @import 'elements/pricing';
 
-
-
 /**************************************
     Blog Styles
 ***************************************/
 
 @import 'blog/blog';
 @import 'blog/blog-details';
-
-
 
 /**************************************
     Template Styles
