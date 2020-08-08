@@ -5,6 +5,7 @@ import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import Breadcrumb from '../components/elements/Breadcrumb';
 import Portfolio from '../components/HomeLayout/Portfolio';
+// import PortfolioTabbed from '../components/PortfolioTabbed';
 
 const Work = ({ data }) => {
   // console.log('projects', data);
@@ -16,6 +17,14 @@ const Work = ({ data }) => {
       <div className="portfolio-area ptb--120">
         <Portfolio projects={data.allMdx.edges} />
       </div>
+      {/* <div className="designer-portfolio-area ptb--120 bg_color--1">
+        <div className="wrapper plr--70 plr_sm--30 plr_md--30">
+          <PortfolioTabbed
+            column="col-lg-4 col-md-6 col-sm-6 col-12"
+            projects={data.allMdx.edges}
+          />
+        </div>
+      </div> */}
     </Layout>
   );
 };

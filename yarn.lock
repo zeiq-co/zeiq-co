@@ -12608,6 +12608,11 @@ react-tabs@^3.1.0:
     clsx "^1.1.0"
     prop-types "^15.5.0"
 
+react-video-tag@^0.0.10:
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/react-video-tag/-/react-video-tag-0.0.10.tgz#eace2386a77cd17351a9cac7497856aa7d4be25d"
+  integrity sha512-vwe5S9snuflOKjDv6nOFDxyeZ5gCZ5/g83rFp5x7BHmD+Y2mMuCMDVwFeeZWQwjgW5Nwmga870/J2Op0olBikg==
+
 react@^16.13.1, react@^16.8.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"

@@ -118,7 +118,7 @@ export default function ServiceTemplate({ data }) {
           </div>
           <div className="row service-one-wrapper pt--70">
             {childServices.map(({ node: service }) => (
-              <ServiceItem key={service.id} service={service} />
+              <ServiceItem key={service.id} service={service} columnSize="4" />
             ))}
           </div>
         </div>

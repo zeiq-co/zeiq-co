@@ -4,7 +4,8 @@ import { filter } from 'lodash';
 
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
-import HomeSlider from '../components/HomeSlider';
+import HomeSlider from '../components/HomeLayout/HomeSlider';
+import HomeVideoSlider from '../components/HomeLayout/HomeVideoSlider';
 import About from '../components/HomeLayout/About';
 import Portfolio from '../components/HomeLayout/Portfolio';
 import Blog from '../components/HomeLayout/Blog';
@@ -32,9 +33,11 @@ const IndexPage = ({ data }) => {
         description="React, React Native, GatsbyJs and Apollo GraphQL Development"
       />
       <div className="slider-wrapper">
-        <HomeSlider data={data.homeYaml} />
+        {/* <HomeSlider data={data.homeYaml} /> */}
+        <HomeVideoSlider data={data.homeYaml} />
       </div>
-      <div className="about-area about-position-top pb--120">
+      {/* for without video use: about-position-top !pt--120 */}
+      <div className="about-area pt--120 pb--120">
         <About />
       </div>
       <div className="service-area ptb--80  bg_image bg_image--3">

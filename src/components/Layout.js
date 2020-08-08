@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import styled, { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 import ScrollToTop from 'react-scroll-up';
 import { FiChevronUp } from 'react-icons/fi';
 import { useStaticQuery, graphql } from 'gatsby';
@@ -12,10 +12,6 @@ import Header from './Header';
 import Footer from './Footer';
 
 import '../index.scss';
-
-const Container = styled.div`
-  min-height: 70vh;
-`;
 
 const pageQuery = graphql`
   query LayoutPageQuery {
@@ -68,7 +64,7 @@ const IndexLayout = ({ children, hideHeader }) => {
             services={data.allMdx.edges}
           />
         )}
-        <Container>{children}</Container>
+        {children}
         <CallAction />
         <Footer data={data.contactYaml} />
         <div className="backto-top">

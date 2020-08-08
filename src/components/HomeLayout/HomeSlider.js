@@ -1,5 +1,5 @@
 import React from 'react';
-import ServiceOne from './elements/ServiceOne';
+import ServiceOne from '../elements/ServiceOne';
 
 const HomeSlider = ({ data }) => (
   <div className="slider-activation">

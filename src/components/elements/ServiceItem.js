@@ -3,14 +3,17 @@ import { Link } from 'gatsby';
 import { isNull } from 'lodash';
 import * as FontAwesome from 'react-icons/fa';
 
-const ServiceItem = ({ service }) => {
+const ServiceItem = ({ service, columnSize }) => {
+  console.log('columnSize', columnSize);
+  const colSize = columnSize || '6';
   const iconName = service.frontmatter.icon;
   const icon = !isNull(iconName)
     ? React.createElement(FontAwesome[iconName])
-    : '';
+    : React.createElement(FontAwesome.FaAtom);
 
   return (
-    <div className="col-lg-6 col-md-6 col-sm-6 col-12">
+    <div
+      className={`col-lg-${colSize} col-md-${colSize} col-sm-${colSize} col-12`}>
       <Link to={service.fields.slug}>
         <div className="service service__style--2">
           <div className="icon">{icon}</div>
