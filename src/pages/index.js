@@ -33,8 +33,8 @@ const IndexPage = ({ data }) => {
         description="React, React Native, GatsbyJs and Apollo GraphQL Development"
       />
       <div className="slider-wrapper">
-        {/* <HomeSlider data={data.homeYaml} /> */}
-        <HomeVideoSlider data={data.homeYaml} />
+        <HomeSlider data={data.homeYaml} />
+        {/* <HomeVideoSlider data={data.homeYaml} /> */}
       </div>
       {/* for without video use: about-position-top !pt--120 */}
       <div className="about-area pt--120 pb--120">
