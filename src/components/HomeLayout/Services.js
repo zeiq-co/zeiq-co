@@ -4,8 +4,7 @@ import ServiceItem from '../elements/ServiceItem';
 
 const Services = ({ services }) => {
   const title = 'Services';
-  const description =
-    'Website performance is what makes or breaks businesses nowadays. We can help you build a modern website, or PWA, that will bring you customers and and stay on top of your competition.';
+  const description ='Zeiq builds and promotes digital marketing of your business or services. Digitally transforming and driving your brand to deliver the best possible results. We provide strategies, planning, and design for businesses to create an indestructible online reputation, combining our divergent skillset and your ambition together to create a big picture for your brand. ';
 
   return (
     <>
