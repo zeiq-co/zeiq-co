@@ -9,13 +9,13 @@ const HomeSlider = ({ data }) => (
     >
       <div className="container position-relative">
         <div className="row">
-          <div className="col-lg-10">
+          <div className="col-lg-12">
             <div className="inner">
-              <h1 className="title theme-gradient mt--80">{data.slogan}</h1>
+              <h1 className="title theme-gradient">{data.slogan}</h1>
             </div>
           </div>
         </div>
-        <div className="service-wrapper service-white mt--40">
+        <div className="service-wrapper service-white">
           <ServiceOne data={data.features} />
         </div>
       </div>
