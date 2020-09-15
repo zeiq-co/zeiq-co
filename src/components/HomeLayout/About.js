@@ -47,13 +47,13 @@ const About = () => {
                 <div className="row mt--30 mt_sm--10">
                   <div className="col-lg-6 col-md-12 col-sm-12 col-12">
                     <div className="about-us-list">
-                      <h3 className="title">Who we are</h3>
+                      <h3 className="title">Our Commitment</h3>
                       <p>{about.whoWeAre}</p>
                     </div>
                   </div>
                   <div className="col-lg-6 col-md-12 col-sm-12 col-12">
                     <div className="about-us-list">
-                      <h3 className="title">Who we are</h3>
+                      <h3 className="title">Our Philosophy</h3>
                       <p>{about.whatWeDo}</p>
                     </div>
                   </div>
