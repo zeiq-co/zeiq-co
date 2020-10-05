@@ -1,15 +1,30 @@
 - one:
   title: Brand one
-  image: /assets/images/brand/brand-01.png
+  image: /assets/images/brand/gatsby-logo.jpg
 - two:
   title: Brand two
-  image: /assets/images/brand/brand-02.png
+  image: /assets/images/brand/react-logo.jpg
 - three:
   title: Brand three
-  image: /assets/images/brand/brand-03.png
+  image: /assets/images/brand/graphql-logo.jpg
 - four:
   title: Brand four
-  image: /assets/images/brand/brand-04.png
+  image: /assets/images/brand/netlify-logo.jpg
 - five:
   title: Brand five
-  image: /assets/images/brand/brand-05.png
+  image: /assets/images/brand/amazon.jpg
+- six:
+  title: Brand six
+  image: /assets/images/brand/contentful-logo.jpg
+- seven:
+  title: Brand seven
+  image: /assets/images/brand/expo-logo.png
+- eight:
+  title: Brand eight
+  image: /assets/images/brand/next-logo.png
+- nine:
+  title: Brand nine
+  image: /assets/images/brand/api.png
+- ten:
+  title: Brand ten
+  image: /assets/images/brand/machine-learning-logo.png
