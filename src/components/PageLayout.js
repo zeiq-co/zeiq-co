@@ -22,8 +22,13 @@ const Container = styled.div`
   .mdx-content {
     margin: 4rem 10rem;
   }
+  @media only screen and (max-width: 767px) {
+    .mdx-content {
+      margin: 2rem;
+    }
+  }
   .about-area {
-    margin-top: 15rem;
+    margin-top: 8rem;
   }
   .rn-finding-us-area {
     margin-bottom: 8rem;
@@ -47,7 +52,8 @@ export default function PageTemplate({ children }) {
             h2: (props) => <h2 {...props} />,
             h3: (props) => <h3 {...props} />,
             p: (props) => <p {...props} />,
-          }}>
+          }}
+        >
           {children}
         </MDXProvider>
       </Container>
