@@ -4,7 +4,8 @@ import ServiceItem from '../elements/ServiceItem';
 
 const Services = ({ services }) => {
   const title = 'Services';
-  const description ='Zeiq builds and promotes digital marketing of your business or services. Digitally transforming and driving your brand to deliver the best possible results. We provide strategies, planning, and design for businesses to create an indestructible online reputation, combining our divergent skillset and your ambition together to create a big picture for your brand. ';
+  const description =
+    'Zeiq builds and promotes product development to strengthen your business or services. Digital transformation is key for any brand to deliver the best possible results. We provide strategy, planning, and design for businesses to create an eternal online reputation. Our team, our skillset and your ambition together the impossible is possible.';
 
   return (
     <>
