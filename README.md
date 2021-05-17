@@ -1,8 +1,8 @@
-# Kickoff GatsbyJs
+# Zeiq
 
-A starting point using ReactJs, bundled with awesome GatsbyJs v2.
+Zeiq website, build with ReactJs,GatsbyJs v2.
 
-[Demo](https://kickoff-gatsbyjs.netlify.com/)
+[Demo](https://www.zeiq.co/)
 
 ## Stack
 
