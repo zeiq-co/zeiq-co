@@ -45,7 +45,7 @@ const Footer = ({ data }) => {
           <div className="col-lg-4 col-md-12 col-sm-12 col-12">
             <div className="inner text-lg-right text-center mt_md--20 mt_sm--20">
               <div className="text">
-                <p>Copyright © 2020 Zeiq.co. All Rights Reserved.</p>
+                <p>Copyright © 2021 Zeiq.co. All Rights Reserved.</p>
               </div>
             </div>
           </div>
