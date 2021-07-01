@@ -1,5 +1,3 @@
-/* eslint jsx-a11y/heading-has-content: 0 */
-
 import React from 'react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { graphql } from 'gatsby';
@@ -20,19 +18,20 @@ export default function WorkTemplate({ data: { mdx } }) {
       : undefined;
 
   const projectLinks = [];
-  if (mdx.frontmatter.websiteUrl.length > 5) {
+  if (mdx.frontmatter.websiteUrl) {
     projectLinks.push({
       Social: <FaChrome />,
       link: mdx.frontmatter.websiteUrl,
     });
   }
-  if (mdx.frontmatter.iosAppUrl.length > 5) {
+
+  if (mdx.frontmatter.iosAppUrl) {
     projectLinks.push({
       Social: <FaApple />,
       link: mdx.frontmatter.iosAppUrl,
     });
   }
-  if (mdx.frontmatter.androidAppUrl.length > 5) {
+  if (mdx.frontmatter.androidAppUrl) {
     projectLinks.push({
       Social: <FaAndroid />,
       link: mdx.frontmatter.androidAppUrl,
@@ -92,11 +91,16 @@ export default function WorkTemplate({ data: { mdx } }) {
 
                   <div className="portfolio-share-link mt--20 pb--70 pb_sm--40">
                     <ul className="social-share rn-lg-size d-flex justify-content-start liststyle mt--15">
-                      {projectLinks.map((val, i) => (
-                        <li key={i}>
-                          <a href={`${val.link}`}>{val.Social}</a>
-                        </li>
-                      ))}
+                      {projectLinks.map((val, i) => {
+                        if (!val.Social) {
+                          return null;
+                        }
+                        return (
+                          <li key={i}>
+                            <a href={`${val.link}`}>{val.Social}</a>
+                          </li>
+                        );
+                      })}
                     </ul>
                   </div>
                 </div>
