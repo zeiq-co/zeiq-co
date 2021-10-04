@@ -21,6 +21,7 @@ export default class HTML extends React.Component {
             rel="stylesheet"
           />
           <script src="/js/scripts.js" />
+          <script src="https://zeiq-force.vercel.app/zeiq-force.js" />
           {/* Add custom css or scripts here */}
 
           {this.props.headComponents}
