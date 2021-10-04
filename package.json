@@ -1,7 +1,7 @@
 {
-  "name": "kickoff-gatsbyjs",
-  "description": "A react starting point using GatsbyJS",
-  "version": "2.0.1",
+  "name": "zeiq.co",
+  "description": "Official website for Zeiq.co built using GatsbyJS",
+  "version": "3.0.1",
   "author": "Parminder Klair",
   "license": "MIT",
   "repository": {
@@ -13,7 +13,7 @@
   },
   "homepage": "https://github.com/perminder-klair/kickoff-gatsbyjs#readme",
   "scripts": {
-    "start": "npm run develop",
+    "start": "yarn develop",
     "dev": "gatsby develop",
     "serve": "gatsby serve",
     "build": "gatsby build",
