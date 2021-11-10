@@ -1,4 +1,4 @@
-# Zeiq.co
+# Zeiq.co.
 
 Zeiq website, build with ReactJs,GatsbyJs v2.
 
