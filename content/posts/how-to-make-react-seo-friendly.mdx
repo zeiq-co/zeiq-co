@@ -8,15 +8,11 @@ isFeatured: true
 type: post
 ---
 
-
-
 Today most developers like to work on [React](https://www.zeiq.co/posts/what's-so-great-about-react-web-development/) (javascript framework) as it allows for building fast, responsive and animation-rich websites and web applications with a smooth user experience.
 
 But React or any other framework has a limited understanding of SEO(search engine optimization). So, Today we will discuss the solutions we can have to gain SEO access.
 
 Let's start with Single Page Optimization to understand the challenges with SEO in React Websites.
-
-  
 
 ### What is Single Page Applications?
 
@@ -28,8 +24,6 @@ These apps cache data in local storage that means they will load even faster nex
 
 When you want to build SPA then the popular javascript React, Angular or Vue come into play. Among these three, React holds the top spot. React is the popular javascript framework of today.
 
-  
-
 ### Principles of Search Engine Optimization
 
 Search Engine Optimization (SEO) is how Google performs basically. You type something into Google and then Google gives you lots of results. Those results are web pages.
@@ -38,24 +32,18 @@ According to Backlinko, 75% of all users go to the top three websites in search 
 
 To determine a website's ranking, search engines use web crawlers that may be known as Google bots. That's why crawlers should understand the website content and that's where the problem starts.
 
-  
-
 ### Single Page Applications for Search Engines
 
 As we know single page app loads pages on the client-side. At first, the page is an empty container, then javascript pushes content to this container. And when the crawler visits the site, there is an empty page without content.
 
 In this way, google bots arise issues when it comes to searching from website content on the web pages.
 
--   Long delays
--   Limited Crawling Budget
-
-  
+- Long delays
+- Limited Crawling Budget
 
 ## Solving this issue
 
 You can make React SEO friendly by creating an isomorphic React app or by using prerendering.
-
-  
 
 ### Isomorphic React App
 
@@ -71,14 +59,10 @@ In the case of working with javascript, only the first page is rendered on the s
 
 But This is a Time-Consuming App. And we have alternative frameworks - Gatsby and Nextjs that helps in solving SEO issues.
 
--   **Next.js** is a framework that helps you create React apps that are generated on the server-side quickly and without hassle. It also allows for automatic code splitting and hot code reloading.
--   **Gatsby** is a free open-source compiler that enables developers to make fast and powerful websites. Gatsby doesn’t offer full-fledged server-side rendering.
-
-  
+- **Next.js** is a framework that helps you create React apps that are generated on the server-side quickly and without hassle. It also allows for automatic code splitting and hot code reloading.
+- **Gatsby** is a free open-source compiler that enables developers to make fast and powerful websites. Gatsby doesn’t offer full-fledged server-side rendering.
 
 For Knowing about Gatsby and Nextjs - you may refer to our [gatsby](https://www.zeiq.co/posts/ecommerce-gatsby/) and [nextjs](https://www.zeiq.co/posts/why-nextjs-is-good-for-ecommerce/) blogs.
-
-  
 
 **Server-side rendering with Next.js**
 
@@ -106,19 +90,13 @@ Request processing during runtime happens like this:
 1.  Gatsby instantly sends HTML, CSS, and JavaScript files to the requested page, since they already were rendered during compilation.
 2.  After JavaScript is filled into the browser, the website starts working as a typical React app. You can dynamically request data that isn’t important for SEO and work with the website just like you work with a regular single-page React app.
 
-  
-
 ### Prerendering
 
 The idea of prerendering is to preload all HTML elements on the page and cache all SPA pages on the server with the help of [Headless Chrome](https://developers.google.com/web/updates/2017/04/headless-chrome). We can do this is using a prerendering service like [prerender.io](https://prerender.io/). A prerendering service intercepts all requests to your website and, with the help of a user agent, defines whether a bot or a user is viewing the website.
 
 If the viewer is a bot, it gets the cached HTML version of the page. If it’s a user, the single-page app loads normally.
 
-  
-
 Prerendering has a smaller server payload related to server-side rendering. But on the other hand, most prerendering services are paid and work poorly with dynamically changing content.
-
-  
 
 ### Conclusion
 
