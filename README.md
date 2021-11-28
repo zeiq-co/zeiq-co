@@ -1,6 +1,6 @@
 # Zeiq.co.
 
-Zeiq website, build with ReactJs,GatsbyJs v2.
+Zeiq website, build with ReactJs,GatsbyJs v3.
 
 [Demo](https://www.zeiq.co/)
 
