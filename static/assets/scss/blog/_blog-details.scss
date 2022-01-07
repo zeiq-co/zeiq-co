@@ -49,7 +49,7 @@ BLog Details Styles
             }
             @media #{$sm-layout} {
                 padding: 0 10px;
-                h2 {
+                h1 , h2 {
                   font-size: 2rem !important;
                 }
             }
