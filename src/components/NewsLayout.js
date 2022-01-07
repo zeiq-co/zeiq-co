@@ -12,6 +12,13 @@ import PageLayout from './PageLayout';
 
 const Container = styled.div`
   background-image: ${(props) => `url(${props.bgImage}) !important`};
+  @media only screen and (max-width: 767px) {
+    .inner-wrapper , .inner {
+      h2 {
+        font-size: 2rem !important;
+      }
+    }
+  }
 `;
 
 export default function PageTemplate({ data: { mdx } }) {
