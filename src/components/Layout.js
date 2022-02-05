@@ -1,8 +1,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { ThemeProvider } from 'styled-components';
-import ScrollToTop from 'react-scroll-up';
-import { FiChevronUp } from 'react-icons/fi';
+// import ScrollToTop from 'react-scroll-up';
+// import { FiChevronUp } from 'react-icons/fi';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import GlobalStyle, { theme } from '../utils/theme';
@@ -67,11 +67,11 @@ const IndexLayout = ({ children, hideHeader }) => {
         {children}
         <CallAction />
         <Footer data={data.contactYaml} />
-        <div className="backto-top">
+        {/* <div className="backto-top">
           <ScrollToTop showUnder={160}>
             <FiChevronUp />
           </ScrollToTop>
-        </div>
+        </div> */}
       </>
     </ThemeProvider>
   );

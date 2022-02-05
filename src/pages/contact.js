@@ -17,7 +17,8 @@ const Contact = ({ data: { contactYaml: contact } }) => (
     <Container
       bgImage={contact.coverImage}
       className="rn-page-title-area pt--120 pb--190 bg_image"
-      data-black-overlay="6">
+      data-black-overlay="6"
+    >
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
@@ -89,10 +90,8 @@ const Contact = ({ data: { contactYaml: contact } }) => (
               </div>
               <div className="inner">
                 <h4 className="title">Location</h4>
-                <p>
-                  {contact.locationUk} <br />
-                  {contact.locationIndia}
-                </p>
+                <p>{contact.locationUk}</p>
+                <p>{contact.locationIndia}</p>
               </div>
             </div>
           </div>

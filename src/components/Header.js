@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import { FiX, FiMenu } from 'react-icons/fi';
@@ -82,7 +83,8 @@ class Header extends Component {
 
     return (
       <header
-        className={`header-area formobile-menu header--transparent ${color}`}>
+        className={`header-area formobile-menu header--transparent ${color}`}
+      >
         <div className="header-wrapper" id="header-wrapper">
           <div className="header-left">
             <div className="logo">
@@ -106,10 +108,13 @@ class Header extends Component {
                   </ul>
                 </li>
                 <li>
+                  <Link to="/blog">Blog</Link>
+                </li>
+                <li>
                   <Link to="/about">About</Link>
                 </li>
                 <li>
-                  <Link to="/blog">Blog</Link>
+                  <Link to="/support">Support</Link>
                 </li>
               </ul>
             </nav>
@@ -122,7 +127,8 @@ class Header extends Component {
             <div className="humberger-menu d-block d-lg-none pl--20">
               <span
                 onClick={this.menuTrigger}
-                className="menutrigger text-white">
+                className="menutrigger text-white"
+              >
                 <FiMenu />
               </span>
             </div>
