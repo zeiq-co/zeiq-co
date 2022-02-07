@@ -3,9 +3,9 @@ import { NextSeo } from 'next-seo';
 import config from '../utils/config';
 import Layout from '../components/Layout';
 import PageHero from '../components/global/PageHero';
-import WorkItem from '../components/work/WorkItem';
+import ServiceItem from '../components/services/ServiceItem';
 
-function ProductsPage() {
+function ServicesPage() {
   return (
     <Layout>
       <NextSeo
@@ -13,20 +13,16 @@ function ProductsPage() {
         description="A short description goes here."
       />
       <PageHero />
-      <section className="section portfolio-grid-creative bg-white">
+      <section className="section bg-white">
         <div className="container">
-          <div className="row">
-            <WorkItem />
-            <WorkItem />
-            <WorkItem />
-            <WorkItem />
-            <WorkItem />
-            <WorkItem />
-          </div>
+          <ServiceItem />
+          <ServiceItem imageLeft />
+          <ServiceItem />
+          <ServiceItem imageLeft />
         </div>
       </section>
     </Layout>
   );
 }
 
-export default ProductsPage;
+export default ServicesPage;

@@ -2,7 +2,7 @@ import { NextSeo } from 'next-seo';
 
 import config from '../utils/config';
 import Layout from '../components/Layout';
-import BlogHero from '../components/blog/BlogHero';
+import PageHero from '../components/global/PageHero';
 import PostItem from '../components/blog/PostItem';
 
 const bgColors = ['#c11c3b', '#139090', '#d59801', '#296e4a'];
@@ -14,7 +14,7 @@ function BlogPage() {
         title={config.siteName}
         description="A short description goes here."
       />
-      <BlogHero />
+      <PageHero />
       <div className="section pt-n30 bg-white">
         <div className="container">
           <div className="row">

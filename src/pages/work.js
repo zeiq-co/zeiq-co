@@ -2,7 +2,7 @@ import { NextSeo } from 'next-seo';
 
 import config from '../utils/config';
 import Layout from '../components/Layout';
-import WorkHero from '../components/work/WorkHero';
+import PageHero from '../components/global/PageHero';
 import WorkItem from '../components/work/WorkItem';
 
 function WorkPage() {
@@ -12,7 +12,7 @@ function WorkPage() {
         title={config.siteName}
         description="A short description goes here."
       />
-      <WorkHero />
+      <PageHero />
       <section className="section portfolio-grid-creative bg-white">
         <div className="container">
           <div className="row">

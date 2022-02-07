@@ -92,16 +92,17 @@ const Header = () => (
                     </ul>
                   </li>
                   <li className="nav-item dropdown">
-                    <a
-                      className="nav-link dropdown-toggle"
-                      href="#"
-                      role="button"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      Services
-                    </a>
+                    <Link href="/services">
+                      <a
+                        className="nav-link dropdown-toggle"
+                        role="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        Services
+                      </a>
+                    </Link>
                     <ul className="dropdown-menu">
                       {services.map((item) => (
                         <li key={item.key}>

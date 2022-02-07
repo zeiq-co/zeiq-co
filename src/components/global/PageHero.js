@@ -1,4 +1,4 @@
-const BlogHero = () => (
+const PageHero = () => (
   <section className="page-header">
     <div className="container">
       <div className="row justify-content-center">
@@ -15,4 +15,4 @@ const BlogHero = () => (
   </section>
 );
 
-export default BlogHero;
+export default PageHero;
