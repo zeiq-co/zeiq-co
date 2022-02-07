@@ -1,0 +1,79 @@
+---
+title: Creating Static E-commerce site with GatsbyJs
+date: '2018-06-10'
+category: general
+author: Parminder Klair
+featuredImage: ../images/ecommerceblog.jpg
+isFeatured: false
+---
+
+So, a few days ago I saw tweet from Kayle Gill about building static e-commerce site using GatsbyJs. That time I was in process of building an e-commerce website for my wife using NextJs (which is also awesome!).
+
+Instead of building the site with NextJs I gave GatsbyJs a try. Within 3 days from Sketch design to the Live site, I made the site live. After that I tweeted about it and found that people are really interested in it.
+
+Live demo of the site can be found here https://www.sejalsuits.co.uk/
+
+I decided to open source the code of the site, it’s on Github now and I will keep developing and pushing code there and keeping the code clean as much as possible so that anyone can pick it up and use without making huge changes. Keeping things simple.
+
+Also, API is on api branch, here it is.
+
+While its open sourced now, I thought of writing a little article to fully understand it. So here we go.
+
+Stack:
+
+- GatsbyJs (to build static site)
+
+- Contentful (Headless CMS)
+
+- Apollo Graphql (API for few mutations)
+
+Services I used:
+
+- Netlify (to host GatsbyJs static site)
+
+- Now (to host Apollo API)
+
+- Contentful (to host data and CMS)
+
+- Stripe (Process payment)
+
+- Mailchimp (Subscription box)
+
+- Mailgun (Sending emails)
+
+- Blog (using Medium)
+
+Frontend (static site)
+
+Setup
+To change site config ./src/config/index.js
+also add .envfile in the root, with content for example:
+CONTENTFUL_SPACE_ID=YOUR_KEY_HERE
+CONTENTFUL_DELIVERY_API_TOKEN=YOUR_KEY_HERE
+STRIPE_PUBLISHABLE_KEY=YOUR_KEY_HERE
+Run:
+yarn install
+To start development server
+yarn start
+Also added layout’s sketch file SejalSuits.sketchif anyone need it just in case, it’s in github repo.
+
+Backend (for sending data to contentful and some mails)
+We use API based on Apollo GraphQL Server. We use it for few mutations we got to send data to Contentful and some emails. It works for me, you can choose your stack to go with serverless or whatever you prefer.
+To change API config ./src/config.js
+You can also add .envfile in the root, with content for example:
+CONTENTFUL_SPACE_ID=YOUR_KEY_HERE
+CONTENTFUL_DELIVERY_API_TOKEN=YOUR_KEY_HERE
+MAILGUN_USER=YOUR_KEY_HERE
+MAILGUN_PASSWORD=YOUR_KEY_HERE
+MAILCHIMP_KEY=YOUR_KEY_HERE
+MAILCHIMP_LIST=YOUR_KEY_HERE
+STRIPE_KEY=YOUR_KEY_HERE
+CONTENTFUL_SPACE_ID=YOUR_KEY_HERE
+CONTENTFUL_MANAGEMENT_ACCESS_TOKEN=YOUR_KEY_HERE
+Run:
+yarn install
+To start development server
+yarn start
+For reference in setting up fields in Contentful’s Content Model, I have added some JSON files in the directory: ./contentful_fields
+
+<!-- i am paragraph 2 [google](https://www.google.com) -->

@@ -1,5 +1,6 @@
 const withPlugins = require('next-compose-plugins');
 const withMDX = require('@next/mdx')();
+const withYaml = require('next-plugin-yaml');
 
 const nextConfig = {
   images: {
@@ -17,4 +18,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withPlugins([withMDX], nextConfig);
+module.exports = withPlugins([withMDX, withYaml], nextConfig);

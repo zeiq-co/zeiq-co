@@ -1,0 +1,106 @@
+---
+title: How to Make React SEO Friendly
+date: '2021-11-10'
+category: general
+author: Taniya Sharma
+featuredImage: ../images/search-engin-optimisation.jpg
+isFeatured: true
+---
+
+Today most developers like to work on [React](https://www.zeiq.co/posts/what's-so-great-about-react-web-development/) (javascript framework) as it allows for building fast, responsive and animation-rich websites and web applications with a smooth user experience.
+
+But React or any other framework has a limited understanding of SEO(search engine optimization). So, Today we will discuss the solutions we can have to gain SEO access.
+
+Let's start with Single Page Optimization to understand the challenges with SEO in React Websites.
+
+### What is Single Page Applications?
+
+A single-page application is an app that doesn't demand to reload the page during its use and works within a browser. Think of the apps you use daily like Facebook, Google Maps, Gmail, Twitter, Google Drive, or even GitHub. These all are examples of a SPA.
+
+Here, content is served on a single HTML page. Rather than sending a new request to the server each time and then getting a whole new page with new content, the client-side of a single-page web app only requests for the updated data.
+
+These apps cache data in local storage that means they will load even faster next time again.
+
+When you want to build SPA then the popular javascript React, Angular or Vue come into play. Among these three, React holds the top spot. React is the popular javascript framework of today.
+
+### Principles of Search Engine Optimization
+
+Search Engine Optimization (SEO) is how Google performs basically. You type something into Google and then Google gives you lots of results. Those results are web pages.
+
+According to Backlinko, 75% of all users go to the top three websites in search engine results and beyond get 0.78% of clicks.
+
+To determine a website's ranking, search engines use web crawlers that may be known as Google bots. That's why crawlers should understand the website content and that's where the problem starts.
+
+### Single Page Applications for Search Engines
+
+As we know single page app loads pages on the client-side. At first, the page is an empty container, then javascript pushes content to this container. And when the crawler visits the site, there is an empty page without content.
+
+In this way, google bots arise issues when it comes to searching from website content on the web pages.
+
+- Long delays
+- Limited Crawling Budget
+
+## Solving this issue
+
+You can make React SEO friendly by creating an isomorphic React app or by using prerendering.
+
+### Isomorphic React App
+
+An isomorphic JavaScript application can run on both the client-side and the server-side.
+
+You can run the React app and capture the rendered HTML file. Then, It can be served to everyone who requests the site (including Googlebot).
+
+On the client-side, the app can use this HTML as a base and continue operating on it in the browser as if it had been rendered by the browser. When needed, additional data is added using JavaScript, as an isomorphic app is still dynamic.
+
+It defines whether the client can run scripts or not. In case of no javascript, the code is rendered on the server. And browser or bot receives all meta tags and content in HTML and CSS.
+
+In the case of working with javascript, only the first page is rendered on the server, so the browser gets HTML, CSS, and JavaScript files. Then JavaScript starts running. The rest of the content is loaded dynamically. The first screen is displayed faster and user interactions are smoother in contrast to when websites are rendered on the client-side.
+
+But This is a Time-Consuming App. And we have alternative frameworks - Gatsby and Nextjs that helps in solving SEO issues.
+
+- **Next.js** is a framework that helps you create React apps that are generated on the server-side quickly and without hassle. It also allows for automatic code splitting and hot code reloading.
+- **Gatsby** is a free open-source compiler that enables developers to make fast and powerful websites. Gatsby doesn’t offer full-fledged server-side rendering.
+
+For Knowing about Gatsby and Nextjs - you may refer to our [gatsby](https://www.zeiq.co/posts/ecommerce-gatsby/) and [nextjs](https://www.zeiq.co/posts/why-nextjs-is-good-for-ecommerce/) blogs.
+
+**Server-side rendering with Next.js**
+
+The **Next.js** rendering algorithm seems as follows:
+
+1.  The Next.js server, running on Node.js, gets a request and matches it with a certain page (a React component) using a URL address.
+2.  The page can request data from an API or database, and the server will wait for this data.
+3.  The Next.js app generates HTML and CSS based on the received data and existing React components.
+4.  The server sends a response with HTML, CSS, and JavaScript.
+
+**Making website SEO Friendly with GatsbyJS**
+
+Here we have two phases -
+
+Generating a static website during the build and processing requests during runtime.
+
+The [build time process](https://www.gatsbyjs.org/docs/glossary/#build) seems as follows:
+
+1.  Gatsby’s bundling tool gets data from an API, CMS, and file system.
+2.  During deployment or setting up a CI/CD pipeline, the tool creates static HTML and CSS on the basis of data and React components.
+3.  After compilation, the tool produces an about folder with an index.html file. The website consists of only static files, which can be hosted on any hosting service or in the cloud.
+
+Request processing during runtime happens like this:
+
+1.  Gatsby instantly sends HTML, CSS, and JavaScript files to the requested page, since they already were rendered during compilation.
+2.  After JavaScript is filled into the browser, the website starts working as a typical React app. You can dynamically request data that isn’t important for SEO and work with the website just like you work with a regular single-page React app.
+
+### Prerendering
+
+The idea of prerendering is to preload all HTML elements on the page and cache all SPA pages on the server with the help of [Headless Chrome](https://developers.google.com/web/updates/2017/04/headless-chrome). We can do this is using a prerendering service like [prerender.io](https://prerender.io/). A prerendering service intercepts all requests to your website and, with the help of a user agent, defines whether a bot or a user is viewing the website.
+
+If the viewer is a bot, it gets the cached HTML version of the page. If it’s a user, the single-page app loads normally.
+
+Prerendering has a smaller server payload related to server-side rendering. But on the other hand, most prerendering services are paid and work poorly with dynamically changing content.
+
+### Conclusion
+
+Challenges with SEO shouldn’t be a reason for you to avoid using the React library. Rather, you can go for the above-mentioned solutions to meet this issue. Moreover, search engine crawlers are getting smarter every year, so in the future, SEO optimization may no longer be a pitfall of using React.
+
+Have a happy reading!
+
+Thank you!!

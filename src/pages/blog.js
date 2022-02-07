@@ -50,7 +50,7 @@ export async function getStaticProps() {
   const files = fs.readdirSync(directory);
 
   const posts = files.map((fileName) => {
-    const slug = fileName.replace('.md', '');
+    const slug = fileName.replace('.mdx', '');
     const readFile = fs.readFileSync(`${directory}/${fileName}`, 'utf-8');
     const { data: frontmatter } = matter(readFile);
 

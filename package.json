@@ -66,6 +66,7 @@
     "eslint-plugin-react": "^7.28.0",
     "husky": "^7.0.4",
     "jest": "^27.5.0",
+    "next-plugin-yaml": "^1.0.1",
     "prettier": "^2.5.1",
     "start-server-and-test": "^1.14.0"
   }

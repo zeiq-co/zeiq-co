@@ -1,0 +1,20 @@
+- one:
+  personName: Jonathan 
+  personRole: Venture East Africa 
+  review: Thanks to zeiq I managed to turn my idea into a real digital E-commerce website that meant I could focus on planning the events on the ground in Tanzania. They really assist on UX/UI and full E2E delivery. 
+  image: /assets/images/client/jonanthan-client.jpg
+- two:
+  personName: Reiss McGrath 
+  personRole: Bizzy Buddies Ltd 
+  review: We already had our website designs mapped out however there were certain UX flows we missed. The zeiq team helped shape the full customer journey and out e-commerce website was all built using the latest website reactjs gatsby technologies.  Great service and good value.  
+  image: /assets/images/client/ress-client.jpg
+- two:
+  personName: Sanjay Dhir
+  personRole: Founder & CEO of Select Developments
+  review: Zeiq delivery on technical expertise, high quality, communication and services is unmatched amongst their industry. Their ability to build confidence and trust within your idea truly shows just how genuine and honest the company is on helping you succeed.
+  image: /assets/images/client/review-person-04.jpg
+- four:
+  personName: Merlin Sibley
+  personRole: Communications Director, GetConnected
+  review: They provided an excellent service in the design/development of the app. They showed great flexibility in meeting additional requirements that came up during the project and have consistently impressed us with their understanding of the app marketplace, particularly in relation to younger people.
+  image: /assets/images/client/review-person-05.jpg
