@@ -1,3 +1,4 @@
+import '../styles/main.css';
 import Head from 'next/head';
 import { ZeiqProvider } from '@zeiq/web';
 import { StoreProvider } from 'easy-peasy';
@@ -8,7 +9,7 @@ import Router from 'next/router';
 import { SessionProvider } from 'next-auth/react';
 
 import withReduxStore from '../utils/with-redux-store';
-import GlobalStyles from '../utils/styles';
+import GlobalStyles from '../styles/styles';
 import config from '../utils/config';
 
 Router.events.on('routeChangeStart', (url) => {
@@ -25,7 +26,11 @@ function MyApp({ Component, pageProps, reduxStore }) {
     <>
       <GlobalStyles />
       <Head>
-        <script async src="/scripts.js" />
+        <meta charset="utf-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1"
+        />
       </Head>
       <DefaultSeo
         titleTemplate={`%s | ${config.siteName}`}
@@ -49,6 +54,14 @@ function MyApp({ Component, pageProps, reduxStore }) {
           </SessionProvider>
         </StoreProvider>
       </ZeiqProvider>
+      <>
+        <script src="plugins/jquery.min.js" />
+        <script src="plugins/bootstrap.bundle.min.js" />
+        <script src="plugins/swiper-bundle.min.js" />
+        <script src="plugins/isotope.min.js" />
+
+        <script async src="/scripts.js" />
+      </>
     </>
   );
 }
