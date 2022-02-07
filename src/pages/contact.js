@@ -1,5 +1,6 @@
 import { NextSeo } from 'next-seo';
 
+import contactData from '../../content/general/contact.yaml';
 import config from '../utils/config';
 import Layout from '../components/Layout';
 
@@ -22,9 +23,8 @@ function ContactPage() {
                         Describe Your Project
                       </h4>
                       <p className="has-anim fade">
-                        Leave us your contact info, we’ll get back to you within
-                        24 hours. Stay up to date with our newest collections,
-                        latest deals and special offers!
+                        Tell us about your project, get a quick estimate and a
+                        plan for making it live.
                       </p>
 
                       <div className="mt-4 pt-2 has-anim fade anim-delay-1">
@@ -34,9 +34,9 @@ function ContactPage() {
                         <p>
                           <a
                             className="line-link text-dark"
-                            href="mailto:contact@abildon.io"
+                            href={`mailto:${contactData.emailSales}`}
                           >
-                            contact@abildon.io
+                            {contactData.emailSales}
                           </a>
                         </p>
                       </div>
@@ -47,23 +47,23 @@ function ContactPage() {
                         <p>
                           <a
                             className="line-link text-dark"
-                            href="tel:0722232424"
+                            href={`tel:${contactData.telephoneUk}`}
                           >
-                            +072 223 2424
+                            {contactData.telephoneUk}
                           </a>
                         </p>
                       </div>
                       <div className="mt-4 has-anim fade anim-delay-3">
                         <p className="text-uppercase small font-weight-500 mb-1">
-                          Address:
+                          Our Offices:
                         </p>
-                        <p>Qvid city, 02000</p>
-                        <p>16 Nikola Y. Vaptsarov Blvd,</p>
+                        <p>{contactData.locationUk}</p>
+                        <p>{contactData.locationIndia}</p>
                       </div>
                     </div>
                   </div>
                   <div className="col-lg-7">
-                    <form action="#">
+                    <form>
                       <div className="row gh-1 gv-2">
                         <div className="col-12 col-md-6 has-anim fade">
                           <input
@@ -87,28 +87,12 @@ function ContactPage() {
                           />
                         </div>
                         <div className="col-12 col-md-6 has-anim fade">
-                          <input
-                            type="company"
-                            className="form-control"
-                            placeholder="Company"
-                          />
-                        </div>
-                        <div className="col-12 col-md-6 has-anim fade">
                           <select className="form-control custom-control custom-select">
                             <option selected="">Type of Project</option>
                             <option>Web/App UI Project</option>
                             <option>Creative Branding</option>
                             <option>Wordpress Website</option>
                             <option>Static Website</option>
-                          </select>
-                        </div>
-                        <div className="col-12 col-md-6 has-anim fade">
-                          <select className="form-control custom-control custom-select">
-                            <option selected="">Your Budget</option>
-                            <option>&lt; 10,000</option>
-                            <option>10k-20k</option>
-                            <option>20k-30k</option>
-                            <option>&gt; 30,000</option>
                           </select>
                         </div>
                         <div className="col-12 has-anim fade">

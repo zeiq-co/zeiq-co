@@ -1,12 +1,18 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import styled from 'styled-components';
+
+const LogoContainer = styled.a`
+  display: flex;
+`;
 
 const services = [
-  { id: 1, title: 'Development', slug: 'services/development' },
-  { id: 2, title: 'Design Thinking', slug: 'services/design-thinking' },
+  { id: 1, title: 'Development', slug: '/services/development' },
+  { id: 2, title: 'Design Thinking', slug: '/services/design-thinking' },
   {
     id: 3,
     title: 'Software Development',
-    slug: 'services/software-development',
+    slug: '/services/software-development',
   },
 ];
 
@@ -19,9 +25,18 @@ const Header = () => (
           <div className="col-12">
             <nav className="navbar navbar-expand-lg navbar-dark px-0 py-3 py-lg-4">
               <Link href="/">
-                <a className="navbar-brand font-weight-bold mb-0" title="Zeiq">
-                  <img src="assets/images/logo.png" alt="Zeiq" />
-                </a>
+                <LogoContainer
+                  className="navbar-brand font-weight-bold mb-0"
+                  title="Zeiq"
+                >
+                  <Image
+                    src="/logo-1024.png"
+                    alt="Zeiq Logo"
+                    width={48}
+                    height={30}
+                  />
+                  <span>ZEIQ</span>
+                </LogoContainer>
               </Link>
 
               <button
@@ -105,7 +120,7 @@ const Header = () => (
                     </Link>
                     <ul className="dropdown-menu">
                       {services.map((item) => (
-                        <li key={item.key}>
+                        <li key={item.slug}>
                           <Link href={item.slug}>
                             <a className="dropdown-item">{item.title}</a>
                           </Link>
@@ -134,7 +149,7 @@ const Header = () => (
                   <Link href="/support">
                     <a
                       className="btn btn-white"
-                      data-text="Buy Now"
+                      data-text="Clients"
                       target="_blank"
                       rel="nofollow noreferrer"
                     >

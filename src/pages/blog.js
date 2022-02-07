@@ -1,11 +1,13 @@
 import { NextSeo } from 'next-seo';
-import { orderBy } from 'lodash';
+import { orderBy, random } from 'lodash';
 
 import { getMdxFromDir } from '../utils/helpers';
 import config from '../utils/config';
 import Layout from '../components/Layout';
 import PageHero from '../components/global/PageHero';
 import PostItem from '../components/blog/PostItem';
+
+const bgColors = ['#c11c3b', '#139090', '#d59801', '#296e4a'];
 
 function BlogPage({ posts }) {
   return (
@@ -14,13 +16,15 @@ function BlogPage({ posts }) {
         title={config.siteName}
         description="A short description goes here."
       />
-      <PageHero />
+      <PageHero title="News & Updates" subTitle="Latest news" />
       <div className="section pt-n30 bg-white">
         <div className="container">
           <div className="row">
-            {posts.map((item) => (
-              <PostItem key={item.slug} post={item} />
-            ))}
+            {posts.map((item) => {
+              const randomId = random(0, bgColors.length - 1);
+              const bgColor = bgColors[randomId];
+              return <PostItem key={item.slug} post={item} bgColor={bgColor} />;
+            })}
             <div className="col-lg-12">
               <div className="text-center mt-5 pt-4 has-anim">
                 <a

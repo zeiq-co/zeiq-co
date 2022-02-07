@@ -7,9 +7,10 @@ import jqueryLoad from '../utils/jquery';
 import contactData from '../../content/general/contact.yaml';
 
 const Layout = ({ children }) => {
-  console.log('contactData', contactData);
+  // console.log('contactData', contactData);
+
   useEffect(() => {
-    jqueryLoad();
+    setTimeout(() => jqueryLoad(), 200);
   }, []);
 
   return (
@@ -17,7 +18,7 @@ const Layout = ({ children }) => {
       <ScrollToTop />
       <Header />
       {children}
-      <Footer />
+      <Footer contactData={contactData} />
     </div>
   );
 };

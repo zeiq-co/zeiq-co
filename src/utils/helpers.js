@@ -1,6 +1,15 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 
+export const getPathsFromDir = (directory) => {
+  const files = fs.readdirSync(directory);
+  return files.map((fileName) => ({
+    params: {
+      slug: fileName.replace('.mdx', ''),
+    },
+  }));
+};
+
 export const getMdxFromDir = (directory) => {
   const files = fs.readdirSync(directory);
 
@@ -14,4 +23,9 @@ export const getMdxFromDir = (directory) => {
       ...frontmatter,
     };
   });
+};
+
+export const getSingleMdx = (path) => {
+  const fileName = fs.readFileSync(path, 'utf-8');
+  return matter(fileName);
 };
