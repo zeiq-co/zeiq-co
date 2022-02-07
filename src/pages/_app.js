@@ -26,7 +26,7 @@ function MyApp({ Component, pageProps, reduxStore }) {
     <>
       <GlobalStyles />
       <Head>
-        <meta charset="utf-8" />
+        <meta charSet="utf-8" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1"
@@ -55,12 +55,12 @@ function MyApp({ Component, pageProps, reduxStore }) {
         </StoreProvider>
       </ZeiqProvider>
       <>
-        <script src="plugins/jquery.min.js" />
-        <script src="plugins/bootstrap.bundle.min.js" />
-        <script src="plugins/swiper-bundle.min.js" />
-        <script src="plugins/isotope.min.js" />
+        <script src="/plugins/jquery.min.js" />
+        <script src="/plugins/bootstrap.bundle.min.js" />
+        <script src="/plugins/swiper-bundle.min.js" />
+        <script src="/plugins/isotope.min.js" />
 
-        <script async src="/scripts.js" />
+        <script async src="/plugins/scripts.js" />
       </>
     </>
   );

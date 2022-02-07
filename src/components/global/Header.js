@@ -66,17 +66,17 @@ const Header = () => (
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      About
+                      Work
                     </a>
                     <ul className="dropdown-menu">
                       <li>
                         <a className="dropdown-item" href="about-me.html">
-                          About Me
+                          Recent Projects
                         </a>
                       </li>
                       <li>
                         <a className="dropdown-item" href="about-us.html">
-                          About Us
+                          Our Products
                         </a>
                       </li>
                     </ul>
