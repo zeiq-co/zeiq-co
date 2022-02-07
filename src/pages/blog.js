@@ -1,3 +1,5 @@
+import fs from 'fs';
+import matter from 'gray-matter';
 import { NextSeo } from 'next-seo';
 
 import config from '../utils/config';
@@ -7,7 +9,9 @@ import PostItem from '../components/blog/PostItem';
 
 const bgColors = ['#c11c3b', '#139090', '#d59801', '#296e4a'];
 
-function BlogPage() {
+function BlogPage({ posts }) {
+  console.log('posts', posts);
+
   return (
     <Layout>
       <NextSeo
@@ -40,3 +44,25 @@ function BlogPage() {
 }
 
 export default BlogPage;
+
+export async function getStaticProps() {
+  const directory = 'content/posts';
+  const files = fs.readdirSync(directory);
+
+  const posts = files.map((fileName) => {
+    const slug = fileName.replace('.md', '');
+    const readFile = fs.readFileSync(`${directory}/${fileName}`, 'utf-8');
+    const { data: frontmatter } = matter(readFile);
+
+    return {
+      slug,
+      frontmatter,
+    };
+  });
+
+  return {
+    props: {
+      posts,
+    },
+  };
+}
