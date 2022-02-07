@@ -1,4 +1,10 @@
-const RecentProjects = () => (
+import { random } from 'lodash';
+import Image from 'next/image';
+import Link from 'next/link';
+
+const bgColors = ['#D83013', '#5A6422', '#E08100', '#B10101', '#0E268A'];
+
+const RecentProjects = ({ projects }) => (
   <section className="section bg-white portfolio-carousel-fluid">
     <div className="container">
       <div className="row">
@@ -12,131 +18,43 @@ const RecentProjects = () => (
     </div>
     <div className="swiper-container">
       <div className="swiper-wrapper">
-        <div className="swiper-slide">
-          <div className="card portfolio-card card-overlay card-hover-zoom">
-            <span className="card-img">
-              <img
-                className="img-fluid"
-                src="assets/images/portfolio/carousel/01.jpg"
-                alt="Portfolio Thumbnail"
-              />
-              <span
-                className="img-overlay"
-                style={{ backgroundColor: '#D83013' }}
-              />
-            </span>
-            <div className="card-img-overlay text-center">
-              <div className="block">
-                <h3 className="h2 card-title mb-3">
-                  <a href="portfolio-single.html">Spearmint</a>
-                </h3>
-                <span className="card-subtitle">
-                  <a href="portfolio-grid-3-col.html">Branding</a>
+        {projects.map((item) => {
+          const randomId = random(0, bgColors.length - 1);
+          const bgColor = bgColors[randomId];
+          return (
+            <div className="swiper-slide" key={item.slug}>
+              <div className="card portfolio-card card-overlay card-hover-zoom">
+                <span className="card-img">
+                  <Image
+                    src={item.featuredImage}
+                    alt={item.title}
+                    className="img-fluid"
+                    height={590}
+                    width={795}
+                  />
+                  <span
+                    className="img-overlay"
+                    style={{ backgroundColor: bgColor }}
+                  />
                 </span>
+                <div className="card-img-overlay text-center">
+                  <div className="block">
+                    <h3 className="h2 card-title mb-3">
+                      <Link href={`/work/${item.slug}`}>
+                        <a>{item.title}</a>
+                      </Link>
+                    </h3>
+                    <span className="card-subtitle">
+                      <Link href={`/work/${item.slug}`}>
+                        <a>{item.category}</a>
+                      </Link>
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="swiper-slide">
-          <div className="card portfolio-card card-overlay card-hover-zoom">
-            <span className="card-img">
-              <img
-                className="img-fluid"
-                src="assets/images/portfolio/carousel/02.jpg"
-                alt="Portfolio Thumbnail"
-              />
-              <span
-                className="img-overlay"
-                style={{ backgroundColor: '#5A6422' }}
-              />
-            </span>
-            <div className="card-img-overlay text-center">
-              <div className="block">
-                <h3 className="h2 card-title mb-3">
-                  <a href="portfolio-single.html">Pear</a>
-                </h3>
-                <span className="card-subtitle">
-                  <a href="portfolio-grid-3-col.html">Development</a>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="swiper-slide">
-          <div className="card portfolio-card card-overlay card-hover-zoom">
-            <span className="card-img">
-              <img
-                className="img-fluid"
-                src="assets/images/portfolio/carousel/03.jpg"
-                alt="Portfolio Thumbnail"
-              />
-              <span
-                className="img-overlay"
-                style={{ backgroundColor: '#E08100' }}
-              />
-            </span>
-            <div className="card-img-overlay text-center">
-              <div className="block">
-                <h3 className="h2 card-title mb-3">
-                  <a href="portfolio-single.html">Hibiscus</a>
-                </h3>
-                <span className="card-subtitle">
-                  <a href="portfolio-grid-3-col.html">Development</a>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="swiper-slide">
-          <div className="card portfolio-card card-overlay card-hover-zoom">
-            <span className="card-img">
-              <img
-                className="img-fluid"
-                src="assets/images/portfolio/carousel/04.jpg"
-                alt="Portfolio Thumbnail"
-              />
-              <span
-                className="img-overlay"
-                style={{ backgroundColor: '#B10101' }}
-              />
-            </span>
-            <div className="card-img-overlay text-center">
-              <div className="block">
-                <h3 className="h2 card-title mb-3">
-                  <a href="portfolio-single.html">Cocacola</a>
-                </h3>
-                <span className="card-subtitle">
-                  <a href="portfolio-grid-3-col.html">Branding</a>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="swiper-slide">
-          <div className="card portfolio-card card-overlay card-hover-zoom">
-            <span className="card-img">
-              <img
-                className="img-fluid"
-                src="assets/images/portfolio/carousel/05.jpg"
-                alt="Portfolio Thumbnail"
-              />
-              <span
-                className="img-overlay"
-                style={{ backgroundColor: '#0E268A' }}
-              />
-            </span>
-            <div className="card-img-overlay text-center">
-              <div className="block">
-                <h3 className="h2 card-title mb-3">
-                  <a href="portfolio-single.html">F.A M.T</a>
-                </h3>
-                <span className="card-subtitle">
-                  <a href="portfolio-grid-3-col.html">Design</a>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
+          );
+        })}
       </div>
 
       <div className="text-center mt-4">
@@ -146,8 +64,8 @@ const RecentProjects = () => (
 
       <div className="swipeCarousel-control">
         <div className="swiper-pagination" />
-        <div className="activeslide">01</div>
-        <div className="totalslide">05</div>
+        <div className="activeslide">1</div>
+        <div className="totalslide">{projects.length}</div>
       </div>
     </div>
   </section>

@@ -1,43 +1,44 @@
-const HomeHero = () => (
+import Link from 'next/link';
+
+const HomeHero = ({ data }) => (
   <section className="banner">
     <div className="container text-center text-lg-left position-relative">
       <div className="row justify-content-md-center align-items-center">
         <div className="col-xl-6 col-lg-7 col-md-10 has-anim fade">
-          <p className="mb-3 font-weight-500">We Are Abildon</p>
+          <p className="mb-3 font-weight-500">We Are Zeiq</p>
           <h1 className="banner-title mb-5 text-white">
-            We build brands, relations &amp; trust
+            {data.slogan}
             <span className="text-primary">.</span>
           </h1>
-
-          <a
-            href="portfolio.html"
-            className="btn btn-white"
-            data-text="Case Studies"
-          >
-            <span>Case Studies</span>
-          </a>
+          <Link href="/work">
+            <a className="btn btn-white" data-text="Case Studies">
+              <span>Case Studies</span>
+            </a>
+          </Link>
         </div>
         <div className="col-xl-4 col-lg-5 col-md-10 mt-5 mt-lg-0 has-anim fade anim-delay-2">
           <p className="lead text-white" style={{ marginBottom: '2rem' }}>
             We design &amp; build world-class digital products that make an
             impact and connect people.
           </p>
-          <a href="about-us.html" className="line-link">
-            About Us{' '}
-            <svg
-              className="arrow-up-right"
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <line x1="7" y1="17" x2="17" y2="7" />
-              <polyline points="7 7 17 7 17 17" />
-            </svg>
-          </a>
+          <Link href="/about">
+            <a className="line-link">
+              About Us{' '}
+              <svg
+                className="arrow-up-right"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7 7 17 7 17 17" />
+              </svg>
+            </a>
+          </Link>
         </div>
       </div>
 

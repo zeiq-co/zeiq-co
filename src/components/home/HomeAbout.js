@@ -1,6 +1,6 @@
-const HomeAbout = () => (
+const HomeAbout = ({ data }) => (
   <>
-    <div className="mb-n5 has-anim fade">
+    {/* <div className="mb-n5 has-anim fade">
       <div className="container">
         <div className="row">
           <div className="col-12">
@@ -13,7 +13,7 @@ const HomeAbout = () => (
           </div>
         </div>
       </div>
-    </div>
+    </div> */}
 
     <section className="section bg-white">
       <div className="container pt-5">
@@ -25,13 +25,7 @@ const HomeAbout = () => (
           </div>
           <div className="col-md-6 offset-md-1 mt-4 mt-md-0 has-anim fade anim-delay-1">
             <p className="lead">
-              <span className="text-dark">
-                Abildon is a world-class creative studio
-              </span>
-              . Well known as designing website &amp; mobile apps. at the
-              intersection of art, design and technology. We are on a mission to
-              explore, create meaning and provoke emotions through design and
-              storytelling.
+              <span className="text-dark">{data.info}</span>. {data.details}
             </p>
           </div>
         </div>

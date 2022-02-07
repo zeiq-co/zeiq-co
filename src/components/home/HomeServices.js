@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const HomeServices = () => (
   <section className="section">
     <div className="container">
@@ -32,7 +34,11 @@ const HomeServices = () => (
             >
               ━━
             </span>
-            <p>145 projects done</p>
+            <p>
+              <Link href="/services/design-thinking">
+                <a>Learn more</a>
+              </Link>
+            </p>
           </div>
         </div>
 
@@ -62,7 +68,11 @@ const HomeServices = () => (
             >
               ━━
             </span>
-            <p>89 projects done</p>
+            <p>
+              <Link href="/services/marketing">
+                <a>Learn more</a>
+              </Link>
+            </p>
           </div>
         </div>
 
@@ -96,7 +106,11 @@ const HomeServices = () => (
             >
               ━━
             </span>
-            <p>200+ projects done</p>
+            <p>
+              <Link href="/services/development">
+                <a>Learn more</a>
+              </Link>
+            </p>
           </div>
         </div>
 
@@ -118,39 +132,42 @@ const HomeServices = () => (
             </div>
 
             <h4 className="font-weight-light text-white mb-3">
-              Interactive Design
+              Software Development
             </h4>
-            <p>
-              Dolores fuga saepe sunt cumque perferendis repudian daetab culpa
-              ratione.
-            </p>
+            <p>We offer tailor-made software solutions</p>
             <span
               className="my-2 d-inline-block"
               style={{ letterSpacing: '-3px' }}
             >
               ━━
             </span>
-            <p>93 projects done</p>
+            <p>
+              <Link href="/services/software-development">
+                <a>Learn more</a>
+              </Link>
+            </p>
           </div>
         </div>
 
         <div className="col-12">
-          <a href="services.html" className="line-link">
-            All Services{' '}
-            <svg
-              className="arrow-up-right"
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <line x1="7" y1="17" x2="17" y2="7" />
-              <polyline points="7 7 17 7 17 17" />
-            </svg>
-          </a>
+          <Link href="/services">
+            <a className="line-link">
+              All Services{' '}
+              <svg
+                className="arrow-up-right"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7 7 17 7 17 17" />
+              </svg>
+            </a>
+          </Link>
         </div>
       </div>
     </div>
