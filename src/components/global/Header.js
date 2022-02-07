@@ -1,3 +1,15 @@
+import Link from 'next/link';
+
+const services = [
+  { id: 1, title: 'Development', slug: 'services/development' },
+  { id: 2, title: 'Design Thinking', slug: 'services/design-thinking' },
+  {
+    id: 3,
+    title: 'Software Development',
+    slug: 'services/software-development',
+  },
+];
+
 const Header = () => (
   <>
     <div className="adjust-navigation-height" />
@@ -6,13 +18,11 @@ const Header = () => (
         <div className="row">
           <div className="col-12">
             <nav className="navbar navbar-expand-lg navbar-dark px-0 py-3 py-lg-4">
-              <a
-                className="navbar-brand font-weight-bold mb-0"
-                href="index.html"
-                title="Zeiq"
-              >
-                <img src="assets/images/logo.png" alt="Zeiq" />
-              </a>
+              <Link href="/">
+                <a className="navbar-brand font-weight-bold mb-0" title="Zeiq">
+                  <img src="assets/images/logo.png" alt="Zeiq" />
+                </a>
+              </Link>
 
               <button
                 className="navbar-toggler"
@@ -70,14 +80,14 @@ const Header = () => (
                     </a>
                     <ul className="dropdown-menu">
                       <li>
-                        <a className="dropdown-item" href="about-me.html">
-                          Recent Projects
-                        </a>
+                        <Link href="/work">
+                          <a className="dropdown-item">Recent Projects</a>
+                        </Link>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="about-us.html">
-                          Our Products
-                        </a>
+                        <Link href="/products">
+                          <a className="dropdown-item">Our Products</a>
+                        </Link>
                       </li>
                     </ul>
                   </li>
@@ -93,80 +103,43 @@ const Header = () => (
                       Services
                     </a>
                     <ul className="dropdown-menu">
-                      <li>
-                        <a className="dropdown-item" href="portfolio.html">
-                          Portfolio
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          className="dropdown-item"
-                          href="portfolio-floating.html"
-                        >
-                          Portfolio Floating
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          className="dropdown-item"
-                          href="portfolio-broken.html"
-                        >
-                          Portfolio Broken
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          className="dropdown-item"
-                          href="portfolio-grid-3-col.html"
-                        >
-                          Grid 3 Column
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          className="dropdown-item"
-                          href="portfolio-grid-4-col.html"
-                        >
-                          Grid 4 Column
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          className="dropdown-item"
-                          href="portfolio-single.html"
-                        >
-                          Portfolio Single
-                        </a>
-                      </li>
+                      {services.map((item) => (
+                        <li key={item.key}>
+                          <Link href={item.slug}>
+                            <a className="dropdown-item">{item.title}</a>
+                          </Link>
+                        </li>
+                      ))}
                     </ul>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="contact.html">
-                      Blog
-                    </a>
+                    <Link href="/blog">
+                      <a className="nav-link">Blog</a>
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="contact.html">
-                      About
-                    </a>
+                    <Link href="/about">
+                      <a className="nav-link">About</a>
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="contact.html">
-                      Contact
-                    </a>
+                    <Link href="/contact">
+                      <a className="nav-link">Contact</a>
+                    </Link>
                   </li>
                 </ul>
 
                 <div className="navbar-actions">
-                  <a
-                    href="https://ui8.net/flexplate/products"
-                    className="btn btn-white"
-                    data-text="Buy Now"
-                    target="_blank"
-                    rel="nofollow noreferrer"
-                  >
-                    <span>Support</span>
-                  </a>
+                  <Link href="/support">
+                    <a
+                      className="btn btn-white"
+                      data-text="Buy Now"
+                      target="_blank"
+                      rel="nofollow noreferrer"
+                    >
+                      <span>Support</span>
+                    </a>
+                  </Link>
                 </div>
               </div>
             </nav>

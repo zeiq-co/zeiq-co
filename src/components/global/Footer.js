@@ -104,14 +104,12 @@ const Footer = () => (
         <div className="row">
           <div className="col-lg-10 mb-5 pb-4">
             <p className="h6 font-weight-light mb-2">
-              Copyright &copy;{' '}
-              <script>document.write(new Date().getFullYear())</script>.
-              Developed by{' '}
+              Copyright &copy; {new Date().getFullYear()}{' '}
               <a
                 href="https://ui8.net/flexplate/products"
                 className="line-link text-white font-weight-light"
               >
-                FlexPlate
+                Zeiq.co
               </a>
             </p>
             <p className="h6 font-weight-light">
