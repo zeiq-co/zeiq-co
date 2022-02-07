@@ -3,11 +3,18 @@ import matter from 'gray-matter';
 
 export const getPathsFromDir = (directory) => {
   const files = fs.readdirSync(directory);
-  return files.map((fileName) => ({
-    params: {
-      slug: fileName.replace('.mdx', ''),
-    },
-  }));
+
+  const result = [];
+  files.forEach((fileName) => {
+    if (fileName.includes('mdx')) {
+      result.push({
+        params: {
+          slug: fileName.replace('.mdx', ''),
+        },
+      });
+    }
+  });
+  return result;
 };
 
 export const getMdxFromDir = (directory) => {

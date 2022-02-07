@@ -15,7 +15,7 @@ import LatestPosts from '../components/home/LatestPosts';
 import homeData from '../../content/general/home.yaml';
 
 function Index({ projects, posts }) {
-  console.log('posts', posts);
+  // console.log('posts', posts);
 
   return (
     <Layout>

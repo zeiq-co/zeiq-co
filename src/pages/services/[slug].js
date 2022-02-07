@@ -80,7 +80,7 @@ export async function getStaticProps({ params: { slug } }) {
   let childResult = getMdxFromDir(filesDir);
   childResult = filter(childResult, (o) => o.parent === slug);
   childResult = orderBy(childResult, ['listingOrder'], ['asc']);
-  console.log('childServices', childResult);
+  // console.log('childServices', childResult);
 
   return {
     props: {
