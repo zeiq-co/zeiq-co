@@ -1,6 +1,4 @@
-import 'twin.macro';
 import styled from 'styled-components';
-import '@tailwindcss/typography';
 
 import Layout from './Layout';
 

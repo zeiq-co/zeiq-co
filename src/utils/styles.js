@@ -1,13 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
-import tw, { GlobalStyles as BaseStyles } from 'twin.macro';
 
 const CustomStyles = createGlobalStyle`
-  body {
-		margin: 0;
-    padding: 0;
-    ${tw`antialiased`}
-  }
-
   /* Make clicks pass-through */
   #nprogress {
     pointer-events: none;
@@ -84,12 +77,7 @@ const CustomStyles = createGlobalStyle`
 `;
 
 const GlobalStyles = function () {
-  return (
-    <>
-      <BaseStyles />
-      <CustomStyles />
-    </>
-  );
+  return <CustomStyles />;
 };
 
 export default GlobalStyles;

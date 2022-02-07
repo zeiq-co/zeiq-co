@@ -1,7 +1,5 @@
-import 'twin.macro';
 import Link from 'next/link';
 
-import ToggleDarkMode from './ToggleDarkMode';
 import config from '../../utils/config';
 
 const Footer = () => (
@@ -21,7 +19,6 @@ const Footer = () => (
             <Link href="/contact">
               <a tw="py-2 px-4 inline-block hover:underline">Contact</a>
             </Link>
-            <ToggleDarkMode />
           </div>
         </div>
       </div>

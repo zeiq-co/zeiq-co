@@ -1,4 +1,3 @@
-import 'twin.macro';
 import { NextSeo } from 'next-seo';
 import { makeId } from '@zeiq/core';
 

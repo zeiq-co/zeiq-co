@@ -1,4 +1,3 @@
-import 'twin.macro';
 import dayjs from 'dayjs';
 import Link from 'next/link';
 import Image from 'next/image';

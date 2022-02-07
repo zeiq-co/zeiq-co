@@ -2,14 +2,12 @@ import Head from 'next/head';
 import { ZeiqProvider } from '@zeiq/web';
 import { StoreProvider } from 'easy-peasy';
 import { DefaultSeo } from 'next-seo';
-import { ThemeProvider as NextThemeProvider } from 'next-themes';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { ApolloProvider } from '@apollo/client/react';
 import NProgress from 'nprogress';
 import Router from 'next/router';
+import { SessionProvider } from 'next-auth/react';
 
 import withReduxStore from '../utils/with-redux-store';
-import apolloClient from '../utils/apolloClient';
 import GlobalStyles from '../utils/styles';
 import config from '../utils/config';
 
@@ -45,13 +43,11 @@ function MyApp({ Component, pageProps, reduxStore }) {
         }}
       />
       <ZeiqProvider>
-        <NextThemeProvider attribute="class" defaultTheme="light">
-          <StoreProvider store={reduxStore}>
-            <ApolloProvider client={apolloClient}>
-              <Component {...pageProps} />
-            </ApolloProvider>
-          </StoreProvider>
-        </NextThemeProvider>
+        <StoreProvider store={reduxStore}>
+          <SessionProvider session={pageProps ? pageProps.session : undefined}>
+            <Component {...pageProps} />
+          </SessionProvider>
+        </StoreProvider>
       </ZeiqProvider>
     </>
   );

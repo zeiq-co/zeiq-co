@@ -1,5 +1,3 @@
-import 'twin.macro';
-
 import Header from './global/Header';
 import Footer from './global/Footer';
 
