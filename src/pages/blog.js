@@ -1,17 +1,13 @@
-import fs from 'fs';
-import matter from 'gray-matter';
 import { NextSeo } from 'next-seo';
+import { orderBy } from 'lodash';
 
+import { getMdxFromDir } from '../utils/helpers';
 import config from '../utils/config';
 import Layout from '../components/Layout';
 import PageHero from '../components/global/PageHero';
 import PostItem from '../components/blog/PostItem';
 
-const bgColors = ['#c11c3b', '#139090', '#d59801', '#296e4a'];
-
 function BlogPage({ posts }) {
-  console.log('posts', posts);
-
   return (
     <Layout>
       <NextSeo
@@ -22,9 +18,9 @@ function BlogPage({ posts }) {
       <div className="section pt-n30 bg-white">
         <div className="container">
           <div className="row">
-            <PostItem bgColor={bgColors[0]} />
-            <PostItem bgColor={bgColors[1]} />
-            <PostItem bgColor={bgColors[2]} />
+            {posts.map((item) => (
+              <PostItem key={item.slug} post={item} />
+            ))}
             <div className="col-lg-12">
               <div className="text-center mt-5 pt-4 has-anim">
                 <a
@@ -46,23 +42,12 @@ function BlogPage({ posts }) {
 export default BlogPage;
 
 export async function getStaticProps() {
-  const directory = 'content/posts';
-  const files = fs.readdirSync(directory);
-
-  const posts = files.map((fileName) => {
-    const slug = fileName.replace('.mdx', '');
-    const readFile = fs.readFileSync(`${directory}/${fileName}`, 'utf-8');
-    const { data: frontmatter } = matter(readFile);
-
-    return {
-      slug,
-      frontmatter,
-    };
-  });
+  const result = getMdxFromDir('content/posts');
+  const orderedData = orderBy(result, ['date'], ['desc']);
 
   return {
     props: {
-      posts,
+      posts: orderedData,
     },
   };
 }

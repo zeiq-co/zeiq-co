@@ -4,7 +4,7 @@ const withYaml = require('next-plugin-yaml');
 
 const nextConfig = {
   images: {
-    domains: ['assets.vercel.com', 'dummyimage.com'],
+    domains: ['assets.vercel.com'],
   },
   pageExtensions: ['mdx', 'jsx', 'js'],
   devIndicators: {
