@@ -3,6 +3,7 @@ import Image from 'next/image';
 import md from 'markdown-it';
 import { upperFirst } from 'lodash';
 import styled from 'styled-components';
+import fs from 'fs';
 
 import { getPathsFromDir, getSingleMdx } from '../../utils/helpers';
 import config from '../../utils/config';
@@ -115,21 +116,25 @@ const Work = ({ data }) => (
 export default Work;
 
 const filesDir = 'content/work';
+const filesDir2 = 'content/products';
 
 export async function getStaticPaths() {
   // Retrieve all our slugs
   const paths = getPathsFromDir(filesDir);
+  const paths2 = getPathsFromDir(filesDir2);
 
   return {
-    paths,
+    paths: [...paths, ...paths2],
     fallback: false,
   };
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  const { data: frontmatter, content } = getSingleMdx(
-    `${filesDir}/${slug}.mdx`,
-  );
+  let filePath = `${filesDir}/${slug}.mdx`;
+  if (!fs.existsSync(filePath)) {
+    filePath = `${filesDir2}/${slug}.mdx`;
+  }
+  const { data: frontmatter, content } = getSingleMdx(filePath);
 
   return {
     props: {

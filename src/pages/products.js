@@ -1,11 +1,13 @@
 import { NextSeo } from 'next-seo';
+import { orderBy } from 'lodash';
 
+import { getMdxFromDir } from '../utils/helpers';
 import config from '../utils/config';
 import Layout from '../components/Layout';
 import PageHero from '../components/global/PageHero';
 import WorkItem from '../components/work/WorkItem';
 
-function ProductsPage() {
+function ProductsPage({ projects }) {
   return (
     <Layout>
       <NextSeo
@@ -16,12 +18,9 @@ function ProductsPage() {
       <section className="section portfolio-grid-creative bg-white">
         <div className="container">
           <div className="row">
-            <WorkItem />
-            <WorkItem />
-            <WorkItem />
-            <WorkItem />
-            <WorkItem />
-            <WorkItem />
+            {projects.map((item) => (
+              <WorkItem key={item.slug} data={item} />
+            ))}
           </div>
         </div>
       </section>
@@ -30,3 +29,14 @@ function ProductsPage() {
 }
 
 export default ProductsPage;
+
+export async function getStaticProps() {
+  const result = getMdxFromDir('content/products');
+  const orderedData = orderBy(result, ['listingOrder'], ['asc']);
+
+  return {
+    props: {
+      projects: orderedData,
+    },
+  };
+}
