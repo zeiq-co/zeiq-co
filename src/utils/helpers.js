@@ -13,16 +13,20 @@ export const getPathsFromDir = (directory) => {
 export const getMdxFromDir = (directory) => {
   const files = fs.readdirSync(directory);
 
-  return files.map((fileName) => {
-    const slug = fileName.replace('.mdx', '');
-    const readFile = fs.readFileSync(`${directory}/${fileName}`, 'utf-8');
-    const { data: frontmatter } = matter(readFile);
+  const result = [];
+  files.forEach((fileName) => {
+    if (fileName.includes('mdx')) {
+      const slug = fileName.replace('.mdx', '');
+      const readFile = fs.readFileSync(`${directory}/${fileName}`, 'utf-8');
+      const { data: frontmatter } = matter(readFile);
 
-    return {
-      slug,
-      ...frontmatter,
-    };
+      result.push({
+        slug,
+        ...frontmatter,
+      });
+    }
   });
+  return result;
 };
 
 export const getSingleMdx = (path) => {
