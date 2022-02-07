@@ -1,29 +1,44 @@
-import dayjs from 'dayjs';
-import Link from 'next/link';
-import Image from 'next/image';
+const PostItem = ({ post, bgColor }) => (
+  <div className="col-lg-12">
+    <article className="card blog-card blog-card-horizontal border-0 rounded-0 has-anim">
+      <div className="card-background" style={{ backgroundColor: bgColor }} />
 
-const PostItem = ({ post }) => (
-  <div tw="p-4 md:w-1/3">
-    <div tw="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-      <Image
-        tw="lg:h-48 md:h-36 w-full object-cover object-center"
-        src="https://dummyimage.com/722x402"
-        alt="blog"
-        width={722}
-        height={402}
-      />
-      <div tw="p-6">
-        <h2 tw="tracking-widest text-xs font-medium text-gray-400 mb-1">
-          {dayjs(post.createdAt).format('MMMM YYYY')}
-        </h2>
-        <Link href={`/post/${post.slug}`}>
-          <a>
-            <h1 tw="text-lg font-medium text-gray-900 mb-3">{post.title}</h1>
+      <div className="row justify-content-center align-items-center">
+        <div className="col-lg-6">
+          <a href="blog-single.html" className="card-image">
+            <img
+              loading="lazy"
+              src="assets/images/blogs/01-hr.jpg"
+              className="card-img rounded-0"
+              alt="blog-post"
+            />
           </a>
-        </Link>
-        <p tw="leading-relaxed mb-3">Read article...</p>
+        </div>
+        <div className="col-lg-6 mt-4 mt-sm-5 mt-lg-0">
+          <div className="card-body p-0 p-lg-4">
+            <span className="card-tag mb-3">
+              <a href="blogs-3-col.html">Branding</a>
+            </span>
+
+            <h3 className="card-title">
+              <a href="blog-single.html">
+                Thoughts on Branding from Rowan, a new premium coat-care brand
+                for dogs
+              </a>
+            </h3>
+            <p className="card-text">
+              We love seeing new products coming to life especially when there's
+              a lot of attention on Branding and Visual Identity, the overall
+              high quality of the product itself.
+            </p>
+
+            <p className="card-meta mt-3">
+              7 Dec 2021 <span className="mx-2">—</span> 3 mins read
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
+    </article>
   </div>
 );
 
