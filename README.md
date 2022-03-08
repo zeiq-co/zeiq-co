@@ -1,4 +1,4 @@
-# Kickoff NextJs FullStack
+# Zeiq NextJs FullStack
 
 Fully re-written using Nextjs and TailwindCSS, includes Graphql Server and CypressJs for testing + Authorization and blog.
 It’s depended on Zeiq Base for elements and helpers
