@@ -21,7 +21,7 @@ function Index({ projects, posts }) {
     <Layout>
       <NextSeo
         title={config.siteName}
-        description="A short description goes here."
+        description="Website and Mobile App Development Agency"
       />
       <HomeHero data={homeData} />
       <HomeAbout data={homeData} />

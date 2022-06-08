@@ -65,12 +65,12 @@ const Footer = ({ contactData }) => (
             <ul className="footer-link list-unstyled">
               <li>
                 <Link href="/services">
-                  <a href="blogs-1-col.html">Services</a>
+                  <a href="">Services</a>
                 </Link>
               </li>
               <li>
                 <Link href="/blog">
-                  <a href="team.html">News & Updates</a>
+                  <a href="">News & Updates</a>
                 </Link>
               </li>
               <li>
@@ -136,10 +136,7 @@ const Footer = ({ contactData }) => (
           <div className="col-lg-10 mb-5 pb-4">
             <p className="h6 font-weight-light mb-2">
               Copyright &copy; {new Date().getFullYear()} |{' '}
-              <a
-                href="https://ui8.net/flexplate/products"
-                className="line-link text-white font-weight-light"
-              >
+              <a href="/" className="line-link text-white font-weight-light">
                 Zeiq.co
               </a>
             </p>

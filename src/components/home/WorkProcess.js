@@ -13,7 +13,7 @@ const WorkProcess = () => (
       <div className="row">
         <div className="col-lg-3 col-sm-6 has-anim fade">
           <div className="work-process-item">
-            <span className="process-text">A</span>
+            <span className="process-text">Z</span>
             <h5 className="process-title font-weight-light">
               We analyze your business and search an idea
             </h5>
@@ -21,7 +21,7 @@ const WorkProcess = () => (
         </div>
         <div className="col-lg-3 col-sm-6 has-anim fade anim-delay-1">
           <div className="work-process-item">
-            <span className="process-text">P</span>
+            <span className="process-text">E</span>
             <h5 className="process-title font-weight-light">
               We plan the strategy and tactics based on idea
             </h5>
@@ -29,7 +29,7 @@ const WorkProcess = () => (
         </div>
         <div className="col-lg-3 col-sm-6 has-anim fade anim-delay-2">
           <div className="work-process-item">
-            <span className="process-text">D</span>
+            <span className="process-text">I</span>
             <h5 className="process-title font-weight-light">
               Now we start working on developing that idea
             </h5>
@@ -37,7 +37,7 @@ const WorkProcess = () => (
         </div>
         <div className="col-lg-3 col-sm-6 has-anim fade anim-delay-3">
           <div className="work-process-item focus">
-            <span className="process-text">R</span>
+            <span className="process-text">Q</span>
             <h5 className="process-title font-weight-light">
               And now your product is ready for release
             </h5>
