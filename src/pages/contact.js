@@ -7,10 +7,7 @@ import Layout from '../components/Layout';
 function ContactPage() {
   return (
     <Layout>
-      <NextSeo
-        title={config.siteName}
-        description="A short description goes here."
-      />
+      <NextSeo title={`Contact Us | ${config.siteName}`} />
       <section className="section contact-us bg-white">
         <div className="container">
           <div className="row justify-content-center">
