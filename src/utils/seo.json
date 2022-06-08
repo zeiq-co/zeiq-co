@@ -1,0 +1,24 @@
+{
+  "title": "Website and Mobile App Development Agency - Zeiq.co",
+  "titleTemplate": "%s - Zeiq",
+  "description": "React, React Native, GatsbyJs and Apollo GraphQL Development -> https://www.innerspaceflooring.co.uk/",
+  "openGraph": {
+    "type": "website",
+    "locale": "en_IE",
+    "url": "https://www.zeiq.co",
+    "site_name": "Zeiq",
+    "icons": [
+      {
+        "src": "/images/logo.png",
+        "sizes": "196x196",
+        "type": "image/png",
+        "purpose": "any maskable"
+      }
+    ]
+  },
+  "twitter": {
+    "handle": "@zeiq",
+    "site": "@zeiq",
+    "cardType": "summary_large_image"
+  }
+}

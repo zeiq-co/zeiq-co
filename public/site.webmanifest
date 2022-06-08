@@ -1,0 +1,24 @@
+{
+  "name": "Zeiq",
+  "short_name": "Zeiq",
+  "description": "Zeiq -> https://www.zeiq.co",
+  "display": "standalone",
+  "start_url": "/",
+  "theme_color": "#f9004d",
+  "background_color": "#fff",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/images/logo.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/images/logo.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ]
+}
