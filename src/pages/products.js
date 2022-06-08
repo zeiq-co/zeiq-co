@@ -2,7 +2,6 @@ import { NextSeo } from 'next-seo';
 import { orderBy } from 'lodash';
 
 import { getMdxFromDir } from '../utils/helpers';
-import config from '../utils/config';
 import Layout from '../components/Layout';
 import PageHero from '../components/global/PageHero';
 import WorkItem from '../components/work/WorkItem';
@@ -11,8 +10,8 @@ function ProductsPage({ projects }) {
   return (
     <Layout>
       <NextSeo
-        title={config.siteName}
-        description="A short description goes here."
+        title="Products"
+        description="Case studies of our web, software & mobile app development work for all industry verticals."
       />
       <PageHero />
       <section className="section portfolio-grid-creative bg-white">
