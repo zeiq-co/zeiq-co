@@ -1,13 +1,12 @@
 import { NextSeo } from 'next-seo';
 
 import contactData from '../../content/general/contact.yaml';
-import config from '../utils/config';
 import Layout from '../components/Layout';
 
 function ContactPage() {
   return (
     <Layout>
-      <NextSeo title={`Contact Us | ${config.siteName}`} />
+      <NextSeo title="Contact Us |" />
       <section className="section contact-us bg-white">
         <div className="container">
           <div className="row justify-content-center">
