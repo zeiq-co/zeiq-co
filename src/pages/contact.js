@@ -6,7 +6,10 @@ import Layout from '../components/Layout';
 function ContactPage() {
   return (
     <Layout>
-      <NextSeo title="Contact Us |" />
+      <NextSeo
+        title="Contact Zeiq for Software & App Services"
+        description="Contact Zeiq for web design, software development, mobile app development, application development & eCommerce solutions. Call at +44-7747810130 Email at sales@zeiq.co."
+      />
       <section className="section contact-us bg-white">
         <div className="container">
           <div className="row justify-content-center">
