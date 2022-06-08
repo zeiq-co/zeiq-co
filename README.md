@@ -1,6 +1,6 @@
 # Zeiq NextJs FullStack
 
-Fully re-written using Nextjs and TailwindCSS, includes Graphql Server and CypressJs for testing + Authorization and blog.
+Fully re-written using Nextjs and TailwindCSS, includes Graphql Server    + Authorization and blog.
 It’s depended on Zeiq Base for elements and helpers
 
 ## Stack
@@ -15,7 +15,6 @@ It’s depended on Zeiq Base for elements and helpers
 - [tailwindcss](https://tailwindcss.com/)
 - [Apollo Server](https://www.apollographql.com/)
 - [Mongoose MongoDB](https://mongoosejs.com/)
-- [Cypress Testing](https://www.cypress.io/)
 
 ## To use
 
@@ -45,10 +44,6 @@ Visit:
 ```
 http://localhost:3000/api/build-emails
 ```
-
-## Testing
-
-To start tests using CypressJs
 
 ```
 yarn test
