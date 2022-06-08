@@ -6,10 +6,10 @@ export const getPathsFromDir = (directory) => {
 
   const result = [];
   files.forEach((fileName) => {
-    if (fileName.includes('mdx')) {
+    if (fileName?.includes('mdx')) {
       result.push({
         params: {
-          slug: fileName.replace('.mdx', ''),
+          slug: fileName?.replace('.mdx', ''),
         },
       });
     }

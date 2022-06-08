@@ -63,9 +63,8 @@ const LatestPosts = ({ posts }) => {
           {otherPosts.map((post) => {
             const randomId = random(0, bgColors.length - 1);
             const bgColor = bgColors[randomId];
-
             return (
-              <div className="col-lg-4 col-md-6 has-anim fade">
+              <div className="col-lg-4 col-md-6 has-anim fade" key={post.slug}>
                 <article className="card blog-card border-0 rounded-0">
                   <div
                     className="card-background"
