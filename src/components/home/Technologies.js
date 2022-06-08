@@ -21,8 +21,8 @@ const Technologies = () => (
               <Image
                 src={item.image}
                 alt={item.title}
-                height={54}
-                width={162}
+                height={250}
+                width={400}
               />
             </a>
           </div>
