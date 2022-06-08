@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps, reduxStore }) {
       </Head>
       <DefaultSeo
         titleTemplate={`%s | ${config.siteName}`}
-        description="Free Images Gallery Builder"
+        description="React, React Native, GatsbyJs and Apollo GraphQL Development"
         openGraph={{
           type: 'website',
           locale: 'en_IE',
@@ -42,7 +42,7 @@ function MyApp({ Component, pageProps, reduxStore }) {
           site_name: config.siteName,
         }}
         twitter={{
-          handle: '@galllery',
+          handle: '@zeiq',
           site: '@site',
           cardType: 'summary_large_image',
         }}

@@ -1,12 +1,12 @@
 - one:
   title: gatsby
-  image: /images/brands/gatsby-logo.jpg
+  image: /images/brands/gatsby-logo.png
 - two:
   title: react
-  image: /images/brands/react-logo.jpg
+  image: /images/brands/react-logo.png
 - three:
   title: graphql
-  image: /images/brands/graphql-logo.jpg
+  image: /images/brands/graphql-logo.png
 - four:
   title: netlify
   image: /images/brands/netlify-logo.jpg

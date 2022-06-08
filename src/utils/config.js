@@ -1,6 +1,6 @@
 const config = {
   debug: process.env.NODE_ENV === 'development',
-  siteName: process.env.NEXT_PUBLIC_ENV_SITE_NAME || 'NextJs FullStack',
+  siteName: process.env.NEXT_PUBLIC_ENV_SITE_NAME || 'Zeiq',
   projectKey: 'kickoff-nextjs-fullstack',
 
   email: 'no-reply@site.com',
