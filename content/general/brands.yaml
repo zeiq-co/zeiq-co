@@ -12,10 +12,10 @@
   image: /images/brands/netlify-logo.png
 - five:
   title: amazon
-  image: /images/brands/amazon.png
+  image: /images/brands/amazon-web-services.png
 - six:
   title: contentful
-  image: /images/brands/contentful-logo.jpg
+  image: /images/brands/vercel-logo.png
 - seven:
   title: expo
   image: /images/brands/expo-logo.png
