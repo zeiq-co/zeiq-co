@@ -17,8 +17,8 @@ const WorkItem = ({ data }) => {
                 src={data.featuredImage}
                 alt={data.title}
                 className="img-fluid"
-                height={500}
-                width={400}
+                height={1200}
+                width={1200}
               />
             </a>
           </Link>

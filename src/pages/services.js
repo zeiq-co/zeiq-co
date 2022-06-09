@@ -2,7 +2,6 @@ import { NextSeo } from 'next-seo';
 import { orderBy, filter } from 'lodash';
 
 import { getMdxFromDir } from '../utils/helpers';
-import config from '../utils/config';
 import Layout from '../components/Layout';
 import PageHero from '../components/global/PageHero';
 import ServiceItem from '../components/services/ServiceItem';
@@ -11,10 +10,7 @@ function ServicesPage({ services }) {
   // console.log('services', services);
   return (
     <Layout>
-      <NextSeo
-        title={config.siteName}
-        description="A short description goes here."
-      />
+      <NextSeo title="Services" description="A short description goes here." />
       <PageHero title="What we do" subTitle="We build creative experiences." />
       <section className="section bg-white">
         <div className="container">

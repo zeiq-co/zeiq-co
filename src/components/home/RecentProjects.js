@@ -19,8 +19,12 @@ const RecentProjects = ({ projects }) => (
     <div className="swiper-container">
       <div className="swiper-wrapper">
         {projects.map((item) => {
-          const randomId = random(0, bgColors.length - 1);
-          const bgColor = bgColors[randomId];
+
+            const randomId = random(0, bgColors.length - 1);
+
+
+            const bgColor = bgColors[randomId];
+
           return (
             <div className="swiper-slide" key={item.slug}>
               <div className="card portfolio-card card-overlay card-hover-zoom">
