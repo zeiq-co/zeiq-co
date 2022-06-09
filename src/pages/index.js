@@ -2,7 +2,6 @@ import { NextSeo } from 'next-seo';
 import { orderBy, filter } from 'lodash';
 
 import { getMdxFromDir } from '../utils/helpers';
-import config from '../utils/config';
 import Layout from '../components/Layout';
 import HomeHero from '../components/home/HomeHero';
 import HomeAbout from '../components/home/HomeAbout';
@@ -19,10 +18,7 @@ function Index({ projects, posts }) {
 
   return (
     <Layout>
-      <NextSeo
-        title={config.siteName}
-        description="Website and Mobile App Development Agency"
-      />
+      <NextSeo title="Website and Mobile App Development Agency - Zeiq.co" />
       <HomeHero data={homeData} />
       <HomeAbout data={homeData} />
       <HomeServices data={homeData} />

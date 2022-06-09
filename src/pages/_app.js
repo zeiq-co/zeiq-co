@@ -11,6 +11,7 @@ import { SessionProvider } from 'next-auth/react';
 import withReduxStore from '../utils/with-redux-store';
 import GlobalStyles from '../styles/styles';
 import config from '../utils/config';
+import nextSeo from '../utils/seo.json';
 
 Router.events.on('routeChangeStart', (url) => {
   console.log(`Loading: ${url}`);
@@ -26,27 +27,21 @@ function MyApp({ Component, pageProps, reduxStore }) {
     <>
       <GlobalStyles />
       <Head>
+        <title>{config.siteName}</title>
         <meta charSet="utf-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1"
+          content="width=device-width, initial-scale=1, user-scalable=0"
+        />
+        <meta name="theme-color" content={config.theme_color} />
+        <meta
+          name="apple-mobile-web-app-status-bar"
+          content={config.theme_color}
         />
       </Head>
-      <DefaultSeo
-        titleTemplate={`%s | ${config.siteName}`}
-        description="React, React Native, GatsbyJs and Apollo GraphQL Development"
-        openGraph={{
-          type: 'website',
-          locale: 'en_IE',
-          url: config.siteUrl,
-          site_name: config.siteName,
-        }}
-        twitter={{
-          handle: '@zeiq',
-          site: '@site',
-          cardType: 'summary_large_image',
-        }}
-      />
+      <DefaultSeo {...nextSeo} />
+
       <ZeiqProvider>
         <StoreProvider store={reduxStore}>
           <SessionProvider session={pageProps ? pageProps.session : undefined}>

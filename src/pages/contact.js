@@ -1,15 +1,14 @@
 import { NextSeo } from 'next-seo';
 
 import contactData from '../../content/general/contact.yaml';
-import config from '../utils/config';
 import Layout from '../components/Layout';
 
 function ContactPage() {
   return (
     <Layout>
       <NextSeo
-        title={config.siteName}
-        description="A short description goes here."
+        title="Contact Zeiq for Software & App Services"
+        description="Contact Zeiq for web design, software development, mobile app development, application development & eCommerce solutions. Call at +44-7747810130 Email at sales@zeiq.co."
       />
       <section className="section contact-us bg-white">
         <div className="container">
