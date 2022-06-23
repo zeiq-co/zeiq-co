@@ -78,6 +78,7 @@ const LatestPosts = ({ posts }) => {
                         className="card-img rounded-0"
                         width={350}
                         height={350}
+                        objectFit="cover"
                       />
                     </a>
                   </Link>
