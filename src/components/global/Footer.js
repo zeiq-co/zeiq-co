@@ -42,7 +42,7 @@ const Footer = ({ contactData }) => (
             <p>{contactData.locationUk}</p>
             <p>{contactData.locationIndia}</p>
           </div>
-          <div className="col-lg-2 col-md-2 col-sm-4 col-6 ml-auto">
+          <div className="col-lg-2 col-md-2 col-sm-4 col-12 ml-auto">
             <ul className="footer-link list-unstyled">
               <h4 className="h4 font-weight-light mb-3">Quick Links</h4>
               <li>
@@ -67,7 +67,7 @@ const Footer = ({ contactData }) => (
               </li>
             </ul>
           </div>
-          <div className="col-lg-2 col-md-2 col-sm-4 col-6">
+          <div className="col-lg-2 col-md-2 col-sm-4 col-12">
             <h4 className="h4 font-weight-light mb-3">Services</h4>
             <ul className="footer-link list-unstyled">
               <li>
@@ -87,7 +87,7 @@ const Footer = ({ contactData }) => (
               </li>
             </ul>
           </div>
-          <div className="col-lg-2 col-md-3 col-sm-4 col-6">
+          <div className="col-lg-2 col-md-3 col-sm-4 col-12">
             <ul className="footer-link list-unstyled">
               <h4 className="h4 font-weight-light mb-3">Work</h4>
               <li>
