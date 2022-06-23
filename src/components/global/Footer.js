@@ -71,17 +71,17 @@ const Footer = ({ contactData }) => (
             <h4 className="h4 font-weight-light mb-3">Services</h4>
             <ul className="footer-link list-unstyled">
               <li>
-                <Link href="/work">
+                <Link href="/services/development">
                   <a>Development</a>
                 </Link>
               </li>
               <li>
-                <Link href="/products">
+                <Link href="/services/design-thinking">
                   <a>Design Thinking</a>
                 </Link>
               </li>
               <li>
-                <Link href="/products">
+                <Link href="/services/software-development">
                   <a>Software Development</a>
                 </Link>
               </li>
