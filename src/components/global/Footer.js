@@ -73,11 +73,6 @@ const Footer = ({ contactData }) => (
                   <a href="">News & Updates</a>
                 </Link>
               </li>
-              <li>
-                <Link href="/privacy">
-                  <a>Privacy &amp; policy</a>
-                </Link>
-              </li>
             </ul>
           </div>
           <div className="col-lg-2 col-md-3 col-sm-4 col-6">
