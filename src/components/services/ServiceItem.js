@@ -10,8 +10,10 @@ const ServiceImage = ({ data }) => (
             src={data.featuredImage}
             alt={data.title}
             className="img-fluid"
-            height={500}
-            width={400}
+            layout="responsive"
+            height={1574}
+            width={2400}
+            objectFit="cover"
           />
         </a>
       </Link>
@@ -25,7 +27,7 @@ const ServiceItem = ({ data, imageLeft }) => {
   }
 
   return (
-    <div className="row justify-content-center align-items-center  mt-5 pt-5 has-anim fade">
+    <div className="row align-items-center justify-content-start justify-content-lg-around my-5 py-5 has-anim fade visible">
       {imageLeft && <ServiceImage data={data} />}
       <div className="col-lg-5 col-md-10 position-relative">
         <div className="service-icon-lg">
@@ -47,7 +49,7 @@ const ServiceItem = ({ data, imageLeft }) => {
         <p className="mt-2">{data.info}</p>
         <p className="mt-2">{data.featuredOneDetails}</p>
 
-        <ul className="service-info-list text-dark mt-4">
+        {/* <ul className="service-info-list text-dark mt-4">
           <li>Brand Positioning</li>
           <li>Naming</li>
           <li>Logo Design</li>
@@ -60,7 +62,7 @@ const ServiceItem = ({ data, imageLeft }) => {
         <span className="my-2 d-inline-block" style={{ letterSpacing: '-3px' }}>
           ━━
         </span>
-        <p>145 projects done</p>
+        <p>145 projects done</p> */}
       </div>
       {!imageLeft && <ServiceImage data={data} />}
     </div>
