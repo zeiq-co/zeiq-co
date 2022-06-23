@@ -44,28 +44,10 @@ const Footer = ({ contactData }) => (
           </div>
           <div className="col-lg-2 col-md-2 col-sm-4 col-6 ml-auto">
             <ul className="footer-link list-unstyled">
+              <h4 className="h4 font-weight-light mb-3">Quick Links</h4>
               <li>
                 <Link href="/about">
                   <a>About Us</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/work">
-                  <a>Recent Projects</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/products">
-                  <a>Our Products</a>
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="col-lg-2 col-md-2 col-sm-4 col-6">
-            <ul className="footer-link list-unstyled">
-              <li>
-                <Link href="/services">
-                  <a href="">Services</a>
                 </Link>
               </li>
               <li>
@@ -73,10 +55,6 @@ const Footer = ({ contactData }) => (
                   <a href="">News & Updates</a>
                 </Link>
               </li>
-            </ul>
-          </div>
-          <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-            <ul className="footer-link list-unstyled">
               <li>
                 <Link href="/contact">
                   <a>Contact Us</a>
@@ -85,6 +63,41 @@ const Footer = ({ contactData }) => (
               <li>
                 <Link href="/support">
                   <a>Customer Support</a>
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className="col-lg-2 col-md-2 col-sm-4 col-6">
+            <h4 className="h4 font-weight-light mb-3">Services</h4>
+            <ul className="footer-link list-unstyled">
+              <li>
+                <Link href="/work">
+                  <a>Development</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/products">
+                  <a>Design Thinking</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/products">
+                  <a>Software Development</a>
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className="col-lg-2 col-md-3 col-sm-4 col-6">
+            <ul className="footer-link list-unstyled">
+              <h4 className="h4 font-weight-light mb-3">Work</h4>
+              <li>
+                <Link href="/work">
+                  <a>Recent Projects</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/products">
+                  <a>Our Products</a>
                 </Link>
               </li>
             </ul>
