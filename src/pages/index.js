@@ -40,7 +40,6 @@ export async function getStaticProps() {
   let posts = getMdxFromDir('content/posts');
   // posts = orderBy(posts, ['date'], ['desc']);
   posts = filter(posts, (item) => item.isFeatured === true);
-  console.log('posts', posts);
 
   return {
     props: {
