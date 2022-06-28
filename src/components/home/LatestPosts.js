@@ -55,7 +55,7 @@ const LatestPosts = ({ posts }) => {
                     <p className="card-text">Read full story</p>
                     {firstPost.date && (
                       <p className="card-meta mt-3">
-                        {dayjs(firstPost.date).format('D MMM YYYY')}{' '}
+                        {dayjs(firstPost.date).format('DD MMMM YYYY')}{' '}
                         <span className="mx-2">—</span> {firstPost.author}
                       </p>
                     )}
@@ -99,7 +99,7 @@ const LatestPosts = ({ posts }) => {
                     </h4>
                     <p className="card-text">Read full story</p>
                     <p className="card-meta mt-3">
-                      {dayjs(post.date).format('D MMM YYYY')}{' '}
+                      {dayjs(post.date).format('DD MMMM YYYY')}{' '}
                       <span className="mx-2">—</span> {post.author}
                     </p>
                   </div>

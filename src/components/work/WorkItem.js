@@ -10,7 +10,7 @@ const WorkItem = ({ data }) => {
   return (
     <div className="col-lg-4 col-sm-6">
       <div className="mb-4 pb-3 has-anim p-2 bg-cream">
-        <div className="card portfolio-card">
+        <div className="card  portfolio-card ">
           <Link href={`/work/${data.slug}`}>
             <a className="card-img overflow-hidden rounded-0">
               <Image

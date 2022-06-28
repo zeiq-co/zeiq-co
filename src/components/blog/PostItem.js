@@ -36,7 +36,7 @@ const PostItem = ({ post, bgColor }) => {
           <div className="col-lg-6 mt-4 mt-sm-5 mt-lg-0">
             <div className="card-body p-0 p-lg-4">
               <span className="card-tag mb-3">
-                <a href="#">{upperFirst(post.category)}</a>
+                <p>{upperFirst(post.category)}</p>
               </span>
               <h3 className="card-title">
                 <Link href={`/posts/${post.slug}`}>
@@ -46,7 +46,7 @@ const PostItem = ({ post, bgColor }) => {
               <p className="card-text">Read full story</p>
               {post && post.date && (
                 <p className="card-meta mt-3">
-                  {dayjs(post.date).format('DD MM YYYY')}{' '}
+                  {dayjs(post.date).format('DD MMMM YYYY')}{' '}
                   <span className="mx-2">—</span> {post.author}
                 </p>
               )}
