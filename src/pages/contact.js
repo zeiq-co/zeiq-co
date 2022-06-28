@@ -37,6 +37,20 @@ function ContactPage() {
       <NextSeo
         title="Contact Zeiq for Software & App Services"
         description="Contact Zeiq for web design, software development, mobile app development, application development & eCommerce solutions. Call at +44-7747810130 Email at sales@zeiq.co."
+        openGraph={{
+          title: `Contact Zeiq for Software & App Services`,
+          description:
+            'Contact Zeiq for web design, software development, mobile app development, application development & eCommerce solutions. Call at +44-7747810130 Email at sales@zeiq.co.',
+          images: [
+            {
+              url: '/images/about.png',
+              width: 500,
+              height: 500,
+              alt: 'Zeiq Contact us',
+              type: 'image/jpeg',
+            },
+          ],
+        }}
       />
       <section className="section contact-us bg-white">
         <div className="container">
