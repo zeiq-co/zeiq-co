@@ -30,11 +30,6 @@ const BlogPost = ({ post }) => (
         ],
         site_name: 'Zeiq',
       }}
-      twitter={{
-        handle: '@zeiq',
-        site: '@zeiq',
-        cardType: 'summary_large_image',
-      }}
     />
     <PostHero post={post} />
     <section className="section pb-0">
