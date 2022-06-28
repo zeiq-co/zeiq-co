@@ -1,5 +1,4 @@
 import '../styles/main.css';
-
 import Head from 'next/head';
 import { DefaultSeo } from 'next-seo';
 import NProgress from 'nprogress';
