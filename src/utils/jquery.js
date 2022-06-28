@@ -1,5 +1,3 @@
-/* eslint-disable no-use-before-define */
-
 const jqueryLoad = () => {
   console.log('page loaded');
   !(function (i) {

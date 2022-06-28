@@ -44,10 +44,12 @@ const PostItem = ({ post, bgColor }) => {
                 </Link>
               </h3>
               <p className="card-text">Read full story</p>
-              <p className="card-meta mt-3">
-                {dayjs(post.date).format('D MMM YYYY')}{' '}
-                <span className="mx-2">—</span> {post.author}
-              </p>
+              {post && post.date && (
+                <p className="card-meta mt-3">
+                  {dayjs(post.date).format('DD MM YYYY')}{' '}
+                  <span className="mx-2">—</span> {post.author}
+                </p>
+              )}
             </div>
           </div>
         </div>

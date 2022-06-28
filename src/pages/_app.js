@@ -1,4 +1,3 @@
-import Script from 'next/script';
 import '../styles/main.css';
 import Head from 'next/head';
 import { ZeiqProvider } from '@zeiq/web';
@@ -27,6 +26,7 @@ function MyApp({ Component, pageProps, reduxStore }) {
   return (
     <>
       <GlobalStyles />
+
       <Head>
         <title>{config.siteName}</title>
         <meta charSet="utf-8" />
@@ -40,6 +40,11 @@ function MyApp({ Component, pageProps, reduxStore }) {
           name="apple-mobile-web-app-status-bar"
           content={config.theme_color}
         />
+        <script src="/plugins/jquery.min.js" />
+        <script src="/plugins/bootstrap.bundle.min.js" />
+        <script src="/plugins/swiper-bundle.min.js" />
+        <script src="/plugins/isotope.min.js" />
+        <script async src="/plugins/scripts.js" />
       </Head>
       <DefaultSeo {...nextSeo} />
 
@@ -50,13 +55,6 @@ function MyApp({ Component, pageProps, reduxStore }) {
           </SessionProvider>
         </StoreProvider>
       </ZeiqProvider>
-      <>
-        <Script src="/plugins/jquery.min.js" />
-        <Script src="/plugins/bootstrap.bundle.min.js" />
-        <Script src="/plugins/swiper-bundle.min.js" />
-        <Script src="/plugins/isotope.min.js" />
-        <Script async src="/plugins/scripts.js" />
-      </>
     </>
   );
 }

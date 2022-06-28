@@ -31,8 +31,9 @@ const RecentProjects = ({ projects }) => (
                     src={item.featuredImage}
                     alt={item.title}
                     className="img-fluid"
-                    height={590}
-                    width={795}
+                    width={1400}
+                    height={600}
+                    objectFit="cover"
                   />
                   <span
                     className="img-overlay"

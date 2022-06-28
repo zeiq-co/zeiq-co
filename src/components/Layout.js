@@ -7,8 +7,6 @@ import jqueryLoad from '../utils/jquery';
 import contactData from '../../content/general/contact.yaml';
 
 const Layout = ({ children }) => {
-  // console.log('contactData', contactData);
-
   useEffect(() => {
     setTimeout(() => jqueryLoad(), 200);
   }, []);
