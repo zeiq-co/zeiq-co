@@ -53,7 +53,7 @@ const Work = ({ data }) => (
               className="img-fluid"
               height={1000}
               width={1200}
-              objectFit="cover"
+              objectFit="contain"
             />
           </div>
         </div>
