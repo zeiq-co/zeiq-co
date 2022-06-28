@@ -11,7 +11,7 @@ function ServicesPage({ services }) {
   return (
     <Layout>
       <NextSeo title="Services" description="A short description goes here." />
-      <PageHero title="What we do" subTitle="We build creative experiences." />
+      <PageHero title="What we do" subTitle="We build creative experiences" />
       <section className="section bg-white">
         <div className="container">
           {services.map((item, index) => (

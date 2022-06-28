@@ -13,7 +13,7 @@ function ProductsPage({ projects }) {
         title="Products"
         description="Case studies of our web, software & mobile app development work for all industry verticals."
       />
-      <PageHero />
+      <PageHero title="Our Products" subTitle="Our Business" />
       <section className="section portfolio-grid-creative bg-white">
         <div className="container">
           <div className="row">

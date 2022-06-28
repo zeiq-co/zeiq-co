@@ -1,7 +1,7 @@
 {
   "name": "Zeiq",
   "short_name": "Zeiq",
-  "description": "Zeiq -> https://www.zeiq.co",
+  "description": "Website and Mobile App Development-> https://www.zeiq.co",
   "display": "standalone",
   "start_url": "/",
   "theme_color": "#f9004d",

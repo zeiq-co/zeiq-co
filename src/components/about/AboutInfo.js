@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 const Section = styled.div`
@@ -37,13 +38,14 @@ const AboutInfo = () => (
             bonds which we weave between our customers and our talents.
           </p>
 
-          <a
-            href="contact.html"
-            className="btn btn-black mt-5 has-anim fade anim-delay-2"
-            data-text="Contact Us"
-          >
-            <span>Contact Us</span>
-          </a>
+          <Link href="/contact">
+            <a
+              className="btn btn-black mt-5 has-anim fade anim-delay-2"
+              data-text="Contact Us"
+            >
+              <span>Contact Us</span>
+            </a>
+          </Link>
         </div>
       </div>
     </div>
