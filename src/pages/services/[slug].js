@@ -17,8 +17,26 @@ import WorkProcess from '../../components/home/WorkProcess';
 const Service = ({ data, childServices }) => (
   <Layout>
     <NextSeo
-      title={`${data.title} | ${config.siteTitle}`}
-      description="A short description goes here."
+      title={`${data.title}`}
+      description={data.featuredOneDetails}
+      canonical={`${config.siteUrl}/${data.slug}`}
+      openGraph={{
+        url: `${config.siteUrl}${data.slug}`,
+        title: data.title,
+        description: data?.featuredOneDetails
+          ? data?.featuredOneDetails
+          : data.siteTitle,
+        images: [
+          {
+            url: data.featuredImage ? data.featuredImage : '',
+            width: 800,
+            height: 600,
+            alt: data.title,
+            type: 'image/jpeg',
+          },
+        ],
+        site_name: 'Zeiq',
+      }}
     />
     <PostHero post={data} />
     <section className="section pb-0">

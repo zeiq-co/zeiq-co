@@ -10,7 +10,7 @@ import PostHero from '../../components/blog/PostHero';
 const BlogPost = ({ post }) => (
   <Layout>
     <NextSeo
-      title={`${post.title} | ${config.siteTitle}`}
+      title={`${post.title}`}
       description={post.seoDescription}
       canonical={`${config.siteUrl}/${post.slug}`}
       openGraph={{
