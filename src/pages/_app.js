@@ -1,14 +1,9 @@
 import '../styles/main.css';
 import Head from 'next/head';
-import { ZeiqProvider } from '@zeiq/web';
-import { StoreProvider } from 'easy-peasy';
 import { DefaultSeo } from 'next-seo';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import NProgress from 'nprogress';
 import Router from 'next/router';
-import { SessionProvider } from 'next-auth/react';
 
-import withReduxStore from '../utils/with-redux-store';
 import GlobalStyles from '../styles/styles';
 import config from '../utils/config';
 import nextSeo from '../utils/seo.json';
@@ -22,7 +17,7 @@ Router.events.on('routeChangeComplete', () => {
 });
 Router.events.on('routeChangeError', () => NProgress.done());
 
-function MyApp({ Component, pageProps, reduxStore }) {
+function MyApp({ Component, pageProps }) {
   return (
     <>
       <GlobalStyles />
@@ -47,16 +42,9 @@ function MyApp({ Component, pageProps, reduxStore }) {
         <script async src="/plugins/scripts.js" />
       </Head>
       <DefaultSeo {...nextSeo} />
-
-      <ZeiqProvider>
-        <StoreProvider store={reduxStore}>
-          <SessionProvider session={pageProps ? pageProps.session : undefined}>
-            <Component {...pageProps} />
-          </SessionProvider>
-        </StoreProvider>
-      </ZeiqProvider>
+      <Component {...pageProps} />
     </>
   );
 }
 
-export default withReduxStore(MyApp);
+export default MyApp;

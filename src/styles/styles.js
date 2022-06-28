@@ -8,7 +8,6 @@ const CustomStyles = createGlobalStyle`
 
   #nprogress .bar {
     background: #29d;
-
     position: fixed;
     z-index: 1031;
     top: 0;
@@ -78,9 +77,6 @@ const CustomStyles = createGlobalStyle`
     background-color: #eef2ff;
   }
 `;
-
-const GlobalStyles = function () {
-  return <CustomStyles />;
-};
+const GlobalStyles = () => <CustomStyles />;
 
 export default GlobalStyles;

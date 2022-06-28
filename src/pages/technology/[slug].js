@@ -5,7 +5,6 @@ import md from 'markdown-it';
 import { getPathsFromDir, getSingleMdx } from '../../utils/helpers';
 import config from '../../utils/config';
 import Layout from '../../components/Layout';
-// import PostHero from '../../components/blog/PostHero';
 
 const SingleTechnology = ({ data }) => (
   <Layout>
@@ -30,7 +29,6 @@ const SingleTechnology = ({ data }) => (
         ],
       }}
     />
-    {/* <PostHero post={data} /> */}
     <section className="section pb-0">
       <div className="container">
         <div className="row">
