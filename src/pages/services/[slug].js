@@ -25,7 +25,7 @@ const Service = ({ data, childServices }) => (
         title: data.title,
         description: data?.featuredOneDetails
           ? data?.featuredOneDetails
-          : data.siteTitle,
+          : data.title,
         images: [
           {
             url: data.featuredImage ? data.featuredImage : '',
