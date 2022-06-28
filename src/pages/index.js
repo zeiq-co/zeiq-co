@@ -13,7 +13,7 @@ import Technologies from '../components/home/Technologies';
 import LatestPosts from '../components/home/LatestPosts';
 import homeData from '../../content/general/home.yaml';
 
-function Index({ projects, posts }) {
+function Index({ projects, posts, technologies }) {
   return (
     <Layout>
       <NextSeo title="Website and Mobile App Development Agency - Zeiq.co" />
@@ -23,7 +23,7 @@ function Index({ projects, posts }) {
       <RecentProjects projects={projects} />
       <WorkProcess />
       <Testimonials />
-      <Technologies />
+      <Technologies brandsData={technologies} />
       <LatestPosts posts={posts} />
     </Layout>
   );
@@ -37,14 +37,17 @@ export async function getStaticProps() {
   projects = orderBy(projects, ['listingOrder'], ['asc']);
   projects = projects.slice(0, 8);
 
+  let fetchTechnologies = getMdxFromDir('content/technology');
+  fetchTechnologies = orderBy(fetchTechnologies, ['order'], ['asc']);
+
   let posts = getMdxFromDir('content/posts');
-  // posts = orderBy(posts, ['date'], ['desc']);
   posts = filter(posts, (item) => item.isFeatured === true);
 
   return {
     props: {
       projects,
       posts,
+      technologies: fetchTechnologies,
     },
   };
 }

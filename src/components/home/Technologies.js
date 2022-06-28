@@ -1,8 +1,6 @@
 import Image from 'next/image';
 
-import brandsData from '../../../content/general/brands.yaml';
-
-const Technologies = () => (
+const Technologies = ({ brandsData }) => (
   <section className="section">
     <div className="container">
       <div className="row">
@@ -15,18 +13,22 @@ const Technologies = () => (
       </div>
 
       <div className="clients-logo-grid">
-        {brandsData.map((item) => (
-          <div className="logo-item" key={item.title}>
-            <a href="#!" className="has-anim fade">
-              <Image
-                src={item.image}
-                alt={item.title}
-                height={250}
-                width={400}
-              />
-            </a>
-          </div>
-        ))}
+        {brandsData &&
+          brandsData.map((item) => {
+            if (!item.featuredImage) return null;
+            return (
+              <div className="logo-item" key={item.title}>
+                <a href="#!" className="has-anim fade">
+                  <Image
+                    src={item.featuredImage}
+                    alt={item.title}
+                    height={250}
+                    width={400}
+                  />
+                </a>
+              </div>
+            );
+          })}
       </div>
     </div>
   </section>

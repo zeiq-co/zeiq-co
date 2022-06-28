@@ -1,11 +1,14 @@
 import { NextSeo } from 'next-seo';
+import { orderBy } from 'lodash';
+
+import { getMdxFromDir } from '../utils/helpers';
 import Layout from '../components/Layout';
 import PageHero from '../components/global/PageHero';
 import AboutInfo from '../components/about/AboutInfo';
 import Testimonials from '../components/home/Testimonials';
 import Technologies from '../components/home/Technologies';
 
-const AboutUs = () => (
+const AboutUs = ({ brandsData }) => (
   <Layout>
     <NextSeo
       title="About Us"
@@ -42,9 +45,19 @@ const AboutUs = () => (
         </p>
       </div>
     </section>
-    <Technologies />
+    <Technologies brandsData={brandsData} />
     <Testimonials />
   </Layout>
 );
 
 export default AboutUs;
+
+export async function getStaticProps() {
+  let fetchTechnologies = getMdxFromDir('content/technology');
+  fetchTechnologies = orderBy(fetchTechnologies, ['order'], ['asc']);
+  return {
+    props: {
+      brandsData: fetchTechnologies,
+    },
+  };
+}
