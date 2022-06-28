@@ -1,9 +1,37 @@
 import { NextSeo } from 'next-seo';
+import swal from 'sweetalert';
 
 import contactData from '../../content/general/contact.yaml';
+import ContactForm from '../components/contact/ContactForm';
 import Layout from '../components/Layout';
 
 function ContactPage() {
+  const handleSubmit = async (e) => {
+    // eslint-disable-next-line no-undef
+    const res = await fetch('/api/subscribe', {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        email: e.email,
+        firstName: e.firstName,
+        lastName: e.lastName,
+        message: e.message,
+        phone: e.phone,
+        company: e.company,
+        projectType: e.projectType,
+      }),
+    });
+
+    const { error } = await res.json();
+    console.log(error, 'error');
+    if (error) {
+      swal('Already subscribed', '', 'error');
+    } else {
+      swal('Success!', '🎉  Subscribed successfully', 'success');
+    }
+  };
   return (
     <Layout>
       <NextSeo
@@ -19,11 +47,13 @@ function ContactPage() {
                   <div className="col-lg-5 mb-5 mb-lg-0">
                     <div className="pr-0 pr-lg-4">
                       <h4 className="text-dark mb-3 has-anim fade">
-                        Describe Your Project
+                        Contact Us
                       </h4>
                       <p className="has-anim fade">
-                        Tell us about your project, get a quick estimate and a
-                        plan for making it live.
+                        Share the details of your project – like scope, time
+                        frames, or business challenges. Our team will carefully
+                        study them and then we’ll figure out the next move
+                        together.
                       </p>
 
                       <div className="mt-4 pt-2 has-anim fade anim-delay-1">
@@ -62,57 +92,7 @@ function ContactPage() {
                     </div>
                   </div>
                   <div className="col-lg-7">
-                    <form>
-                      <div className="row gh-1 gv-2">
-                        <div className="col-12 col-md-6 has-anim fade">
-                          <input
-                            type="name"
-                            className="form-control"
-                            placeholder="Your Name *"
-                          />
-                        </div>
-                        <div className="col-12 col-md-6 has-anim fade">
-                          <input
-                            type="email"
-                            className="form-control"
-                            placeholder="Your Email *"
-                          />
-                        </div>
-                        <div className="col-12 col-md-6 has-anim fade">
-                          <input
-                            type="phone"
-                            className="form-control"
-                            placeholder="Your Phone *"
-                          />
-                        </div>
-                        <div className="col-12 col-md-6 has-anim fade">
-                          <select className="form-control custom-control custom-select">
-                            <option selected="">Type of Project</option>
-                            <option>Web/App UI Project</option>
-                            <option>Creative Branding</option>
-                            <option>Wordpress Website</option>
-                            <option>Static Website</option>
-                          </select>
-                        </div>
-                        <div className="col-12 has-anim fade">
-                          <textarea
-                            className="form-control"
-                            rows="1"
-                            placeholder="Message *"
-                          />
-                        </div>
-                        <div className="col-12 has-anim fade">
-                          <button
-                            className="btn btn-black"
-                            type="button"
-                            name="button"
-                            data-text="Submit"
-                          >
-                            <span>Submit</span>
-                          </button>
-                        </div>
-                      </div>
-                    </form>
+                    <ContactForm onSubmit={(val) => handleSubmit(val)} />
                   </div>
                 </div>
               </div>
