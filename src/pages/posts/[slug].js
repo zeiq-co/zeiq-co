@@ -11,7 +11,30 @@ const BlogPost = ({ post }) => (
   <Layout>
     <NextSeo
       title={`${post.title} | ${config.siteTitle}`}
-      description="A short description goes here."
+      description={post.seoDescription}
+      canonical={`${config.siteUrl}/${post.slug}`}
+      openGraph={{
+        url: `${config.siteUrl}${post.slug}`,
+        title: post.title,
+        description: post?.seoDescription
+          ? post?.seoDescription
+          : post.siteTitle,
+        images: [
+          {
+            url: post.featuredImage ? post.featuredImage : '',
+            width: 800,
+            height: 600,
+            alt: post.title,
+            type: 'image/jpeg',
+          },
+        ],
+        site_name: 'Zeiq',
+      }}
+      twitter={{
+        handle: '@zeiq',
+        site: '@zeiq',
+        cardType: 'summary_large_image',
+      }}
     />
     <PostHero post={post} />
     <section className="section pb-0">
