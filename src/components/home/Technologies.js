@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Technologies = ({ brandsData }) => (
   <section className="section">
@@ -18,14 +19,16 @@ const Technologies = ({ brandsData }) => (
             if (!item.featuredImage) return null;
             return (
               <div className="logo-item" key={item.title}>
-                <a href="#!" className="has-anim fade">
-                  <Image
-                    src={item.featuredImage}
-                    alt={item.title}
-                    height={250}
-                    width={400}
-                  />
-                </a>
+                <Link href={`/technology/${item?.slug}`}>
+                  <a className="has-anim fade">
+                    <Image
+                      src={item.featuredImage}
+                      alt={item.title}
+                      height={250}
+                      width={400}
+                    />
+                  </a>
+                </Link>
               </div>
             );
           })}
