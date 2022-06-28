@@ -33,6 +33,7 @@ export const getMdxFromDir = (directory) => {
       });
     }
   });
+
   return result;
 };
 

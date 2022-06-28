@@ -14,8 +14,6 @@ import LatestPosts from '../components/home/LatestPosts';
 import homeData from '../../content/general/home.yaml';
 
 function Index({ projects, posts }) {
-  // console.log('posts', posts);
-
   return (
     <Layout>
       <NextSeo title="Website and Mobile App Development Agency - Zeiq.co" />
@@ -40,8 +38,9 @@ export async function getStaticProps() {
   projects = projects.slice(0, 8);
 
   let posts = getMdxFromDir('content/posts');
-  posts = orderBy(posts, ['date'], ['desc']);
-  posts = posts.slice(0, 4);
+  // posts = orderBy(posts, ['date'], ['desc']);
+  posts = filter(posts, (item) => item.isFeatured === true);
+  console.log('posts', posts);
 
   return {
     props: {

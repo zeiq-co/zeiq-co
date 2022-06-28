@@ -47,10 +47,7 @@ export default BlogPage;
 
 export async function getStaticProps() {
   const result = getMdxFromDir('content/posts');
-  console.log(result, 'result');
-
   const orderedData = orderBy(result, ['date'], ['desc']);
-  console.log(orderedData, 'result');
 
   return {
     props: {

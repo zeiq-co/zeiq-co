@@ -53,10 +53,12 @@ const LatestPosts = ({ posts }) => {
                       </Link>
                     </h3>
                     <p className="card-text">Read full story</p>
-                    <p className="card-meta mt-3">
-                      {dayjs(firstPost.date).format('D MMM YYYY')}{' '}
-                      <span className="mx-2">—</span> {firstPost.author}
-                    </p>
+                    {firstPost.date && (
+                      <p className="card-meta mt-3">
+                        {dayjs(firstPost.date).format('D MMM YYYY')}{' '}
+                        <span className="mx-2">—</span> {firstPost.author}
+                      </p>
+                    )}
                   </div>
                 </div>
               </div>
