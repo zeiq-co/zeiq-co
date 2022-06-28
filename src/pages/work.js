@@ -13,7 +13,7 @@ function WorkPage({ projects }) {
     <Layout>
       <NextSeo
         title={config.siteName}
-        description="A short description goes here."
+        description="Analyze your business,plan the strategy,works on developing idea and releases your product "
       />
       <PageHero title="Our Work" subTitle="Work we do" />
       <section className="section portfolio-grid-creative bg-white">

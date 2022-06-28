@@ -10,7 +10,10 @@ function ServicesPage({ services }) {
   // console.log('services', services);
   return (
     <Layout>
-      <NextSeo title="Services" description="A short description goes here." />
+      <NextSeo
+        title="Services"
+        description="Creation of user-friendly and interactive websites & applications. A solution-based approach that provides better results in terms of the style and design element that represents you & your brand. Designing, planning, programming, testing, bug fixing & more, one-stop-shop for all your software requirements."
+      />
       <PageHero title="What we do" subTitle="We build creative experiences" />
       <section className="section bg-white">
         <div className="container">

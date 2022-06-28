@@ -16,7 +16,7 @@ function SupportPage() {
     <Layout>
       <NextSeo
         title={config.siteName}
-        description="A short description goes here."
+        description="Get a quick estimate and a plan for your project with Zeiq's Customer Support"
       />
       <PageHero />
       <section className="section bg-white">
