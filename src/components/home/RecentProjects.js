@@ -22,7 +22,7 @@ const RecentProjects = ({ projects }) => (
           const randomId = random(0, bgColors.length - 1);
 
           const bgColor = bgColors[randomId];
-
+          if (!item.featuredImage) return null;
           return (
             <div className="swiper-slide" key={item.slug}>
               <div className="card portfolio-card card-overlay card-hover-zoom">

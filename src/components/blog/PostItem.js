@@ -19,17 +19,19 @@ const PostItem = ({ post, bgColor }) => {
         <CardBg className="card-background" bgColor={bgColor} />
         <div className="row justify-content-center align-items-center">
           <div className="col-lg-6">
-            <Link href={`/posts/${post.slug}`}>
-              <a className="card-image">
-                <Image
-                  src={post.featuredImage}
-                  alt={post.title}
-                  className="card-img rounded-0"
-                  width={610}
-                  height={460}
-                />
-              </a>
-            </Link>
+            {post.featuredImage && (
+              <Link href={`/posts/${post.slug}`}>
+                <a className="card-image">
+                  <Image
+                    src={post.featuredImage}
+                    alt={post.title}
+                    className="card-img rounded-0"
+                    width={610}
+                    height={460}
+                  />
+                </a>
+              </Link>
+            )}
           </div>
           <div className="col-lg-6 mt-4 mt-sm-5 mt-lg-0">
             <div className="card-body p-0 p-lg-4">

@@ -30,17 +30,19 @@ const LatestPosts = ({ posts }) => {
 
               <div className="row justify-content-center align-items-center">
                 <div className="col-lg-6">
-                  <Link href={`/posts/${firstPost.slug}`}>
-                    <a className="card-image">
-                      <Image
-                        src={firstPost.featuredImage}
-                        alt={firstPost.title}
-                        className="card-img rounded-0"
-                        width={610}
-                        height={460}
-                      />
-                    </a>
-                  </Link>
+                  {firstPost.featuredImage && (
+                    <Link href={`/posts/${firstPost.slug}`}>
+                      <a className="card-image">
+                        <Image
+                          src={firstPost.featuredImage}
+                          alt={firstPost.title}
+                          className="card-img rounded-0"
+                          width={610}
+                          height={460}
+                        />
+                      </a>
+                    </Link>
+                  )}
                 </div>
                 <div className="col-lg-6 mt-4 mt-sm-5 mt-lg-0">
                   <div className="card-body p-0 p-lg-4">
@@ -70,18 +72,20 @@ const LatestPosts = ({ posts }) => {
                     className="card-background"
                     style={{ backgroundColor: bgColor }}
                   />
-                  <Link href={`/posts/${post.slug}`}>
-                    <a className="card-image">
-                      <Image
-                        src={post.featuredImage}
-                        alt={post.title}
-                        className="card-img rounded-0"
-                        width={350}
-                        height={350}
-                        objectFit="cover"
-                      />
-                    </a>
-                  </Link>
+                  {post.featuredImage && (
+                    <Link href={`/posts/${post.slug}`}>
+                      <a className="card-image">
+                        <Image
+                          src={post.featuredImage}
+                          alt={post.title}
+                          className="card-img rounded-0"
+                          width={350}
+                          height={350}
+                          objectFit="cover"
+                        />
+                      </a>
+                    </Link>
+                  )}
                   <div className="card-body p-0 mt-4">
                     <span className="card-tag mb-3">
                       <a href="#">{upperFirst(post.category)}</a>
