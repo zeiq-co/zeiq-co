@@ -49,6 +49,20 @@ function BlogPage({ posts }) {
       <NextSeo
         title={`${config.siteName} News : Software, Website, Mobile App, Ecommerce, Digital Marketing`}
         description={`${config.siteName} Blog, Get Updated on latest news of mobile applications Development, software and web development services, ecommerce Solutions.}`}
+        openGraph={{
+          url: `${config.siteUrl}/blog`,
+          title: `${`${config.siteName} News : Software, Website, Mobile App, Ecommerce, Digital Marketing`}`,
+          description: `${`${config.siteName} Blog, Get Updated on latest news of mobile applications Development, software and web development services, ecommerce Solutions.}`}`,
+          images: [
+            {
+              url: '/images/blog-about-blogs.jpg',
+              width: 800,
+              height: 600,
+              alt: 'News',
+              type: 'image/jpeg',
+            },
+          ],
+        }}
       />
       <PageHero
         title="Our Blogs"
