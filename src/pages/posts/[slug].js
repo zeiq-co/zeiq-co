@@ -14,7 +14,7 @@ const BlogPost = ({ post }) => (
       description={post.seoDescription}
       canonical={`${config.siteUrl}/${post.slug}`}
       openGraph={{
-        url: `${config.siteUrl}${post.slug}`,
+        url: `${config.siteUrl}/${post.slug}`,
         title: post.title,
         description: post?.seoDescription
           ? post?.seoDescription
@@ -45,8 +45,9 @@ const BlogPost = ({ post }) => (
               src={post.featuredImage}
               alt={post.title}
               className="img-fluid"
-              height={600}
+              height={800}
               width={1400}
+              objectFit="cover"
             />
           </div>
         </div>
