@@ -6,9 +6,9 @@ import config from '../utils/config';
 import Layout from '../components/Layout';
 import PageHero from '../components/global/PageHero';
 import WorkItem from '../components/work/WorkItem';
+import CallToAction from '../components/about/CallToAction';
 
 function WorkPage({ projects }) {
-  // console.log('projects', projects);
   return (
     <Layout>
       <NextSeo
@@ -25,6 +25,7 @@ function WorkPage({ projects }) {
           </div>
         </div>
       </section>
+      <CallToAction />
     </Layout>
   );
 }
