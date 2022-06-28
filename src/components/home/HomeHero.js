@@ -12,7 +12,7 @@ const HomeHero = ({ data }) => (
           </h1>
           <Link href="/work">
             <a className="btn btn-white" data-text="Case Studies">
-              <span>Case Studies</span>
+              <span>Our Work</span>
             </a>
           </Link>
         </div>
