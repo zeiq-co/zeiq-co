@@ -51,8 +51,9 @@ const Work = ({ data }) => (
               src={data.featuredImage}
               alt={data.title}
               className="img-fluid"
-              height={600}
-              width={1400}
+              height={1000}
+              width={1200}
+              objectFit="cover"
             />
           </div>
         </div>
