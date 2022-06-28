@@ -12,7 +12,6 @@ const PostItem = ({ post, bgColor }) => {
   if (!post.title) {
     return null;
   }
-
   return (
     <div className="col-lg-12">
       <article className="card blog-card blog-card-horizontal border-0 rounded-0 has-anim">
