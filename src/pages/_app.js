@@ -1,3 +1,4 @@
+import Script from 'next/script';
 import '../styles/main.css';
 import Head from 'next/head';
 import { ZeiqProvider } from '@zeiq/web';
@@ -50,12 +51,11 @@ function MyApp({ Component, pageProps, reduxStore }) {
         </StoreProvider>
       </ZeiqProvider>
       <>
-        <script src="/plugins/jquery.min.js" />
-        <script src="/plugins/bootstrap.bundle.min.js" />
-        <script src="/plugins/swiper-bundle.min.js" />
-        <script src="/plugins/isotope.min.js" />
-
-        <script async src="/plugins/scripts.js" />
+        <Script src="/plugins/jquery.min.js" />
+        <Script src="/plugins/bootstrap.bundle.min.js" />
+        <Script src="/plugins/swiper-bundle.min.js" />
+        <Script src="/plugins/isotope.min.js" />
+        <Script async src="/plugins/scripts.js" />
       </>
     </>
   );
