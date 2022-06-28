@@ -50,7 +50,10 @@ function BlogPage({ posts }) {
         title={`${config.siteName} News : Software, Website, Mobile App, Ecommerce, Digital Marketing`}
         description={`${config.siteName} Blog, Get Updated on latest news of mobile applications Development, software and web development services, ecommerce Solutions.}`}
       />
-      <PageHero title="News & Updates" subTitle="Latest news" />
+      <PageHero
+        title="Our Blogs"
+        subTitle="A home for inspiring stories on business and technology"
+      />
       <div className="section pt-n30 bg-white">
         <div className="container">
           <div className="row">
