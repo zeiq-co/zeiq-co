@@ -25,11 +25,11 @@ function ContactPage() {
     });
 
     const { error } = await res.json();
-    console.log(error, 'error');
-    if (error) {
-      swal('Already subscribed', '', 'error');
-    } else {
+    console.log(error, 'messegescsv');
+    if (error === 'Success') {
       swal('Success!', '🎉  Subscribed successfully', 'success');
+    } else {
+      swal('Already Subscribed!', error, 'error');
     }
   };
   return (

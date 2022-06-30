@@ -1,28 +1,29 @@
 import mailchimp from '@mailchimp/mailchimp_marketing';
 
 mailchimp.setConfig({
-  apiKey: '',
-  server: 'us18',
+  apiKey: '8355818e8cf79bce79efe9d116e83d2f-us10',
+  server: 'us10',
 });
 
 export default async (req, res) => {
   const { email, firstName, lastName, message, company, phone, projectType } =
     req.body;
+  console.log(req.body, ' req.body');
   if (!email) {
     return res.status(400).json({ error: 'Email is required' });
   }
 
   try {
-    await mailchimp.lists.addListMember('d292c382e0', {
+    await mailchimp.lists.addListMember('63018f3271', {
       email_address: email,
       status: 'subscribed',
       merge_fields: {
         FNAME: firstName,
         LNAME: lastName,
-        Message: message,
-        Company: company,
+        MESSAGE: message,
+        COMPANY: company,
         PHONE: phone,
-        ProjectType: projectType,
+        PROJECT_TY: projectType,
       },
     });
 
