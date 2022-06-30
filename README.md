@@ -55,6 +55,7 @@ To deploy to zeit now host
 
 ```
 yarn deploy
+
 ```
 
 ## Lint code and check Errors
