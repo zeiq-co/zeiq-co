@@ -33,8 +33,7 @@ const ContactUsForm = ({
           }
         />
       </div>
-
-      <div className="col-6 col-md-6 has-anim fade">
+      <div className="col-12 col-md-6 has-anim fade">
         <InputGroup
           type="text"
           name="lastName"

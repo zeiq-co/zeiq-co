@@ -11,7 +11,6 @@ export default async (req, res) => {
   if (!email) {
     return res.status(400).json({ error: 'Email is required' });
   }
-
   try {
     await mailchimp.lists.addListMember('63018f3271', {
       email_address: email,
@@ -25,7 +24,6 @@ export default async (req, res) => {
         PROJECT_TY: projectType,
       },
     });
-
     return res.status(201).json({ error: 'Success' });
   } catch (error) {
     return res.status(500).json({ error: error.message || error.toString() });
