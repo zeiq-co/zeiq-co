@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { DefaultSeo } from 'next-seo';
 import NProgress from 'nprogress';
 import Router from 'next/router';
+import 'jquery/dist/jquery';
 
 import GlobalStyles from '../styles/styles';
 import config from '../utils/config';
@@ -36,7 +37,6 @@ function MyApp({ Component, pageProps }) {
           content={config.theme_color}
         />
         <script src="/plugins/jquery.min.js" />
-        <script src="/plugins/bootstrap.bundle.min.js" />
         <script src="/plugins/swiper-bundle.min.js" />
         <script src="/plugins/isotope.min.js" />
         <script async src="/plugins/scripts.js" />
