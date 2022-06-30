@@ -145,9 +145,10 @@ export default withFormik({
     message: Yup.string().required('Message is required!'),
   }),
 
-  handleSubmit: (values, { setSubmitting, props }) => {
+  handleSubmit: (values, { setSubmitting, props, resetForm }) => {
     props.onSubmit(values).finally(() => {
       setSubmitting(false);
+      resetForm();
     });
   },
   displayName: 'ContactUsForm', // helps with React DevTools
