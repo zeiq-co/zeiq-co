@@ -1,7 +1,7 @@
 # Zeiq
 
 Fully re-written using Nextjs and TailwindCSS, includes Graphql Server    + Authorization and blog.
-It’s depended on Zeiq Base for elements and helpers
+It’s depended on Zeiq Base for elements and helpers.
 
 ## Stack
 
