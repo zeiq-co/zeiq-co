@@ -16,7 +16,7 @@ import homeData from '../../content/general/home.yaml';
 function Index({ projects, posts, technologies }) {
   return (
     <Layout>
-      <NextSeo title="Website and Mobile App Development Agency - Zeiq.co" />
+      <NextSeo title="Website and Mobile App Development Agency - Zeiq.co " />
       <HomeHero data={homeData} />
       <HomeAbout data={homeData} />
       <HomeServices data={homeData} />
