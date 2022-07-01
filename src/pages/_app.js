@@ -22,7 +22,6 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <GlobalStyles />
-
       <Head>
         <title>{config.siteName}</title>
         <meta charSet="utf-8" />

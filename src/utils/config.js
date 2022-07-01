@@ -6,6 +6,7 @@ const config = {
   email: 'sales@zeiq.co',
   telephone: '+44-7747810130',
   address: 'London, UK',
+  siteUrl: 'https://zeiq.co',
 };
 
 export default config;
