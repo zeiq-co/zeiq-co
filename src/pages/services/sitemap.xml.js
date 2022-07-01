@@ -6,14 +6,14 @@ const remoteUrl = `${config.siteUrl}`;
 const localUrl = `http://localhost:3000`;
 
 const siteUrl = new URL(remoteUrl || localUrl);
-const filesDir = 'content/posts';
+const filesDir = 'content/services';
 
 export const getServerSideProps = async (ctx) => {
   const allPaths = getPathsFromDir(filesDir);
   const paths =
     allPaths &&
     allPaths.map((item) => ({
-      loc: `https://${siteUrl}posts/${item?.params?.slug}`,
+      loc: `https://${siteUrl}services/${item?.params?.slug}`,
       lastmod: new Date().toISOString(),
     }));
 
