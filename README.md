@@ -1,4 +1,4 @@
-# Zeiq NextJs FullStack
+# Zeiq
 
 Fully re-written using Nextjs and TailwindCSS, includes Graphql Server    + Authorization and blog.
 It’s depended on Zeiq Base for elements and helpers
@@ -7,14 +7,11 @@ It’s depended on Zeiq Base for elements and helpers
 
 - [Next.js](https://nextjs.org/)
 - [React.js](https://facebook.github.io/react/)
-- [Zeiq Base](https://github.com/zeiq-co/zeiq-base)
 - [Next.js](https://nextjs.org/)
 - [Tailwind Blocks](https://tailblocks.cc/)
 - [headlessUI](https://headlessui.dev)
 - [heroicons](https://heroicons.com)
 - [tailwindcss](https://tailwindcss.com/)
-- [Apollo Server](https://www.apollographql.com/)
-- [Mongoose MongoDB](https://mongoosejs.com/)
 
 ## To use
 
