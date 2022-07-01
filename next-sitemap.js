@@ -1,4 +1,4 @@
-const siteUrl = `https://zeiq.co`;
+const siteUrl = `https://zeiq-co-git-v4-zeiq-dev.vercel.app`;
 
 module.exports = {
   siteUrl,
