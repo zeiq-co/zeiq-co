@@ -6,7 +6,7 @@ const config = {
   email: 'sales@zeiq.co',
   telephone: '+44-7747810130',
   address: 'London, UK',
-  websiteUrl: 'https://zeiq-co-git-v4-zeiq-dev.vercel.app',
+  siteUrl: 'https://zeiq-co-git-v4-zeiq-dev.vercel.app',
 };
 
 export default config;
