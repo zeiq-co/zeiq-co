@@ -57,7 +57,7 @@ const HomeServices = () => (
               </svg>
             </div>
 
-            <h4 className="font-weight-light text-white mb-3">Marketing</h4>
+            <h4 className="font-weight-light text-white mb-3">Digital Marketing</h4>
             <p>
               Increase your sales thanks to our services tailor-made to your
               client’s need.
