@@ -39,7 +39,7 @@ const SingleTechnology = ({ data }) => (
               height={50}
               width={140}
               layout="responsive"
-              objectFit="contain"
+              objectFit="cover"
             />
           </div>
         </div>

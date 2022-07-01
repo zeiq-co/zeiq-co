@@ -49,7 +49,7 @@ const Service = ({ data, childServices }) => (
               className="img-fluid"
               height={600}
               width={1400}
-              objectFit="cover"
+              objectFit="contain"
             />
           </div>
         </div>
