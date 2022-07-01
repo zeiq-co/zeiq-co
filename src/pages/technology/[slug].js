@@ -29,15 +29,15 @@ const SingleTechnology = ({ data }) => (
         ],
       }}
     />
-    <section className="section pb-0">
+    <section className="section ">
       <div className="container">
         <div className="row">
-          <div className="col-12 mb-n5 has-anim anim-delay-2">
+          <div className="col-12 has-anim anim-delay-2   pb-5">
             <Image
               src={data.featuredImage}
               alt={data.title}
-              height={50}
-              width={140}
+              width={300}
+              height={100}
               layout="responsive"
               objectFit="contain"
             />
