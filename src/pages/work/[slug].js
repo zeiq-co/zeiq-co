@@ -4,6 +4,7 @@ import md from 'markdown-it';
 import { upperFirst } from 'lodash';
 import styled from 'styled-components';
 import fs from 'fs';
+import AnchorLink from '../../components/elements/AnchorLink';
 
 import { getPathsFromDir, getSingleMdx } from '../../utils/helpers';
 import config from '../../utils/config';
@@ -66,27 +67,30 @@ const Work = ({ data }) => (
               <div className="mb-5 has-anim fade">
                 <h3 className="h5 mb-2 text-dark">{data.title}</h3>
                 <p className="mb-3">{data.info}</p>
-                <a
-                  className="line-link text-dark font-weight-500"
-                  href={data.websiteUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Visit website{' '}
-                  <svg
-                    className="arrow-up-right"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <line x1="7" y1="17" x2="17" y2="7" />
-                    <polyline points="7 7 17 7 17 17" />
-                  </svg>
-                </a>
+                <div className="mb-3">
+                  {data.websiteUrl && (
+                    <AnchorLink
+                      stackName="website"
+                      stackUrl={data.websiteUrl}
+                    />
+                  )}
+                </div>
+                <div className="mb-3">
+                  {data.androidAppUrl && (
+                    <AnchorLink
+                      stackName="Play store"
+                      stackUrl={data.androidAppUrl}
+                    />
+                  )}
+                </div>
+                <div className="mb-3">
+                  {data.iosAppUrl && (
+                    <AnchorLink
+                      stackName="App store"
+                      stackUrl={data.iosAppUrl}
+                    />
+                  )}
+                </div>
               </div>
               <div className="mb-5 has-anim fade anim-delay-3">
                 <h3 className="h5 mb-2 text-dark">Services we provided</h3>

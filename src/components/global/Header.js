@@ -14,6 +14,11 @@ const services = [
     title: 'Software Development',
     slug: '/services/software-development',
   },
+  {
+    id: 4,
+    title: 'Digital Marketing',
+    slug: '/services/marketing',
+  },
 ];
 
 const Header = () => (
