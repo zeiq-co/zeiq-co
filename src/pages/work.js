@@ -35,12 +35,16 @@ function WorkPage({ projects }) {
         }}
       />
       <PageHero title="Our Work" subTitle="Work we do" />
-      <section className="section portfolio-grid-creative bg-white">
-        <div className="container">
-          <div className="row">
-            {projects.map((item) => (
-              <WorkItem key={item.slug} data={item} />
-            ))}
+      <section className="section portfolio-grid-creative bg-white ">
+        <div className="row m-auto">
+          <div className="col">
+            <div className="container">
+              <div className="row">
+                {projects.map((item) => (
+                  <WorkItem key={item.slug} data={item} />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
