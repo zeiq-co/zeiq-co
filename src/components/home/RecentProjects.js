@@ -1,3 +1,6 @@
+// eslint-disable-next-line import/no-unresolved
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 import { random } from 'lodash';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -18,46 +21,54 @@ const RecentProjects = ({ projects }) => (
     </div>
     <div className="swiper-container">
       <div className="swiper-wrapper">
-        {projects.map((item) => {
-          const randomId = random(0, bgColors.length - 1);
+        <Swiper
+          slidesPerView={2}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log('slide change')}
+        >
+          {projects.map((item) => {
+            const randomId = random(0, bgColors.length - 1);
 
-          const bgColor = bgColors[randomId];
-          if (!item.featuredImage) return null;
-          return (
-            <div className="swiper-slide" key={item.slug}>
-              <div className="card portfolio-card card-overlay card-hover-zoom">
-                <span className="card-img">
-                  <Image
-                    src={item.featuredImage}
-                    alt={item.title}
-                    className="img-fluid"
-                    width={1400}
-                    height={600}
-                    objectFit="cover"
-                  />
-                  <span
-                    className="img-overlay"
-                    style={{ backgroundColor: bgColor }}
-                  />
-                </span>
-                <div className="card-img-overlay text-center">
-                  <div className="block">
-                    <h3 className="h2 card-title mb-3">
-                      <Link href={`/work/${item.slug}`}>
-                        <a>{item.title}</a>
-                      </Link>
-                    </h3>
-                    <span className="card-subtitle">
-                      <Link href={`/work/${item.slug}`}>
-                        <a>{item.category}</a>
-                      </Link>
+            const bgColor = bgColors[randomId];
+            if (!item.featuredImage) return null;
+            return (
+              <SwiperSlide>
+                <div className="swiper-slide" key={item.slug}>
+                  <div className="card portfolio-card card-overlay card-hover-zoom">
+                    <span className="card-img">
+                      <Image
+                        src={item.featuredImage}
+                        alt={item.title}
+                        className="img-fluid"
+                        width={1400}
+                        height={600}
+                        objectFit="cover"
+                      />
+                      <span
+                        className="img-overlay"
+                        style={{ backgroundColor: bgColor }}
+                      />
                     </span>
+                    <div className="card-img-overlay text-center">
+                      <div className="block">
+                        <h3 className="h2 card-title mb-3">
+                          <Link href={`/work/${item.slug}`}>
+                            <a>{item.title}</a>
+                          </Link>
+                        </h3>
+                        <span className="card-subtitle">
+                          <Link href={`/work/${item.slug}`}>
+                            <a>{item.category}</a>
+                          </Link>
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          );
-        })}
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
       </div>
 
       <div className="text-center mt-4">
