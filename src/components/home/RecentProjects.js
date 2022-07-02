@@ -1,6 +1,7 @@
-// eslint-disable-next-line import/no-unresolved
+/* eslint-disable import/no-unresolved */
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import { useState } from 'react';
+import { Navigation, Pagination, Scrollbar } from 'swiper';
 import { random } from 'lodash';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,6 +9,8 @@ import Link from 'next/link';
 const bgColors = ['#D83013', '#5A6422', '#E08100', '#B10101', '#0E268A'];
 
 const RecentProjects = ({ projects }) => {
+  const [swiper, setSwiperLocal] = useState(null);
+  const [activeStep, setActiveStep] = useState(0);
   const settings = {
     slidesPerView: 2,
     spaceBetween: 0,
@@ -16,14 +19,6 @@ const RecentProjects = ({ projects }) => {
     centeredSlides: !0,
     preloadImages: !1,
     lazy: !0,
-    pagination: {
-      el: '.portfolio-carousel-fluid .swiper-pagination',
-      type: 'progressbar',
-    },
-    navigation: {
-      nextEl: '.portfolio-carousel-fluid .swiper-button.next',
-      prevEl: '.portfolio-carousel-fluid .swiper-button.prev',
-    },
     breakpoints: {
       0: {
         slidesPerView: 1,
@@ -45,7 +40,7 @@ const RecentProjects = ({ projects }) => {
   };
 
   return (
-    <section className="section bg-white  portfolio-carousel-fluid ">
+    <section className="section bg-white portfolio-carousel-fluid ">
       <div className="container">
         <div className="row">
           <div className="col-12 has-anim fade">
@@ -56,73 +51,82 @@ const RecentProjects = ({ projects }) => {
           </div>
         </div>
       </div>
-      <Swiper
-        {...settings}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
-        className=""
-      >
-        <div className="swiper-container">
+      <div className="swiper-container swiper-container-initialized swiper-container-horizontal">
+        <Swiper
+          {...settings}
+          onSwiper={setSwiperLocal}
+          onSlideChange={() => console.log(swiper, 'slide change')}
+          onActiveIndexChange={({ realIndex }) => {
+            setActiveStep(realIndex);
+          }}
+          modules={[Navigation, Pagination, Scrollbar]}
+          pagination={{
+            el: '.portfolio-carousel-fluid .swiper-pagination',
+            type: 'progressbar',
+          }}
+          navigation={{
+            nextEl: '.portfolio-carousel-fluid .swiper-button.next',
+            prevEl: '.portfolio-carousel-fluid .swiper-button.prev',
+          }}
+        >
           <div className="swiper-wrapper">
-            <div>
-              {projects.map((item) => {
-                const randomId = random(0, bgColors.length - 1);
-
-                const bgColor = bgColors[randomId];
-                if (!item.featuredImage) return null;
-                return (
-                  <SwiperSlide>
-                    <div className="swiper-slide" key={item.slug}>
-                      <div className="card portfolio-card card-overlay card-hover-zoom">
-                        <span className="card-img">
-                          <Image
-                            src={item.featuredImage}
-                            alt={item.title}
-                            className="img-fluid"
-                            width={1200}
-                            height={900}
-                            objectFit="contain"
-                            layout="responsive"
-                          />
-                          <span
-                            className="img-overlay"
-                            style={{ backgroundColor: bgColor }}
-                          />
-                        </span>
-                        <div className="card-img-overlay text-center">
-                          <div className="block">
-                            <h3 className="h2 card-title mb-3">
-                              <Link href={`/work/${item.slug}`}>
-                                <a>{item.title}</a>
-                              </Link>
-                            </h3>
-                            <span className="card-subtitle">
-                              <Link href={`/work/${item.slug}`}>
-                                <a>{item.category}</a>
-                              </Link>
-                            </span>
-                          </div>
+            {projects.map((item) => {
+              const randomId = random(0, bgColors.length - 1);
+              const bgColor = bgColors[randomId];
+              if (!item.featuredImage) return null;
+              return (
+                <SwiperSlide>
+                  <div className="swiper-slide" key={item.slug}>
+                    <div className="card portfolio-card card-overlay card-hover-zoom">
+                      <span className="card-img">
+                        <Image
+                          src={item.featuredImage}
+                          alt={item.title}
+                          className="img-fluid"
+                          width={1200}
+                          height={900}
+                          objectFit="contain"
+                          layout="responsive"
+                        />
+                        <span
+                          className="img-overlay"
+                          style={{ backgroundColor: bgColor }}
+                        />
+                      </span>
+                      <div className="card-img-overlay text-center">
+                        <div className="block">
+                          <h3 className="h2 card-title mb-3">
+                            <Link href={`/work/${item.slug}`}>
+                              <a>{item.title}</a>
+                            </Link>
+                          </h3>
+                          <span className="card-subtitle">
+                            <Link href={`/work/${item.slug}`}>
+                              <a>{item.category}</a>
+                            </Link>
+                          </span>
                         </div>
                       </div>
                     </div>
-                  </SwiperSlide>
-                );
-              })}
-            </div>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
           </div>
-
           <div className="text-center mt-4">
             <div className="swiper-button prev cursor-pointer">Prev</div>
             <div className="swiper-button next cursor-pointer">Next</div>
           </div>
-
           <div className="swipeCarousel-control">
-            <div className="swiper-pagination" />
-            <div className="activeslide">1</div>
+            <div
+              className="swiper-pagination portfolio-carousel-fluid swiper-pagination-progressbar"
+              type="progressbar"
+            />
+            <div className="activeslide">{activeStep + 1}</div>
             <div className="totalslide">{projects.length}</div>
           </div>
-        </div>
-      </Swiper>
+        </Swiper>
+      </div>
     </section>
   );
 };
