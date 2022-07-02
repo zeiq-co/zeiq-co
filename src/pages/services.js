@@ -41,5 +41,6 @@ export async function getStaticProps() {
     props: {
       services: result,
     },
+    revalidate: 3600, // in seconds (1 hour)
   };
 }

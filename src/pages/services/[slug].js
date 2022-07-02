@@ -106,5 +106,6 @@ export async function getStaticProps({ params: { slug } }) {
       data: { content, slug, ...frontmatter },
       childServices: childResult,
     },
+    revalidate: 3600, // in seconds (1 hour)
   };
 }

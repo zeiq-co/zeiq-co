@@ -49,5 +49,6 @@ export async function getStaticProps() {
       posts,
       technologies: fetchTechnologies,
     },
+    revalidate: 3600, // in seconds (1 hour)
   };
 }

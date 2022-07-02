@@ -107,5 +107,6 @@ export async function getStaticProps() {
     props: {
       posts: orderedData,
     },
+    revalidate: 3600, // in seconds (1 hour)
   };
 }

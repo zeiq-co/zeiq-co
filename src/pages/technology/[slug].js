@@ -89,5 +89,6 @@ export async function getStaticProps({ params: { slug } }) {
     props: {
       data: { content, slug, ...frontmatter },
     },
+    revalidate: 3600, // in seconds (1 hour)
   };
 }

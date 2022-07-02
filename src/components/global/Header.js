@@ -29,7 +29,7 @@ const Header = () => (
         <div className="row">
           <div className="col-12">
             <nav className="navbar navbar-expand-lg navbar-dark px-0 py-3 py-lg-4">
-              <Link href="/">
+              <Link href="/" prefetch={false}>
                 <LogoContainer
                   className="navbar-brand font-weight-bold mb-0"
                   title="Zeiq"

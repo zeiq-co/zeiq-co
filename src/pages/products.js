@@ -37,5 +37,6 @@ export async function getStaticProps() {
     props: {
       projects: orderedData,
     },
+    revalidate: 3600, // in seconds (1 hour)
   };
 }
