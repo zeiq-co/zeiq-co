@@ -228,8 +228,8 @@ const RecentProjects = ({ projects }) => {
               const bgColor = bgColors[randomId];
               if (!item.featuredImage) return null;
               return (
-                <SwiperSlide>
-                  <div className="swiper-slide" key={item.slug}>
+                <SwiperSlide key={item.slug || index}>
+                  <div className="swiper-slide">
                     <div className="card portfolio-card card-overlay card-hover-zoom">
                       <span className="card-img">
                         <Image
