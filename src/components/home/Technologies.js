@@ -15,13 +15,14 @@ const Technologies = ({ brandsData }) => (
 
       <div className="clients-logo-grid">
         {brandsData &&
-          brandsData.map((item) => {
+          brandsData.map((item, index) => {
             if (!item.featuredImage) return null;
             return (
               <div className="logo-item" key={item.title}>
                 <Link href={`/technology/${item?.slug}`}>
                   <a className="has-anim fade">
                     <Image
+                      priority={index}
                       src={item.featuredImage}
                       alt={item.title}
                       height={250}

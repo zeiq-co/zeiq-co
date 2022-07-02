@@ -223,7 +223,7 @@ const RecentProjects = ({ projects }) => {
           }}
         >
           <div className="swiper-wrapper">
-            {projects.map((item) => {
+            {projects.map((item, index) => {
               const randomId = random(0, bgColors.length - 1);
               const bgColor = bgColors[randomId];
               if (!item.featuredImage) return null;
@@ -233,6 +233,7 @@ const RecentProjects = ({ projects }) => {
                     <div className="card portfolio-card card-overlay card-hover-zoom">
                       <span className="card-img">
                         <Image
+                          priority={index}
                           src={item.featuredImage}
                           alt={item.title}
                           className="img-fluid"
