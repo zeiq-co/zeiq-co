@@ -94,61 +94,6 @@ const jqueryLoad = () => {
                 transform: "rotateZ(" + e + ")",
               });
           });
-      }),
-      i(window).on("load", function () {
-        i(".mesonaryInit").isotope(),
-          i(".floating-info-block").each(function () {
-            i(this)
-              .on("mouseenter", function () {
-                i(this).data("title") &&
-                  (i(".floating-info-block-tile").html(
-                    '<span class="card-subtitle font-weight-500 small mb-1">' +
-                      i(this).data("category") +
-                      '</span><h4 class="card-title mb-0 font-weight-bold">' +
-                      i(this).data("title") +
-                      "</h4>",
-                  ),
-                  i(".floating-info-block-tile").addClass("visible")),
-                  i(document).on("mousemove", function (e) {
-                    i(".floating-info-block-tile").css({
-                      left: e.clientX + 15,
-                      top: e.clientY + 20,
-                    });
-                  });
-              })
-              .on("mouseleave", function () {
-                i(".floating-info-block-tile").removeClass("visible");
-              });
-          }),
-          i(".floating-image-block .block").each(function () {
-            i(this)
-              .on("mouseenter", function () {
-                i(this).addClass("enter"),
-                  i(document).on("mousemove", function (e) {
-                    i(".floating-image").css({
-                      left: e.clientX - 50,
-                      top: e.clientY - 50,
-                    });
-                  });
-              })
-              .on("mouseleave", function () {
-                i(this).removeClass("enter");
-              });
-          }),
-          (e = i(".fade-slider .slider-item:eq(0)").height()),
-          i(".fade-slider").css("height", e),
-          i(".fade-slider .slider-item:eq(0)").addClass("active"),
-          i(".fade-slider .slider-item:gt(0)").hide(),
-          setInterval(function () {
-            i(".active:eq(0)")
-              .fadeOut(1e3)
-              .removeClass("active")
-              .nextOrFirst(".slider-item")
-              .addClass("active")
-              .fadeIn(1e3)
-              .end();
-          }, 3e3),
-          s();
       });
   })(jQuery);
 };

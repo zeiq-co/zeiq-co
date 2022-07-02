@@ -36,8 +36,6 @@ function MyApp({ Component, pageProps }) {
           content={config.theme_color}
         />
         <script src="/plugins/jquery.min.js" />
-        <script src="/plugins/isotope.min.js" />
-        <script async src="/plugins/scripts.js" />
       </Head>
       <DefaultSeo {...nextSeo} />
       <Component {...pageProps} />
