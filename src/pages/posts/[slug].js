@@ -92,7 +92,6 @@ export async function getStaticProps({ params: { slug } }) {
   const { data: frontmatter, content } = getSingleMdx(
     `${filesDir}/${slug}.mdx`,
   );
-  console.log(slug, 'slug');
   return {
     props: {
       post: { content, slug, ...frontmatter },
