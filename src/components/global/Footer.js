@@ -144,9 +144,11 @@ const Footer = ({ contactData }) => (
           <div className="col-lg-10 mb-5 pb-4">
             <p className="h6 font-weight-light mb-2">
               Copyright &copy; {new Date().getFullYear()} |{' '}
-              <a href="/" className="line-link text-white font-weight-light">
-                Zeiq.co
-              </a>
+              <Link href="/">
+                <a className="line-link text-white font-weight-light">
+                  Zeiq.co
+                </a>
+              </Link>
             </p>
             <p className="h6 font-weight-light">
               When you visit or interact with our sites, services or tools, we

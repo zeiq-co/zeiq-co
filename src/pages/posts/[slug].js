@@ -7,67 +7,70 @@ import config from '../../utils/config';
 import Layout from '../../components/Layout';
 import PostHero from '../../components/blog/PostHero';
 
-const BlogPost = ({ post }) => (
-  <Layout>
-    <NextSeo
-      title={`${post.title}`}
-      description={post.seoDescription}
-      canonical={`${config.siteUrl}/${post.slug}`}
-      openGraph={{
-        url: `${config.siteUrl}/${post.slug}`,
-        title: post.title,
-        description: post?.seoDescription
-          ? post?.seoDescription
-          : post.siteTitle,
-        images: [
-          {
-            url: post.featuredImage ? post.featuredImage : '',
-            width: 800,
-            height: 600,
-            alt: post.title,
-            type: 'image/jpeg',
-          },
-        ],
-        site_name: 'Zeiq',
-      }}
-    />
-    <PostHero post={post} />
-    <section className="section pb-0">
-      <div className="container">
-        <div className="row">
-          <div className="col-12 mb-n5 has-anim anim-delay-2">
-            <Image
-              src={post.featuredImage}
-              alt={post.title}
-              className="img-fluid"
-              height={800}
-              width={1400}
-              objectFit="cover"
-            />
+const BlogPost = ({ post }) => {
+  if (post) return null;
+  return (
+    <Layout>
+      <NextSeo
+        title={`${post.title}`}
+        description={post.seoDescription}
+        canonical={`${config.siteUrl}/${post.slug}`}
+        openGraph={{
+          url: `${config.siteUrl}/${post.slug}`,
+          title: post.title,
+          description: post?.seoDescription
+            ? post?.seoDescription
+            : post.siteTitle,
+          images: [
+            {
+              url: post.featuredImage ? post.featuredImage : '',
+              width: 800,
+              height: 600,
+              alt: post.title,
+              type: 'image/jpeg',
+            },
+          ],
+          site_name: 'Zeiq',
+        }}
+      />
+      <PostHero post={post} />
+      <section className="section pb-0">
+        <div className="container">
+          <div className="row">
+            <div className="col-12 mb-n5 has-anim anim-delay-2">
+              <Image
+                src={post.featuredImage}
+                alt={post.title}
+                className="img-fluid"
+                height={800}
+                width={1400}
+                objectFit="cover"
+              />
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="section bg-white">
-        <div className="container">
-          <div className="row justify-content-center pt-5">
-            <div className="col-lg-9">
-              <div className="pr-0 pr-lg-5">
-                <div className="content mb-5 pb-3">
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: md().render(post.content),
-                    }}
-                  />
+        <div className="section bg-white">
+          <div className="container">
+            <div className="row justify-content-center pt-5">
+              <div className="col-lg-9">
+                <div className="pr-0 pr-lg-5">
+                  <div className="content mb-5 pb-3">
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: md().render(post.content),
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </Layout>
-);
+      </section>
+    </Layout>
+  );
+};
 
 export default BlogPost;
 
@@ -79,15 +82,17 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 }
 
 export async function getStaticProps({ params: { slug } }) {
+  if (!slug) return { notFound: true };
+
   const { data: frontmatter, content } = getSingleMdx(
     `${filesDir}/${slug}.mdx`,
   );
-
+  console.log(slug, 'slug');
   return {
     props: {
       post: { content, slug, ...frontmatter },
