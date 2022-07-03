@@ -40,8 +40,8 @@ function WorkPage({ projects }) {
           <div className="col">
             <div className="container">
               <div className="row">
-                {projects.map((item) => (
-                  <WorkItem key={item.slug} data={item} />
+                {projects.map((item, index) => (
+                  <WorkItem key={item.slug} data={item} index={index} />
                 ))}
               </div>
             </div>

@@ -50,6 +50,7 @@ const Service = ({ data, childServices }) => (
               height={600}
               width={1400}
               objectFit="contain"
+              priority
             />
           </div>
         </div>
