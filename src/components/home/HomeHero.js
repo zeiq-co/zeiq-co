@@ -2,9 +2,9 @@ import Link from 'next/link';
 
 const HomeHero = ({ data }) => (
   <section className="banner">
-    <div className="container text-center text-lg-left position-relative">
+    <div className="container text-center text-lg-left position-relative is-hero-fade">
       <div className="row justify-content-md-center align-items-center">
-        <div className="col-xl-6 col-lg-7 col-md-10 has-anim fade">
+        <div className="col-xl-6 col-lg-7 col-md-10">
           <p className="mb-3 font-weight-500">We Are Zeiq</p>
           <h1 className="banner-title mb-5 text-white">
             {data.slogan}
@@ -16,7 +16,7 @@ const HomeHero = ({ data }) => (
             </a>
           </Link>
         </div>
-        <div className="col-xl-4 col-lg-5 col-md-10 mt-5 mt-lg-0 has-anim fade anim-delay-2">
+        <div className="col-xl-4 col-lg-5 col-md-10 mt-5 mt-lg-0">
           <p className="lead text-white" style={{ marginBottom: '2rem' }}>
             We design &amp; build world-class digital products that make an
             impact and connect people.
@@ -43,7 +43,7 @@ const HomeHero = ({ data }) => (
       </div>
 
       <svg
-        className="banner-shape has-anim anim-delay-1"
+        className="banner-shape"
         viewBox="0 0 105 98"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

@@ -52,7 +52,7 @@ function ContactPage() {
           ],
         }}
       />
-      <section className="section contact-us bg-white">
+      <section className="section contact-us bg-white  is-hero-fade">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-xl-11">
@@ -60,17 +60,15 @@ function ContactPage() {
                 <div className="row justify-content-center">
                   <div className="col-lg-5 mb-5 mb-lg-0">
                     <div className="pr-0 pr-lg-4">
-                      <h4 className="text-dark mb-3 has-anim fade">
-                        Contact Us
-                      </h4>
-                      <p className="has-anim fade">
+                      <h4 className="text-dark mb-3">Contact Us</h4>
+                      <p>
                         Share the details of your project – like scope, time
                         frames, or business challenges. Our team will carefully
                         study them and then we’ll figure out the next move
                         together.
                       </p>
 
-                      <div className="mt-4 pt-2 has-anim fade anim-delay-1">
+                      <div className="mt-4 pt-2">
                         <p className="text-uppercase small font-weight-500 mb-1">
                           Email us:
                         </p>
@@ -83,7 +81,7 @@ function ContactPage() {
                           </a>
                         </p>
                       </div>
-                      <div className="mt-4 has-anim fade anim-delay-2">
+                      <div className="mt-4">
                         <p className="text-uppercase small font-weight-500 mb-1">
                           Call us:
                         </p>
@@ -96,7 +94,7 @@ function ContactPage() {
                           </a>
                         </p>
                       </div>
-                      <div className="mt-4 has-anim fade anim-delay-3">
+                      <div className="mt-4">
                         <p className="text-uppercase small font-weight-500 mb-1">
                           Our Offices:
                         </p>

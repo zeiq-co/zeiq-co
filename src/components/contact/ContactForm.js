@@ -20,7 +20,7 @@ const ContactUsForm = ({
 }) => (
   <form onSubmit={handleSubmit}>
     <div className="row gh-1 gv-2">
-      <div className="col-12 col-md-6 has-anim fade">
+      <div className="col-12 col-md-6">
         <InputGroup
           name="firstName"
           placeholder="First Name*"
@@ -33,7 +33,7 @@ const ContactUsForm = ({
           }
         />
       </div>
-      <div className="col-12 col-md-6 has-anim fade">
+      <div className="col-12 col-md-6 ">
         <InputGroup
           type="text"
           name="lastName"
@@ -46,7 +46,7 @@ const ContactUsForm = ({
           }
         />
       </div>
-      <div className="col-12 col-md-6 has-anim fade">
+      <div className="col-12 col-md-6 ">
         <InputGroup
           name="email"
           type="email"
@@ -57,7 +57,7 @@ const ContactUsForm = ({
           error={errors.email && touched.email ? errors.email : undefined}
         />
       </div>
-      <div className="col-12 col-md-6 has-anim fade">
+      <div className="col-12 col-md-6 ">
         <InputGroup
           name="phone"
           type="text"
@@ -68,7 +68,7 @@ const ContactUsForm = ({
           error={errors.phone && touched.phone ? errors.phone : undefined}
         />
       </div>
-      <div className="col-12 col-md-6 has-anim fade">
+      <div className="col-12 col-md-6 ">
         <InputGroup
           name="projectType"
           type="text"
@@ -83,7 +83,7 @@ const ContactUsForm = ({
           }
         />
       </div>
-      <div className="col-12 col-md-6 has-anim fade">
+      <div className="col-12 col-md-6 ">
         <InputGroup
           name="company"
           type="text"
@@ -94,7 +94,7 @@ const ContactUsForm = ({
           error={errors.company && touched.company ? errors.company : undefined}
         />
       </div>
-      <div className="col-12 has-anim fade">
+      <div className="col-12 ">
         <TextAreaGroup
           rows="1"
           placeholder="About Project*"
@@ -106,7 +106,7 @@ const ContactUsForm = ({
           error={errors.message && touched.message ? errors.message : undefined}
         />
       </div>
-      <div className="col-12 has-anim fade">
+      <div className="col-12 ">
         {isSubmitting ? (
           <LoadingButton className="spinner-border" role="status">
             <span className="sr-only">Loading...</span>

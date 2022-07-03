@@ -49,6 +49,11 @@ const jqueryLoad = () => {
           i(this).addClass("visible");
       });
     }
+
+    $(document).ready(function () {
+      $('.is-hero-fade').fadeIn(2000).removeClass('.is-hero-fade');
+    });
+
     (i.fn.nextOrFirst = function (e) {
       var t = this.next(e);
       return t.length ? t : this.prevAll(e).last();

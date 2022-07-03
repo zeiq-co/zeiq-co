@@ -517,6 +517,9 @@ button {
     padding-right: 15px !important;
   }
 }
+.is-hero-fade {
+  display: none;
+}
 .has-anim {
   opacity: 0;
   visibility: hidden;

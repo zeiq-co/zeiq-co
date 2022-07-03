@@ -42,7 +42,7 @@ const Service = ({ data, childServices }) => (
     <section className="section pb-0">
       <div className="container">
         <div className="row">
-          <div className="col-12 mb-n5 has-anim anim-delay-2">
+          <div className="col-12 mb-n5 is-hero-fade">
             <Image
               src={data.featuredImage}
               alt={data.title}
@@ -55,24 +55,25 @@ const Service = ({ data, childServices }) => (
           </div>
         </div>
       </div>
-
-      <div className="section bg-white">
-        <div className="container">
-          <div className="row justify-content-center pt-5">
-            <div className="col-lg-9">
-              <div className="pr-0 pr-lg-5">
-                <div className="content mb-5 pb-3">
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: md().render(data.content),
-                    }}
-                  />
+      {data.content && (
+        <div className="section bg-white">
+          <div className="container">
+            <div className="row justify-content-center pt-5">
+              <div className="col-lg-9">
+                <div className="pr-0 pr-lg-5">
+                  <div className="content mb-5 pb-3">
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: md().render(data.content),
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
     </section>
     <RelatedServices services={childServices} />
     <WorkProcess />
