@@ -249,7 +249,7 @@ const RecentProjects = ({ projects }) => {
                       </span>
                       <div className="card-img-overlay text-center">
                         <div className="block">
-                          <h3 className="h2 card-title mb-3">
+                          <h3 className="card-title mb-3">
                             <Link href={`/work/${item.slug}`}>
                               <a>{item.title}</a>
                             </Link>

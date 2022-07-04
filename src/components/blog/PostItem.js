@@ -39,7 +39,7 @@ const PostItem = ({ post, bgColor }) => {
               </span>
               <h3 className="card-title">
                 <Link href={`/posts/${post.slug}`}>
-                  <a>{post.title}</a>
+                  <a className="card-title">{post.title}</a>
                 </Link>
               </h3>
               <p className="card-text">Read full story</p>
