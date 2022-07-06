@@ -55,7 +55,7 @@ function BlogPage({ posts }) {
           description: `${`${config.siteName} Blog, Get Updated on latest news of mobile applications Development, software and web development services, ecommerce Solutions.}`}`,
           images: [
             {
-              url: '/images/blog-about-blogs.jpg',
+              url: `${config.siteUrl}/images/blog-about-blogs.jpg`,
               width: 800,
               height: 600,
               alt: 'News',

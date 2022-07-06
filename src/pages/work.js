@@ -1,5 +1,6 @@
 import { NextSeo } from 'next-seo';
 import { orderBy } from 'lodash';
+import config from '../utils/config';
 
 import { getMdxFromDir } from '../utils/helpers';
 import Layout from '../components/Layout';
@@ -25,7 +26,7 @@ function WorkPage({ projects }) {
           description: content.seoDescription,
           images: [
             {
-              url: '/images/logo.png',
+              url: `${config.siteUrl}/images/logo.png`,
               width: 500,
               height: 500,
               alt: 'Zeiq Work and Case studies',

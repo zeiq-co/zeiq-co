@@ -26,14 +26,16 @@ const Work = ({ data }) => (
     <NextSeo
       title={`Zeiq ${data.title}`}
       description={data.details}
-      canonical={`${config.siteUrl}/${data.slug}`}
+      canonical={`${config.siteUrl}/work/${data.slug}`}
       openGraph={{
         url: `${config.siteUrl}/${data.slug}`,
         title: data.title,
         description: data?.details ? data?.details : data.title,
         images: [
           {
-            url: data.featuredImage ? data.featuredImage : '',
+            url: `${config.siteUrl}/${
+              data.featuredImage ? data.featuredImage : ''
+            }`,
             width: 800,
             height: 600,
             alt: data.title,

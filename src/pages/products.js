@@ -1,5 +1,6 @@
 import { NextSeo } from 'next-seo';
 import { orderBy } from 'lodash';
+import config from '../utils/config';
 
 import { getMdxFromDir } from '../utils/helpers';
 import Layout from '../components/Layout';
@@ -12,6 +13,20 @@ function ProductsPage({ projects }) {
       <NextSeo
         title="Products"
         description="Case studies of our web, software & mobile app development work for all industry verticals."
+        openGraph={{
+          title: 'Products',
+          description:
+            'Case studies of our web, software & mobile app development work for all industry verticals.',
+          images: [
+            {
+              url: `${config.siteUrl}/images/logo.png`,
+              width: 500,
+              height: 500,
+              alt: 'Zeiq Products and Case studies',
+              type: 'image/jpeg',
+            },
+          ],
+        }}
       />
       <PageHero title="Our Products" subTitle="Our Business" />
       <section className="section portfolio-grid-creative bg-white">

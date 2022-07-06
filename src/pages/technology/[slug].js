@@ -11,9 +11,9 @@ const SingleTechnology = ({ data }) => (
     <NextSeo
       title={`${data.title}`}
       description={data.seoDescription}
-      canonical={`${config.siteUrl}/${data.slug}`}
+      canonical={`${config.siteUrl}/technology/${data.slug}`}
       openGraph={{
-        url: `${config.siteUrl}/${data.slug}`,
+        url: `${config.siteUrl}/technology/${data.slug}`,
         title: data.title,
         description: data?.seoDescription
           ? data?.seoDescription

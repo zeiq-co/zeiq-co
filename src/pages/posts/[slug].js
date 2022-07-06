@@ -14,16 +14,18 @@ const BlogPost = ({ post }) => {
       <NextSeo
         title={`${post.title}`}
         description={post.seoDescription}
-        canonical={`${config.siteUrl}/${post.slug}`}
+        canonical={`${config.siteUrl}/posts/${post.slug}`}
         openGraph={{
-          url: `${config.siteUrl}/${post.slug}`,
+          url: `${config.siteUrl}/posts/${post.slug}`,
           title: post.title,
           description: post?.seoDescription
             ? post?.seoDescription
             : post.siteTitle,
           images: [
             {
-              url: post.featuredImage ? post.featuredImage : '',
+              url: `${config.siteUrl}/${
+                post.featuredImage ? post.featuredImage : ''
+              }`,
               width: 800,
               height: 600,
               alt: post.title,

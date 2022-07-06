@@ -1,5 +1,6 @@
 import { NextSeo } from 'next-seo';
 import { orderBy } from 'lodash';
+import config from '../utils/config';
 
 import { getMdxFromDir } from '../utils/helpers';
 import Layout from '../components/Layout';
@@ -13,6 +14,21 @@ const AboutUs = ({ brandsData }) => (
     <NextSeo
       title="About Us"
       description="Zeiq is a leading software development company in UK that offers offshore software development, web development and web designing services."
+      openGraph={{
+        url: `${config.siteUrl}/about`,
+        title: 'About Us',
+        description:
+          'Zeiq is a leading software development company in UK that offers offshore software development, web development and web designing services.',
+        images: [
+          {
+            url: `${config.siteUrl}/images/about.png`,
+            width: 800,
+            height: 600,
+            alt: 'About',
+            type: 'image/jpeg',
+          },
+        ],
+      }}
     />
     <PageHero title="Who we are" subTitle="We are agents of change" />
     <AboutInfo />

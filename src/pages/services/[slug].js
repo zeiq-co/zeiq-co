@@ -19,16 +19,18 @@ const Service = ({ data, childServices }) => (
     <NextSeo
       title={`${data.title}`}
       description={data.featuredOneDetails}
-      canonical={`${config.siteUrl}/${data.slug}`}
+      canonical={`${config.siteUrl}/services/${data.slug}`}
       openGraph={{
-        url: `${config.siteUrl}${data.slug}`,
+        url: `${config.siteUrl}/services/${data.slug}`,
         title: data.title,
         description: data?.featuredOneDetails
           ? data?.featuredOneDetails
           : data.title,
         images: [
           {
-            url: data.featuredImage ? data.featuredImage : '',
+            url: `${config.siteUrl}/${
+              data.featuredImage ? data.featuredImage : ''
+            }`,
             width: 800,
             height: 600,
             alt: data.title,

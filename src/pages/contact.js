@@ -1,5 +1,6 @@
 import { NextSeo } from 'next-seo';
 import swal from 'sweetalert';
+import config from '../utils/config';
 
 import contactData from '../../content/general/contact.yaml';
 import ContactForm from '../components/contact/ContactForm';
@@ -25,7 +26,7 @@ function ContactPage() {
     });
 
     const { error } = await res.json();
-    console.log(error, 'messegescsv');
+    console.log(error, 'error');
     if (error === 'Success') {
       swal('Success!', '🎉  Subscribed successfully', 'success');
     } else {
@@ -43,7 +44,7 @@ function ContactPage() {
             'Contact Zeiq for web design, software development, mobile app development, application development & eCommerce solutions. Call at +44-7747810130 Email at sales@zeiq.co.',
           images: [
             {
-              url: '/images/about.png',
+              url: `${config.siteUrl}/images/about.png`,
               width: 500,
               height: 500,
               alt: 'Zeiq Contact us',

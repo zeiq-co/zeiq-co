@@ -27,7 +27,7 @@ function Index({ projects, posts, technologies }) {
           images: [
             {
               url: `${config.siteUrl}/images/logo.png`,
-              width: 800,
+              width: 600,
               height: 600,
               alt: 'Zeiq',
               type: 'image/jpeg',
