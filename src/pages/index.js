@@ -1,5 +1,6 @@
 import { NextSeo } from 'next-seo';
 import { orderBy, filter } from 'lodash';
+import config from '../utils/config';
 
 import { getMdxFromDir } from '../utils/helpers';
 import Layout from '../components/Layout';
@@ -16,7 +17,24 @@ import homeData from '../../content/general/home.yaml';
 function Index({ projects, posts, technologies }) {
   return (
     <Layout>
-      <NextSeo title="Website and Mobile App Development Agency - Zeiq.co " />
+      <NextSeo
+        title={homeData.seoTitle}
+        description={homeData.details}
+        openGraph={{
+          url: `${config.siteUrl}`,
+          title: homeData.seoTitle,
+          description: homeData.details,
+          images: [
+            {
+              url: `${config.siteUrl}/images/logo.png`,
+              width: 800,
+              height: 600,
+              alt: 'Zeiq',
+              type: 'image/jpeg',
+            },
+          ],
+        }}
+      />
       <HomeHero data={homeData} />
       <HomeAbout data={homeData} />
       <HomeServices data={homeData} />
