@@ -268,8 +268,12 @@ const RecentProjects = ({ projects }) => {
             })}
           </div>
           <div className="text-center mt-4">
-            <div className="swiper-button prev cursor-pointer">Prev</div>
-            <div className="swiper-button next cursor-pointer">Next</div>
+            <div className="swiper-button prev cursor-pointer user-select-none">
+              Prev
+            </div>
+            <div className="swiper-button next cursor-pointer user-select-none">
+              Next
+            </div>
           </div>
           <div className="swipeCarousel-control portfolio-carousel-fluid portfolio-carousel-fluid">
             <div className="swiper-pagination swiper-pagination-progressbar portfolio-carousel-fluid " />
