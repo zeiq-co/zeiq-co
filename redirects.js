@@ -1,7 +1,7 @@
 const data = [
   {
-    source: '/product/chaudhry-crockery-house',
-    destination: '/work/chaudhry-crockery-house',
+    source: '/product/packrs',
+    destination: '/work/packrs',
   },
   {
     source: '/product/ada-grow',
