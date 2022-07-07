@@ -1,6 +1,7 @@
 const withPlugins = require('next-compose-plugins');
 const withMDX = require('@next/mdx')();
 const withYaml = require('next-plugin-yaml');
+const redirects = require('./redirects');
 
 const nextConfig = {
   images: {
@@ -15,6 +16,10 @@ const nextConfig = {
     maxInactiveAge: 25 * 1000,
     // number of pages that should be kept simultaneously without being disposed
     pagesBufferLength: 2,
+  },
+  async redirects() {
+    const allRedirects = await redirects();
+    return allRedirects;
   },
 };
 
