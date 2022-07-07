@@ -50,14 +50,17 @@ const Work = ({ data }) => (
       <div className="container">
         <div className="row">
           <div className="col-12 mb-n5 has-anim anim-delay-2">
-            <Image
-              src={data.featuredImage}
-              alt={data.title}
-              className="img-fluid"
-              width={1200}
-              height={700}
-              objectFit="contain"
-            />
+            <div className="img-fluid shadow position-relative">
+              <Image
+                src={data.featuredImage}
+                alt={data.title}
+                className="shadow"
+                height={1006}
+                width={1218}
+                layout="responsive"
+                priority
+              />
+            </div>
           </div>
         </div>
       </div>
