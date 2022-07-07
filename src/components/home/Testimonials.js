@@ -1,6 +1,7 @@
 /* eslint-disable import/no-unresolved */
 import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper';
 import reviewsData from '../../../content/general/reviews.yaml';
 
 const Testimonials = () => {
@@ -14,6 +15,8 @@ const Testimonials = () => {
             <div className="swiper-container">
               <div className="swiper-wrapper pb-0">
                 <Swiper
+                  modules={[Autoplay]}
+                  autoplay={{ delay: 4000 }}
                   slidesPerView={1}
                   onSwiper={setSwiperLocal}
                   onSlideChange={() => console.log(swiper, 'slide change')}
@@ -21,8 +24,8 @@ const Testimonials = () => {
                     setActiveStep(realIndex);
                   }}
                   autoHeight
-                  speed={600}
-                  loop={!1}
+                  loop
+                  direction="horizontal"
                   spaceBetween={0}
                   navigation={{
                     nextEl: '.swiper-button-next',

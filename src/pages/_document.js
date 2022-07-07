@@ -10,6 +10,10 @@ export default class MyDocument extends Document {
           <link rel="apple-touch-icon" href="/images/logo.png" />
           <link rel="manifest" href="/site.webmanifest" key="site-manifest" />
           <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+          <meta
+            name="google-site-verification"
+            content="EoQml24_MzZgKoOcuDxzulPIrjbx2m0Gb-zFPSFut1Q"
+          />
         </Head>
         <body>
           <Main />
