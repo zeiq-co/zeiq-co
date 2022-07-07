@@ -142,6 +142,7 @@ export default withFormik({
       .required('Email is required!'),
     projectType: Yup.string().required('Project Type is required!'),
     message: Yup.string().required('Message is required!'),
+    phone: Yup.string().required('Phone Number is required!'),
   }),
 
   handleSubmit: (values, { setSubmitting, props, resetForm }) => {

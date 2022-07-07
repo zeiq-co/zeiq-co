@@ -37,8 +37,10 @@ const Footer = ({ contactData }) => (
                 {contactData.emailSales}
               </a>
             </h4>
-
-            <p>Phone: {contactData.telephoneUk}</p>
+            Phone :{' '}
+            <a href={`tel:${contactData.telephoneUk}`}>
+              {`${contactData.telephoneUk}`}{' '}
+            </a>
             <p>{contactData.locationUk}</p>
             <p>{contactData.locationIndia}</p>
           </div>
