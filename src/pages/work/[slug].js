@@ -26,7 +26,6 @@ const Work = ({ data }) => (
     <NextSeo
       title={`Zeiq ${data.title}`}
       description={data.details}
-      canonical={`${config.siteUrl}/work/${data.slug}`}
       openGraph={{
         url: `${config.siteUrl}/${data.slug}`,
         title: data.title,

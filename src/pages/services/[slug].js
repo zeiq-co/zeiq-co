@@ -19,7 +19,6 @@ const Service = ({ data, childServices }) => (
     <NextSeo
       title={`${data.title}`}
       description={data.featuredOneDetails}
-      canonical={`${config.siteUrl}/services/${data.slug}`}
       openGraph={{
         url: `${config.siteUrl}/services/${data.slug}`,
         title: data.title,
