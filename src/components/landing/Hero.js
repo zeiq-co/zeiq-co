@@ -69,10 +69,6 @@ const PageHero = () => (
                   work as a new way to express oneself. Also m mimini periores
                   vitae.
                 </p>
-
-                <a href="#!" className="line-link mt-4">
-                  Download CV <i className="icon las la-download" />
-                </a>
               </div>
             </div>
 
