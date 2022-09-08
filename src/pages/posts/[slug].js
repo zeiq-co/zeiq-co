@@ -15,7 +15,6 @@ const BlogPost = ({ post }) => {
         title={`${post.title}`}
         description={post.seoDescription}
         openGraph={{
-          url: `${config.siteUrl}/posts/${post.slug}`,
           title: post.title,
           description: post?.seoDescription
             ? post?.seoDescription
@@ -31,7 +30,6 @@ const BlogPost = ({ post }) => {
               type: 'image/jpeg',
             },
           ],
-          site_name: 'Zeiq',
         }}
       />
       <PostHero post={post} />
