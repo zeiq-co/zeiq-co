@@ -18,111 +18,118 @@ const ContactUsForm = ({
   handleChange,
   handleBlur,
 }) => (
-  <form onSubmit={handleSubmit}>
-    <div className="row gh-1 gv-2">
-      <div className="col-12 col-md-6">
-        <InputGroup
-          name="firstName"
-          placeholder="First Name*"
-          type="text"
-          value={values.firstName}
-          onChange={handleChange}
-          onBlur={handleBlur}
-          error={
-            errors.firstName && touched.firstName ? errors.firstName : undefined
-          }
-        />
+  <div className='d-flex flex-column align-self-center mt-3'>
+    <p className='mb-4'>
+      Share the details of your project – like scope, time frames, or
+      business challenges. Our team will carefully study them and then
+      we’ll figure out the next move together.
+    </p>
+    <form onSubmit={handleSubmit}>
+      <div className="row gh-1 gv-2">
+        <div className="col-12 col-md-6">
+          <InputGroup
+            name="firstName"
+            placeholder="First Name*"
+            type="text"
+            value={values.firstName}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            error={
+              errors.firstName && touched.firstName ? errors.firstName : undefined
+            }
+          />
+        </div>
+        <div className="col-12 col-md-6 ">
+          <InputGroup
+            type="text"
+            name="lastName"
+            value={values.lastName}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            placeholder="Last Name*"
+            error={
+              errors.lastName && touched.lastName ? errors.lastName : undefined
+            }
+          />
+        </div>
+        <div className="col-12 col-md-6 ">
+          <InputGroup
+            name="email"
+            type="email"
+            value={values.email}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            placeholder="Email*"
+            error={errors.email && touched.email ? errors.email : undefined}
+          />
+        </div>
+        <div className="col-12 col-md-6 ">
+          <InputGroup
+            name="phone"
+            type="text"
+            value={values.phone}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            placeholder="Phone Number*"
+            error={errors.phone && touched.phone ? errors.phone : undefined}
+          />
+        </div>
+        <div className="col-12 col-md-6 ">
+          <InputGroup
+            name="projectType"
+            type="text"
+            value={values.projectType}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            placeholder="Project Type*"
+            error={
+              errors.projectType && touched.projectType
+                ? errors.projectType
+                : undefined
+            }
+          />
+        </div>
+        <div className="col-12 col-md-6 ">
+          <InputGroup
+            name="company"
+            type="text"
+            value={values.company}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            placeholder="Company Name"
+            error={errors.company && touched.company ? errors.company : undefined}
+          />
+        </div>
+        <div className="col-12 ">
+          <TextAreaGroup
+            rows="1"
+            placeholder="About Project*"
+            name="message"
+            type="text"
+            value={values.message}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            error={errors.message && touched.message ? errors.message : undefined}
+          />
+        </div>
+        <div className="col-12 ">
+          {isSubmitting ? (
+            <LoadingButton className="spinner-border" role="status">
+              <span className="sr-only">Loading...</span>
+            </LoadingButton>
+          ) : (
+            <button
+              className="btn btn-black"
+              type="submit"
+              disabled={isSubmitting}
+            >
+              Send
+            </button>
+          )}
+        </div>
       </div>
-      <div className="col-12 col-md-6 ">
-        <InputGroup
-          type="text"
-          name="lastName"
-          value={values.lastName}
-          onChange={handleChange}
-          onBlur={handleBlur}
-          placeholder="Last Name*"
-          error={
-            errors.lastName && touched.lastName ? errors.lastName : undefined
-          }
-        />
-      </div>
-      <div className="col-12 col-md-6 ">
-        <InputGroup
-          name="email"
-          type="email"
-          value={values.email}
-          onChange={handleChange}
-          onBlur={handleBlur}
-          placeholder="Email*"
-          error={errors.email && touched.email ? errors.email : undefined}
-        />
-      </div>
-      <div className="col-12 col-md-6 ">
-        <InputGroup
-          name="phone"
-          type="text"
-          value={values.phone}
-          onChange={handleChange}
-          onBlur={handleBlur}
-          placeholder="Phone Number*"
-          error={errors.phone && touched.phone ? errors.phone : undefined}
-        />
-      </div>
-      <div className="col-12 col-md-6 ">
-        <InputGroup
-          name="projectType"
-          type="text"
-          value={values.projectType}
-          onChange={handleChange}
-          onBlur={handleBlur}
-          placeholder="Project Type*"
-          error={
-            errors.projectType && touched.projectType
-              ? errors.projectType
-              : undefined
-          }
-        />
-      </div>
-      <div className="col-12 col-md-6 ">
-        <InputGroup
-          name="company"
-          type="text"
-          value={values.company}
-          onChange={handleChange}
-          onBlur={handleBlur}
-          placeholder="Company Name"
-          error={errors.company && touched.company ? errors.company : undefined}
-        />
-      </div>
-      <div className="col-12 ">
-        <TextAreaGroup
-          rows="1"
-          placeholder="About Project*"
-          name="message"
-          type="text"
-          value={values.message}
-          onChange={handleChange}
-          onBlur={handleBlur}
-          error={errors.message && touched.message ? errors.message : undefined}
-        />
-      </div>
-      <div className="col-12 ">
-        {isSubmitting ? (
-          <LoadingButton className="spinner-border" role="status">
-            <span className="sr-only">Loading...</span>
-          </LoadingButton>
-        ) : (
-          <button
-            className="btn btn-black"
-            type="submit"
-            disabled={isSubmitting}
-          >
-            Send
-          </button>
-        )}
-      </div>
-    </div>
-  </form>
+    </form>
+  </div>
 );
 
 export default withFormik({

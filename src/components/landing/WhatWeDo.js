@@ -31,6 +31,12 @@ const WhatWeDo = () => (
   <Wrapper>
     <section className="section pricing-plans bg-white">
       <div className="container">
+        <div className="col-12 has-anim fade">
+          <div className="section-title text-center">
+            <h2 className="title text-dark">What We Do ?</h2>
+            <p className='font-weight-700'>We understand how to deliver engaging and successful eCommerce experiences</p>
+          </div>
+        </div>
         <div className="row no-gutters justify-content-center align-items-center">
           {data &&
             data.map((item) => (
@@ -41,47 +47,33 @@ const WhatWeDo = () => (
                 <div
                   className={`block border  ${item.isDark ? 'bg-dark' : ''}`}
                 >
-                  <h5
-                    className={`font-weight-500 ${
-                      item.isDark ? 'bg-dark' : ''
-                    }`}
-                  >
-                    Standard subscription
-                  </h5>
                   <div className="price-wrapper">
-                    <span
-                      className={`price ${
-                        item.isDark ? 'text-white' : 'text-dark'
-                      }`}
+                    <h3
+                      className={`font-weight-100 font ${item.isDark ? 'text-white' : 'text-dark'
+                        }`}
                     >
-                      $3,500
-                    </span>
-                    <span>/ month</span>
+
+                      Sell more online
+                    </h3>
                   </div>
                   <div
-                    className={`content  ${
-                      item.isDark
-                        ? 'text-light content-dark'
-                        : 'text-dark content-light'
-                    }`}
+                    className={`content  ${item.isDark
+                      ? 'text-light content-dark'
+                      : 'text-dark content-light'
+                      }`}
                   >
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Velit amet suscipit non.
-                    </p>
-                    <h6>What you get with Standard</h6>
                     <ul className="pl-0">
-                      <li>10 User</li>
-                      <li>Unlimited Bandwidth</li>
-                      <li>Whitelabelling</li>
-                      <li>Priority Support</li>
-                      <li>File Uploader</li>
+                      <li>Fully customizable online store</li>
+                      <li>Enterprise-level security</li>
+                      <li>50+ payment providers</li>
+                      <li>Secure cart &amp; checkout</li>
+                      <li>Gift cards &amp; product subscriptions</li>
+                      <li>Point of sale solution (in-store &amp; online)</li>
                     </ul>
                     <a
                       href="contact.html"
-                      className={`btn btn-block mt-3 ${
-                        item.isDark ? 'btn-white' : 'btn-black'
-                      }`}
+                      className={`btn btn-block mt-3 ${item.isDark ? 'btn-white' : 'btn-black'
+                        }`}
                       data-text="I Want This"
                     >
                       <span>I Want This</span>

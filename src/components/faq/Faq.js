@@ -4,21 +4,39 @@ import FaqItem from './FaqItem';
 const faqItems = [
   {
     id: 1,
-    title: 'Can I try before I buy?',
+    title: 'What is an eCommerce website?',
     description:
-      'Yes sign up today and let our activation team walk you through the DEMO.The service is free.      ',
+      'An eCommerce website can either be business-to-business (B2B), business-to-customer (B2C) or customer-to-customer (C2C). These websites give businesses and individuals the ability to sell or buy products or services online.',
   },
   {
     id: 2,
-    title: 'What payment methods does ListMe accept?',
+    title: 'How long does it take to build an eCommerce website?',
     description:
-      'As long as you have a bank account registered in your country we can get you up and running in no time. You can start accepting mobile payments right away. (cashless society)',
+      'A typical eCommerce website project will take up to 12 weeks to complete. But we don’t stop there, we will guide and support you as your business grows and challenges throughout your journey.',
   },
   {
     id: 3,
-    title: 'How do I create events?',
+    title: 'How much does an eCommerce website cost?',
     description:
-      'Once your account is activated you can create the events via the dashboard. Simple and easy.',
+      'The short answer is that a custom eCommerce website will determined by the following factors like design, functionality, development, integration, support and maintenance, company selection and marketing and SEO. To get the right quote for customized eCommerce solutions, you can get in touch with our eCommerce development experts.',
+  },
+  {
+    id: 4,
+    title: 'How will you manage my project?',
+    description:
+      'Our team of account managers and skilled developers will work with you every step of the way ensuring you are always up to date with the development process and provide feedback at every stage.',
+  },
+  {
+    id: 5,
+    title: 'I have an existing online business website. Can you upgrade it? ',
+    description:
+      'Yes! We specialise in developing custom eCommerce website design and web development, so we can work with your existing website and upgrade it to match your requirements. ',
+  },
+  {
+    id: 6,
+    title: 'Do you support me and my business after the platform is built?',
+    description:
+      ' Yes. We offer you the full support of our expert eCommerce development and agency team. From project managers, UX designers, digital managers, developers and even advice from our in-house marketing team, a full support system is in place for your business.',
   },
 ];
 
@@ -28,11 +46,6 @@ const Faq = () => (
       <div>
         <div className="mb-4">
           <h4 className="text-dark mb-3"> Frequently Asked Questions</h4>
-          <p>
-            Share the details of your project – like scope, time frames, or
-            business challenges. Our team will carefully study them and then
-            we’ll figure out the next move together.
-          </p>
         </div>
         {faqItems &&
           faqItems.map((item) => <FaqItem key={item.id} data={item} />)}

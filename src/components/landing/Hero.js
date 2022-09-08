@@ -52,27 +52,24 @@ const PageHero = () => (
             </div>
           </div>
         </div>
-        <div className="col-lg-7">
+        <div className="col-lg-7 d-flex flex-column align-self-center">
           <div className="pl-0 pl-lg-4">
             <div className="about-me-block text-white">
-              <p className="mb-3 font-weight-500 text-light">
-                Hey! m Vincent Londez
-              </p>
               <h2 className="text-white font-weight-500 ">
-                A Product designer <br /> based in St. Petersburg.
+                Start Selling  <br /> Your Business Online.
               </h2>
+              <p className="mb-3 font-weight-500 text-light">
+                Grow Your Ecommerce Sales Quicker, Smarter &amp; Further
+              </p>
 
               <div className="mt-4">
                 <p>
-                  e always tried to give equal importance to story-telling and
-                  composition, balancing the two. Tried to transform the cgi
-                  work as a new way to express oneself. Also m mimini periores
-                  vitae.
+                  Take the next step for Your Business with an online shop where you can easily manage products and orders and take payments securely.
                 </p>
               </div>
             </div>
 
-            <div className="about-me-block">
+            {/* <div className="about-me-block">
               <h2 className="h4 about-me-title text-underline text-white font-weight-light font-italic text-monospace">
                 Main expertise:
               </h2>
@@ -100,9 +97,9 @@ const PageHero = () => (
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            <div className="about-me-block">
+            {/* <div className="about-me-block">
               <h2 className="h4 about-me-title text-underline text-white font-weight-light font-italic text-monospace has-anim ">
                 Work experiances:
               </h2>
@@ -163,7 +160,7 @@ const PageHero = () => (
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

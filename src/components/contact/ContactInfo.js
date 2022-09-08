@@ -41,13 +41,18 @@ const ContactInfo = ({ contactData, isFaq }) => {
         <div className="row justify-content-center">
           <div className="col-xl-11">
             <div className="block">
+              <div className="col-12 has-anim fade">
+                <div className="section-title text-center">
+                  <h2 className="title text-dark">Want to increase your eCommerce sales? Get started today</h2>
+                </div>
+              </div>
               <div className="row justify-content-center">
                 <div className="col-lg-6 mb-5 mb-lg-0">
                   <div className="pr-0 pr-lg-4">
                     {isFaq ? <Faq /> : <Details contactData={contactData} />}
                   </div>
                 </div>
-                <div className="col-lg-6">
+                <div className="col-lg-6 d-flex">
                   <ContactForm onSubmit={(val) => handleSubmit(val)} />
                 </div>
               </div>
