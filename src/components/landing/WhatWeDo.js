@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Link from 'next/link';
 
 const Wrapper = styled.div`
   .pricing-plans .block {
@@ -119,15 +120,16 @@ const WhatWeDo = () => (
                         item.list &&
                         item.list.map((el) => <li>{el.title}</li>)}
                     </ul>
-                    <a
-                      href="contact.html"
-                      className={`btn btn-block mt-3 ${
-                        item.isDark ? 'btn-white' : 'btn-black'
-                      }`}
-                      data-text="I Want This"
-                    >
-                      <span>I Want This</span>
-                    </a>
+                    <Link href="/contact">
+                      <a
+                        className={`btn btn-block mt-3 ${
+                          item.isDark ? 'btn-white' : 'btn-black'
+                        }`}
+                        data-text="Get In Touch"
+                      >
+                        <span>Get In Touch</span>
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>
