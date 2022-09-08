@@ -7,8 +7,8 @@ import {
   getMdxFromDir,
 } from '../../utils/helpers';
 import config from '../../utils/config';
-import homeData from '../../../content/general/home.yaml';
 import contactData from '../../../content/general/contact.yaml';
+import whatWeDoData from '../../../content/general/whatWeDo.yaml';
 
 import Layout from '../../components/Layout';
 import PostHero from '../../components/landing/Hero';
@@ -45,7 +45,7 @@ const BlogPost = ({ page, projects }) => {
       />
       <PostHero page={page} />
       <WhatWeDo />
-      <HomeServices data={homeData} />
+      <HomeServices data={whatWeDoData} />
       <RecentProjects projects={projects} />
       <Testimonials />
       <ContactInfo contactData={contactData} isFaq />

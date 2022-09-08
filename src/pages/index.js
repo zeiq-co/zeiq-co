@@ -13,6 +13,7 @@ import Testimonials from '../components/home/Testimonials';
 import Technologies from '../components/home/Technologies';
 import LatestPosts from '../components/home/LatestPosts';
 import homeData from '../../content/general/home.yaml';
+import whatWeDoData from '../../content/general/whatWeDo.yaml';
 
 function Index({ projects, posts, technologies }) {
   return (
@@ -37,7 +38,7 @@ function Index({ projects, posts, technologies }) {
       />
       <HomeHero data={homeData} />
       <HomeAbout data={homeData} />
-      <HomeServices data={homeData} />
+      <HomeServices data={whatWeDoData} />
       <RecentProjects projects={projects} />
       <WorkProcess />
       <Testimonials />

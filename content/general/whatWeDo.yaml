@@ -1,0 +1,26 @@
+- one:
+  category: home
+  title: Design & Branding
+  subtitle: We build simple, beautiful and differentiated digital products what users want.
+  image: /images/service/branding.svg
+  linkTo: /services/design-thinking
+- two:
+  category: home
+  title: Digital Marketing
+  subtitle: Increase your sales thanks to our services tailor-made to your client’s need.
+  image: /images/service/marketing.svg
+  linkTo: /services/marketing
+- three:
+  category: home
+  title: Web Application
+  subtitle: Choose proven technologies, ensuring unlimited possibilities for your site.
+  image: /images/service/webApp.svg
+  linkTo: /services/development
+- four:
+  category: home
+  title: Software Development
+  subtitle: We offer tailor-made software solutions
+  image: /images/service/software-dev.svg
+  linkTo: /services/software-development
+
+
