@@ -1,17 +1,17 @@
 const jqueryLoad = () => {
-  console.log("page loaded");
+  console.log('page loaded');
   !(function (i) {
-    "use strict";
+    'use strict';
 
     function e() {
-      var o = document.querySelector(".scroll-progress path"),
+      var o = document.querySelector('.scroll-progress path'),
         s = o.getTotalLength();
-      (o.style.transition = o.style.WebkitTransition = "none"),
-        (o.style.strokeDasharray = s + " " + s),
+      (o.style.transition = o.style.WebkitTransition = 'none'),
+        (o.style.strokeDasharray = s + ' ' + s),
         (o.style.strokeDashoffset = s),
         o.getBoundingClientRect(),
         (o.style.transition = o.style.WebkitTransition =
-          "stroke-dashoffset 10ms linear");
+          'stroke-dashoffset 10ms linear');
 
       function e() {
         var e = i(window).scrollTop(),
@@ -19,15 +19,15 @@ const jqueryLoad = () => {
         o.style.strokeDashoffset = s - (e * s) / t;
       }
       e(), i(window).scroll(e);
-      jQuery(window).on("scroll", function () {
+      jQuery(window).on('scroll', function () {
         50 < jQuery(this).scrollTop()
-          ? jQuery(".scroll-progress").addClass("active-progress")
-          : jQuery(".scroll-progress").removeClass("active-progress");
+          ? jQuery('.scroll-progress').addClass('active-progress')
+          : jQuery('.scroll-progress').removeClass('active-progress');
       }),
-        jQuery(".scroll-progress").on("click", function (e) {
+        jQuery('.scroll-progress').on('click', function (e) {
           return (
             e.preventDefault(),
-            jQuery("html, body").animate(
+            jQuery('html, body').animate(
               {
                 scrollTop: 0,
               },
@@ -39,27 +39,25 @@ const jqueryLoad = () => {
     }
 
     function s() {
-      i(".has-anim").each(function () {
+      i('.has-anim').each(function () {
         var e, t, o, s;
         !0 ==
           ((e = this),
           (t = i(window).scrollTop()),
           (o = t + i(window).height()),
           (s = i(e).offset().top) + i(e).height() / 4 <= o && t <= s) &&
-          i(this).addClass("visible");
+          i(this).addClass('visible');
       });
     }
-
     $(document).ready(function () {
       $('.is-hero-fade').fadeIn(2000).removeClass('.is-hero-fade');
     });
-
     (i.fn.nextOrFirst = function (e) {
       var t = this.next(e);
       return t.length ? t : this.prevAll(e).last();
     }),
-      i(".work-process-item").hover(function () {
-        i(".work-process-item").removeClass("focus"), i(this).addClass("focus");
+      i('.work-process-item').hover(function () {
+        i('.work-process-item').removeClass('focus'), i(this).addClass('focus');
       }),
       i(document).ready(function () {
         var t;
@@ -68,37 +66,178 @@ const jqueryLoad = () => {
             var e =
               document.documentElement.scrollTop || document.body.scrollTop;
             300 < e && t <= e
-              ? ((t = e), i(".navigation").addClass("header-unpinned"))
-              : ((t = e), i(".navigation").removeClass("header-unpinned"));
+              ? ((t = e), i('.navigation').addClass('header-unpinned'))
+              : ((t = e), i('.navigation').removeClass('header-unpinned'));
           }),
-          i('[data-toggle="navbar-menu"]').on("click", function () {
-            i(this).attr("data-navbar", "visible"),
-              i(".navigation").addClass("visible"),
-              i("#navbar-menu").addClass("show"),
-              i(".sidenav-overlay").addClass("show");
+          i('[data-toggle="navbar-menu"]').on('click', function () {
+            i(this).attr('data-navbar', 'visible'),
+              i('.navigation').addClass('visible'),
+              i('#navbar-menu').addClass('show'),
+              i('.sidenav-overlay').addClass('show');
           }),
           i('[data-toggle="navbar-menu-close"], .sidenav-overlay').on(
-            "click",
+            'click',
             function () {
-              i('[data-toggle="navbar-menu"]').attr("data-navbar", "hidden"),
-                i(".navigation").removeClass("visible"),
-                i("#navbar-menu").removeClass("show"),
-                i(".sidenav-overlay").removeClass("show");
+              i('[data-toggle="navbar-menu"]').attr('data-navbar', 'hidden'),
+                i('.navigation').removeClass('visible'),
+                i('#navbar-menu').removeClass('show'),
+                i('.sidenav-overlay').removeClass('show');
             },
           ),
           e(),
           i(window).scroll(function () {
             var e;
             s(),
-              (e = 0 + i(window).scrollTop() / 3 + "deg"),
-              i(".user-image .shape").css({
-                "-webkit-transform": "rotateZ(" + e + ")",
-                "-moz-transform": "rotateZ(" + e + ")",
-                "-ms-transform": "rotateZ(" + e + ")",
-                "-o-transform": "rotateZ(" + e + ")",
-                transform: "rotateZ(" + e + ")",
+              (e = 0 + i(window).scrollTop() / 3 + 'deg'),
+              i('.user-image .shape').css({
+                '-webkit-transform': 'rotateZ(' + e + ')',
+                '-moz-transform': 'rotateZ(' + e + ')',
+                '-ms-transform': 'rotateZ(' + e + ')',
+                '-o-transform': 'rotateZ(' + e + ')',
+                transform: 'rotateZ(' + e + ')',
               });
           });
+      }),
+      i(window).on('load', function () {
+        var t, o, e;
+        (t = new Swiper('.portfolio-carousel-fluid .swiper-container', {
+          slidesPerView: 2,
+          spaceBetween: 0,
+          speed: 600,
+          loop: !0,
+          centeredSlides: !0,
+          preloadImages: !1,
+          lazy: !0,
+          breakpoints: {
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 0,
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 0,
+            },
+            767: {
+              slidesPerView: 2,
+              spaceBetween: 0,
+            },
+            991: {
+              slidesPerView: 2,
+              spaceBetween: 0,
+            },
+          },
+          pagination: {
+            el: '.portfolio-carousel-fluid .swiper-pagination',
+            type: 'progressbar',
+          },
+          navigation: {
+            nextEl: '.portfolio-carousel-fluid .swiper-button.next',
+            prevEl: '.portfolio-carousel-fluid .swiper-button.prev',
+          },
+        })).on('slideChange', function () {
+          var e = t.realIndex;
+          i('.activeslide').html('0' + (e + 1));
+        }),
+          (o = new Swiper('.review-carousel .swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed: 600,
+            loop: !1,
+            autoHeight: !0,
+          })).on('slideChange', function () {
+            var e = o.realIndex;
+            i('.activeslide').html('0' + (e + 1));
+          }),
+          new Swiper('.team-group-carousel .swiper-container', {
+            slidesPerView: 2,
+            spaceBetween: 80,
+            speed: 1e3,
+            loop: !0,
+            preloadImages: !1,
+            lazy: !0,
+            breakpoints: {
+              0: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+              },
+              640: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+              },
+              767: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+              },
+              991: {
+                slidesPerView: 2,
+                spaceBetween: 60,
+              },
+            },
+            on: {
+              touchStart: function () {
+                i('.team-group-image img').addClass('hold');
+              },
+              touchEnd: function () {
+                i('.team-group-image img').removeClass('hold');
+              },
+              slideChange: function () {
+                i('.team-group-image img').removeClass('hold');
+              },
+            },
+          }),
+          i('.mesonaryInit').isotope(),
+          i('.floating-info-block').each(function () {
+            i(this)
+              .on('mouseenter', function () {
+                i(this).data('title') &&
+                  (i('.floating-info-block-tile').html(
+                    '<span class="card-subtitle font-weight-500 small mb-1">' +
+                      i(this).data('category') +
+                      '</span><h4 class="card-title mb-0 font-weight-bold">' +
+                      i(this).data('title') +
+                      '</h4>',
+                  ),
+                  i('.floating-info-block-tile').addClass('visible')),
+                  i(document).on('mousemove', function (e) {
+                    i('.floating-info-block-tile').css({
+                      left: e.clientX + 15,
+                      top: e.clientY + 20,
+                    });
+                  });
+              })
+              .on('mouseleave', function () {
+                i('.floating-info-block-tile').removeClass('visible');
+              });
+          }),
+          i('.floating-image-block .block').each(function () {
+            i(this)
+              .on('mouseenter', function () {
+                i(this).addClass('enter'),
+                  i(document).on('mousemove', function (e) {
+                    i('.floating-image').css({
+                      left: e.clientX - 50,
+                      top: e.clientY - 50,
+                    });
+                  });
+              })
+              .on('mouseleave', function () {
+                i(this).removeClass('enter');
+              });
+          }),
+          (e = i('.fade-slider .slider-item:eq(0)').height()),
+          i('.fade-slider').css('height', e),
+          i('.fade-slider .slider-item:eq(0)').addClass('active'),
+          i('.fade-slider .slider-item:gt(0)').hide(),
+          setInterval(function () {
+            i('.active:eq(0)')
+              .fadeOut(1e3)
+              .removeClass('active')
+              .nextOrFirst('.slider-item')
+              .addClass('active')
+              .fadeIn(1e3)
+              .end();
+          }, 3e3),
+          s();
       });
   })(jQuery);
 };
