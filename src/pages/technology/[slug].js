@@ -68,7 +68,6 @@ const SingleTechnology = ({ data }) => (
 export default SingleTechnology;
 
 const filesDir = 'content/technology';
-
 export async function getStaticPaths() {
   // Retrieve all our slugs
   const paths = getPathsFromDir(filesDir);
