@@ -25,7 +25,39 @@ const Wrapper = styled.div`
   }
 `;
 
-const data = [{ id: 1 }, { id: 2, isDark: true }, { id: 3 }];
+const data = [
+  {
+    id: 1,
+    list: [
+      { title: '10 User' },
+      { title: 'Unlimited Bandwidth' },
+      { title: 'Whitelabelling' },
+      { title: 'Priority Support' },
+      { title: 'File Uploader' },
+    ],
+  },
+  {
+    id: 2,
+    list: [
+      { title: '10 User' },
+      { title: 'Unlimited Bandwidth' },
+      { title: 'Whitelabelling' },
+      { title: 'Priority Support' },
+      { title: 'File Uploader' },
+    ],
+    isDark: true,
+  },
+  {
+    id: 3,
+    list: [
+      { title: '10 User' },
+      { title: 'Unlimited Bandwidth' },
+      { title: 'Whitelabelling' },
+      { title: 'Priority Support' },
+      { title: 'File Uploader' },
+    ],
+  },
+];
 
 const WhatWeDo = () => (
   <Wrapper>
@@ -71,11 +103,9 @@ const WhatWeDo = () => (
                     </p>
                     <h6>What you get with Standard</h6>
                     <ul className="pl-0">
-                      <li>10 User</li>
-                      <li>Unlimited Bandwidth</li>
-                      <li>Whitelabelling</li>
-                      <li>Priority Support</li>
-                      <li>File Uploader</li>
+                      {item &&
+                        item.list &&
+                        item.list.map((el) => <li>{el.title}</li>)}
                     </ul>
                     <a
                       href="contact.html"
