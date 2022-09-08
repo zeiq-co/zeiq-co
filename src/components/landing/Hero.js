@@ -1,6 +1,7 @@
 /* eslint-disable import/no-unresolved */
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, Autoplay } from 'swiper';
+import Image from 'next/image';
 
 const heroSlider = [
   {
@@ -35,10 +36,10 @@ const PageHero = () => (
                     if (!item?.image) return null;
                     return (
                       <SwiperSlide>
-                        <img
-                          // height={1200}
-                          // width={800}
-                          // layout=""
+                        <Image
+                          height={1786}
+                          width={1455}
+                          layout="intrinsic"
                           className="img-fluid slider-item"
                           src={item.image}
                           alt={item.alt}
