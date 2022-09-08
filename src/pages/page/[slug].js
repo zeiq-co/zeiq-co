@@ -48,7 +48,7 @@ const BlogPost = ({ page, projects }) => {
       <HomeServices data={homeData} />
       <RecentProjects projects={projects} />
       <Testimonials />
-      <ContactInfo contactData={contactData} />
+      <ContactInfo contactData={contactData} isFaq />
     </Layout>
   );
 };
