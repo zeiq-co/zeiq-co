@@ -26,7 +26,9 @@ const Faq = () => (
   <section className="bg-white">
     <div className="row justify-content-center">
       <div className="">
-        <h5 className="text-dark mb-2 has-anim fade">General Questions</h5>
+        <h5 className="text-dark mb-2 has-anim fade">
+          Frequently Asked Questions
+        </h5>
         {faqItems &&
           faqItems.map((item) => <FaqItem key={item.id} data={item} />)}
       </div>

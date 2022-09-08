@@ -35,7 +35,7 @@ const PageHero = () => (
                   {heroSlider.map((item) => {
                     if (!item?.image) return null;
                     return (
-                      <SwiperSlide>
+                      <SwiperSlide key={item.image}>
                         <Image
                           height={1786}
                           width={1455}
