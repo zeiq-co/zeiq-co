@@ -23,6 +23,18 @@ const data = [
     source: `/work/d-&-j-foods`,
     destination: '/work/dj-food',
   },
+  {
+    source: `/page/e-commerce`,
+    destination: '/page/ecommerce',
+  },
+  {
+    source: `/ecommerce`,
+    destination: '/page/ecommerce',
+  },
+  {
+    source: `/advertisement/ecommerce`,
+    destination: '/page/ecommerce',
+  },
 ];
 
 module.exports = async () => {
