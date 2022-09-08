@@ -1,9 +1,12 @@
 import { NextSeo } from 'next-seo';
 import { getPathsFromDir, getSingleMdx } from '../../utils/helpers';
 import config from '../../utils/config';
+import homeData from '../../../content/general/home.yaml';
+
 import Layout from '../../components/Layout';
 import PostHero from '../../components/landing/Hero';
 import WhatWeDo from '../../components/landing/WhatWeDo';
+import HomeServices from '../../components/home/HomeServices';
 
 const BlogPost = ({ page }) => {
   if (!page) return null;
@@ -32,6 +35,7 @@ const BlogPost = ({ page }) => {
       />
       <PostHero post={page} />
       <WhatWeDo />
+      <HomeServices data={homeData} />
     </Layout>
   );
 };
