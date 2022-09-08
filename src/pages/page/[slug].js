@@ -1,5 +1,10 @@
 import { NextSeo } from 'next-seo';
-import { getPathsFromDir, getSingleMdx } from '../../utils/helpers';
+import { orderBy, filter } from 'lodash';
+import {
+  getPathsFromDir,
+  getSingleMdx,
+  getMdxFromDir,
+} from '../../utils/helpers';
 import config from '../../utils/config';
 import homeData from '../../../content/general/home.yaml';
 
@@ -7,8 +12,10 @@ import Layout from '../../components/Layout';
 import PostHero from '../../components/landing/Hero';
 import WhatWeDo from '../../components/landing/WhatWeDo';
 import HomeServices from '../../components/home/HomeServices';
+import RecentProjects from '../../components/home/RecentProjects';
+import Testimonials from '../../components/home/Testimonials';
 
-const BlogPost = ({ page }) => {
+const BlogPost = ({ page, projects }) => {
   if (!page) return null;
   return (
     <Layout>
@@ -36,6 +43,8 @@ const BlogPost = ({ page }) => {
       <PostHero post={page} />
       <WhatWeDo />
       <HomeServices data={homeData} />
+      <RecentProjects projects={projects} />
+      <Testimonials />
     </Layout>
   );
 };
@@ -60,9 +69,14 @@ export async function getStaticProps({ params: { slug } }) {
   const { data: frontmatter, content } = getSingleMdx(
     `${filesDir}/${slug}.mdx`,
   );
+  let projects = getMdxFromDir('content/work');
+  projects = filter(projects, (item) => item.isFeatured === true);
+  projects = orderBy(projects, ['listingOrder'], ['asc']);
+  projects = projects.slice(0, 8);
   return {
     props: {
       page: { content, slug, ...frontmatter },
+      projects,
     },
     revalidate: 3600, // in seconds (1 hour)
   };
