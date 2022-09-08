@@ -43,7 +43,7 @@ const BlogPost = ({ page, projects }) => {
           ],
         }}
       />
-      <PostHero post={page} />
+      <PostHero page={page} />
       <WhatWeDo />
       <HomeServices data={homeData} />
       <RecentProjects projects={projects} />

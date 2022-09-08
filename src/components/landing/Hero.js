@@ -3,22 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, Autoplay } from 'swiper';
 import Image from 'next/image';
 
-const heroSlider = [
-  {
-    image: '/images/landing/ecommerce1.png',
-    alt: 'Ecommerce Zeiq',
-  },
-  {
-    image: '/images/landing/ecommerce2.png',
-    alt: 'Ecommerce Zeiq',
-  },
-  {
-    image: '/images/landing/ecommerce3.png',
-    alt: 'E-commerce Zeiq',
-  },
-];
-
-const PageHero = () => (
+const PageHero = ({ page }) => (
   <section className="mt-5 pt-3">
     <div className="container">
       <div className="row">
@@ -32,21 +17,23 @@ const PageHero = () => (
                   loop
                   autoplay
                 >
-                  {heroSlider.map((item) => {
-                    if (!item?.image) return null;
-                    return (
-                      <SwiperSlide key={item.image}>
-                        <Image
-                          height={1786}
-                          width={1455}
-                          layout="intrinsic"
-                          className="img-fluid slider-item"
-                          src={item.image}
-                          alt={item.alt}
-                        />
-                      </SwiperSlide>
-                    );
-                  })}
+                  {page &&
+                    page.heroSliderImages.map((item) => {
+                      console.log('item', item);
+                      if (!item.image) return null;
+                      return (
+                        <SwiperSlide key={item.image.src}>
+                          <Image
+                            height={1786}
+                            width={1455}
+                            layout="intrinsic"
+                            className="img-fluid slider-item"
+                            src={item.image.src}
+                            alt={item.image.alt}
+                          />
+                        </SwiperSlide>
+                      );
+                    })}
                 </Swiper>
               </div>
             </div>
