@@ -1,6 +1,6 @@
 export default async (req, res) => {
-  const token = '5784516054:AAEYyRMC7Gd2V3ueEEfyw8fA-XLBF3olhXs';
-  const chatId = '-614588922';
+  const token = process.env.TELEGRAM_TOKEN;
+  const chatId = process.env.TELEGRAM_CHAT_ID;
   const { email, firstName, lastName, message, company, phone, projectType } =
     req.body;
 
