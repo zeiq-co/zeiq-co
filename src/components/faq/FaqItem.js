@@ -11,14 +11,14 @@ const FaqItem = ({ data }) => {
             tabIndex="0"
             aria-expanded={active ? 'true' : 'false'}
             onClick={() => setActive(!active)}
-            className="d-flex justify-content-between font-w-600"
+            className="d-flex justify-content-between font-w-600 my-1"
             data-toggle="collapse"
             aria-controls="faq3"
           >
             {data.title}
           </a>
         </div>
-        <div className={`collapse ${active ? 'show' : ''}`}>
+        <div className={`collapse  ${active ? 'show' : ''}`}>
           <div className="card-body content">{data.description}</div>
         </div>
       </div>
