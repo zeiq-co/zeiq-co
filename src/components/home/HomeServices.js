@@ -195,7 +195,7 @@ const HomeServices = () => (
             >
               ━━
             </span>
-          </div>
+          </div>   
         </div>
 
         {/* <div className="col-12">
