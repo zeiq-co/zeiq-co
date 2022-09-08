@@ -167,52 +167,6 @@ const PageHero = () => (
                 </div>
               </div>
             </div>
-
-            <div className="about-me-block">
-              <h2 className="h4 about-me-title text-underline text-white font-weight-light font-italic text-monospace has-anim ">
-                My clients & companies:
-              </h2>
-
-              <div className="row">
-                <div className="col-md-3 col-4 has-anim ">
-                  <img
-                    className="img-fluid pr-1 pr-sm-4 mb-4 pb-1"
-                    loading="lazy"
-                    src="/images/logo.png"
-                    alt="brands"
-                  />
-                </div>
-                <div className="col-md-3 col-4 has-anim  anim-delay-3">
-                  <img
-                    className="img-fluid pr-1 pr-sm-4 mb-4 pb-1"
-                    loading="lazy"
-                    src="/images/logo.png"
-                    alt="brands"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="about-me-block">
-              <h2 className="h4 about-me-title text-underline text-white font-weight-light font-italic text-monospace has-anim ">
-                Recognitions:
-              </h2>
-
-              <div>
-                <p className="h5 font-weight-light text-white mb-3 has-anim ">
-                  FWA of the Month{' '}
-                  <span className="mx-2 d-inline-block text-muted">━━</span> 3x
-                </p>
-                <p className="h5 font-weight-light text-white mb-3 has-anim  anim-delay-2">
-                  Awwwards, Site of the Day{' '}
-                  <span className="mx-2 d-inline-block text-muted">━━</span> 2x
-                </p>
-                <p className="h5 font-weight-light text-white mb-0 has-anim  anim-delay-3">
-                  CSS Design Awards, Website of the Month{' '}
-                  <span className="mx-2 d-inline-block text-muted">━━</span> 2x
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
