@@ -3,6 +3,7 @@ import { getPathsFromDir, getSingleMdx } from '../../utils/helpers';
 import config from '../../utils/config';
 import Layout from '../../components/Layout';
 import PostHero from '../../components/landing/Hero';
+import WhatWeDo from '../../components/landing/WhatWeDo';
 
 const BlogPost = ({ page }) => {
   if (!page) return null;
@@ -30,6 +31,7 @@ const BlogPost = ({ page }) => {
         }}
       />
       <PostHero post={page} />
+      <WhatWeDo />
     </Layout>
   );
 };
