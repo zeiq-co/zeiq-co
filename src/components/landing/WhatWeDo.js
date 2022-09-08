@@ -28,6 +28,11 @@ const Wrapper = styled.div`
 const data = [
   {
     id: 1,
+    type: 'Standard subscription',
+    title: '1200',
+    subtitle:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit amet suscipit non.',
+    body: 'Lorem ipsum dolor ',
     list: [
       { title: '10 User' },
       { title: 'Unlimited Bandwidth' },
@@ -38,6 +43,12 @@ const data = [
   },
   {
     id: 2,
+    type: 'Standard subscription',
+    title: '1200',
+    subtitle:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit amet suscipit non.',
+    body: 'Lorem ipsum dolor ',
+
     list: [
       { title: '10 User' },
       { title: 'Unlimited Bandwidth' },
@@ -49,6 +60,11 @@ const data = [
   },
   {
     id: 3,
+    type: 'Standard subscription',
+    title: '1200',
+    subtitle:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit amet suscipit non.',
+    body: 'Lorem ipsum dolor ',
     list: [
       { title: '10 User' },
       { title: 'Unlimited Bandwidth' },
@@ -78,7 +94,7 @@ const WhatWeDo = () => (
                       item.isDark ? 'bg-dark' : ''
                     }`}
                   >
-                    Standard subscription
+                    {item.type}
                   </h5>
                   <div className="price-wrapper">
                     <span
@@ -86,9 +102,8 @@ const WhatWeDo = () => (
                         item.isDark ? 'text-white' : 'text-dark'
                       }`}
                     >
-                      $3,500
+                      {item.title}
                     </span>
-                    <span>/ month</span>
                   </div>
                   <div
                     className={`content  ${
@@ -97,11 +112,8 @@ const WhatWeDo = () => (
                         : 'text-dark content-light'
                     }`}
                   >
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Velit amet suscipit non.
-                    </p>
-                    <h6>What you get with Standard</h6>
+                    <p>{item.subtitle}</p>
+                    <h6>{item.body}</h6>
                     <ul className="pl-0">
                       {item &&
                         item.list &&
