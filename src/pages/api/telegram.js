@@ -9,13 +9,13 @@ export default async (req, res) => {
   }
   try {
     const result = `
-     <strong>New Customer</strong>
-        - Email Address: ${email}
-        - Customer: ${firstName} ${lastName}
-        - Phone: ${phone}
-        - Message: ${message}
-        - Project Type: ${projectType}
-        - Company: ${company}
+        <strong>New Customer</strong>
+        Email Address: ${email}
+        Customer: ${firstName} ${lastName}
+        Phone: ${phone}
+        Message: ${message}
+        Project Type: ${projectType}
+        Company: ${company}
         `;
     await fetch(
       `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${result}&parse_mode=HTML`,
