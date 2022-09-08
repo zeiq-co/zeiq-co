@@ -7,7 +7,7 @@ import Faq from '../faq/Faq';
 const ContactInfo = ({ contactData, isFaq }) => {
   const handleSubmit = async (e) => {
     // eslint-disable-next-line no-undef
-    const res = await fetch('/api/subscribe', {
+    const res = await fetch('/api/telegram', {
       headers: {
         'Content-Type': 'application/json',
       },
@@ -26,9 +26,13 @@ const ContactInfo = ({ contactData, isFaq }) => {
     const { error } = await res.json();
     console.log(error, 'error');
     if (error === 'Success') {
-      swal('Success!', '🎉  Subscribed successfully', 'success');
+      swal(
+        'Success!',
+        '🎉 Thanks for submitting. we will contact you shortly.',
+        'success',
+      );
     } else {
-      swal('Already Subscribed!', error, 'error');
+      swal('Try Again', error, 'error');
     }
   };
   return (
