@@ -1,5 +1,6 @@
 import { NextSeo } from 'next-seo';
 import { orderBy, filter } from 'lodash';
+
 import {
   getPathsFromDir,
   getSingleMdx,
@@ -7,6 +8,7 @@ import {
 } from '../../utils/helpers';
 import config from '../../utils/config';
 import homeData from '../../../content/general/home.yaml';
+import contactData from '../../../content/general/contact.yaml';
 
 import Layout from '../../components/Layout';
 import PostHero from '../../components/landing/Hero';
@@ -14,6 +16,7 @@ import WhatWeDo from '../../components/landing/WhatWeDo';
 import HomeServices from '../../components/home/HomeServices';
 import RecentProjects from '../../components/home/RecentProjects';
 import Testimonials from '../../components/home/Testimonials';
+import ContactInfo from '../../components/contact/ContactInfo';
 
 const BlogPost = ({ page, projects }) => {
   if (!page) return null;
@@ -45,6 +48,7 @@ const BlogPost = ({ page, projects }) => {
       <HomeServices data={homeData} />
       <RecentProjects projects={projects} />
       <Testimonials />
+      <ContactInfo contactData={contactData} />
     </Layout>
   );
 };
