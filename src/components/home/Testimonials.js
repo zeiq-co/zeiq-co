@@ -16,6 +16,11 @@ const Testimonials = ({ category }) => {
   return (
     <section className="section bg-white review-carousel">
       <div className="container">
+        <div className="col-12 has-anim fade">
+          <div className="section-title text-center">
+            <h2 className="title text-dark">What Our Clients Say?</h2>
+          </div>
+        </div>
         <div className="row justify-content-center">
           <div className="col-lg-9 has-anim fade">
             <div className="swiper-container">

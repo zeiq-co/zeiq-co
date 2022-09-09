@@ -1,4 +1,4 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 import Image from 'next/image';
 import { filter } from 'lodash';
 
@@ -9,6 +9,12 @@ const HomeServices = ({ data, category }) => {
   return (
     <section className="section">
       <div className="container">
+        <div className="col-12 has-anim fade">
+          <div className="section-title text-center">
+            <h2 className="title text-white">How We Work on it?</h2>
+            <p className="mb-2">E-Commerce Development Process</p>
+          </div>
+        </div>
         <div className="row">
           {filteredData &&
             filteredData.map((item) => (
@@ -35,18 +41,18 @@ const HomeServices = ({ data, category }) => {
                   >
                     ━━
                   </span>
-                  {item.linkTo && (
+                  {/* {item.linkTo && (
                     <p>
                       <Link href={item.linkTo}>
                         <a>Learn more</a>
                       </Link>
                     </p>
-                  )}
+                  )} */}
                 </div>
               </div>
             ))}
 
-          <div className="col-12">
+          {/* <div className="col-12">
             <Link href="/services">
               <a className="line-link">
                 All Services{' '}
@@ -65,7 +71,7 @@ const HomeServices = ({ data, category }) => {
                 </svg>
               </a>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

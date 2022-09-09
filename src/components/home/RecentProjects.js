@@ -198,8 +198,15 @@ const RecentProjects = ({ projects }) => {
         <div className="row">
           <div className="col-12 has-anim fade">
             <div className="section-title text-center">
-              <p className="mb-2">Recent works</p>
-              <h2 className="title text-dark">Selected Projects</h2>
+              <h2 className="title text-dark">
+                Glimpse of Our Ecommerce Projects
+              </h2>
+              <p className="mb-2">
+                Check out our latest case studies and learn about how we helped
+                worldwide companies
+                <br /> to reach an efficient outcome for their eCommerce
+                business.
+              </p>
             </div>
           </div>
         </div>

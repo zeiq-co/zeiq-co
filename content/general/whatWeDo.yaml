@@ -24,27 +24,25 @@
   linkTo: /services/software-development
 - five:
   category: ecommerce
-  title: Gathering requirement
-  subtitle: This is the time to make the right path to your e-commerce success. By learning about your e-commerce goal, business objective, customers as well as your competitors, we collect your complete information about the main objective of your website and how we could meet your requirements.
+  title: Gathering requirements & Project Planning
+  subtitle: We take you right to your eCommerce success. Here, We collect your project's complete information, gather requirements and define the scope of work. All development plans and defining terms of cooperation decides in this stage.
   image: /images/service/branding.svg
   linkTo: /services/design-thinking
 - siz:
   category: ecommerce
-  title: Planning and Discovery
-  subtitle: Designing mock-ups for clients to show a great and eye-catching user experience. It involves theme selection, menus, and icons placement. The client can suggest themes to their websites that are visible to the end users. The theme includes logos, color schemes, borders, layouts, images, etc.
+  title: Design & Development
+  subtitle: Designing wireframes & mock-ups, preparing content and project setup (setting up the development environment, code repository, creating all needed accounts, etc.) are done after planning. Then work on Development and initial testing starts.
   image: /images/service/software-dev.svg
   linkTo: /services/software-development
 - seven:
   category: ecommerce
-  title: Approval
-  subtitle: After design approval from the client, our designers and shopping cart experts customize and develop the website’s back-end functionalities. Our Designers and developers craft your e-commerce website to give a great user experience keeping the search engine in mind.
+  title: Testing & Polishing
+  subtitle: Here, we test the entire system, make final fixes and important improvements to the back-end logic. Our digital marketing specialists test the user experiences and search engine ranking factors of the website before launching.
   image: /images/service/marketing.svg
   linkTo: /services/marketing
 - eight:
   category: ecommerce
-  title: Design and development
-  subtitle: We have experienced web designing experts and e-commerce growth hacking specialists who will work on your dream project. We believe Perfect design and clean coding bring success to the project. Our dedicated team can handle open source e-commerce platforms like Magento, woo commerce, open cart, cakeshop, etc.
+  title: Launch & Support
+  subtitle: After the final approval, we move website/application to the live hosting and domain. After the successful launching of your website/app, we support and monitors your project.
   image: /images/service/webApp.svg
   linkTo: /services/development
-
-
