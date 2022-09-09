@@ -6,7 +6,7 @@
 -------------------------*/
 @import url(https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap);
 body {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
@@ -159,7 +159,7 @@ h6 {
 .line-link::after,
 .line-link::before {
   position: absolute;
-  content: "";
+  content: '';
   height: 1px;
   width: 0%;
   background-color: rgba(0, 183, 95, 0.8);
@@ -599,7 +599,7 @@ button {
   }
 }
 .section-title .title::after {
-  content: ".";
+  content: '.';
   color: #00b75f;
 }
 .lead {
@@ -636,7 +636,7 @@ textarea.form-control {
     no-repeat right 15px center;
 }
 .tooltip {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 13px;
   z-index: 9999;
 }
@@ -648,19 +648,19 @@ textarea.form-control {
   border-radius: 3px;
   padding: 8px 14px;
 }
-.bs-tooltip-auto[x-placement^="top"] .arrow::before,
+.bs-tooltip-auto[x-placement^='top'] .arrow::before,
 .bs-tooltip-top .arrow::before {
   border-top-color: #001213 !important;
 }
-.bs-tooltip-auto[x-placement^="right"] .arrow::before,
+.bs-tooltip-auto[x-placement^='right'] .arrow::before,
 .bs-tooltip-right .arrow::before {
   border-right-color: #001213 !important;
 }
-.bs-tooltip-auto[x-placement^="bottom"] .arrow::before,
+.bs-tooltip-auto[x-placement^='bottom'] .arrow::before,
 .bs-tooltip-bottom .arrow::before {
   border-bottom-color: #001213 !important;
 }
-.bs-tooltip-auto[x-placement^="left"] .arrow::before,
+.bs-tooltip-auto[x-placement^='left'] .arrow::before,
 .bs-tooltip-left .arrow::before {
   border-left-color: #001213 !important;
 }
@@ -804,7 +804,7 @@ a.text-dark:hover {
 .scroll-progress::after,
 .scroll-progress::before {
   position: absolute;
-  content: "";
+  content: '';
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='451.8' height='451.8' fill='%23ffffff'%3E%3Cpath d='M248.3 106.4l194.3 194.3a31.6 31.6 0 11-44.8 44.7L226 173.5 54 345.5a31.6 31.6 0 01-44.7-44.8l194.3-194.3a31.5 31.5 0 0144.7 0z'/%3E%3C/svg%3E");
   left: 7%;
   top: 7%;
@@ -867,26 +867,26 @@ a.text-dark:hover {
 }
 .accordion .card-header a {
   font-size: 18px;
-  padding: 20px 30px;
+  padding: 16px 20px;
   padding-right: 65px;
   background: #001213;
   color: #fff;
   position: relative;
 }
 .accordion .card-header a::after {
-  font-family: "Line Awesome Free";
+  font-family: 'Line Awesome Free';
   font-weight: 900;
-  content: "\f067";
+  content: '\f067';
   transition: 0.3s cubic-bezier(0.7, 0, 0.3, 1);
   position: absolute;
   right: 30px;
   top: 50%;
   line-height: 1;
 }
-.accordion .card-header a[aria-expanded="true"]::after {
+.accordion .card-header a[aria-expanded='true']::after {
   transform: translateY(-50%) rotate(-136deg);
 }
-.accordion .card-header a[aria-expanded="false"]::after {
+.accordion .card-header a[aria-expanded='false']::after {
   transform: translateY(-50%) rotate(0);
 }
 .content * {
@@ -963,7 +963,7 @@ a.text-dark:hover {
 }
 .content ul li::after {
   position: absolute;
-  content: "";
+  content: '';
   height: 7px;
   width: 7px;
   background-color: #000;
@@ -1017,7 +1017,7 @@ a.text-dark:hover {
 .navbar-toggler:hover svg {
   opacity: 0.7;
 }
-[data-toggle="navbar-menu-close"] {
+[data-toggle='navbar-menu-close'] {
   display: none;
   text-align: right;
   margin-bottom: 15px;
@@ -1033,21 +1033,21 @@ a.text-dark:hover {
   user-select: none;
   cursor: pointer;
 }
-[data-toggle="navbar-menu-close"] i {
+[data-toggle='navbar-menu-close'] i {
   font-size: 15px;
   transform: translateY(1px);
 }
-.navbar-expanded [data-toggle="navbar-menu-close"] {
+.navbar-expanded [data-toggle='navbar-menu-close'] {
   margin-right: 30px;
   transition: 0.3s;
 }
-.navbar-expanded [data-toggle="navbar-menu-close"] i {
+.navbar-expanded [data-toggle='navbar-menu-close'] i {
   font-size: 25px;
 }
-.navbar-expanded [data-toggle="navbar-menu-close"]:hover {
+.navbar-expanded [data-toggle='navbar-menu-close']:hover {
   opacity: 0.5;
 }
-.navbar-light [data-toggle="navbar-menu-close"] {
+.navbar-light [data-toggle='navbar-menu-close'] {
   color: #001213;
 }
 .sidenav-overlay {
@@ -1136,7 +1136,7 @@ a.text-dark:hover {
   border-radius: 2px;
   border-right: 0;
   border-top: 0;
-  content: "";
+  content: '';
   height: 0.5em;
   width: 0.5em;
   position: relative;
@@ -1273,7 +1273,7 @@ a.text-dark:hover {
   .navigation .btn {
     display: block;
   }
-  .navigation [data-toggle="navbar-menu-close"] {
+  .navigation [data-toggle='navbar-menu-close'] {
     display: block;
   }
 }
@@ -1339,7 +1339,7 @@ a.text-dark:hover {
   float: right;
   margin-right: 5px;
 }
-.navigation .navbar-expanded [data-toggle="navbar-menu-close"] {
+.navigation .navbar-expanded [data-toggle='navbar-menu-close'] {
   display: block;
 }
 .banner {
@@ -1433,7 +1433,7 @@ a.text-dark:hover {
 .banner.personal-portfolio .user-image::after,
 .banner.personal-portfolio .user-image::before {
   position: absolute;
-  content: "";
+  content: '';
   height: calc(100% - 20px);
   width: 50%;
   background-color: #00b75f;
@@ -1478,12 +1478,12 @@ a.text-dark:hover {
   width: 100%;
 }
 .banner.personal-portfolio .user-image .shape::before {
-  content: "\f6bb";
+  content: '\f6bb';
   font-size: 48vw;
   color: #001213;
   line-height: 1;
   font-weight: 400;
-  font-family: "Line Awesome Free";
+  font-family: 'Line Awesome Free';
   font-weight: 900;
   z-index: -1;
   position: absolute;
@@ -1752,7 +1752,7 @@ a.text-dark:hover {
 }
 .floating-info-block-tile::after {
   position: absolute;
-  content: "";
+  content: '';
   width: 100%;
   height: 100%;
   transform: scale(0.4);
@@ -2001,7 +2001,7 @@ a.text-dark:hover {
   text-align: center;
 }
 .review-carousel .swipeCarousel-control div:first-child::after {
-  content: "";
+  content: '';
   height: 1px;
   width: 20px;
   background-color: #001213;
@@ -2051,7 +2051,7 @@ a.text-dark:hover {
 }
 .work-process-item .process-title::after {
   position: absolute;
-  content: "0";
+  content: '0';
   top: 0;
   left: 50%;
   color: #fff;
@@ -2336,7 +2336,7 @@ a.text-dark:hover {
 }
 .about-me-block .about-me-title::before {
   position: absolute;
-  content: "";
+  content: '';
   height: 100%;
   width: 12px;
   background-color: #00b75f;
