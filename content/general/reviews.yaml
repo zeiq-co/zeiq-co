@@ -27,11 +27,30 @@
   countryFlag: 🇬🇧
   category: home
 - five:
-  personName: Merlin Sibley
-  personRole: Communications Director, GetConnected
-  review: They provided an excellent service in the design/development of the app. They showed great flexibility in meeting additional requirements that came up during the project and have consistently impressed us with their understanding of the app marketplace, particularly in relation to younger people.
+  personName: Joshua Parker
+  personRole: Daily Deposits
+  review: The team has been amazing! Efficient, pro active and have built an amazing product and website that I am able to navigate with ease. The team is always on hand to answer any questions I have in simple understandable terms. I cannot recommend them highly enough and am thankful for their service.
   image: /images/client/review-person-05.jpg
   countryFlag: 🇬🇧
   category: ecommerce
-
-
+- six:
+  personName: Ravi Singh
+  personRole: Smart Home Devices Ltd
+  review: I must say this is just a wonderful company if you are looking for ecommerce. The team is very cooperative and understanding. They seem to work in the way that we do, and we have a close collaboration with them. Every day we talk to the developers and outline what needs to be done. Just love their work.
+  image: /images/client/review-person-05.jpg
+  countryFlag: 🇬🇧
+  category: ecommerce
+- seven:
+  personName: Merlin Sibley
+  personRole: WTrade India
+  review: They provided an excellent service in the design/development of the app and yes for website too. Team is very good and friendly. They helped me in growing my ecommerce business to a great level. I was very happy with their overall performance.
+  image: /images/client/review-person-05.jpg
+  countryFlag: 🇬🇧
+  category: ecommerce
+- eight:
+  personName: Merlin Sibley
+  personRole: Chaudhary Crockery House
+  review: We are quite satisfied with the Zeiq and our collaboration so far. We especially appreciate how they maintained the communication. The team was constantly in touch with us and available at each project step.
+  image: /images/client/review-person-05.jpg
+  countryFlag: 🇬🇧
+  category: ecommerce
