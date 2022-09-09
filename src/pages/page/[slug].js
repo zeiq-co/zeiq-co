@@ -74,9 +74,10 @@ export async function getStaticProps({ params: { slug } }) {
     `${filesDir}/${slug}.mdx`,
   );
   let projects = getMdxFromDir('content/work');
-  projects = filter(projects, (item) => item.isFeatured === true);
+  projects = filter(projects, (item) => item.category === frontmatter.category);
   projects = orderBy(projects, ['listingOrder'], ['asc']);
   projects = projects.slice(0, 8);
+
   return {
     props: {
       page: { content, slug, ...frontmatter },
