@@ -133,7 +133,7 @@ const Work = ({ data }) => (
         </div>
       </div>
       <WorkProcess />
-      <Testimonials />
+      <Testimonials category="home" />
     </section>
   </Layout>
 );

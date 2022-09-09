@@ -41,7 +41,7 @@ function Index({ projects, posts, technologies }) {
       <HomeServices data={whatWeDoData} />
       <RecentProjects projects={projects} />
       <WorkProcess />
-      <Testimonials />
+      <Testimonials category="home" />
       <Technologies brandsData={technologies} />
       <LatestPosts posts={posts} />
     </Layout>

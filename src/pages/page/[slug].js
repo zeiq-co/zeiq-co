@@ -18,7 +18,7 @@ import RecentProjects from '../../components/home/RecentProjects';
 import Testimonials from '../../components/home/Testimonials';
 import ContactInfo from '../../components/contact/ContactInfo';
 
-const BlogPost = ({ page, projects }) => {
+const LandingPage = ({ page, projects }) => {
   if (!page) return null;
   return (
     <Layout>
@@ -47,13 +47,13 @@ const BlogPost = ({ page, projects }) => {
       <WhatWeDo />
       <HomeServices data={whatWeDoData} />
       <RecentProjects projects={projects} />
-      <Testimonials />
+      <Testimonials category={page.category || 'home'} />
       <ContactInfo contactData={contactData} isFaq />
     </Layout>
   );
 };
 
-export default BlogPost;
+export default LandingPage;
 
 const filesDir = 'content/pages';
 

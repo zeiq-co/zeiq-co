@@ -1,12 +1,18 @@
 /* eslint-disable import/no-unresolved */
 import { useState } from 'react';
+import { filter } from 'lodash';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper';
 import reviewsData from '../../../content/general/reviews.yaml';
 
-const Testimonials = () => {
+const Testimonials = ({ category }) => {
   const [swiper, setSwiperLocal] = useState(null);
   const [activeStep, setActiveStep] = useState(0);
+  const filteredReviews = filter(
+    reviewsData,
+    (item) => item.category === category,
+  );
   return (
     <section className="section bg-white review-carousel">
       <div className="container">
@@ -32,8 +38,8 @@ const Testimonials = () => {
                     prevEl: '.swiper-button-prev',
                   }}
                 >
-                  {reviewsData &&
-                    reviewsData.map((item) => (
+                  {filteredReviews &&
+                    filteredReviews.map((item) => (
                       <SwiperSlide
                         className="swiper-slide"
                         key={item.personName}
@@ -66,7 +72,7 @@ const Testimonials = () => {
                     ))}
                   <div className="swipeCarousel-control">
                     <div className="activeslide">{activeStep + 1}</div>
-                    <div className="totalslide">{reviewsData.length}</div>
+                    <div className="totalslide">{filteredReviews.length}</div>
                   </div>
                 </Swiper>
               </div>
