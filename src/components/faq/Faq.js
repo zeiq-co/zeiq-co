@@ -6,6 +6,9 @@ const Faq = () => (
   <section className="bg-white">
     <div className="row justify-content-center">
       <div>
+        <div className="mb-4">
+          <h4 className="text-dark mb-3"> Frequently Asked Questions</h4>
+        </div>
         {faqData &&
           faqData.map((item, i) => <FaqItem key={item.id || i} data={item} />)}
       </div>

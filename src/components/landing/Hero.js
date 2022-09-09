@@ -41,19 +41,18 @@ const PageHero = ({ page }) => (
         <div className="col-lg-7">
           <div className="pl-0 pl-lg-4">
             <div className="about-me-block text-white">
-              <p className="mb-3 font-weight-500 text-light">
-                Hey! m Vincent Londez
-              </p>
               <h2 className="text-white font-weight-500 ">
-                A Product designer <br /> based in St. Petersburg.
+                Start Selling <br /> Your Business Online.
               </h2>
+              <p className="mb-3 font-weight-500 text-light">
+                Grow Your Ecommerce Sales Quicker, Smarter &amp; Further
+              </p>
 
               <div className="mt-4">
                 <p>
-                  e always tried to give equal importance to story-telling and
-                  composition, balancing the two. Tried to transform the cgi
-                  work as a new way to express oneself. Also m mimini periores
-                  vitae.
+                  Take the next step for Your Business with an online shop where
+                  you can easily manage products and orders and take payments
+                  securely.
                 </p>
               </div>
             </div>
@@ -65,30 +64,36 @@ const PageHero = ({ page }) => (
               <div className="row text-white">
                 <div className="col-sm-6">
                   <p className="h5 mt-0 font-weight-light mb-3 has-anim ">
-                    <span className="text-muted">–</span>&nbsp; UI/UX Design
-                  </p>
-                  <p className="h5 mt-0 font-weight-light mb-3 has-anim  anim-delay-1">
-                    <span className="text-muted">–</span>&nbsp; Branding
+                    <span className="text-muted">–</span>&nbsp; Customizable
+                    &amp; SEO friendly design
                   </p>
                   <p className="h5 mt-0 font-weight-light mb-3 has-anim  anim-delay-2">
-                    <span className="text-muted">–</span>&nbsp; Identity
+                    <span className="text-muted">–</span>&nbsp; Easy tracking of
+                    orders &amp; fulfillment
                   </p>
                   <p className="h5 mt-0 font-weight-light mb-3 has-anim  anim-delay-3">
-                    <span className="text-muted">–</span>&nbsp; Animation
+                    <span className="text-muted">–</span>&nbsp; Multiple
+                    shipping &amp; delivery options
                   </p>
                 </div>
                 <div className="col-sm-6">
                   <p className="h5 mt-0 font-weight-light mb-3 has-anim ">
-                    <span className="text-muted">–</span>&nbsp; Art Direction
+                    <span className="text-muted">–</span>&nbsp; Advanced payment
+                    solutions
                   </p>
                   <p className="h5 mt-0 font-weight-light mb-3 has-anim  anim-delay-1">
-                    <span className="text-muted">–</span>&nbsp; Illustration
+                    <span className="text-muted">–</span>&nbsp; Run campaigns
+                    and ads on multiple sales channels
+                  </p>
+                  <p className="h5 mt-0 font-weight-light mb-3 has-anim  anim-delay-1">
+                    <span className="text-muted">–</span>&nbsp; Systematic
+                    inventory management
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="about-me-block">
+            {/* <div className="about-me-block">
               <h2 className="h4 about-me-title text-underline text-white font-weight-light font-italic text-monospace has-anim ">
                 Work experiances:
               </h2>
@@ -149,7 +154,7 @@ const PageHero = ({ page }) => (
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
