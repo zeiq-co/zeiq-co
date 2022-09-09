@@ -48,6 +48,17 @@ const ContactInfo = ({ contactData, isFaq }) => {
                   </div>
                 </div>
                 <div className="col-lg-6">
+                  {isFaq && (
+                    <div className="mb-4">
+                      <h4 className="text-dark mb-3">Contact Us</h4>
+                      <p>
+                        Share the details of your project – like scope, time
+                        frames, or business challenges. Our team will carefully
+                        study them and then we’ll figure out the next move
+                        together.
+                      </p>
+                    </div>
+                  )}
                   <ContactForm onSubmit={(val) => handleSubmit(val)} />
                 </div>
               </div>
