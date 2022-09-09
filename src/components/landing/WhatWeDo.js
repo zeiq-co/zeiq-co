@@ -29,8 +29,8 @@ const Wrapper = styled.div`
 const data = [
   {
     id: 1,
-    type: 'Standard subscription',
-    title: '1200',
+    type: 'Sell more online',
+    title: 'Sell',
     subtitle:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit amet suscipit non.',
     body: 'Lorem ipsum dolor ',
@@ -80,6 +80,15 @@ const WhatWeDo = () => (
   <Wrapper>
     <section className="section pricing-plans bg-white">
       <div className="container">
+        <div className="col-12 has-anim fade">
+          <div className="section-title text-center">
+            <h2 className="title text-dark">What We Do ?</h2>
+            <p className="font-weight-700">
+              We understand how to deliver engaging and successful eCommerce
+              experiences
+            </p>
+          </div>
+        </div>
         <div className="row no-gutters justify-content-center align-items-center">
           {data &&
             data.map((item) => (
