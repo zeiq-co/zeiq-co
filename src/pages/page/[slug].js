@@ -45,7 +45,7 @@ const LandingPage = ({ page, projects }) => {
       />
       <PostHero page={page} />
       <WhatWeDo />
-      <HomeServices data={whatWeDoData} />
+      <HomeServices data={whatWeDoData} category={page.category || 'home'} />
       <RecentProjects projects={projects} />
       <Testimonials category={page.category || 'home'} />
       <ContactInfo contactData={contactData} isFaq />

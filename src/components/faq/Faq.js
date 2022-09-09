@@ -7,7 +7,7 @@ const Faq = () => (
     <div className="row justify-content-center">
       <div>
         {faqData &&
-          faqData.map((item) => <FaqItem key={item.id} data={item} />)}
+          faqData.map((item, i) => <FaqItem key={item.id || i} data={item} />)}
       </div>
     </div>
   </section>

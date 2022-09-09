@@ -22,5 +22,35 @@
   subtitle: We offer tailor-made software solutions
   image: /images/service/software-dev.svg
   linkTo: /services/software-development
+- five:
+  category: ecommerce
+  title: Gathering requirement
+  subtitle: This is the time to make the right path to your e-commerce success. By learning about your e-commerce goal, business objective, customers as well as your competitors, we collect your complete information about the main objective of your website and how we could meet your requirements.
+  image: /images/service/branding.svg
+  linkTo: /services/design-thinking
+- five:
+  category: ecommerce
+  title: Planning and Discovery
+  subtitle: Designing mock-ups for clients to show a great and eye-catching user experience. It involves theme selection, menus, and icons placement. The client can suggest themes to their websites that are visible to the end users. The theme includes logos, color schemes, borders, layouts, images, etc.
+  image: /images/service/software-dev.svg
+  linkTo: /services/software-development
+- six:
+  category: ecommerce
+  title: Approval
+  subtitle: After design approval from the client, our designers and shopping cart experts customize and develop the website’s back-end functionalities. Our Designers and developers craft your e-commerce website to give a great user experience keeping the search engine in mind.
+  image: /images/service/marketing.svg
+  linkTo: /services/marketing
+- seven:
+  category: ecommerce
+  title: Design and development
+  subtitle: We have experienced web designing experts and e-commerce growth hacking specialists who will work on your dream project. We believe Perfect design and clean coding bring success to the project. Our dedicated team can handle open source e-commerce platforms like Magento, woo commerce, open cart, cakeshop, etc.
+  image: /images/service/webApp.svg
+  linkTo: /services/development
+- eight:
+  category: ecommerce
+  title: Testing
+  subtitle: We test everything. From website speed, user experience, meta-tags, keywords, responsiveness, and conversion for the entire website. Bugs and difficulties can be fixed immediately after the finding from our tester. Our digital marketing specialists test the user experiences and search engine ranking factors of the website before launching.
+  image: /images/service/software-dev.svg
+  linkTo: /services/software-development
 
 

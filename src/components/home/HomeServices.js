@@ -1,46 +1,50 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { filter } from 'lodash';
 
-const HomeServices = ({ data }) => {
+const HomeServices = ({ data, category }) => {
   if (!data) return null;
+  const filteredData = filter(data, (item) => item.category === category);
+
   return (
     <section className="section">
       <div className="container">
         <div className="row">
-          {data.map((item) => (
-            <div className="col-lg-3 col-sm-6 has-anim fade" key={item.title}>
-              <div className="service-item text-light">
-                {item.image && (
-                  <div className="service-icon text-primary mb-4">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      className="shadow"
-                      height={30}
-                      width={30}
-                    />
-                  </div>
-                )}
-                <h4 className="font-weight-light text-white mb-3">
-                  {item.title}
-                </h4>
-                <p>{item.subtitle}</p>
-                <span
-                  className="my-2 d-inline-block"
-                  style={{ letterSpacing: '-3px' }}
-                >
-                  ━━
-                </span>
-                {item.linkTo && (
-                  <p>
-                    <Link href={item.linkTo}>
-                      <a>Learn more</a>
-                    </Link>
-                  </p>
-                )}
+          {filteredData &&
+            filteredData.map((item) => (
+              <div className="col-lg-3 col-sm-6 has-anim fade" key={item.title}>
+                <div className="service-item text-light">
+                  {item.image && (
+                    <div className="service-icon text-primary mb-4">
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        className="shadow"
+                        height={30}
+                        width={30}
+                      />
+                    </div>
+                  )}
+                  <h4 className="font-weight-light text-white mb-3">
+                    {item.title}
+                  </h4>
+                  <p>{item.subtitle}</p>
+                  <span
+                    className="my-2 d-inline-block"
+                    style={{ letterSpacing: '-3px' }}
+                  >
+                    ━━
+                  </span>
+                  {item.linkTo && (
+                    <p>
+                      <Link href={item.linkTo}>
+                        <a>Learn more</a>
+                      </Link>
+                    </p>
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
 
           <div className="col-12">
             <Link href="/services">
