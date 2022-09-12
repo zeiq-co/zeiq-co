@@ -56,7 +56,7 @@ const ContactInfo = ({ contactData, isFaq }) => {
                     {isFaq ? <Faq /> : <Details contactData={contactData} />}
                   </div>
                 </div>
-                <div className="col-lg-6 d-flex flex-column align-self-center">
+                <div className="col-lg-6 d-flex flex-column">
                   {isFaq && (
                     <div className="mb-4">
                       <p>
