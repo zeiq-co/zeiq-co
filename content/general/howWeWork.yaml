@@ -3,8 +3,18 @@
   title: Design & Branding
   subtitle: We build simple, beautiful and differentiated digital products what users want.
   image: /images/service/branding.svg
+  list:
+  - name: First Name
+  - name: Second Name
+  - name: First Name
+  - name: Second Name
 - two:
   category: ecommerce
-  title: Digital Marketing
-  subtitle: Increase your sales thanks to our services tailor-made to your client’s need.
-  image: /images/service/marketing.svg
+  title: Launch & Support
+  subtitle: After the final approval, we move website/application to the live hosting and domain. After the successful launching of your website/app, we support and monitors your project.
+  image: /images/service/webApp.svg
+  list:
+  - name: First Name
+  - name: Second Name
+  - name: First Name
+  - name: Second Name
