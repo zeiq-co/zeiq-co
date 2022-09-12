@@ -848,6 +848,9 @@ a.text-dark:hover {
 .accordion .content ul li:not(:last-child) {
   margin-bottom: 7px !important;
 }
+.whitespace-pre-line {
+  white-space: pre-line;
+}
 .accordion .card {
   border: 0 !important;
   border-radius: 0;

@@ -4,7 +4,7 @@ import ContactForm from './ContactForm';
 import Details from './Details';
 import Faq from '../faq/Faq';
 
-const ContactInfo = ({ contactData, isFaq }) => {
+const ContactInfo = ({ contactData, isFaq, content }) => {
   const handleSubmit = async (e) => {
     // eslint-disable-next-line no-undef
     const res = await fetch('/api/telegram', {
@@ -41,15 +41,20 @@ const ContactInfo = ({ contactData, isFaq }) => {
         <div className="row justify-content-center">
           <div className="col-xl-11">
             <div className="block">
-              <div className="col-12 has-anim fade">
-                <div className="section-title text-center">
-                  <p className="font-weight-700">Contact Us</p>
-                  <h2 className="title text-dark">
-                    Want to increase your eCommerce sales?
-                    <br /> Get started today
-                  </h2>
+              {content && (
+                <div className="col-12 has-anim fade">
+                  <div className="section-title text-center">
+                    {content.title && (
+                      <p className="font-weight-700">{content.title}</p>
+                    )}
+                    {content.title && (
+                      <h2 className="title text-dark whitespace-pre-line">
+                        {content.subtitle}
+                      </h2>
+                    )}
+                  </div>
                 </div>
-              </div>
+              )}
               <div className="row justify-content-center">
                 <div className="col-lg-6 mb-5 mb-lg-0">
                   <div className="pr-0 pr-lg-4">

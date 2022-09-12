@@ -58,7 +58,15 @@ const LandingPage = ({ page, projects }) => {
         to reach an efficient outcome for their eCommerce business."
       />
       <Testimonials category={page.category || 'home'} />
-      <ContactInfo contactData={contactData} isFaq />
+      <ContactInfo
+        contactData={contactData}
+        isFaq
+        content={{
+          title: 'Contact Us',
+          subtitle:
+            'Want to increase your eCommerce sales? \n Get started today',
+        }}
+      />
     </Layout>
   );
 };
