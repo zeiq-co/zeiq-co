@@ -3,6 +3,15 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, Autoplay } from 'swiper';
 import Image from 'next/image';
 
+const list = [
+  { name: 'Customizable & SEO friendly design' },
+  { name: 'Easy tracking of orders & fulfillment' },
+  { name: 'Multiple shipping &amp; delivery options' },
+  { name: 'Advanced payment solutions' },
+  { name: 'Run campaigns and ads on multiple sales channels' },
+  { name: 'Systematic inventory management' },
+];
+
 const PageHero = ({ page }) => (
   <section className="mt-5 pt-3">
     <div className="container">
@@ -61,100 +70,35 @@ const PageHero = ({ page }) => (
               <h2 className="h4 about-me-title text-underline text-white font-weight-light font-italic text-monospace">
                 Main expertise:
               </h2>
-              <div className="row text-white">
+              <div className="row text-white content content-dark">
                 <div className="col-sm-6">
-                  <p className="h5 mt-0 font-weight-light mb-3 has-anim ">
-                    <span className="text-muted">–</span>&nbsp; Customizable
-                    &amp; SEO friendly design
-                  </p>
-                  <p className="h5 mt-0 font-weight-light mb-3 has-anim  anim-delay-2">
-                    <span className="text-muted">–</span>&nbsp; Easy tracking of
-                    orders &amp; fulfillment
-                  </p>
-                  <p className="h5 mt-0 font-weight-light mb-3 has-anim  anim-delay-3">
-                    <span className="text-muted">–</span>&nbsp; Multiple
-                    shipping &amp; delivery options
-                  </p>
+                  <ul className="pl-0">
+                    {list &&
+                      list.slice(0, 3).map((item) => {
+                        if (!item) return null;
+                        return (
+                          <div className="content text-light content-dark">
+                            <li>{item.name}</li>
+                          </div>
+                        );
+                      })}
+                  </ul>
                 </div>
                 <div className="col-sm-6">
-                  <p className="h5 mt-0 font-weight-light mb-3 has-anim ">
-                    <span className="text-muted">–</span>&nbsp; Advanced payment
-                    solutions
-                  </p>
-                  <p className="h5 mt-0 font-weight-light mb-3 has-anim  anim-delay-1">
-                    <span className="text-muted">–</span>&nbsp; Run campaigns
-                    and ads on multiple sales channels
-                  </p>
-                  <p className="h5 mt-0 font-weight-light mb-3 has-anim  anim-delay-1">
-                    <span className="text-muted">–</span>&nbsp; Systematic
-                    inventory management
-                  </p>
+                  <ul className="pl-0">
+                    {list &&
+                      list.slice(3).map((item) => {
+                        if (!item.name) return null;
+                        return (
+                          <div className="content text-light content-dark">
+                            <li>{item.name}</li>
+                          </div>
+                        );
+                      })}
+                  </ul>
                 </div>
               </div>
             </div>
-
-            {/* <div className="about-me-block">
-              <h2 className="h4 about-me-title text-underline text-white font-weight-light font-italic text-monospace has-anim ">
-                Work experiances:
-              </h2>
-              <div className="row">
-                <div className="col-lg-10 mb-3">
-                  <div className="mb-4 has-anim ">
-                    <p className="h5 font-weight-light text-white mb-2">
-                      Art Direction{' '}
-                      <span
-                        className="font-italic small font-weight-600"
-                        style={{
-                          opacity: '.6',
-                        }}
-                      >
-                        (2020 – present)
-                      </span>
-                    </p>
-                    <p className="text-light">
-                      Aolestiae voluptates placeat at, ex exercitationem tenetur
-                      deserunt molestias quaerat libero voluptate reprehenderit
-                      dolorum!
-                    </p>
-                  </div>
-                  <div className="mb-4 has-anim  anim-delay-1">
-                    <p className="h5 font-weight-light text-white mb-2">
-                      UI/UX Design{' '}
-                      <span
-                        className="font-italic small font-weight-600"
-                        style={{
-                          opacity: '.6',
-                        }}
-                      >
-                        (2018 – 2020)
-                      </span>
-                    </p>
-                    <p className="text-light">
-                      Voluptatum animi rem saepe ab delectus perspiciatis sunt
-                      quasi temporibus tenetur consectetur distinctio beatae
-                      earum quibusdam excepturi!
-                    </p>
-                  </div>
-                  <div className="has-anim  anim-delay-2">
-                    <p className="h5 font-weight-light text-white mb-2">
-                      Junior UI/UX Design{' '}
-                      <span
-                        className="font-italic small font-weight-600"
-                        style={{
-                          opacity: '.6',
-                        }}
-                      >
-                        (2017 – 2018)
-                      </span>
-                    </p>
-                    <p className="text-light">
-                      Reiciendis optio velit culpa voluptatibus voluptatem
-                      minima quam, placeat aspernatur. Ex dolorum dolorem aut.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>
