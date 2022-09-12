@@ -249,14 +249,16 @@ const RecentProjects = ({ projects, title, subtitle }) => {
                       </span>
                       <div className="card-img-overlay text-center">
                         <div className="block">
-                          <h3 className="card-title mb-3">
-                            <Link href={`/work/${item.slug}`}>
-                              <a>{item.title}</a>
-                            </Link>
-                          </h3>
+                          {item.slug && (
+                            <h3 className="card-title mb-3">
+                              <Link href={`/work/${item.slug}`}>
+                                <a>{item.title}</a>
+                              </Link>
+                            </h3>
+                          )}
                           <span className="card-subtitle">
-                            <Link href={`/work/${item.slug}`}>
-                              <a>{item.category}</a>
+                            <Link href={`/work/${item?.slug}`}>
+                              <a>{item?.category}</a>
                             </Link>
                           </span>
                         </div>
