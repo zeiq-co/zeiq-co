@@ -161,7 +161,7 @@ const Section = styled.section`
   }
 `;
 
-const RecentProjects = ({ projects }) => {
+const RecentProjects = ({ projects, title, subtitle }) => {
   const [swiper, setSwiperLocal] = useState(null);
   const [activeStep, setActiveStep] = useState(0);
   const settings = {
@@ -198,15 +198,8 @@ const RecentProjects = ({ projects }) => {
         <div className="row">
           <div className="col-12 has-anim fade">
             <div className="section-title text-center">
-              <h2 className="title text-dark">
-                Glimpse of Our Ecommerce Projects
-              </h2>
-              <p className="mb-2">
-                Check out our latest case studies and learn about how we helped
-                worldwide companies
-                <br /> to reach an efficient outcome for their eCommerce
-                business.
-              </p>
+              {title && <h2 className="title text-dark">{title}</h2>}
+              {subtitle && <p className="mb-2">{subtitle}</p>}
             </div>
           </div>
         </div>

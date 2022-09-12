@@ -46,7 +46,14 @@ const LandingPage = ({ page, projects }) => {
       <PostHero page={page} />
       <WhatWeDo />
       <HomeServices data={whatWeDoData} category={page.category || 'home'} />
-      <RecentProjects projects={projects} />
+      <RecentProjects
+        projects={projects}
+        title="Glimpse of Our Ecommerce Projects"
+        subtitle="Check out our latest case studies and learn about how we helped
+                worldwide companies
+                to reach an efficient outcome for their eCommerce
+                business."
+      />
       <Testimonials category={page.category || 'home'} />
       <ContactInfo contactData={contactData} isFaq />
     </Layout>
