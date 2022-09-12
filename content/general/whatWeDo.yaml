@@ -27,22 +27,18 @@
   title: Gathering requirements & Project Planning
   subtitle: We take you right to your eCommerce success. Here, We collect your project's complete information, gather requirements and define the scope of work. All development plans and defining terms of cooperation decides in this stage.
   image: /images/service/branding.svg
-  linkTo: /services/design-thinking
-- siz:
+- six:
   category: ecommerce
   title: Design & Development
   subtitle: Designing wireframes & mock-ups, preparing content and project setup (setting up the development environment, code repository, creating all needed accounts, etc.) are done after planning. Then work on Development and initial testing starts.
   image: /images/service/software-dev.svg
-  linkTo: /services/software-development
 - seven:
   category: ecommerce
   title: Testing & Polishing
   subtitle: Here, we test the entire system, make final fixes and important improvements to the back-end logic. Our digital marketing specialists test the user experiences and search engine ranking factors of the website before launching.
   image: /images/service/marketing.svg
-  linkTo: /services/marketing
 - eight:
   category: ecommerce
   title: Launch & Support
   subtitle: After the final approval, we move website/application to the live hosting and domain. After the successful launching of your website/app, we support and monitors your project.
   image: /images/service/webApp.svg
-  linkTo: /services/development
