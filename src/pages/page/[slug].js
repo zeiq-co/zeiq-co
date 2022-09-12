@@ -54,10 +54,8 @@ const LandingPage = ({ page, projects }) => {
       <RecentProjects
         projects={projects}
         title="Glimpse of Our eCommerce Projects"
-        subtitle="Check out our latest case studies and learn about how we helped
-                  worldwide companies
-                  to reach an efficient outcome for their eCommerce
-                  business."
+        subtitle="Check out our latest case studies and learn about how we helped worldwide companies
+        to reach an efficient outcome for their eCommerce business."
       />
       <Testimonials category={page.category || 'home'} />
       <ContactInfo contactData={contactData} isFaq />

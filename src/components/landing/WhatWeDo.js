@@ -29,11 +29,7 @@ const Wrapper = styled.div`
 const data = [
   {
     id: 1,
-    // type: 'Sell more online',
     title: 'Sell more online',
-    // subtitle:
-    //   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit amet suscipit non.',
-    // body: 'Lorem ipsum dolor ',
     list: [
       { title: 'Fully customizable online store' },
       { title: '50+ payment providers' },
@@ -46,12 +42,7 @@ const data = [
   },
   {
     id: 2,
-    // type: 'Standard subscription',
     title: 'Manage your store',
-    // subtitle:
-    //   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit amet suscipit non.',
-    // body: 'Lorem ipsum dolor ',
-
     list: [
       { title: 'Efficient inventory management' },
       { title: 'Easy tracking of orders & fulfillment' },
@@ -65,11 +56,7 @@ const data = [
   },
   {
     id: 3,
-    // type: 'Standard subscription',
     title: 'Grow your business',
-    // subtitle:
-    //   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit amet suscipit non.',
-    // body: 'Lorem ipsum dolor ',
     list: [
       { title: 'Multiple sales channels (e.g., Facebook & Amazon)' },
       { title: 'Run campaigns and ads on Facebook and Instagram' },
