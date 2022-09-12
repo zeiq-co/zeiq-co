@@ -1,0 +1,10 @@
+- one:
+  category: ecommerce
+  title: Design & Branding
+  subtitle: We build simple, beautiful and differentiated digital products what users want.
+  image: /images/service/branding.svg
+- two:
+  category: ecommerce
+  title: Digital Marketing
+  subtitle: Increase your sales thanks to our services tailor-made to your client’s need.
+  image: /images/service/marketing.svg
