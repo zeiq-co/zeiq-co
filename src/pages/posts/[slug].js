@@ -36,16 +36,18 @@ const BlogPost = ({ post }) => {
       <section className="section pb-0">
         <div className="container">
           <div className="row">
-            <div className="col-12 mb-n5 has-anim anim-delay-2">
-              <Image
-                src={post.featuredImage}
-                alt={post.title}
-                className="img-fluid"
-                height={800}
-                width={1400}
-                objectFit="cover"
-              />
-            </div>
+            {post.featuredImage && (
+              <div className="col-12 mb-n5 has-anim anim-delay-2">
+                <Image
+                  src={post.featuredImage}
+                  alt={post.title}
+                  className="img-fluid"
+                  height={800}
+                  width={1400}
+                  objectFit="cover"
+                />
+              </div>
+            )}
           </div>
         </div>
 

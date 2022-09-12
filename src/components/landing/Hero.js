@@ -57,13 +57,11 @@ const PageHero = ({ page }) => (
                 Grow Your Ecommerce Sales Quicker, Smarter &amp; Further
               </p>
 
-              <div className="mt-4">
-                <p>
-                  Take the next step for Your Business with an online shop where
-                  you can easily manage products and orders and take payments
-                  securely.
-                </p>
-              </div>
+              {page.description && (
+                <div className="mt-4">
+                  <p>{page.description}</p>
+                </div>
+              )}
             </div>
 
             <div className="about-me-block">
