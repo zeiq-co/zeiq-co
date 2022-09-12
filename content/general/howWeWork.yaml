@@ -2,7 +2,7 @@
   category: ecommerce
   title: Design & Branding
   subtitle: We build simple, beautiful and differentiated digital products what users want.
-  image: /images/service/branding.svg
+  image: https://kota.co.uk/static/35f4ba1eaf21ed8b53935685ab725801/8b29a/Back-End-Efficiency2.webp
   list:
   - name: First Name
   - name: Second Name
@@ -12,7 +12,7 @@
   category: ecommerce
   title: Launch & Support
   subtitle: After the final approval, we move website/application to the live hosting and domain. After the successful launching of your website/app, we support and monitors your project.
-  image: /images/service/webApp.svg
+  image: https://kota.co.uk/static/35f4ba1eaf21ed8b53935685ab725801/8b29a/Back-End-Efficiency2.webp
   list:
   - name: First Name
   - name: Second Name
