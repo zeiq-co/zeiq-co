@@ -53,7 +53,11 @@ const ContactInfo = ({ contactData, isFaq }) => {
               <div className="row justify-content-center">
                 <div className="col-lg-6 mb-5 mb-lg-0">
                   <div className="pr-0 pr-lg-4">
-                    {isFaq ? <Faq /> : <Details contactData={contactData} />}
+                    {isFaq ? (
+                      <Faq title="Frequently Asked Questions" />
+                    ) : (
+                      <Details contactData={contactData} />
+                    )}
                   </div>
                 </div>
                 <div className="col-lg-6 d-flex flex-column">

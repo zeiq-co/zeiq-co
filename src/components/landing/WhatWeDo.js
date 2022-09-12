@@ -92,12 +92,6 @@ const WhatWeDo = () => (
                 <div
                   className={`block border  ${item.isDark ? 'bg-dark' : ''}`}
                 >
-                  {/* <h5
-                    className={`font-weight-500 ${item.isDark ? 'bg-dark' : ''
-                      }`}
-                  >
-                    {item.type}
-                  </h5> */}
                   <div className="price-wrapper">
                     <h3
                       className={`font-weight-100 font ${
@@ -114,22 +108,11 @@ const WhatWeDo = () => (
                         : 'text-dark content-light'
                     }`}
                   >
-                    {/* <p>{item.subtitle}</p>
-                    <h6>{item.body}</h6> */}
                     <ul className="pl-0">
                       {item &&
                         item.list &&
                         item.list.map((el) => <li>{el.title}</li>)}
                     </ul>
-                    {/* <Link href="/contact">
-                      <a
-                        className={`btn btn-block mt-3 ${item.isDark ? 'btn-white' : 'btn-black'
-                          }`}
-                        data-text="Get In Touch"
-                      >
-                        <span>Get In Touch</span>
-                      </a>
-                    </Link> */}
                   </div>
                 </div>
               </div>
