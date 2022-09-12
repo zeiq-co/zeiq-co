@@ -894,6 +894,9 @@ a.text-dark:hover {
 .accordion .card-header a[aria-expanded='true']::after {
   transform: translateY(-50%) rotate(-136deg);
 }
+.accordion .card-header a[aria-expanded='true'] {
+  border: 1px solid #00b75f !important;
+}
 .accordion .card-header a[aria-expanded='false']::after {
   transform: translateY(-50%) rotate(0);
 }

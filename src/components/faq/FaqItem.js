@@ -11,7 +11,7 @@ const FaqItem = ({ data }) => {
             tabIndex="0"
             aria-expanded={active ? 'true' : 'false'}
             onClick={() => setActive(!active)}
-            className="d-flex justify-content-between font-w-600 my-1"
+            className="d-flex justify-content-between font-w-600 mt-1"
             data-toggle="collapse"
             aria-controls="faq3"
           >
