@@ -97,10 +97,10 @@ const WhatWeDo = () => (
         </div>
         <div className="row no-gutters justify-content-center align-items-center">
           {data &&
-            data.map((item) => (
+            data.map((item, i) => (
               <div
                 className="col-xl-3 col-lg-4 col-md-6 mt-4 pt-2 mt-md-0 pt-md-0 has-anim fade anim-delay-1"
-                key={item.id}
+                key={item.id || i}
               >
                 <div
                   className={`block border  ${item.isDark ? 'bg-dark' : ''}`}
