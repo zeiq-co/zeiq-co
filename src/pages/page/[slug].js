@@ -45,14 +45,19 @@ const LandingPage = ({ page, projects }) => {
       />
       <PostHero page={page} />
       <WhatWeDo />
-      <HomeServices data={whatWeDoData} category={page.category || 'home'} />
+      <HomeServices
+        data={whatWeDoData}
+        title="How We Work on it?"
+        subtitle="eCommerce Development Process"
+        category={page.category || 'home'}
+      />
       <RecentProjects
         projects={projects}
-        title="Glimpse of Our Ecommerce Projects"
+        title="Glimpse of Our eCommerce Projects"
         subtitle="Check out our latest case studies and learn about how we helped
-                worldwide companies
-                to reach an efficient outcome for their eCommerce
-                business."
+                  worldwide companies
+                  to reach an efficient outcome for their eCommerce
+                  business."
       />
       <Testimonials category={page.category || 'home'} />
       <ContactInfo contactData={contactData} isFaq />
