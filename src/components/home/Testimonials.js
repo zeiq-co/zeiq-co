@@ -25,7 +25,7 @@ const Testimonials = ({ category }) => {
                   autoplay={{ delay: 4000 }}
                   slidesPerView={1}
                   onSwiper={setSwiperLocal}
-                  onSlideChange={() => console.log(swiper, 'slide change')}
+                  onSlideChange={() => !swiper}
                   onActiveIndexChange={({ realIndex }) => {
                     setActiveStep(realIndex);
                   }}

@@ -208,7 +208,7 @@ const RecentProjects = ({ projects, title, subtitle }) => {
         <Swiper
           {...settings}
           onSwiper={setSwiperLocal}
-          onSlideChange={() => console.log(swiper, 'slide change')}
+          onSlideChange={() => !swiper}
           onActiveIndexChange={({ realIndex }) => {
             setActiveStep(realIndex);
           }}

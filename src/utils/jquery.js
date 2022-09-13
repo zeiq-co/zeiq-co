@@ -1,5 +1,5 @@
 const jqueryLoad = () => {
-  console.log('page loaded');
+  // console.log('page loaded');
   !(function (i) {
     'use strict';
 
