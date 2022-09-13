@@ -1147,19 +1147,19 @@ a.text-dark:hover {
 }
 .navigation .dropdown-toggle::after {
   border: 2px solid transparent !important;
-  border-radius: 2px !important;
-  border-right: 0 !important;
-  border-top: 0 !important;
-  content: '' !important;
-  height: 0.5em !important;
-  width: 0.5em !important;
+  border-radius: 2px;
+  border-right: 0;
+  border-top: 0;
+  content: '';
+  height: 0.5em;
+  width: 0.5em;
   position: relative;
-  top: 1px !important;
-  margin-left: 7px !important;
-  pointer-events: none !important;
-  transform: rotate(-45deg) !important;
-  transform-origin: center !important;
-  border-color: inherit !important;
+  top: 1px;
+  margin-left: 7px;
+  pointer-events: none;
+  transform: rotate(-45deg);
+  transform-origin: center;
+  border-color: inherit;
 }
 .navigation .dropdown-menu {
   border: 0;
