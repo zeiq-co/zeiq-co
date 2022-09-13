@@ -1,22 +1,18 @@
 import React from 'react';
 
-const content = {
-  title: 'What We Work',
-  subtitle:
-    'We understand how to deliver engaging and successful eCommerce experiences',
-};
-
-const HowWeWork = ({ data }) => {
+const HowWeWork = ({ data, content }) => {
   if (!data) return null;
   return (
     <div className="section bg-white">
       <div className="container">
-        <div className="col-12 has-anim fade">
-          <div className="section-title text-center">
-            <h2 className="title text-dark">{content.title}</h2>
-            <p className="font-weight-700">{content.subtitle}</p>
+        {content && (
+          <div className="col-12 has-anim fade">
+            <div className="section-title text-center">
+              <h2 className="title text-dark">{content.title}</h2>
+              <p className="font-weight-700">{content.subtitle}</p>
+            </div>
           </div>
-        </div>
+        )}
         {data &&
           data.map((item, i) => (
             <div key={item.title || i}>

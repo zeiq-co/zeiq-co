@@ -47,7 +47,14 @@ const LandingPage = ({ page, projects }) => {
       />
       <PostHero page={page} />
       <WhatWeDo />
-      <HowWeWork data={howWeWorkData} />
+      <HowWeWork
+        data={howWeWorkData}
+        // content={{
+        //   title: 'How We Work',
+        //   subtitle:
+        //     'We understand how to deliver engaging and successful eCommerce experiences',
+        // }}
+      />
       <HomeServices
         data={whatWeDoData}
         title="How We Work on it?"
