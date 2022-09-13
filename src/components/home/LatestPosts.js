@@ -5,21 +5,23 @@ import { random, upperFirst } from 'lodash';
 
 const bgColors = ['#0a11a8', '#002306', '#c76234'];
 
-const LatestPosts = ({ posts }) => {
+const LatestPosts = ({ posts, content }) => {
   const firstPost = posts[0];
   const otherPosts = posts.slice(1, 4);
 
   return (
     <section className="section bg-white">
       <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-12 has-anim fade">
-            <div className="section-title text-center mb-4">
-              <p className="mb-2">Latest news</p>
-              <h2 className="title text-dark">Our Blog Posts</h2>
+        {content && (
+          <div className="row justify-content-center">
+            <div className="col-12 has-anim fade">
+              <div className="section-title text-center mb-4">
+                <p className="mb-2">{content.title}</p>
+                <h2 className="title text-dark">{content.subtitle}</h2>
+              </div>
             </div>
           </div>
-        </div>
+        )}
         <div className="row">
           <div className="col-lg-12 has-anim fade">
             <article className="card blog-card blog-card-horizontal border-0 rounded-0">

@@ -43,7 +43,10 @@ function Index({ projects, posts, technologies }) {
       <WorkProcess />
       <Testimonials category="home" />
       <Technologies brandsData={technologies} />
-      <LatestPosts posts={posts} />
+      <LatestPosts
+        posts={posts}
+        content={{ title: 'Latest news', subtitle: 'Our Blog Posts' }}
+      />
     </Layout>
   );
 }
