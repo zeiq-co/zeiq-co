@@ -20,7 +20,7 @@ const HowWeWork = ({ data }) => {
         {data &&
           data.map((item, i) => (
             <div key={item.title || i}>
-              <section className="py-4">
+              <section className="py-4" key={item.title || i}>
                 <div className="">
                   <div
                     className={`row justify-content-center align-items-center has-anim fade ${
