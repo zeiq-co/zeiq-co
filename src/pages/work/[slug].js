@@ -51,7 +51,7 @@ const Work = ({ data }) => (
           <div className="col-12 mb-n5 has-anim anim-delay-2">
             <div className="img-fluid shadow position-relative">
               <Image
-                src={data.featuredImage}
+                src={data.heroImage || data.featuredImage}
                 alt={data.title}
                 className="shadow"
                 height={1006}

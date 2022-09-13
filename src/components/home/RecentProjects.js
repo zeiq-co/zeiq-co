@@ -234,7 +234,7 @@ const RecentProjects = ({ projects, title, subtitle }) => {
                       <span className="card-img">
                         <Image
                           priority={index}
-                          src={item.featuredImage}
+                          src={item.featuredImage || item.heroImage}
                           alt={item.title}
                           className="img-fluid"
                           width={1200}
