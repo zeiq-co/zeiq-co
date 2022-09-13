@@ -9,7 +9,11 @@ export default class MyDocument extends Document {
           <link rel="icon" href="/images/logo.png" />
           <link rel="apple-touch-icon" href="/images/logo.png" />
           <link rel="manifest" href="/site.webmanifest" key="site-manifest" />
-          <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+          <link rel="icon" type="image/x-icon" href="/logo-1024.png" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />

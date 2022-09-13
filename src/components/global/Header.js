@@ -91,7 +91,6 @@ const Header = () => (
                     <Link href="/work">
                       <a
                         className="nav-link dropdown-toggle"
-                        href=""
                         role="button"
                         data-toggle="dropdown"
                         aria-haspopup="true"

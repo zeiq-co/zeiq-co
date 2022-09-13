@@ -4,6 +4,10 @@ const withYaml = require('next-plugin-yaml');
 const redirects = require('./redirects');
 
 const nextConfig = {
+  env: {
+    TELEGRAM_TOKEN: '5784516054:AAEYyRMC7Gd2V3ueEEfyw8fA-XLBF3olhXs',
+    TELEGRAM_CHAT_ID: '-630224343',
+  },
   images: {
     domains: ['assets.vercel.com'],
   },

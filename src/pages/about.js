@@ -62,7 +62,7 @@ const AboutUs = ({ brandsData }) => (
       </div>
     </section>
     <Technologies brandsData={brandsData} />
-    <Testimonials />
+    <Testimonials category="home" />
   </Layout>
 );
 

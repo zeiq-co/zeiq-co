@@ -3,18 +3,54 @@
   personRole: Venture East Africa
   review: Thanks to zeiq I managed to turn my idea into a real digital E-commerce website that meant I could focus on planning the events on the ground in Tanzania. They really assist on UX/UI and full E2E delivery.
   image: /images/client/jonanthan-client.jpg
+  countryFlag: 🇬🇧
+  category: home
 - two:
   personName: Reiss McGrath
   personRole: Bizzy Buddies Ltd
   review: We already had our website designs mapped out however there were certain UX flows we missed. The zeiq team helped shape the full customer journey and out e-commerce website was all built using the latest website reactjs gatsby technologies.  Great service and good value.
   image: /images/client/ress-client.jpg
-- two:
+  countryFlag: 🇬🇧
+  category: home
+- three:
   personName: Sanjay Dhir
   personRole: Founder & CEO of Select Developments
   review: Zeiq delivery on technical expertise, high quality, communication and services is unmatched amongst their industry. Their ability to build confidence and trust within your idea truly shows just how genuine and honest the company is on helping you succeed.
   image: /images/client/review-person-04.jpg
+  countryFlag: 🇮🇳
+  category: home
 - four:
   personName: Merlin Sibley
   personRole: Communications Director, GetConnected
   review: They provided an excellent service in the design/development of the app. They showed great flexibility in meeting additional requirements that came up during the project and have consistently impressed us with their understanding of the app marketplace, particularly in relation to younger people.
   image: /images/client/review-person-05.jpg
+  countryFlag: 🇬🇧
+  category: home
+- five:
+  personName: Joshua Parker
+  personRole: Daily Deposits
+  review: The team has been amazing! Efficient, pro active and have built an amazing product and website that I am able to navigate with ease. The team is always on hand to answer any questions I have in simple understandable terms. I cannot recommend them highly enough and am thankful for their service.
+  image: /images/client/review-person-05.jpg
+  countryFlag: 🇬🇧
+  category: ecommerce
+- six:
+  personName: Ravi Singh
+  personRole: Smart Home Devices Ltd
+  review: I must say this is just a wonderful company if you are looking for ecommerce. The team is very cooperative and understanding. They seem to work in the way that we do, and we have a close collaboration with them. Every day we talk to the developers and outline what needs to be done. Just love their work.
+  image: /images/client/review-person-05.jpg
+  countryFlag: 🇨🇦
+  category: ecommerce
+- seven:
+  personName: Shushoban
+  personRole: WTrade India
+  review: They provided an excellent service in the design/development of the app and yes for website too. Team is very good and friendly. They helped me in growing my ecommerce business to a great level. I was very happy with their overall performance.
+  image: /images/client/review-person-05.jpg
+  countryFlag: 🇬🇧
+  category: ecommerce
+- eight:
+  personName: Sumit Choudhary
+  personRole: Chaudhary Crockery House
+  review: We are quite satisfied with the Zeiq and our collaboration so far. We especially appreciate how they maintained the communication. The team was constantly in touch with us and available at each project step.
+  image: /images/client/review-person-05.jpg
+  countryFlag: 🇮🇳
+  category: ecommerce

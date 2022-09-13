@@ -11,7 +11,6 @@ const SingleTechnology = ({ data }) => (
     <NextSeo
       title={`${data.title}`}
       description={data.seoDescription}
-      canonical={`${config.siteUrl}/technology/${data.slug}`}
       openGraph={{
         url: `${config.siteUrl}/technology/${data.slug}`,
         title: data.title,
@@ -69,7 +68,6 @@ const SingleTechnology = ({ data }) => (
 export default SingleTechnology;
 
 const filesDir = 'content/technology';
-
 export async function getStaticPaths() {
   // Retrieve all our slugs
   const paths = getPathsFromDir(filesDir);
