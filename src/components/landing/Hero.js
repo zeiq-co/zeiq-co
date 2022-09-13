@@ -38,6 +38,7 @@ const LandingPageHero = ({ page }) => (
                             className="img-fluid slider-item"
                             src={item.image.src}
                             alt={item.image.alt}
+                            priority={i}
                           />
                         </SwiperSlide>
                       );
