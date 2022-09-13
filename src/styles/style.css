@@ -1145,12 +1145,9 @@ a.text-dark:hover {
 .navigation .dropdown-toggle {
   padding-right: 19px;
 }
-.navigation.dropdown-toggle::after {
-  border: 2px solid transparent;
+.navigation .dropdown-toggle::after {
   border-radius: 2px;
-  border-right: 0;
-  border-top: 0;
-  content: "";
+  content: '';
   height: 0.5em;
   width: 0.5em;
   position: relative;
@@ -1159,7 +1156,14 @@ a.text-dark:hover {
   pointer-events: none;
   transform: rotate(-45deg);
   transform-origin: center;
+  border: 2px solid transparent;
   border-color: inherit;
+  border-top: 0px !important;
+  border-right: 0px !important;
+}
+.dropdown-toggle::after {
+  display: inline-block;
+  vertical-align: 0.255em;
 }
 .navigation .dropdown-menu {
   border: 0;
