@@ -27,10 +27,10 @@ const PageHero = ({ page }) => (
                   autoplay
                 >
                   {page &&
-                    page.heroSliderImages.map((item) => {
+                    page.heroSliderImages.map((item, i) => {
                       if (!item.image) return null;
                       return (
-                        <SwiperSlide key={item?.image?.src}>
+                        <SwiperSlide key={item?.image?.src || i}>
                           <Image
                             height={1786}
                             width={1455}
