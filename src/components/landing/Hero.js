@@ -13,7 +13,7 @@ const list = [
 ];
 
 const PageHero = ({ page }) => (
-  <section className="mt-5 pt-3">
+  <section className="mt-5 py-5">
     <div className="container">
       <div className="row">
         <div className="col-lg-5 col-md-6">
