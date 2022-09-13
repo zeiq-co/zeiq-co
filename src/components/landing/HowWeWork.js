@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const HowWeWork = ({ data, content }) => {
   if (!data) return null;
@@ -25,8 +26,15 @@ const HowWeWork = ({ data, content }) => {
                   >
                     {item.image && (
                       <div className="col-lg-6 col-md-10 mb-4 mb-lg-0 pb-2 pb-lg-0">
-                        <div className="pr-0 pr-lg-3">
-                          <img
+                        <div
+                          className={`pr-0  ${
+                            i % 2 === 0 ? 'pr-lg-3' : 'pl-lg-3'
+                          }`}
+                        >
+                          <Image
+                            layout="responsive"
+                            width={1200}
+                            height={900}
                             className="img-fluid"
                             src={item.image}
                             alt="service"
