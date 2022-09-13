@@ -18,8 +18,10 @@ const FaqItem = ({ data }) => {
             {data.title}
           </a>
         </div>
-        <div className={`collapse  ${active ? 'show' : ''}`}>
-          <div className="card-body content text-dark">{data.description}</div>
+        <div className={`collapse  ${active ? 'show' : 'hide'}`}>
+          <div className="card-body content text-dark accordion-description">
+            {data.description}
+          </div>
         </div>
       </div>
     </div>

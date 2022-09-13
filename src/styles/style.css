@@ -872,8 +872,8 @@ a.text-dark:hover {
   background: #fff !important;
 }
 .accordion .card-header a {
-  font-size: 18px;
-  padding: 16px 20px;
+  font-size: 16px;
+  padding: 16px 16px;
   padding-right: 65px;
   background: #fff !important;
   color: #000;
@@ -902,6 +902,9 @@ a.text-dark:hover {
 }
 .accordion .card-header a[aria-expanded='false']::after {
   transform: translateY(-50%) rotate(0);
+}
+.accordion-description {
+  font-size: 14px !important;
 }
 .content * {
   word-break: break-word;
