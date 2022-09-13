@@ -111,7 +111,9 @@ const WhatWeDo = () => (
                     <ul className="pl-0">
                       {item &&
                         item.list &&
-                        item.list.map((el) => <li>{el.title}</li>)}
+                        item.list.map((el) => (
+                          <li key={el.title}>{el.title}</li>
+                        ))}
                     </ul>
                   </div>
                 </div>
