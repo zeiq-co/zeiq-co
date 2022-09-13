@@ -12,7 +12,7 @@ const list = [
   { name: 'Systematic inventory management' },
 ];
 
-const PageHero = ({ page }) => (
+const LandingPageHero = ({ page }) => (
   <section className="mt-5 py-5">
     <div className="container">
       <div className="row">
@@ -30,7 +30,7 @@ const PageHero = ({ page }) => (
                     page.heroSliderImages.map((item, i) => {
                       if (!item.image) return null;
                       return (
-                        <SwiperSlide key={item?.image?.src || i}>
+                        <SwiperSlide key={i || item?.image?.src}>
                           <Image
                             height={1786}
                             width={1455}
@@ -75,7 +75,10 @@ const PageHero = ({ page }) => (
                       list.slice(0, 3).map((item) => {
                         if (!item) return null;
                         return (
-                          <div className="content text-light content-dark">
+                          <div
+                            className="content text-light content-dark"
+                            key={item.name}
+                          >
                             <li>{item.name}</li>
                           </div>
                         );
@@ -88,7 +91,10 @@ const PageHero = ({ page }) => (
                       list.slice(3).map((item) => {
                         if (!item.name) return null;
                         return (
-                          <div className="content text-light content-dark">
+                          <div
+                            className="content text-light content-dark"
+                            key={item.name}
+                          >
                             <li>{item.name}</li>
                           </div>
                         );
@@ -104,4 +110,4 @@ const PageHero = ({ page }) => (
   </section>
 );
 
-export default PageHero;
+export default LandingPageHero;
