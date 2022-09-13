@@ -1145,8 +1145,8 @@ a.text-dark:hover {
 .navigation .dropdown-toggle {
   padding-right: 19px;
 }
-.navigation .dropdown-toggle::after {
-  border: 2px solid transparent !important;
+.navigation.dropdown-toggle::after {
+  border: 2px solid transparent;
   border-radius: 2px;
   border-right: 0;
   border-top: 0;
