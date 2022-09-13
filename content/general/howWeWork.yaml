@@ -3,38 +3,18 @@
   title: Front end ux
   subtitle: Our web developers will build your e-commerce store with user-focused design and functionality. So, not only will it be visually pleasing, your site will be simple to use and seamless to navigate.
   image: /images/landing/howWeWork.png
-  list:
-  - name: First Name
-  - name: Second Name
-  - name: First Name
-  - name: Second Name
 - two:
   category: ecommerce
   title: Back End Efficiency
   subtitle: The best ecommorce stores are built from the ground up, with careful consideration of features and functionality. Wherever possible, our e-commerce web services will aim to improve and streamline the back end setup to add efficiencies to your business.
   image: /images/landing/howWeWork.png
-  list:
-  - name: First Name
-  - name: Second Name
-  - name: First Name
-  - name: Second Name
 - three:
   category: ecommerce
   title: Customized & Scalable
   subtitle: We develop online stores that are completely tailored to your business needs and user preferences. When the sales roll in and you’re ready to grow, your platform will make scaling your shop simple.
   image: /images/landing/howWeWork.png
-  list:
-  - name: First Name
-  - name: Second Name
-  - name: First Name
-  - name: Second Name
 - four:
   category: ecommerce
   title: What else?
   subtitle: With your online store refreshed and reimagined, our dedicated team of design experts will help you get comfortable with the platform through dedicated training and provide ongoing support to your teams. For any questions on our e-commerce web services, just drop us a line.
   image: /images/landing/howWeWork.png
-  list:
-  - name: First Name
-  - name: Second Name
-  - name: First Name
-  - name: Second Name
