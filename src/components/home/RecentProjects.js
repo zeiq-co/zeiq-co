@@ -223,51 +223,52 @@ const RecentProjects = ({ projects, title, subtitle }) => {
           }}
         >
           <div className="swiper-wrapper">
-            {projects.map((item, index) => {
-              const randomId = random(0, bgColors.length - 1);
-              const bgColor = bgColors[randomId];
-              if (!item.featuredImage) return null;
-              return (
-                <SwiperSlide key={item.slug || index}>
-                  <div className="swiper-slide">
-                    <div className="card portfolio-card card-overlay card-hover-zoom">
-                      <span className="card-img">
-                        <Image
-                          priority={index}
-                          src={item.featuredImage || item.heroImage}
-                          alt={item.title}
-                          className="img-fluid"
-                          width={1200}
-                          height={900}
-                          objectFit="contain"
-                          layout="responsive"
-                        />
-                        <span
-                          className="img-overlay"
-                          style={{ backgroundColor: bgColor }}
-                        />
-                      </span>
-                      <div className="card-img-overlay text-center">
-                        <div className="block">
-                          {item.slug && (
-                            <h3 className="card-title mb-3">
-                              <Link href={`/work/${item.slug}`}>
-                                <a>{item.title}</a>
+            {projects &&
+              projects.map((item, index) => {
+                const randomId = random(0, bgColors.length - 1);
+                const bgColor = bgColors[randomId];
+                if (!item.featuredImage) return null;
+                return (
+                  <SwiperSlide key={item.slug || index}>
+                    <div className="swiper-slide">
+                      <div className="card portfolio-card card-overlay card-hover-zoom">
+                        <span className="card-img">
+                          <Image
+                            priority={index}
+                            src={item.featuredImage || item.heroImage}
+                            alt={item.title}
+                            className="img-fluid"
+                            width={1200}
+                            height={900}
+                            objectFit="contain"
+                            layout="responsive"
+                          />
+                          <span
+                            className="img-overlay"
+                            style={{ backgroundColor: bgColor }}
+                          />
+                        </span>
+                        <div className="card-img-overlay text-center">
+                          <div className="block">
+                            {item.slug && (
+                              <h3 className="card-title mb-3">
+                                <Link href={`/work/${item.slug}`}>
+                                  <a>{item.title}</a>
+                                </Link>
+                              </h3>
+                            )}
+                            <span className="card-subtitle">
+                              <Link href={`/work/${item?.slug}`}>
+                                <a>{item?.category}</a>
                               </Link>
-                            </h3>
-                          )}
-                          <span className="card-subtitle">
-                            <Link href={`/work/${item?.slug}`}>
-                              <a>{item?.category}</a>
-                            </Link>
-                          </span>
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </SwiperSlide>
-              );
-            })}
+                  </SwiperSlide>
+                );
+              })}
           </div>
           <div className="text-center mt-4">
             <div className="swiper-button prev cursor-pointer user-select-none">
