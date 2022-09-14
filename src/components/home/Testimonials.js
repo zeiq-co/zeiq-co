@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper';
 import reviewsData from '../../../content/general/reviews.yaml';
 
-const Testimonials = ({ category }) => {
+const Testimonials = ({ category, heading }) => {
   const [swiper, setSwiperLocal] = useState(null);
   const [activeStep, setActiveStep] = useState(0);
   const filteredReviews = filter(
@@ -16,6 +16,13 @@ const Testimonials = ({ category }) => {
   return (
     <section className="section bg-white review-carousel">
       <div className="container">
+        {heading && (
+          <div className="col-12 has-anim fade">
+            <div className="section-title text-center">
+              <h2 className="title text-dark">{heading}</h2>
+            </div>
+          </div>
+        )}
         <div className="row justify-content-center">
           <div className="col-lg-9 has-anim fade">
             <div className="swiper-container">
