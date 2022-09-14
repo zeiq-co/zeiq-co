@@ -116,7 +116,6 @@ const Header = () => {
                       <i className="las la-times mr-1" />
                       Close
                     </li>
-
                     <li className="nav-item dropdown">
                       <DropDownItem
                         label="Work"
@@ -125,7 +124,6 @@ const Header = () => {
                           setActive(!active);
                         }}
                       />
-
                       <ul
                         className={`dropdown-menu ${active ? 'd-block' : ''}`}
                       >
