@@ -47,14 +47,6 @@ const LandingPage = ({ page, projects }) => {
       />
       <PostHero page={page} />
       <WhatWeDo />
-      <HowWeWork
-        data={howWeWorkData}
-        // content={{
-        //   title: 'How We Work',
-        //   subtitle:
-        //     'We understand how to deliver engaging and successful eCommerce experiences',
-        // }}
-      />
       <HomeServices
         data={whatWeDoData}
         title="How We Work on it?"
@@ -66,6 +58,14 @@ const LandingPage = ({ page, projects }) => {
         title="Glimpse of Our eCommerce Projects"
         subtitle="Check out our latest case studies and learn about how we helped worldwide companies
         to reach an efficient outcome for their eCommerce business."
+      />
+      <HowWeWork
+        data={howWeWorkData}
+        // content={{
+        //   title: 'How We Work',
+        //   subtitle:
+        //     'We understand how to deliver engaging and successful eCommerce experiences',
+        // }}
       />
       <Testimonials category={page.category || 'home'} />
       <ContactInfo

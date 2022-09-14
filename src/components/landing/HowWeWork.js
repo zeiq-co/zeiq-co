@@ -4,7 +4,7 @@ import Image from 'next/image';
 const HowWeWork = ({ data, content }) => {
   if (!data) return null;
   return (
-    <div className="section bg-white">
+    <div className="section py-4 bg-white">
       <div className="container">
         {content && (
           <div className="col-12 has-anim fade">
