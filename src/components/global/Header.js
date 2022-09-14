@@ -42,7 +42,8 @@ const DropDownItem = ({ href, onClick, label }) => (
 );
 
 const Header = () => {
-  const [active, setActive] = useState(false);
+  const [activeWork, setActiveWork] = useState(false);
+  const [activeService, setActiveService] = useState(false);
   return (
     <>
       <div className="adjust-navigation-height" />
@@ -121,11 +122,13 @@ const Header = () => {
                         label="Work"
                         href="/work"
                         onClick={() => {
-                          setActive(!active);
+                          setActiveWork(!activeWork);
                         }}
                       />
                       <ul
-                        className={`dropdown-menu ${active ? 'd-block' : ''}`}
+                        className={`dropdown-menu ${
+                          activeWork ? 'd-block' : ''
+                        }`}
                       >
                         <li>
                           <Link href="/work">
@@ -144,11 +147,13 @@ const Header = () => {
                         label="Services"
                         href="/services"
                         onClick={() => {
-                          setActive(!active);
+                          setActiveService(!activeService);
                         }}
                       />
                       <ul
-                        className={`dropdown-menu ${active ? 'd-block' : ''}`}
+                        className={`dropdown-menu ${
+                          activeService ? 'd-block' : ''
+                        }`}
                       >
                         {services.map((item) => (
                           <li key={item.slug}>
