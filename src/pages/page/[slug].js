@@ -67,7 +67,10 @@ const LandingPage = ({ page, projects }) => {
         //     'We understand how to deliver engaging and successful eCommerce experiences',
         // }}
       />
-      <Testimonials category={page.category || 'home'} />
+      <Testimonials
+        category={page.category || 'home'}
+        heading="What Our Clients Says"
+      />
       <ContactInfo
         contactData={contactData}
         isFaq
