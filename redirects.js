@@ -24,16 +24,12 @@ const data = [
     destination: '/work/dj-food',
   },
   {
-    source: `/page/e-commerce`,
-    destination: '/page/ecommerce',
+    source: `/e-commerce`,
+    destination: '/ecommerce',
   },
   {
-    source: `/ecommerce`,
-    destination: '/page/ecommerce',
-  },
-  {
-    source: `/advertisement/ecommerce`,
-    destination: '/page/ecommerce',
+    source: `/services/e-commerce`,
+    destination: '/ecommerce',
   },
 ];
 

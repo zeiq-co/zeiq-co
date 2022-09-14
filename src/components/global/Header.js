@@ -19,6 +19,11 @@ const services = [
     title: 'Digital Marketing',
     slug: '/services/marketing',
   },
+  {
+    id: 5,
+    title: 'E-Commerce',
+    slug: '/ecommerce',
+  },
 ];
 
 const Header = () => (
