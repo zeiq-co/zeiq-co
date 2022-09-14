@@ -6,7 +6,7 @@ import Image from 'next/image';
 const list = [
   { name: 'Customizable & SEO friendly design' },
   { name: 'Easy tracking of orders & fulfillment' },
-  { name: 'Multiple shipping &amp; delivery options' },
+  { name: 'Multiple shipping & delivery options' },
   { name: 'Advanced payment solutions' },
   { name: 'Run campaigns and ads on multiple sales channels' },
   { name: 'Systematic inventory management' },
@@ -55,7 +55,7 @@ const LandingPageHero = ({ page }) => (
                 Start Selling <br /> Your Business Online.
               </h2>
               <p className="mb-3 font-weight-500 text-light">
-                Grow Your Ecommerce Sales Quicker, Smarter &amp; Further
+                Grow Your E-Commerce Sales Quicker, Smarter &amp; Further
               </p>
 
               {page.description && (
