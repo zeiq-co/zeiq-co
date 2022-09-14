@@ -15,7 +15,7 @@ const WorkItem = ({ data, index }) => {
             <Link href={`/work/${data.slug}`}>
               <a className="card-img overflow-hidden rounded-0">
                 <Image
-                  src={data.featuredImage}
+                  src={data.heroImage || data.featuredImage}
                   alt={data.title}
                   className="img-fluid"
                   height={1006}

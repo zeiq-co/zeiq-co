@@ -1,24 +1,20 @@
 import { NextSeo } from 'next-seo';
 import { orderBy, filter } from 'lodash';
 
-import {
-  getPathsFromDir,
-  getSingleMdx,
-  getMdxFromDir,
-} from '../../utils/helpers';
-import config from '../../utils/config';
-import contactData from '../../../content/general/contact.yaml';
-import whatWeDoData from '../../../content/general/whatWeDo.yaml';
-import howWeWorkData from '../../../content/general/howWeWork.yaml';
+import { getPathsFromDir, getSingleMdx, getMdxFromDir } from '../utils/helpers';
+import config from '../utils/config';
+import contactData from '../../content/general/contact.yaml';
+import whatWeDoData from '../../content/general/whatWeDo.yaml';
+import howWeWorkData from '../../content/general/howWeWork.yaml';
 
-import Layout from '../../components/Layout';
-import PostHero from '../../components/landing/Hero';
-import WhatWeDo from '../../components/landing/WhatWeDo';
-import HowWeWork from '../../components/landing/HowWeWork';
-import HomeServices from '../../components/home/HomeServices';
-import RecentProjects from '../../components/home/RecentProjects';
-import Testimonials from '../../components/home/Testimonials';
-import ContactInfo from '../../components/contact/ContactInfo';
+import Layout from '../components/Layout';
+import PostHero from '../components/landing/Hero';
+import WhatWeDo from '../components/landing/WhatWeDo';
+import HowWeWork from '../components/landing/HowWeWork';
+import HomeServices from '../components/home/HomeServices';
+import RecentProjects from '../components/home/RecentProjects';
+import Testimonials from '../components/home/Testimonials';
+import ContactInfo from '../components/contact/ContactInfo';
 
 const LandingPage = ({ page, projects }) => {
   if (!page) return null;
