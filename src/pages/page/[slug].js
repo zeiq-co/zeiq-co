@@ -104,7 +104,7 @@ export async function getStaticProps({ params: { slug } }) {
   let projects = getMdxFromDir('content/work');
   projects = filter(projects, (item) => item.category === frontmatter.category);
   projects = orderBy(projects, ['listingOrder'], ['asc']);
-  projects = projects.slice(0, 8);
+  projects = projects.slice(0, 10);
 
   return {
     props: {
