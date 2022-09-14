@@ -27,6 +27,20 @@ const services = [
   },
 ];
 
+const DropDownItem = ({ href, onClick, label }) => (
+  <Link href={href || '/'}>
+    <a
+      className="nav-link dropdown-toggle"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+      onClick={onClick}
+    >
+      {label}
+    </a>
+  </Link>
+);
+
 const Header = () => {
   const [active, setActive] = useState(false);
   return (
@@ -104,19 +118,14 @@ const Header = () => {
                     </li>
 
                     <li className="nav-item dropdown">
-                      <Link href="/work">
-                        <a
-                          className="nav-link dropdown-toggle"
-                          data-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                          onClick={() => {
-                            setActive(!active);
-                          }}
-                        >
-                          Work
-                        </a>
-                      </Link>
+                      <DropDownItem
+                        label="Work"
+                        href="/work"
+                        onClick={() => {
+                          setActive(!active);
+                        }}
+                      />
+
                       <ul
                         className={`dropdown-menu ${active ? 'd-block' : ''}`}
                       >
@@ -133,19 +142,13 @@ const Header = () => {
                       </ul>
                     </li>
                     <li className="nav-item dropdown">
-                      <Link href="/services">
-                        <a
-                          className="nav-link dropdown-toggle"
-                          data-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                          onClick={() => {
-                            setActive(!active);
-                          }}
-                        >
-                          Services
-                        </a>
-                      </Link>
+                      <DropDownItem
+                        label="Services"
+                        href="/services"
+                        onClick={() => {
+                          setActive(!active);
+                        }}
+                      />
                       <ul
                         className={`dropdown-menu ${active ? 'd-block' : ''}`}
                       >
