@@ -5,11 +5,9 @@ import Image from 'next/image';
 
 const list = [
   { name: 'Customizable & SEO friendly design' },
-  { name: 'Easy tracking of orders & fulfillment' },
   { name: 'Multiple shipping & delivery options' },
   { name: 'Advanced payment solutions' },
   { name: 'Run campaigns and ads on multiple sales channels' },
-  { name: 'Systematic inventory management' },
 ];
 
 const LandingPageHero = ({ data }) => {
