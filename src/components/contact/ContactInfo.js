@@ -36,7 +36,7 @@ const ContactInfo = ({ contactData, isFaq, content }) => {
     }
   };
   return (
-    <section className="section contact-us bg-white  is-hero-fade">
+    <section className="section contact-us bg-white ">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-xl-11">
