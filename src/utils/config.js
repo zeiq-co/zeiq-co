@@ -1,7 +1,7 @@
 const config = {
   debug: process.env.NODE_ENV === 'development',
   siteName: process.env.NEXT_PUBLIC_ENV_SITE_NAME || 'Zeiq',
-  theme_color: '#f9004d',
+  theme_color: '#001213',
   projectKey: 'zeiq-fullstack',
   email: 'sales@zeiq.co',
   telephone: '+44-7747810130',
