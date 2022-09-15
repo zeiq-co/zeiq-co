@@ -29,13 +29,7 @@ const services = [
 
 const DropDownItem = ({ href, onClick, label }) => (
   <Link href={href || '/'}>
-    <a
-      className="nav-link dropdown-toggle"
-      data-toggle="dropdown"
-      aria-haspopup="true"
-      aria-expanded="false"
-      onClick={onClick}
-    >
+    <a className="nav-link dropdown-toggle" onClick={onClick}>
       {label}
     </a>
   </Link>

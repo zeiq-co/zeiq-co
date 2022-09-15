@@ -11,40 +11,37 @@ import Layout from '../../components/Layout';
 import PrimaryService from '../../components/services/PrimaryService';
 import SecondaryService from '../../components/services/SecondaryService';
 
-const Service = ({ data, childServices, projects }) => {
-  console.log(data.featuredImage);
-  return (
-    <Layout>
-      <NextSeo
-        title={`${data?.title}`}
-        description={data?.featuredOneDetails}
-        openGraph={{
-          url: `${config.siteUrl}/services/${data.slug}`,
-          title: data.title,
-          description: data?.featuredOneDetails
-            ? data?.featuredOneDetails
-            : data.title,
-          images: [
-            {
-              url: `${config.siteUrl}/${
-                data?.featuredImage ? data?.featuredImage : ''
-              }`,
-              width: 800,
-              height: 600,
-              alt: data.title,
-              type: 'image/jpeg',
-            },
-          ],
-        }}
-      />
-      {!data?.advertisementType ? (
-        <PrimaryService childServices={childServices} data={data} />
-      ) : (
-        <SecondaryService data={data} projects={projects} />
-      )}
-    </Layout>
-  );
-};
+const Service = ({ data, childServices, projects }) => (
+  <Layout>
+    <NextSeo
+      title={`${data?.title}`}
+      description={data?.featuredOneDetails}
+      openGraph={{
+        url: `${config.siteUrl}/services/${data.slug}`,
+        title: data.title,
+        description: data?.featuredOneDetails
+          ? data?.featuredOneDetails
+          : data.title,
+        images: [
+          {
+            url: `${config.siteUrl}/${
+              data?.featuredImage ? data?.featuredImage : ''
+            }`,
+            width: 800,
+            height: 600,
+            alt: data.title,
+            type: 'image/jpeg',
+          },
+        ],
+      }}
+    />
+    {data?.advertisementType ? (
+      <SecondaryService data={data} projects={projects} />
+    ) : (
+      <PrimaryService data={data} childServices={childServices} />
+    )}
+  </Layout>
+);
 
 export default Service;
 
