@@ -63,14 +63,14 @@ export async function getStaticProps({ params: { slug } }) {
   );
   let childResult = getMdxFromDir(filesDir);
   childResult = filter(childResult, (o) => o.parent === slug);
-  childResult = orderBy(childResult, ['listingOrder'], ['asc']);
+  childResult = await orderBy(childResult, ['listingOrder'], ['asc']);
   let projects = getMdxFromDir('content/work');
   projects = filter(
     projects,
     (item) => item.category === frontmatter.advertisementType,
   );
   projects = orderBy(projects, ['listingOrder'], ['asc']);
-  projects = projects.slice(0, 10);
+  projects = await projects.slice(0, 10);
 
   return {
     props: {

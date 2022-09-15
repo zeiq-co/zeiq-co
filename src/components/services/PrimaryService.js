@@ -7,7 +7,7 @@ import RelatedServices from './RelatedServices';
 import WorkProcess from '../home/WorkProcess';
 
 const PrimaryService = ({ data, childServices }) => {
-  console.log(data, 'data');
+  console.log('PrimaryService');
   return (
     <div>
       <PostHero post={data} />
