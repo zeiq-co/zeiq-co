@@ -83,6 +83,11 @@ const Footer = ({ contactData }) => (
                 </Link>
               </li>
               <li>
+                <Link href="/services/ecommerce">
+                  <a>E-Commerce Development</a>
+                </Link>
+              </li>
+              <li>
                 <Link href="/services/software-development">
                   <a>Software Development</a>
                 </Link>
