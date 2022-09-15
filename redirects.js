@@ -25,11 +25,11 @@ const data = [
   },
   {
     source: `/e-commerce`,
-    destination: '/ecommerce',
+    destination: '/services/ecommerce',
   },
   {
-    source: `/services/e-commerce`,
-    destination: '/ecommerce',
+    source: `/ecommerce`,
+    destination: '/services/ecommerce',
   },
 ];
 

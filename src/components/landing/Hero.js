@@ -12,7 +12,7 @@ const list = [
   { name: 'Systematic inventory management' },
 ];
 
-const LandingPageHero = ({ page }) => (
+const LandingPageHero = ({ data }) => (
   <section className="mt-5 py-5">
     <div className="container">
       <div className="row">
@@ -26,8 +26,8 @@ const LandingPageHero = ({ page }) => (
                   loop
                   autoplay
                 >
-                  {page &&
-                    page.heroSliderImages.map((item, i) => {
+                  {data &&
+                    data.heroSliderImages.map((item, i) => {
                       if (!item.image) return null;
                       return (
                         <SwiperSlide key={i || item?.image?.src}>
@@ -58,9 +58,9 @@ const LandingPageHero = ({ page }) => (
                 Grow Your E-Commerce Sales Quicker, Smarter &amp; Further
               </p>
 
-              {page.description && (
+              {data.description && (
                 <div className="mt-4">
-                  <p>{page.description}</p>
+                  <p>{data.description}</p>
                 </div>
               )}
             </div>

@@ -23,7 +23,7 @@ const services = [
   {
     id: 5,
     title: 'E-Commerce',
-    slug: '/ecommerce',
+    slug: '/services/ecommerce',
   },
 ];
 

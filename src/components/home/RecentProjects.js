@@ -281,7 +281,9 @@ const RecentProjects = ({ projects, title, subtitle }) => {
           <div className="swipeCarousel-control portfolio-carousel-fluid portfolio-carousel-fluid">
             <div className="swiper-pagination swiper-pagination-progressbar portfolio-carousel-fluid " />
             <div className="activeslide">{activeStep + 1}</div>
-            <div className="totalslide">{projects.length}</div>
+            {projects?.length && (
+              <div className="totalslide">{projects?.length}</div>
+            )}
           </div>
         </Swiper>
       </div>
