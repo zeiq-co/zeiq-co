@@ -47,18 +47,18 @@ function BlogPage({ posts }) {
   return (
     <Layout>
       <NextSeo
-        title={`${config.siteName} News : Software, Website, Mobile App, Ecommerce, Digital Marketing`}
-        description={`${config.siteName} Blog, Get Updated on latest news of mobile applications Development, software and web development services, ecommerce Solutions.}`}
+        title="Blog"
+        description="Blog, Get Updated on latest news of mobile applications Development."
         openGraph={{
           url: `${config.siteUrl}/blog`,
-          title: `${`${config.siteName} News : Software, Website, Mobile App, Ecommerce, Digital Marketing`}`,
-          description: `${`${config.siteName} Blog, Get Updated on latest news of mobile applications Development, software and web development services, ecommerce Solutions.}`}`,
+          title: `${`${config.siteName} Blog | Software, Website, Mobile App, Ecommerce, Digital Marketing`}`,
+          description: `${`${config.siteName} Blog, Get Updated on latest news of mobile applications Development.`}`,
           images: [
             {
               url: `${config.siteUrl}/images/blog-about-blogs.jpg`,
               width: 800,
               height: 600,
-              alt: 'News',
+              alt: 'Blog',
               type: 'image/jpeg',
             },
           ],
