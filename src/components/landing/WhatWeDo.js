@@ -49,7 +49,7 @@ const WhatWeDo = () => (
     <div className="container">
       <div className="col-12 has-anim fade">
         <div className="section-title text-center">
-          <h2 className="title text-dark">What We Do ?</h2>
+          <h2 className="title text-dark">How can we help? ?</h2>
           <p className="font-weight-700">
             We understand how to deliver engaging and successful eCommerce
             experiences
