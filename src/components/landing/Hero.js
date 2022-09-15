@@ -18,7 +18,7 @@ const LandingPageHero = ({ data }) => {
     <section className="mt-5 py-5">
       <div className="container">
         <div className="row">
-          <div className="col-lg-5 col-md-6">
+          <div className="col-lg-5 col-md-6 mb-4 mb-lg-0">
             <div className="about-me-slider">
               <div className="pr-0 pr-lg-3">
                 <div className="swiper-slider">
