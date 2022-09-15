@@ -18,7 +18,7 @@ const Service = ({ data, childServices, projects }) => (
       description={data?.featuredOneDetails}
       openGraph={{
         url: `${config.siteUrl}/services/${data.slug}`,
-        title: data.title,
+        title: data.seoTitle || data.title,
         description: data?.featuredOneDetails
           ? data?.featuredOneDetails
           : data.title,
