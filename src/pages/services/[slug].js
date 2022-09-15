@@ -14,7 +14,7 @@ import SecondaryService from '../../components/services/SecondaryService';
 const Service = ({ data, childServices, projects }) => (
   <Layout>
     <NextSeo
-      title={`${data?.title}`}
+      title={data?.seoTitle || data?.title}
       description={data?.featuredOneDetails}
       openGraph={{
         url: `${config.siteUrl}/services/${data.slug}`,
@@ -35,9 +35,10 @@ const Service = ({ data, childServices, projects }) => (
         ],
       }}
     />
-    {data?.advertisementType ? (
+    {data?.advertisementType && (
       <SecondaryService data={data} projects={projects} />
-    ) : (
+    )}
+    {!data?.advertisementType && (
       <PrimaryService data={data} childServices={childServices} />
     )}
   </Layout>

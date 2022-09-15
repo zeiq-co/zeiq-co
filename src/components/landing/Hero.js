@@ -20,7 +20,7 @@ const LandingPageHero = ({ data }) => {
         <div className="row">
           <div className="col-lg-5 col-md-6">
             <div className="about-me-slider">
-              <div className="pr-0 pr-lg-3 is-hero-fade">
+              <div className="pr-0 pr-lg-3">
                 <div className="swiper-slider">
                   <Swiper
                     modules={[EffectFade, Autoplay]}
