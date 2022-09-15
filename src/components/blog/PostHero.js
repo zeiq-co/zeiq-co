@@ -2,7 +2,7 @@ import { upperFirst } from 'lodash';
 import dayjs from 'dayjs';
 
 const PostHero = ({ post }) => (
-  <section className="page-header pb-0 is-hero-fade">
+  <section className="page-header pb-0">
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-lg-10 text-center">
