@@ -83,7 +83,7 @@ const Footer = ({ contactData }) => (
                 </Link>
               </li>
               <li>
-                <Link href="/services/ecommerce">
+                <Link href="/services/e-commerce">
                   <a>E-Commerce</a>
                 </Link>
               </li>
