@@ -24,8 +24,8 @@ const Service = ({ data, childServices, projects }) => (
           : data.title,
         images: [
           {
-            url: `${config.siteUrl}/${
-              data?.featuredImage ? data?.featuredImage : ''
+            url: `${config.siteUrl}${
+              data?.featuredImage ? data?.featuredImage : '/images/logo.png'
             }`,
             width: 800,
             height: 600,
