@@ -28,7 +28,7 @@ const Service = ({ data, childServices, projects }) => (
               data?.featuredImage ? data?.featuredImage : '/images/logo.png'
             }`,
             width: 960,
-            height: 648,
+            height: 640,
             alt: data.title,
             type: 'image/jpeg',
           },
