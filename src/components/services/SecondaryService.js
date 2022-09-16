@@ -18,7 +18,7 @@ const SecondaryService = ({ data, projects }) => (
     <WhatWeDo />
     <HomeServices
       data={whatWeDoData}
-      title="How we work on it?"
+      title="How do we work on it?"
       subtitle="eCommerce Development Process"
       category={data.advertisementType || 'home'}
     />

@@ -7,7 +7,7 @@ const list = [
   { name: 'Customizable & SEO friendly design' },
   { name: 'Multiple shipping & delivery options' },
   { name: 'Advanced payment solutions' },
-  { name: 'Run campaigns and ads on multiple sales channels' },
+  { name: 'Run campaigns and ads on numerous sales channels' },
 ];
 
 const LandingPageHero = ({ data }) => {
