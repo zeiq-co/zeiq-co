@@ -4,7 +4,10 @@ const Details = ({ contactData }) => (
   <div>
     <div className="pr-0 pr-lg-4">
       <h4 className="text-dark mb-3">Contact Us</h4>
-      <p>Share details of your project – like scope, time frames, or business challenges. Our team will carefully study them. Then we will figure out the next move together.
+      <p>
+        Share details of your project – like scope, time frames, or business
+        challenges. Our team will carefully study them. Then we will figure out
+        the next move together.
       </p>
 
       <div className="mt-4 pt-2">
