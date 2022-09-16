@@ -30,15 +30,15 @@
 - six:
   category: ecommerce
   title: Design & Development
-  subtitle: Designing wireframes & mock-ups, preparing content and project setup (setting up the development environment, code repository, creating all needed accounts, etc.) are done after planning. Then work on Development and initial testing starts.
+  subtitle: Designing wireframes & mock-ups, preparing content and project setup (setting up the development environment, code repository, creating all needed accounts, etc.) will have done after planning. Then work on Development then initial testing starts.
   image: /images/service/software-dev.svg
 - seven:
   category: ecommerce
   title: Testing & Polishing
-  subtitle: Here, we test the entire system and make final fixes and important improvements to the back-end logic. Our digital marketing specialists test the user experiences and search engine ranking factors of the website before launching.
+  subtitle: Here, we test the entire system, make final fixes and improvements to the back-end logic. Our digital marketing specialists will test the user experiences and search engine ranking factors of the website before launching.
   image: /images/service/marketing.svg
 - eight:
   category: ecommerce
   title: Launch & Support
-  subtitle: After the final approval, we move the website/application to the live hosting and domain. After the successful launching of your website/app, we support and monitor your project.
+  subtitle: After the final approval, we move the website/application to the live hosting and domain. After launching your website/app successfully, we will support and monitor your project.
   image: /images/service/webApp.svg
