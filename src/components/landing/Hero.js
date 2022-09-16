@@ -72,7 +72,7 @@ const LandingPageHero = ({ data }) => {
                   <div className="col-sm-6">
                     <ul className="pl-0">
                       {list &&
-                        list.slice(0, 3).map((item) => {
+                        list.slice(0, 2).map((item) => {
                           if (!item) return null;
                           return (
                             <div
@@ -88,7 +88,7 @@ const LandingPageHero = ({ data }) => {
                   <div className="col-sm-6">
                     <ul className="pl-0">
                       {list &&
-                        list.slice(3).map((item) => {
+                        list.slice(2).map((item) => {
                           if (!item.name) return null;
                           return (
                             <div
