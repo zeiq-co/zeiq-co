@@ -69,10 +69,9 @@ const ContactInfo = ({ contactData, isFaq, content }) => {
                   {isFaq && (
                     <div className="mb-4">
                       <p>
-                        Share details of your project – like scope, time
-                        frames, or business challenges. Our team will carefully
-                        study them. Then we will figure out the next move
-                        together.
+                        Share details of your project – like scope, time frames,
+                        or business challenges. Our team will carefully study
+                        them. Then we will figure out the next move together.
                       </p>
                     </div>
                   )}
