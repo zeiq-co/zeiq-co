@@ -19,7 +19,7 @@ const data = [
     title: 'Manage your store',
     list: [
       { title: 'Efficient inventory management' },
-      { title: 'Easy tracking of orders & fulfillment' },
+      { title: 'Easy tracking of orders & fulfilment' },
       { title: 'Multiple shipping & delivery options' },
       { title: 'Mobile management app' },
       { title: 'Automated sales tax' },
@@ -37,7 +37,7 @@ const data = [
       { title: 'Advanced SEO tools' },
       { title: 'Email marketing' },
       { title: 'Live chat with customers' },
-      { title: 'CRM & automations' },
+      { title: 'CRM & automation' },
       { title: 'Branded mobile app' },
     ],
   },
