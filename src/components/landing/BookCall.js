@@ -14,7 +14,7 @@ const BookCall = ({ title, subTitle }) => (
             <div className="text-center">
               <a href="https://calendly.com/perminder-klair/15min">
                 <button className="btn btn-black text-center" type="button">
-                  Book Now
+                  Book A Call
                 </button>
               </a>
             </div>
