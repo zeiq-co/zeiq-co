@@ -11,6 +11,7 @@ import HomeServices from '../home/HomeServices';
 import RecentProjects from '../home/RecentProjects';
 import Testimonials from '../home/Testimonials';
 import ContactInfo from '../contact/ContactInfo';
+import BookCall from '../landing/BookCall';
 
 const SecondaryService = ({ data, projects }) => (
   <div>
@@ -47,6 +48,10 @@ const SecondaryService = ({ data, projects }) => (
         title: 'Contact Us',
         subtitle: 'Want to increase your eCommerce sales? \n Get started today',
       }}
+    />
+    <BookCall
+      title="Book Your Free Consultation Call"
+      subTitle="This is not a sales call, this is an opportunity to find out if we are a mutually good fit"
     />
   </div>
 );
