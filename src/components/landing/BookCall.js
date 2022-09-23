@@ -1,3 +1,5 @@
+import AnimatedButton from '../elements/AnimatedButton';
+
 const BookCall = ({ title, subTitle }) => (
   <section className="page-header bg-white">
     <div className="container">
@@ -13,9 +15,7 @@ const BookCall = ({ title, subTitle }) => (
             </h2>
             <div className="text-center">
               <a href="https://calendly.com/perminder-klair/15min">
-                <button className="btn btn-black text-center" type="button">
-                  Book A Call
-                </button>
+                <AnimatedButton>Book a call</AnimatedButton>
               </a>
             </div>
           </div>
