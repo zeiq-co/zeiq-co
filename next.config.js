@@ -7,7 +7,8 @@ const nextConfig = {
   env: {
     TELEGRAM_TOKEN: '5784516054:AAEYyRMC7Gd2V3ueEEfyw8fA-XLBF3olhXs',
     TELEGRAM_CHAT_ID: '-630224343',
-    NEXT_PUBLIC_GA_MEASUREMENT_ID: 'UA-1390187-41',
+    NEXT_PUBLIC_GA_MEASUREMENT_ID: 'G-J41LT20EGY',
+    // NEXT_PUBLIC_GA_MEASUREMENT_ID: 'UA-1390187-41',
   },
   images: {
     domains: ['assets.vercel.com'],
