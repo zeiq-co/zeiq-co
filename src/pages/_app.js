@@ -43,7 +43,10 @@ function MyApp({ Component, pageProps }) {
         <script src="/plugins/script.min.js" />
       </Head>
       <DefaultSeo {...nextSeo} />
-      <GoogleAnalytics trackPageViews />
+      <GoogleAnalytics
+        trackPageViews
+        id={process.env.NEXT_PUBLIC_ENV_SITE_NAME}
+      />
       <Component {...pageProps} />
     </>
   );
