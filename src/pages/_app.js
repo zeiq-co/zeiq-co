@@ -1,5 +1,7 @@
 import '../styles/main.css';
 import Head from 'next/head';
+import { GoogleAnalytics } from 'nextjs-google-analytics';
+
 import { DefaultSeo } from 'next-seo';
 import NProgress from 'nprogress';
 import Router from 'next/router';
@@ -35,11 +37,13 @@ function MyApp({ Component, pageProps }) {
           name="apple-mobile-web-app-status-bar"
           content={config.theme_color}
         />
+
         <script src="/plugins/jquery.min.js" />
         <script src="/plugins/isotope.min.js" />
         <script src="/plugins/script.min.js" />
       </Head>
       <DefaultSeo {...nextSeo} />
+      <GoogleAnalytics trackPageViews />
       <Component {...pageProps} />
     </>
   );
