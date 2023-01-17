@@ -7,6 +7,7 @@ const config = {
   telephone: '+44-7747810130',
   address: 'London, UK',
   siteUrl: 'https://zeiq.co',
+  googleAnalytics: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID,
 };
 
 export default config;
