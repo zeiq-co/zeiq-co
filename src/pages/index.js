@@ -1,8 +1,12 @@
 import { NextSeo } from 'next-seo';
 import { orderBy, filter } from 'lodash';
-import config from '../utils/config';
 
+import config from '../utils/config';
 import { getMdxFromDir } from '../utils/helpers';
+import homeData from '../../content/general/home.yaml';
+import seoData from '../../content/seo/homeSeo.yaml';
+import whatWeDoData from '../../content/general/whatWeDo.yaml';
+
 import Layout from '../components/Layout';
 import HomeHero from '../components/home/HomeHero';
 import HomeAbout from '../components/home/HomeAbout';
@@ -12,29 +16,35 @@ import WorkProcess from '../components/home/WorkProcess';
 import Testimonials from '../components/home/Testimonials';
 import Technologies from '../components/home/Technologies';
 import LatestPosts from '../components/home/LatestPosts';
-import homeData from '../../content/general/home.yaml';
-import whatWeDoData from '../../content/general/whatWeDo.yaml';
 
 function Index({ projects, posts, technologies }) {
   return (
     <Layout>
       <NextSeo
-        title={homeData.seoTitle}
-        description={homeData.details}
+        title={seoData.seoTitle}
+        description={seoData.details}
         openGraph={{
           url: `${config.siteUrl}`,
-          title: homeData.seoTitle,
-          description: homeData.details,
+          title: seoData.seoTitle,
+          description: seoData.details,
           images: [
             {
-              url: `${config.siteUrl}/images/logo.png`,
+              url:
+                `${config.siteUrl}${seoData?.seoImage}` ||
+                `${config.siteUrl}/images/logo.png`,
               width: 1200,
               height: 800,
-              alt: 'Zeiq',
+              alt: seoData?.imageAlt,
               type: 'image/jpeg',
             },
           ],
         }}
+        additionalMetaTags={[
+          {
+            name: 'keywords',
+            content: seoData?.keywords,
+          },
+        ]}
       />
       <HomeHero data={homeData} />
       <HomeAbout data={homeData} />

@@ -41,8 +41,13 @@ const Work = ({ data }) => (
             type: 'image/jpeg',
           },
         ],
-        site_name: 'Zeiq',
       }}
+      additionalMetaTags={[
+        {
+          name: 'keywords',
+          content: data?.keywords,
+        },
+      ]}
     />
     <PostHero post={data} />
     <section className="section pb-0">

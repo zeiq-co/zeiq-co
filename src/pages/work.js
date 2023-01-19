@@ -7,33 +7,35 @@ import Layout from '../components/Layout';
 import PageHero from '../components/global/PageHero';
 import WorkItem from '../components/work/WorkItem';
 import CallToAction from '../components/about/CallToAction';
-
-const content = {
-  seoTitle:
-    'Analyze your business,plan the strategy,works on developing idea and releases your product',
-  seoDescription:
-    'Zeiq – Full-Stack Mobile (iOS, Android) and Web App Design and Development Company',
-};
+import seoData from '../../content/seo/workSeo.yaml';
 
 function WorkPage({ projects }) {
   return (
     <Layout>
       <NextSeo
-        title={content.seoTitle}
-        description={content.seoDescription}
+        title={seoData.seoTitle}
+        description={seoData.seoDescription}
         openGraph={{
-          title: content.seoTitle,
-          description: content.seoDescription,
+          title: seoData?.seoTitle,
+          description: seoData?.seoDescription,
           images: [
             {
-              url: `${config.siteUrl}/images/logo.png`,
+              url:
+                `${config.siteUrl}${seoData?.seoImage}` ||
+                `${config.siteUrl}/images/logo.png`,
               width: 500,
               height: 500,
-              alt: 'Zeiq Work and Case studies',
+              alt: seoData.imageAlt,
               type: 'image/jpeg',
             },
           ],
         }}
+        additionalMetaTags={[
+          {
+            name: 'keywords',
+            content: seoData?.keywords,
+          },
+        ]}
       />
       <PageHero title="Our Work" subTitle="Work we do" />
       <section className="section portfolio-grid-creative bg-white ">

@@ -6,27 +6,35 @@ import { getMdxFromDir } from '../utils/helpers';
 import Layout from '../components/Layout';
 import PageHero from '../components/global/PageHero';
 import WorkItem from '../components/work/WorkItem';
+import seoData from '../../content/seo/productSeo.yaml';
 
 function ProductsPage({ projects }) {
   return (
     <Layout>
       <NextSeo
-        title="Products"
-        description="Case studies of our web, software & mobile app development work for all industry verticals."
+        title={seoData.seoTitle}
+        description={seoData.seoDescription}
         openGraph={{
-          title: 'Products',
-          description:
-            'Case studies of our web, software & mobile app development work for all industry verticals.',
+          title: seoData.seoTitle,
+          description: seoData.seoDescription,
           images: [
             {
-              url: `${config.siteUrl}/images/logo.png`,
+              url:
+                `${config.siteUrl}${seoData?.seoImage}` ||
+                `${config.siteUrl}/images/logo.png`,
               width: 500,
               height: 500,
-              alt: 'Zeiq Products and Case studies',
+              alt: seoData.imageAlt,
               type: 'image/jpeg',
             },
           ],
         }}
+        additionalMetaTags={[
+          {
+            name: 'keywords',
+            content: seoData?.keywords,
+          },
+        ]}
       />
       <PageHero title="Our Products" subTitle="Our Business" />
       <section className="section portfolio-grid-creative bg-white">

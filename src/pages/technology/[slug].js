@@ -27,6 +27,12 @@ const SingleTechnology = ({ data }) => (
           },
         ],
       }}
+      additionalMetaTags={[
+        {
+          name: 'keywords',
+          content: data?.keywords,
+        },
+      ]}
     />
     <section className="section ">
       <div className="container">

@@ -34,6 +34,12 @@ const Service = ({ data, childServices, projects }) => (
           },
         ],
       }}
+      additionalMetaTags={[
+        {
+          name: 'keywords',
+          content: data?.keywords,
+        },
+      ]}
     />
     {data?.advertisementType && (
       <SecondaryService data={data} projects={projects} />

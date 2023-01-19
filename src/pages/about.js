@@ -8,27 +8,35 @@ import PageHero from '../components/global/PageHero';
 import AboutInfo from '../components/about/AboutInfo';
 import Testimonials from '../components/home/Testimonials';
 import Technologies from '../components/home/Technologies';
+import seoData from '../../content/seo/aboutSeo.yaml';
 
 const AboutUs = ({ brandsData }) => (
   <Layout>
     <NextSeo
-      title="About Us"
-      description="Zeiq is a leading software development company in UK that offers offshore software development, web development and web designing services."
+      title={seoData.seoTitle}
+      description={seoData.seoDescription}
       openGraph={{
         url: `${config.siteUrl}/about`,
-        title: 'About Us',
-        description:
-          'Zeiq is a leading software development company in UK that offers offshore software development, web development and web designing services.',
+        title: seoData.seoTitle,
+        description: seoData.seoDescription,
         images: [
           {
-            url: `${config.siteUrl}/images/about.png`,
+            url:
+              `${config.siteUrl}${seoData?.seoImage}` ||
+              `${config.siteUrl}/images/about.png`,
             width: 800,
             height: 600,
-            alt: 'About',
+            alt: seoData.imageAlt,
             type: 'image/jpeg',
           },
         ],
       }}
+      additionalMetaTags={[
+        {
+          name: 'keywords',
+          content: seoData?.keywords,
+        },
+      ]}
     />
     <PageHero title="Who we are" subTitle="We are agents of change" />
     <AboutInfo />

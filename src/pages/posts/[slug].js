@@ -31,6 +31,12 @@ const BlogPost = ({ post }) => {
             },
           ],
         }}
+        additionalMetaTags={[
+          {
+            name: 'keywords',
+            content: post?.keywords,
+          },
+        ]}
       />
       <PostHero post={post} />
       <section className="section pb-0">
