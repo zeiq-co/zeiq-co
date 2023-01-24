@@ -1,5 +1,6 @@
 import { upperFirst } from 'lodash';
 import dayjs from 'dayjs';
+import Share from './Share';
 
 const PostHero = ({ post }) => (
   <section className="page-header pb-0">
@@ -16,6 +17,7 @@ const PostHero = ({ post }) => (
               {post.title}
               <span className="text-primary">.</span>
             </h2>
+            <Share post={post} />
           </div>
         </div>
       </div>
