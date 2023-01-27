@@ -24,7 +24,7 @@ const Wrapper = styled.section`
 const Share = ({ post }) => {
   if (!post) return null;
   const { title, slug } = post;
-  const blogUrl = `${config.siteUrl}/blog/${slug?.current}`;
+  const blogUrl = `${config.siteUrl}/blog/${slug}`;
   return (
     <Wrapper className="has-text-centered mt-4">
       <TwitterShareButton
