@@ -3,18 +3,17 @@ import { getPathsFromDir } from '../../utils/helpers';
 import config from '../../utils/config';
 
 const remoteUrl = `${config.siteUrl}`;
+const siteUrl = new URL(remoteUrl).origin;
+const filesDir = 'content/work';
+const lastMod = new Date().toISOString();
 
-const fistDirectory = 'content/work';
-const siteUrl = new URL(remoteUrl);
+const allPaths = getPathsFromDir(filesDir) || [];
+const paths = allPaths.map((item) => ({
+  loc: `${siteUrl}/work/${item?.params?.slug}`,
+  lastmod: lastMod,
+}));
 
-export const getServerSideProps = async (ctx) => {
-  const allPaths = getPathsFromDir(fistDirectory);
-  const paths = allPaths.map((item) => ({
-    loc: `https://${siteUrl}work/${item?.params?.slug}`,
-    lastmod: new Date().toISOString(),
-  }));
-
-  return getServerSideSitemap(ctx, paths);
-};
+export const getServerSideProps = async ({ res }) =>
+  getServerSideSitemap({ res }, paths);
 
 export default function Sitemap() {}
