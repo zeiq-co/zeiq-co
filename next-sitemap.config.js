@@ -18,12 +18,10 @@ module.exports = {
     '/blog/sitemap.xml',
     '/work/sitemap.xml',
     '/technology/sitemap.xml',
-    '/page/sitemap.xml',
     '/services/sitemap.xml',
   ],
   robotsTxtOptions: {
     additionalSitemaps: [
-      `${siteUrl}/page/sitemap.xml`,
       `${siteUrl}/work/sitemap.xml`,
       `${siteUrl}/technology/sitemap.xml`,
       `${siteUrl}/posts/sitemap.xml`,
