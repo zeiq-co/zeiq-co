@@ -251,11 +251,11 @@ const RecentProjects = ({ projects, title, subtitle }) => {
                         <div className="card-img-overlay text-center">
                           <div className="block">
                             {item.slug && (
-                              <h3 className="card-title mb-3">
+                              <h2 className="card-title mb-3">
                                 <Link href={`/work/${item.slug}`}>
                                   <a>{item.title}</a>
                                 </Link>
-                              </h3>
+                              </h2>
                             )}
                             <span className="card-subtitle">
                               <Link href={`/work/${item?.slug}`}>
