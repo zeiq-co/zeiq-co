@@ -1,4 +1,4 @@
-const siteUrl = `https://zeiq.co`;
+const siteUrl = process.env.SITEMAP_BASE_URL || 'https://www.zeiq.co';
 
 module.exports = {
   siteUrl,

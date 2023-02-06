@@ -10,7 +10,9 @@
     "start": "next start",
     "build": "next build",
     "deploy": "vercel --prod",
-    "lint": "eslint --fix --ext .jsx,.js src/**"
+    "lint": "eslint --fix --ext .jsx,.js src/**",
+    "postbuild": "next-sitemap",
+    "export": "yarn run build && next export"
   },
   "husky": {
     "hooks": {
