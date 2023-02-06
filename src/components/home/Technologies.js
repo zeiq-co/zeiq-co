@@ -5,7 +5,7 @@ const Technologies = ({ brandsData }) => (
   <section className="section">
     <div className="container">
       <div className="row">
-        <div className="col-12 has-anim fade">
+        <div className="col-12">
           <div className="section-title text-center">
             <p className="mb-2 text-light">Our Tech Stack</p>
             <h2 className="title text-white">Technologies</h2>
@@ -20,7 +20,7 @@ const Technologies = ({ brandsData }) => (
             return (
               <div className="logo-item" key={item.title}>
                 <Link href={`/technology/${item?.slug}`}>
-                  <a className="has-anim fade">
+                  <a>
                     <Image
                       priority={index}
                       src={item.featuredImage}

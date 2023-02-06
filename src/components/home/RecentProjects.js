@@ -196,7 +196,7 @@ const RecentProjects = ({ projects, title, subtitle }) => {
     <Section className="section bg-white portfolio-carousel-fluid swiper-container ">
       <div className="container portfolio-carousel-fluid">
         <div className="row justify-content-center">
-          <div className="col-10 has-anim fade">
+          <div className="col-10">
             <div className="section-title text-center">
               {title && <h2 className="title text-dark mb-3">{title}</h2>}
               {subtitle && <p className="mb-2">{subtitle}</p>}

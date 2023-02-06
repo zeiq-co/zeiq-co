@@ -2,7 +2,7 @@ const WorkProcess = () => (
   <section className="section overflow-hidden">
     <div className="container">
       <div className="row justify-content-center">
-        <div className="col-12 has-anim fade">
+        <div className="col-12">
           <div className="section-title text-center mb-4">
             <p className="mb-2 text-light">Here Is The</p>
             <h2 className="title text-white">Work Process</h2>
@@ -11,7 +11,7 @@ const WorkProcess = () => (
       </div>
 
       <div className="row">
-        <div className="col-lg-3 col-sm-6 has-anim fade">
+        <div className="col-lg-3 col-sm-6">
           <div className="work-process-item">
             <span className="process-text">Z</span>
             <h5 className="process-title font-weight-light">
@@ -19,7 +19,7 @@ const WorkProcess = () => (
             </h5>
           </div>
         </div>
-        <div className="col-lg-3 col-sm-6 has-anim fade anim-delay-1">
+        <div className="col-lg-3 col-sm-6">
           <div className="work-process-item">
             <span className="process-text">E</span>
             <h5 className="process-title font-weight-light">
@@ -27,7 +27,7 @@ const WorkProcess = () => (
             </h5>
           </div>
         </div>
-        <div className="col-lg-3 col-sm-6 has-anim fade anim-delay-2">
+        <div className="col-lg-3 col-sm-6 ">
           <div className="work-process-item">
             <span className="process-text">I</span>
             <h5 className="process-title font-weight-light">
@@ -35,7 +35,7 @@ const WorkProcess = () => (
             </h5>
           </div>
         </div>
-        <div className="col-lg-3 col-sm-6 has-anim fade anim-delay-3">
+        <div className="col-lg-3 col-sm-6">
           <div className="work-process-item focus">
             <span className="process-text">Q</span>
             <h5 className="process-title font-weight-light">

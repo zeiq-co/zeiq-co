@@ -17,14 +17,14 @@ const Testimonials = ({ category, heading }) => {
     <section className="section bg-white review-carousel">
       <div className="container">
         {heading && (
-          <div className="col-12 has-anim fade">
+          <div className="col-12 ">
             <div className="section-title text-center">
               <h2 className="title text-dark">{heading}</h2>
             </div>
           </div>
         )}
         <div className="row justify-content-center">
-          <div className="col-lg-9 has-anim fade">
+          <div className="col-lg-9">
             <div className="swiper-container">
               <div className="swiper-wrapper pb-0">
                 <Swiper
