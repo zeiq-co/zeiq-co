@@ -41,7 +41,7 @@ const BlogPost = ({ post }) => {
           },
         ]}
       />
-      <PostHero post={post} mainImage={mainImage} />
+      <PostHero post={post} mainImage={mainImage} isShowSocialShare />
       <section className="section pb-0">
         <div className="container">
           <div className="row">
