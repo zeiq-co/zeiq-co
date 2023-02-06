@@ -3,9 +3,8 @@ import { getPathsFromDir } from '../../utils/helpers';
 import config from '../../utils/config';
 
 const remoteUrl = `${config.siteUrl}`;
-const localUrl = `http://localhost:3000`;
 
-const siteUrl = new URL(remoteUrl || localUrl);
+const siteUrl = new URL(remoteUrl);
 const filesDir = 'content/technology';
 
 export const getServerSideProps = async (ctx) => {

@@ -26,7 +26,7 @@ module.exports = {
       `${siteUrl}/page/sitemap.xml`,
       `${siteUrl}/work/sitemap.xml`,
       `${siteUrl}/technology/sitemap.xml`,
-      `${siteUrl}/blog/sitemap.xml`,
+      `${siteUrl}/posts/sitemap.xml`,
       `${siteUrl}/services/sitemap.xml`,
     ],
   },
