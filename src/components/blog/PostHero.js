@@ -2,7 +2,7 @@ import { upperFirst } from 'lodash';
 import dayjs from 'dayjs';
 import Share from './Share';
 
-const PostHero = ({ post }) => (
+const PostHero = ({ post, mainImage }) => (
   <section className="page-header pb-0">
     <div className="container">
       <div className="row justify-content-center">
@@ -17,7 +17,7 @@ const PostHero = ({ post }) => (
               {post.title}
               <span className="text-primary">.</span>
             </h2>
-            <Share post={post} />
+            <Share post={post} mainImage={mainImage} />
           </div>
         </div>
       </div>

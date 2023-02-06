@@ -9,6 +9,9 @@ import PostHero from '../../components/blog/PostHero';
 
 const BlogPost = ({ post }) => {
   if (!post) return null;
+  const mainImage = `${config.siteUrl}/${
+    post.featuredImage ? post.featuredImage : ''
+  }`;
   return (
     <Layout>
       <NextSeo
@@ -38,7 +41,7 @@ const BlogPost = ({ post }) => {
           },
         ]}
       />
-      <PostHero post={post} />
+      <PostHero post={post} mainImage={mainImage} />
       <section className="section pb-0">
         <div className="container">
           <div className="row">

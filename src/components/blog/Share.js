@@ -21,7 +21,7 @@ const Wrapper = styled.section`
   }
 `;
 
-const Share = ({ post }) => {
+const Share = ({ post, mainImage }) => {
   if (!post) return null;
   const { title, slug } = post;
   const blogUrl = `${config.siteUrl}/posts/${slug}`;
@@ -32,6 +32,7 @@ const Share = ({ post }) => {
         url={blogUrl}
         title={title}
         hashtags={['zeiq']}
+        media={mainImage}
       >
         <TwitterIcon />
       </TwitterShareButton>
@@ -40,6 +41,7 @@ const Share = ({ post }) => {
         title={title}
         url={blogUrl}
         separator={'  '}
+        media={mainImage}
       >
         <WhatsappIcon />
       </WhatsappShareButton>
@@ -48,6 +50,7 @@ const Share = ({ post }) => {
         url={blogUrl}
         quote={title}
         hashtag="#zeiq"
+        media={mainImage}
       >
         <FacebookIcon />
       </FacebookShareButton>
@@ -56,7 +59,7 @@ const Share = ({ post }) => {
         url={blogUrl}
         description={title}
         hashtag="#zeiq"
-        media="https://www.zeiq.co/images/logo.png"
+        media={mainImage}
       >
         <PinterestIcon />
       </PinterestShareButton>
@@ -66,6 +69,7 @@ const Share = ({ post }) => {
         title={title}
         summary={title}
         source={blogUrl}
+        media={mainImage}
       >
         <LinkedinIcon />
       </LinkedinShareButton>
