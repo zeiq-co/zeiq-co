@@ -65,6 +65,7 @@ const Header = () => {
                   className="navbar-toggler"
                   type="button"
                   data-toggle="navbar-menu"
+                  aria-label="Open navigation menu"
                 >
                   <svg viewBox="0 0 341.333 341.333">
                     {' '}
