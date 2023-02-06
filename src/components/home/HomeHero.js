@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const HomeHero = ({ data }) => (
   <section className="banner">
-    <div className="container text-center text-lg-left position-relative is-hero-fade">
+    <div className="container text-center text-lg-left position-relative">
       <div className="row justify-content-md-center align-items-center">
         <div className="col-xl-6 col-lg-7 col-md-10">
           <h1 className="mb-3 font-weight-500 is-size-6 ">We Are Zeiq</h1>
