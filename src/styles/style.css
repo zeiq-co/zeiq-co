@@ -2421,3 +2421,6 @@ a.text-dark:hover {
   -webkit-text-decoration-color: rgba(255, 255, 255, 0.8);
   -moz-text-decoration-color: rgba(255, 255, 255, 0.8);
 }
+.is-size-6 {
+  font-size: 16px;
+}
