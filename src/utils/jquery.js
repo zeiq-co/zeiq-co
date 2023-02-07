@@ -6,6 +6,7 @@ const jqueryLoad = () => {
     function e() {
       var o = document.querySelector('.scroll-progress path'),
         s = o.getTotalLength();
+        if(!o) return null;
       (o.style.transition = o.style.WebkitTransition = 'none'),
         (o.style.strokeDasharray = s + ' ' + s),
         (o.style.strokeDashoffset = s),
