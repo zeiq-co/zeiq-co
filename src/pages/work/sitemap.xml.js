@@ -1,10 +1,12 @@
 import { getServerSideSitemap } from 'next-sitemap';
+import path from 'path';
 import { getPathsFromDir } from '../../utils/helpers';
 import config from '../../utils/config';
 
 const remoteUrl = `${config.siteUrl}`;
 const siteUrl = new URL(remoteUrl).origin;
-const filesDir = 'content/work';
+const filesDir = path.join(process.cwd(), 'content/work');
+
 const lastMod = new Date().toISOString();
 
 const allPaths = getPathsFromDir(filesDir) || [];
