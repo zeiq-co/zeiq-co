@@ -24,7 +24,6 @@ function Index({ projects, posts, technologies }) {
         title={seoData.seoTitle}
         description={seoData.details}
         openGraph={{
-          url: `${config.siteUrl}`,
           title: seoData.seoTitle,
           description: seoData.details,
           images: [

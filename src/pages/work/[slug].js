@@ -27,7 +27,6 @@ const Work = ({ data }) => (
       title={`Zeiq ${data.title}`}
       description={data.details}
       openGraph={{
-        url: `${config.siteUrl}/${data.slug}`,
         title: data.title,
         description: data?.details ? data?.details : data.title,
         images: [

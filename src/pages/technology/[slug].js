@@ -3,7 +3,6 @@ import Image from 'next/image';
 import md from 'markdown-it';
 
 import { getPathsFromDir, getSingleMdx } from '../../utils/helpers';
-import config from '../../utils/config';
 import Layout from '../../components/Layout';
 
 const SingleTechnology = ({ data }) => (
@@ -12,7 +11,6 @@ const SingleTechnology = ({ data }) => (
       title={`${data.title}`}
       description={data.seoDescription}
       openGraph={{
-        url: `${config.siteUrl}/technology/${data.slug}`,
         title: data.title,
         description: data?.seoDescription
           ? data?.seoDescription
