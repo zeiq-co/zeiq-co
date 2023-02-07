@@ -52,7 +52,7 @@ const Work = ({ data }) => (
     <section className="section pb-0">
       <div className="container">
         <div className="row">
-          <div className="col-12 mb-n5 has-anim anim-delay-2">
+          <div className="col-12 mb-n5">
             <div className="img-fluid shadow position-relative">
               <Image
                 src={data.heroImage || data.featuredImage}
@@ -72,7 +72,7 @@ const Work = ({ data }) => (
         <div className="container">
           <div className="row pt-5">
             <div className="col-lg-4 mt-1">
-              <div className="mb-5 has-anim fade">
+              <div className="mb-5">
                 <h3 className="h5 mb-2 text-dark">{data.title}</h3>
                 <p className="mb-3">{data.info}</p>
                 <div className="mb-3">
@@ -100,24 +100,24 @@ const Work = ({ data }) => (
                   )}
                 </div>
               </div>
-              <div className="mb-5 has-anim fade anim-delay-3">
+              <div className="mb-5">
                 <h3 className="h5 mb-2 text-dark">Services we provided</h3>
                 <ul className="list-unstyled">
                   <li>{upperFirst(data.projectType)}</li>
                 </ul>
               </div>
-              <div className="mb-5 has-anim fade anim-delay-3">
+              <div className="mb-5">
                 <h3 className="h5 mb-2 text-dark">Tech Stack built upon</h3>
                 <ul className="list-unstyled">
                   <li>{data.techStack}</li>
                 </ul>
               </div>
-              <div className="mb-5 has-anim fade anim-delay-1">
+              <div className="mb-5">
                 <h3 className="h5 mb-2 text-dark">Category</h3>
                 <p>{upperFirst(data.category)}</p>
               </div>
 
-              <div className="mb-5 has-anim fade anim-delay-2">
+              <div className="mb-5">
                 <h3 className="h5 mb-2 text-dark">Tags</h3>
                 <p>{data.tags}</p>
               </div>
