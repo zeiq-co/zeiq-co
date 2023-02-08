@@ -15,18 +15,18 @@ const Technologies = ({ brandsData }) => (
 
       <div className="clients-logo-grid">
         {brandsData &&
-          brandsData.map((item, index) => {
+          brandsData.map((item) => {
             if (!item.featuredImage) return null;
             return (
               <div className="logo-item" key={item.title}>
                 <Link href={`/technology/${item?.slug}`}>
                   <a>
                     <Image
-                      priority={index}
                       src={item.featuredImage}
-                      alt={item.title}
+                      alt={item.title || 'ZEIQ'}
                       height={250}
                       width={400}
+                      loading="lazy"
                     />
                   </a>
                 </Link>
