@@ -6,11 +6,16 @@ import config from '../../utils/config';
 const remoteUrl = `${config.siteUrl}`;
 const siteUrl = new URL(remoteUrl).origin;
 const filesDir = path.join(process.cwd(), 'content/work');
+const filesDir2 = path.join(process.cwd(), 'content/products');
 
 const lastMod = new Date().toISOString();
 
-const allPaths = getPathsFromDir(filesDir) || [];
-const paths = allPaths.map((item) => ({
+const allPaths1 = getPathsFromDir(filesDir) || [];
+const allPaths2 = getPathsFromDir(filesDir2) || [];
+
+const mergedArray = [...allPaths1, ...allPaths2];
+
+const paths = mergedArray.map((item) => ({
   loc: `${siteUrl}/work/${item?.params?.slug}`,
   lastmod: lastMod,
 }));
