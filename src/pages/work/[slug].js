@@ -52,19 +52,22 @@ const Work = ({ data }) => (
     <section className="section pb-0">
       <div className="container">
         <div className="row">
-          <div className="col-12 mb-n5">
-            <div className="img-fluid shadow position-relative">
-              <Image
-                src={data.heroImage || data.featuredImage}
-                alt={data.title}
-                className="shadow"
-                height={1006}
-                width={1218}
-                layout="responsive"
-                priority
-              />
-            </div>
-          </div>
+          {data.heroImage ||
+            (data.featuredImage && (
+              <div className="col-12 mb-n5">
+                <div className="img-fluid shadow position-relative">
+                  <Image
+                    src={data.heroImage || data.featuredImage}
+                    alt={data.title}
+                    className="shadow"
+                    height={1006}
+                    width={1218}
+                    layout="responsive"
+                    priority
+                  />
+                </div>
+              </div>
+            ))}
         </div>
       </div>
 
