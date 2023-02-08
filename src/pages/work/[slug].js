@@ -63,7 +63,7 @@ const Work = ({ data }) => (
                     height={1006}
                     width={1218}
                     layout="responsive"
-                    priority
+                    loading="lazy"
                   />
                 </div>
               </div>

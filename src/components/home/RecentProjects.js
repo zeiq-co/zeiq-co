@@ -234,7 +234,6 @@ const RecentProjects = ({ projects, title, subtitle }) => {
                       <div className="card portfolio-card card-overlay card-hover-zoom">
                         <span className="card-img">
                           <Image
-                            priority={index}
                             src={item.featuredImage || item.heroImage}
                             alt={item.title}
                             className="img-fluid"
@@ -242,6 +241,7 @@ const RecentProjects = ({ projects, title, subtitle }) => {
                             height={900}
                             objectFit="contain"
                             layout="responsive"
+                            loading="lazy"
                           />
                           <span
                             className="img-overlay"

@@ -2,7 +2,7 @@ import { upperFirst } from 'lodash';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const WorkItem = ({ data, index }) => {
+const WorkItem = ({ data }) => {
   if (!data.title) {
     return null;
   }
@@ -20,7 +20,7 @@ const WorkItem = ({ data, index }) => {
                   className="img-fluid"
                   height={1006}
                   width={1218}
-                  priority={index}
+                  loading="lazy"
                 />
               </a>
             </Link>
