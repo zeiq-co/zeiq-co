@@ -46,7 +46,7 @@ const BlogPost = ({ post }) => {
         <div className="container">
           <div className="row">
             {post.featuredImage && (
-              <div className="col-12 mb-n5 has-anim anim-delay-2">
+              <div className="col-12 mb-n5">
                 <Image
                   src={post.featuredImage}
                   alt={post.title}

@@ -42,7 +42,7 @@ const ContactInfo = ({ contactData, isFaq, content }) => {
           <div className="col-xl-11">
             <div className="block">
               {content && (
-                <div className="col-12 has-anim fade">
+                <div className="col-12">
                   <div className="section-title text-center">
                     {content.title && (
                       <p className="font-weight-700">{content.title}</p>

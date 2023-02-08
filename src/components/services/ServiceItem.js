@@ -27,7 +27,7 @@ const ServiceItem = ({ data, imageLeft }) => {
   }
 
   return (
-    <div className="row align-items-center justify-content-start justify-content-lg-around my-5 py-5 has-anim fade visible">
+    <div className="row align-items-center justify-content-start justify-content-lg-around my-5 py-5 visible">
       {imageLeft && <ServiceImage data={data} />}
       <div className="col-lg-5 col-md-10 position-relative">
         <div className="service-icon-lg">

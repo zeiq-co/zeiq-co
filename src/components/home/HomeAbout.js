@@ -1,6 +1,6 @@
 const HomeAbout = ({ data }) => (
   <>
-    {/* <div className="mb-n5 has-anim fade">
+    {/* <div className="mb-n5">
       <div className="container">
         <div className="row">
           <div className="col-12">

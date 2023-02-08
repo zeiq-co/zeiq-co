@@ -4,7 +4,7 @@ const FaqItem = ({ data }) => {
   const [active, setActive] = useState(false);
   return (
     <div className="accordion">
-      <div className="card has-anim fade">
+      <div className="card">
         <div className="card-header border-bottom-0 p-0" id="q3">
           <a
             role="menuitem"

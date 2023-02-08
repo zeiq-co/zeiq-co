@@ -7,7 +7,7 @@ const HowWeWork = ({ data, content }) => {
     <div className="section py-4 bg-white">
       <div className="container">
         {content && (
-          <div className="col-12 has-anim fade">
+          <div className="col-12">
             <div className="section-title text-center">
               <h2 className="title text-dark">{content.title}</h2>
               <p className="font-weight-700">{content.subtitle}</p>
@@ -20,7 +20,7 @@ const HowWeWork = ({ data, content }) => {
               <section className="py-4" key={item.title || i}>
                 <div className="">
                   <div
-                    className={`row justify-content-center align-items-center has-anim fade ${
+                    className={`row justify-content-center align-items-center ${
                       i % 2 === 0 ? '' : 'flex-row-reverse'
                     }`}
                   >

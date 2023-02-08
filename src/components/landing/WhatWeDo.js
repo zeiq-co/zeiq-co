@@ -47,7 +47,7 @@ const WhatWeDo = () => (
   // <Wrapper>
   <section className="section pricing-plans bg-white">
     <div className="container">
-      <div className="col-12 has-anim fade">
+      <div className="col-12">
         <div className="section-title text-center">
           <h2 className="title text-dark">How can we help?</h2>
           <p className="font-weight-700">
@@ -60,7 +60,7 @@ const WhatWeDo = () => (
         {data &&
           data.map((item, i) => (
             <div
-              className="col-lg-4 col-md-6 mt-4 pt-2 mt-md-0 pt-md-0 has-anim fade anim-delay-1"
+              className="col-lg-4 col-md-6 mt-4 pt-2 mt-md-0 pt-md-0"
               key={item.id || i}
             >
               <div className={`block border  ${item.isDark ? 'bg-dark' : ''}`}>

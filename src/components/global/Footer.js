@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const Footer = ({ contactData }) => (
   <>
-    <footer className="section-sm pb-4 has-anim">
+    <footer className="section-sm pb-4">
       <div className="container">
         <div className="row">
           <div className="col-12">

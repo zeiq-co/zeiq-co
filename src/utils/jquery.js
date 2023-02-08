@@ -6,7 +6,7 @@ const jqueryLoad = () => {
     function e() {
       var o = document.querySelector('.scroll-progress path'),
         s = o.getTotalLength();
-        if(!o) return null;
+      if (!o) return null;
       (o.style.transition = o.style.WebkitTransition = 'none'),
         (o.style.strokeDasharray = s + ' ' + s),
         (o.style.strokeDashoffset = s),
@@ -50,9 +50,7 @@ const jqueryLoad = () => {
           i(this).addClass('visible');
       });
     }
-    $(document).ready(function () {
-      $('.is-hero-fade').fadeIn(2000).removeClass('.is-hero-fade');
-    });
+
     (i.fn.nextOrFirst = function (e) {
       var t = this.next(e);
       return t.length ? t : this.prevAll(e).last();

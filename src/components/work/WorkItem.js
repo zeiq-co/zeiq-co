@@ -10,7 +10,7 @@ const WorkItem = ({ data, index }) => {
   return (
     <div className="col-lg-4 col-sm-6 d-flex">
       <div className="card mt-5 card-body flex-fill bg-cream border-0">
-        <div className="mb-4 pb-3 has-anim">
+        <div className="mb-4 pb-3">
           <div className="card  portfolio-card ">
             <Link href={`/work/${data.slug}`}>
               <a className="card-img overflow-hidden rounded-0">

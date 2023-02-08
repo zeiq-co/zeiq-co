@@ -86,7 +86,7 @@ function BlogPage({ posts }) {
               return <PostItem key={item.slug} post={item} bgColor={bgColor} />;
             })}
             <div className="col-lg-12">
-              <div className="text-center mt-5 pt-4 has-anim">
+              <div className="text-center mt-5 pt-4">
                 {hasMore ? (
                   <button
                     type="button"

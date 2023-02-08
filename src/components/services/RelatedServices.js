@@ -14,12 +14,12 @@ const RelatedServices = ({ services }) => {
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <div className="section-title text-center has-anim fade">
+            <div className="section-title text-center">
               <p className="mb-2">You might be interested in</p>
               <h2 className="title text-white">More Info</h2>
             </div>
 
-            <div className="row justify-content-center pt-3 mt-5 has-anim fade">
+            <div className="row justify-content-center pt-3 mt-5">
               <ul className="open-positions-list">
                 {services.map((service) => (
                   <li key={service.slug}>

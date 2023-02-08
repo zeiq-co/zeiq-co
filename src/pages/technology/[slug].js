@@ -35,7 +35,7 @@ const SingleTechnology = ({ data }) => (
     <section className="section ">
       <div className="container">
         <div className="row">
-          <div className="col-12 has-anim anim-delay-2   pb-5">
+          <div className="col-12 pb-5">
             <Image
               src={data.featuredImage}
               alt={data.title}

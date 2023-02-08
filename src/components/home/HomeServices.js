@@ -9,7 +9,7 @@ const HomeServices = ({ data, category, isServices, title, subtitle }) => {
   return (
     <section className="section">
       <div className="container">
-        <div className="col-12 has-anim fade">
+        <div className="col-12">
           {!isServices && (
             <div className="section-title text-center">
               {title && <h2 className="title text-white">{title}</h2>}
@@ -20,7 +20,7 @@ const HomeServices = ({ data, category, isServices, title, subtitle }) => {
         <div className="row">
           {filteredData &&
             filteredData.map((item) => (
-              <div className="col-lg-3 col-sm-6 has-anim fade" key={item.title}>
+              <div className="col-lg-3 col-sm-6" key={item.title}>
                 <div className="service-item text-light">
                   {item.image && (
                     <div className="service-icon text-primary mb-4">
