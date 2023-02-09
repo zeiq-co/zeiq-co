@@ -154,7 +154,7 @@ const Header = () => {
                       >
                         {services.map((item) => (
                           <li key={item.slug}>
-                            <Link href={item.slug}>
+                            <Link href={item.slug || '/'}>
                               <a className="dropdown-item">{item.title}</a>
                             </Link>
                           </li>

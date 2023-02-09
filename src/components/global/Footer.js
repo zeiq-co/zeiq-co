@@ -54,7 +54,7 @@ const Footer = ({ contactData }) => (
               </li>
               <li>
                 <Link href="/blog">
-                  <a href="">News & Updates</a>
+                  <a>News & Updates</a>
                 </Link>
               </li>
               <li>
