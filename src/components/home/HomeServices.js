@@ -47,7 +47,7 @@ const HomeServices = ({ data, category, isServices, title, subtitle }) => {
                   )}
                   {item.linkTo && (
                     <p>
-                      <Link href={item.linkTo}>
+                      <Link href={item.linkTo || '/'}>
                         <a>Learn more</a>
                       </Link>
                     </p>
