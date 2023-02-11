@@ -62,7 +62,7 @@ const Footer = ({ contactData }) => (
             <ul className="footer-link list-unstyled">
               <h4 className="h4 font-weight-light mb-3">Quick Links</h4>
               {quickLinksData.map((element) => (
-                <li>
+                <li key={element.title}>
                   <Link href={element.slug || '/'}>
                     <a>{element.title}</a>
                   </Link>
@@ -75,7 +75,7 @@ const Footer = ({ contactData }) => (
             <ul className="footer-link list-unstyled">
               {servicesData &&
                 servicesData.map((el) => (
-                  <li>
+                  <li key={el.title}>
                     <Link href={el.slug || '/'}>
                       <a>{el.title}</a>
                     </Link>
