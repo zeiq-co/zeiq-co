@@ -33,9 +33,9 @@ const HomeServices = ({ data, category, isServices, title, subtitle }) => {
                       />
                     </div>
                   )}
-                  <h4 className="font-weight-light text-white mb-3">
+                  <h1 className="is-size-4 font-weight-light text-white mb-3">
                     {item.title}
-                  </h4>
+                  </h1>
                   <p>{item.subtitle}</p>
                   {item.linkTo && (
                     <span
