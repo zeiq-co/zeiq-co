@@ -27,10 +27,12 @@ const Work = ({ data }) => {
     <Layout>
       <NextSeo
         title={`Zeiq ${data.title}`}
-        description={data.details}
+        description={data.seoDescription || data.details}
         openGraph={{
           title: data.title,
-          description: data?.details ? data?.details : data.title,
+          description: data?.seoDescription
+            ? data?.seoDescription
+            : data.details,
           images: [
             {
               url: `${config.siteUrl}/${
@@ -38,7 +40,7 @@ const Work = ({ data }) => {
               }`,
               width: 800,
               height: 600,
-              alt: data.title,
+              alt: data.alt || data.title,
               type: 'image/jpeg',
             },
           ],
