@@ -4388,7 +4388,7 @@
   font-family: 'Line Awesome Brands';
   font-style: normal;
   font-weight: 400;
-  font-display: auto;
+  font-display: swap;
   src: url('./fonts/la-brands-400.eot');
   src: url('./fonts/la-brands-400.eot?#iefix') format('embedded-opentype'),
     url('./fonts/la-brands-400.woff2') format('woff2'),
@@ -4403,7 +4403,7 @@
   font-family: 'Line Awesome Free';
   font-style: normal;
   font-weight: 400;
-  font-display: auto;
+  font-display: swap;
   src: url('./fonts/la-regular-400.eot');
   src: url('./fonts/la-regular-400.eot?#iefix') format('embedded-opentype'),
     url('./fonts/la-regular-400.woff2') format('woff2'),
@@ -4419,13 +4419,13 @@
   font-family: 'Line Awesome Free';
   font-style: normal;
   font-weight: 900;
-  font-display: auto;
+  font-display: swap;
   src: url('./fonts/la-solid-900.eot');
   src: url('./fonts/la-solid-900.eot?#iefix') format('embedded-opentype'),
-    url("./fonts/la-solid-900.woff2") format('woff2'),
-    url("./fonts/la-solid-900.woff") format('woff'),
-    url("./fonts/la-solid-900.ttf") format('truetype'),
-    url("./fonts/la-solid-900.svg#lineawesome") format('svg');
+    url('./fonts/la-solid-900.woff2') format('woff2'),
+    url('./fonts/la-solid-900.woff') format('woff'),
+    url('./fonts/la-solid-900.ttf') format('truetype'),
+    url('./fonts/la-solid-900.svg#lineawesome') format('svg');
 }
 .la,
 .las {
