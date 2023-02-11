@@ -22,9 +22,10 @@ const Footer = ({ contactData }) => (
           <div className="col-12">
             <div className="section-title">
               <h4 className="h3 font-weight-light text-white">
-                Have an idea, tell us about it!
+                Have an idea, tell us about it
                 <Link href="/contact">
                   <a className="text-primary">
+                    <span>!</span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="40"
