@@ -29,7 +29,7 @@ const BlogPost = ({ post }) => {
               }`,
               width: 800,
               height: 600,
-              alt: post.title,
+              alt: post.alt || post.title,
               type: 'image/jpeg',
             },
           ],
