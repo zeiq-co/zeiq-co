@@ -1,11 +1,11 @@
 import Link from 'next/link';
 
-// const servicesData = [
-//   { title: 'Development', slug: '/services/development' },
-//   { title: 'Design Thinking', slug: '/services/design-thinking' },
-//   { title: 'E-Commerce', slug: '/services/e-commerce' },
-//   { title: 'Software Development', slug: '/services/software-development' },
-// ];
+const servicesData = [
+  { title: 'Development', slug: '/services/development' },
+  { title: 'Design Thinking', slug: '/services/design-thinking' },
+  { title: 'E-Commerce', slug: '/services/e-commerce' },
+  { title: 'Software Development', slug: '/services/software-development' },
+];
 
 const quickLinksData = [
   { title: 'About Us', slug: '/about' },
@@ -72,7 +72,7 @@ const Footer = ({ contactData }) => (
           </div>
           <div className="col-lg-2 col-md-2 col-sm-4 col-12">
             <h4 className="h4 font-weight-light mb-3">Services</h4>
-            {/* <ul className="footer-link list-unstyled">
+            <ul className="footer-link list-unstyled">
               {servicesData &&
                 servicesData.map((el) => (
                   <li key={el.title}>
@@ -81,7 +81,7 @@ const Footer = ({ contactData }) => (
                     </Link>
                   </li>
                 ))}
-            </ul> */}
+            </ul>
           </div>
           <div className="col-lg-2 col-md-3 col-sm-4 col-12">
             <h4 className="h4 font-weight-light mb-3">Work</h4>
