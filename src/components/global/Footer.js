@@ -59,8 +59,8 @@ const Footer = ({ contactData }) => (
             <p>{contactData.locationIndia}</p>
           </div>
           <div className="col-lg-2 col-md-2 col-sm-4 col-12 ml-auto">
+            <h4 className="h4 font-weight-light mb-3">Quick Links</h4>
             <ul className="footer-link list-unstyled">
-              <h4 className="h4 font-weight-light mb-3">Quick Links</h4>
               {quickLinksData.map((element) => (
                 <li key={element.title}>
                   <Link href={element.slug || '/'}>
@@ -84,8 +84,8 @@ const Footer = ({ contactData }) => (
             </ul>
           </div>
           <div className="col-lg-2 col-md-3 col-sm-4 col-12">
+            <h4 className="h4 font-weight-light mb-3">Work</h4>
             <ul className="footer-link list-unstyled">
-              <h4 className="h4 font-weight-light mb-3">Work</h4>
               <li>
                 <Link href="/work">
                   <a>Recent Projects</a>
