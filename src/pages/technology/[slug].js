@@ -20,7 +20,7 @@ const SingleTechnology = ({ data }) => (
             url: data.featuredImage ? data.featuredImage : '',
             width: 800,
             height: 600,
-            alt: data.title,
+            alt: data.alt || data.title,
             type: 'image/jpeg',
           },
         ],
