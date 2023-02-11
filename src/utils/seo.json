@@ -1,5 +1,5 @@
 {
-  "title": "Website and Mobile App Development Agency - Zeiq.co",
+  "title": "Website and Mobile App Development Agency - www.zeiq.co",
   "titleTemplate": "%s - Zeiq",
   "description": "React, React Native, GatsbyJs and Apollo GraphQL Development -> https://www.zeiq.co",
   "openGraph": {
@@ -17,8 +17,8 @@
     ]
   },
   "twitter": {
-    "handle": "@zeiq",
-    "site": "@zeiq",
+    "handle": "ZEIQ",
+    "site": "ZEIQ",
     "cardType": "summary_large_image"
   }
 }
