@@ -5,7 +5,7 @@ import { filter } from 'lodash';
 const HomeServices = ({ data, category, isServices, title, subtitle }) => {
   if (!data) return null;
   const filteredData = filter(data, (item) => item.category === category);
-
+  console.log(filteredData, 'filteredData');
   return (
     <section className="section">
       <div className="container">
@@ -47,7 +47,7 @@ const HomeServices = ({ data, category, isServices, title, subtitle }) => {
                   )}
                   {item.linkTo && (
                     <div>
-                      <Link href={item.linkTo || '/'}>
+                      <Link href={`${item.linkTo || '/'}`}>
                         <a>Learn more </a>
                       </Link>
                     </div>
