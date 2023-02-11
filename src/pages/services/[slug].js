@@ -28,7 +28,7 @@ const Service = ({ data, childServices, projects }) => (
             }`,
             width: 960,
             height: 640,
-            alt: data.title,
+            alt: data.alt || data.title,
             type: 'image/jpeg',
           },
         ],
