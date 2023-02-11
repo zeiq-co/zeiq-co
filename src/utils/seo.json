@@ -1,24 +1,25 @@
 {
-  "title": "Website and Mobile App Development Agency - www.zeiq.co",
-  "titleTemplate": "%s - Zeiq",
-  "description": "React, React Native, GatsbyJs and Apollo GraphQL Development -> https://www.zeiq.co",
+  "title": "Website and Mobile App Development Services | Zeiq",
+  "titleTemplate": "%s | Zeiq",
+  "description": "Get professional React, React Native, GatsbyJS and Apollo GraphQL development services at Zeiq. Contact us today for a free quote.",
   "openGraph": {
     "type": "website",
-    "locale": "en_IE",
+    "locale": "en_US",
     "url": "https://www.zeiq.co",
-    "site_name": "Zeiq",
-    "icons": [
+    "site_name": "Zeiq - Website and Mobile App Development",
+    "description": "Expert React, React Native, GatsbyJS and Apollo GraphQL development services for your next project.",
+    "images": [
       {
-        "src": "/images/logo.png",
-        "sizes": "196x196",
-        "type": "image/png",
-        "purpose": "any maskable"
+        "src": "https://www.zeiq.co/images/logo.png",
+        "alt": "Zeiq logo",
+        "width": "196",
+        "height": "196"
       }
     ]
   },
   "twitter": {
-    "handle": "ZEIQ",
-    "site": "ZEIQ",
+    "handle": "@zeiq",
+    "site": "@zeiq",
     "cardType": "summary_large_image"
   }
 }
