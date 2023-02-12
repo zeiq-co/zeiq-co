@@ -1,5 +1,6 @@
 import { NextSeo } from 'next-seo';
 import { orderBy, filter } from 'lodash';
+import dynamic from 'next/dynamic';
 
 import config from '../utils/config';
 import { getMdxFromDir } from '../utils/helpers';
@@ -11,11 +12,15 @@ import Layout from '../components/Layout';
 import HomeHero from '../components/home/HomeHero';
 import HomeAbout from '../components/home/HomeAbout';
 import HomeServices from '../components/home/HomeServices';
-import RecentProjects from '../components/home/RecentProjects';
+
 import WorkProcess from '../components/home/WorkProcess';
 import Testimonials from '../components/home/Testimonials';
 import Technologies from '../components/home/Technologies';
 import LatestPosts from '../components/home/LatestPosts';
+
+const RecentProjects = dynamic(import('../components/home/RecentProjects'), {
+  loading: () => <p className="text-center">Loading...</p>,
+});
 
 function Index({ projects, posts, technologies }) {
   return (
