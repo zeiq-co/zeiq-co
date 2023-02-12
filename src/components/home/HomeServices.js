@@ -45,13 +45,13 @@ const HomeServices = ({ data, category, isServices, title, subtitle }) => {
                       ━━
                     </span>
                   )}
-                  {item.linkTo && (
+                  {/* {item.linkTo && (
                     <div>
                       <Link href={`${item.linkTo || '/'}`}>
                         <a>Learn more</a>
                       </Link>
                     </div>
-                  )}
+                  )} */}
                 </div>
               </div>
             ))}
