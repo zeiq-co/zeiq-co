@@ -1,5 +1,5 @@
 import { NextSeo } from 'next-seo';
-import { orderBy } from 'lodash';
+import orderBy from 'lodash/orderBy';
 import config from '../utils/config';
 
 import { getMdxFromDir } from '../utils/helpers';

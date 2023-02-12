@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { filter } from 'lodash';
+import filter from 'lodash/filter';
 
 const HomeServices = ({ data, category, isServices, title, subtitle }) => {
   if (!data) return null;
   const filteredData = filter(data, (item) => item.category === category);
-  console.log(filteredData, 'filteredData');
+  // console.log(filteredData, 'filteredData');
   return (
     <section className="section">
       <div className="container">
@@ -48,7 +48,7 @@ const HomeServices = ({ data, category, isServices, title, subtitle }) => {
                   {item.linkTo && (
                     <div>
                       <Link href={`${item.linkTo || '/'}`}>
-                        <a>Learn more {` `}</a>
+                        <a>Learn more</a>
                       </Link>
                     </div>
                   )}

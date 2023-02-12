@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved */
 import { useState } from 'react';
-import { filter } from 'lodash';
+import filter from 'lodash/filter';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper';

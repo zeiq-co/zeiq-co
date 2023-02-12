@@ -1,7 +1,7 @@
 import { NextSeo } from 'next-seo';
 import Image from 'next/image';
 import md from 'markdown-it';
-import { upperFirst } from 'lodash';
+import upperFirst from 'lodash/upperFirst';
 import styled from 'styled-components';
 import fs from 'fs';
 import AnchorLink from '../../components/elements/AnchorLink';

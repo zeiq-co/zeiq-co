@@ -4,7 +4,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar } from 'swiper';
-import { random } from 'lodash';
+import random from 'lodash/random';
 import Image from 'next/image';
 import Link from 'next/link';
 

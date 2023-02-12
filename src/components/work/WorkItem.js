@@ -1,4 +1,4 @@
-import { upperFirst } from 'lodash';
+import upperFirst from 'lodash/upperFirst';
 import Image from 'next/image';
 import Link from 'next/link';
 
