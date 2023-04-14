@@ -19,9 +19,10 @@ const Wrapper = styled.section`
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
-  // .shadow {
-  //   border: 2px solid red !important;
-  // }
+  .shadow-medium {
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5), 0 0 20px 5px rgba(255, 255, 255, 0.3), 0 0 30px 10px rgba(255, 255, 255, 0.2);
+    !important;
+  }
 `;
 
 const Work = ({ data }) => {
@@ -61,7 +62,7 @@ const Work = ({ data }) => {
           <div className="row">
             <div className="col-12 mb-n5">
               {image && (
-                <div className="img-fluid shadow position-relative">
+                <div className="img-fluid position-relative">
                   <Image
                     src={image}
                     alt={data.title}
