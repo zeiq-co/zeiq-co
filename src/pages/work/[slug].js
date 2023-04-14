@@ -13,12 +13,15 @@ import PostHero from '../../components/blog/PostHero';
 import WorkProcess from '../../components/home/WorkProcess';
 import Testimonials from '../../components/home/Testimonials';
 
-const Content = styled.div`
+const Wrapper = styled.section`
   img {
     max-width: 60%;
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
+  // .shadow {
+  //   border: 2px solid red !important;
+  // }
 `;
 
 const Work = ({ data }) => {
@@ -53,7 +56,7 @@ const Work = ({ data }) => {
         ]}
       />
       <PostHero post={data} />
-      <section className="section pb-0">
+      <Wrapper className="section pb-0">
         <div className="container">
           <div className="row">
             <div className="col-12 mb-n5">
@@ -62,10 +65,10 @@ const Work = ({ data }) => {
                   <Image
                     src={image}
                     alt={data.title}
-                    className="shadow"
                     height={1006}
                     width={1218}
                     layout="responsive"
+                    objectFit="contain"
                     loading="lazy"
                   />
                 </div>
@@ -130,13 +133,13 @@ const Work = ({ data }) => {
               </div>
               <div className="col-lg-8">
                 <div className="pl-0 pl-lg-5">
-                  <Content className="mb-5">
+                  <diiv className="mb-5">
                     <div
                       dangerouslySetInnerHTML={{
                         __html: md().render(data.content),
                       }}
                     />
-                  </Content>
+                  </diiv>
                 </div>
               </div>
             </div>
@@ -144,7 +147,7 @@ const Work = ({ data }) => {
         </div>
         <WorkProcess />
         <Testimonials category="home" />
-      </section>
+      </Wrapper>
     </Layout>
   );
 };
