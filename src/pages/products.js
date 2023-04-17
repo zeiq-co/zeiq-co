@@ -1,5 +1,5 @@
 import { NextSeo } from 'next-seo';
-import orderBy from 'lodash/orderBy';
+import { orderBy, filter } from 'lodash';
 import config from '../utils/config';
 
 import { getMdxFromDir } from '../utils/helpers';
@@ -53,12 +53,13 @@ function ProductsPage({ projects }) {
 export default ProductsPage;
 
 export async function getStaticProps() {
-  const result = getMdxFromDir('content/products');
-  const orderedData = orderBy(result, ['listingOrder'], ['asc']);
+  let products = getMdxFromDir('content/products');
+  products = orderBy(products, ['listingOrder'], ['asc']);
+  products = filter(products, (item) => item.isFeatured === true);
 
   return {
     props: {
-      projects: orderedData,
+      projects: products,
     },
     revalidate: 3600, // in seconds (1 hour)
   };
