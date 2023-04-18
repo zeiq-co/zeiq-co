@@ -111,7 +111,7 @@ const Work = ({ data }) => {
                   </div>
                 </div>
                 <div className="mb-5">
-                  <h3 className="h5 mb-2 text-dark">Services we provided</h3>
+                  <h3 className="h5 mb-2 text-dark">Services we provide</h3>
                   <ul className="list-unstyled">
                     <li>{upperFirst(data.projectType)}</li>
                   </ul>
