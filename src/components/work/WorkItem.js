@@ -21,6 +21,7 @@ const WorkItem = ({ data }) => {
                   height={1006}
                   width={1218}
                   loading="lazy"
+                  objectFit="cover"
                 />
               </a>
             </Link>
