@@ -31,6 +31,7 @@ const SecondaryService = ({ data, projects }) => (
     />
     <HowWeWork
       data={howWeWorkData}
+      category={data.advertisementType || 'home'}
       // content={{
       //   title: 'How We Work',
       //   subtitle:
@@ -44,6 +45,7 @@ const SecondaryService = ({ data, projects }) => (
     <ContactInfo
       contactData={contactData}
       isFaq
+      category={data.advertisementType || 'home'}
       content={{
         title: 'Contact Us',
         subtitle: 'Want to increase your eCommerce sales? \n Get started today',

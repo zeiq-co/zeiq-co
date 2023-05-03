@@ -1,18 +1,48 @@
 - one:
+  category: ecommerce
   title: What is an eCommerce website?
-  description: An eCommerce website can either be business-to-business (B2B), business-to-customer (B2C) or customer-to-customer (C2C). These websites give the ability to sell or buy products or services online to businesses and individuals. 
+  description: An eCommerce website can either be business-to-business (B2B), business-to-customer (B2C) or customer-to-customer (C2C). These websites give the ability to sell or buy products or services online to businesses and individuals.
 - two:
+  category: ecommerce
   title: How long does it take to build an eCommerce website?
   description: A typical eCommerce website project will take up to 12 weeks to complete. But we don’t stop there. We will guide and support you as your business grows and challenges you throughout your journey.
 - three:
+  category: ecommerce
   title: How much does an eCommerce website cost?
   description: The short answer is that a custom eCommerce website determines by the factors like design, functionality, development, integration, support and maintenance, company selection and marketing and SEO. To get the correct quote for customized eCommerce solutions, you can get in touch with our eCommerce development experts.
 - four:
+  category: ecommerce
   title: How will you manage my project?
   description: Our team with account managers and skilled developers will work with you every step, ensuring you are always up to date with the development process and providing feedback at every stage.
 - fifth:
+  category: ecommerce
   title: I have an existing online business website. Can you upgrade it?
   description: Yes! We specialise in developing custom eCommerce website design and web development, so we can work with your existing website and upgrade it to match your requirements.
 - sixth:
+  category: ecommerce
   title: Do you support me and my business after the platform is built?
   description: Yes. We offer the full support of our expert eCommerce development and agency team. From project managers, UX designers, digital managers, developers and even advice from our in-house marketing team, a full support system is in place for your business.
+- seventh:
+  category: fitness
+  title: How much does it cost to develop a fitness app?
+  description: There are at least 20 types of fitness apps, and the cost would be dependent on which type of app you want. It will also vary based on the complexity of the app and the features you want in it. To have a better idea, it is best if you can submit your requirements, we will get back to you with a free quote.
+- eighth:
+  category: fitness
+  title: Which type of health & fitness apps you can build?
+  description: We can help you build a wide range of health and fitness apps, including (but not limited to)- Workout app development, Logbook app development, Diet and Nutrition app development, Fitness activity tracking app development.
+- ninth:
+  category: fitness
+  title: What are the must-have features of a fitness app?
+  description: It all depends on your business goals, your end-users needs and even your app’s type, as some features may differ depending on whether you build a web or mobile app. This is why we follow these three steps - we pay a lot of attention to the initial analysis that helps us assess your users’ expectations, then we ensure that chosen features are well developed, and in the end – test all the functionalities with your audience to confirm that our assumptions were correct, and all the components were constructed properly.
+- tenth:
+  category: fitness
+  title: Can you also develop a Web-Dashboard for my Fitness Product?
+  description: Sure. Our health and fitness app developers usually use either React Admin or Graph CMS in order to build a slick and lean Dashboard. But we’d be happy to pick the best-matching framework depending on your usecase.
+- eleventh:
+  category: fitness
+  title: What Health & Fitness devices can you integrate into the app?
+  description: We work with a broad range of devices — from fitness trackers and smart watches to blood oxygen level monitors and bioimpedance sensors.
+- twelveth:
+  category: fitness
+  title: Do you provide ongoing support & post-development app maintenance?
+  description: Yes, absolutely, these are some of the fitness app development services we provide. We’d be happy to support you with bug fixes, SDK & API updates, OS Updates as well as further implementation of new functionality.

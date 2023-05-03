@@ -1,8 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
+import { filter } from 'lodash';
 
-const HowWeWork = ({ data, content }) => {
+const HowWeWork = ({ data, content, category }) => {
   if (!data) return null;
+  const filteredData = filter(data, (item) => item.category === category);
   return (
     <div className="section py-4 bg-white">
       <div className="container">
@@ -14,8 +16,8 @@ const HowWeWork = ({ data, content }) => {
             </div>
           </div>
         )}
-        {data &&
-          data.map((item, i) => (
+        {filteredData &&
+          filteredData.map((item, i) => (
             <div key={item.title || i}>
               <section className="py-4" key={item.title || i}>
                 <div className="">
@@ -62,9 +64,11 @@ const HowWeWork = ({ data, content }) => {
                         </h3>
                       )}
                       {item.subtitle && <p className="mt-2">{item.subtitle}</p>}
-                      <ul className="service-info-list text-dark mt-4">
+                      <ul className="d-grid gap-3 gap-md-0 text-dark mt-4">
                         {item.list &&
-                          item.list.map((el) => <li>{el?.name}</li>)}
+                          item.list.map((el) => (
+                            <li className="p-2">{el?.name}</li>
+                          ))}
                       </ul>
                     </div>
                   </div>

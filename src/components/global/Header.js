@@ -25,6 +25,11 @@ const services = [
     title: 'E-Commerce',
     slug: '/services/e-commerce',
   },
+  {
+    id: 6,
+    title: 'Fitness App Development',
+    slug: '/services/fitness-app-development',
+  },
 ];
 
 const DropDownItem = ({ href, onClick, label }) => (

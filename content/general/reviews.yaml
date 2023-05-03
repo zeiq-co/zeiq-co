@@ -54,3 +54,10 @@
   image: /images/client/review-person-05.jpg
   countryFlag: 🇮🇳
   category: ecommerce
+- ninth:
+  personName: Sumit Choudhary
+  personRole: Chaudhary Crockery House
+  review: We are quite satisfied with the Zeiq and our collaboration so far. We especially appreciate how they maintained the communication. The team was constantly in touch with us and available at each project step.
+  image: /images/client/review-person-05.jpg
+  countryFlag: 🇮🇳
+  category: fitness

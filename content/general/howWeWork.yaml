@@ -18,3 +18,41 @@
   title: What else?
   subtitle: With your online store refreshed and reimagined, our dedicated team of design experts will help you get comfortable with the platform through dedicated training and provide ongoing support to your teams. For any questions on our e-commerce web services, drop us a line.
   image: /images/landing/howWeWork4.png
+- five:
+  category: fitness
+  title: Guided Fitness Trainings & Coaching
+  subtitle: We’ve built several guided fitness applications leveraging BLE & Wearables. Our fitness app developers practice continuous integration, seamlessly delivering new features and maintenance updates to already deployed trainer applications.
+  image: /images/landing/howWeWork4.png
+  list:
+    - name: Personalized account
+    - name: Offline Support
+    - name: GDPR Compliance
+    - name: 3rd-Party API Integrations like a Fitness Tracker
+- sixth:
+  category: fitness
+  title: Workout & Streaming
+  subtitle: With more and more consumers craving workouts accessible from the comfort of their homes, Stormotion, as a workout apps developer understands the importance of building on-demand workout streaming apps like Peloton.
+  image: /images/landing/howWeWork4.png
+  list:
+    - name: Video-on-Demand Streaming
+    - name: Subscription & Membership for Monetization
+    - name: Apple Health, Google Fit & other Wellness APIs
+    - name: Tracking Heart Rate, Cadence & other data
+- seventh:
+  category: fitness
+  title: Activity Tracking & Challenges
+  subtitle: If you’re looking to create a fitness app, which would track activities like steps, km run, calories, or water drunk per day - there’s no better time to start.
+  image: /images/landing/howWeWork4.png
+  list:
+    - name: Steps, Distance & Vital Data Tracking
+    - name: GPS & Location-Based Support
+    - name: Apple Health, Google Fit, Garmin, Fitbit & other Health & Fitness Tracker APIs
+- eighth:
+  category: fitness
+  title: Diet & Nutrition
+  subtitle: Whether you’re planning to target clients, who just want to lose/gain weight, or plan to help clients with specific food intolerances - we got your back.
+  image: /images/landing/howWeWork4.png
+  list:
+    - name: Machine Learning & NLP for analyzing recipes
+    - name: Personalized Suggestions based on Intolerances
+    - name: Integration with Recipe Schema

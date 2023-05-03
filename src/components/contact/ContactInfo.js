@@ -4,7 +4,7 @@ import ContactForm from './ContactForm';
 import Details from './Details';
 import Faq from '../faq/Faq';
 
-const ContactInfo = ({ contactData, isFaq, content }) => {
+const ContactInfo = ({ contactData, isFaq, content, category }) => {
   const handleSubmit = async (e) => {
     // eslint-disable-next-line no-undef
     const res = await fetch('/api/telegram', {
@@ -59,7 +59,10 @@ const ContactInfo = ({ contactData, isFaq, content }) => {
                 <div className="col-lg-6 mb-5 mb-lg-0">
                   <div className="pr-0">
                     {isFaq ? (
-                      <Faq title="Frequently Asked Questions" />
+                      <Faq
+                        title="Frequently Asked Questions"
+                        category={category}
+                      />
                     ) : (
                       <Details contactData={contactData} />
                     )}
