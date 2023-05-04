@@ -42,3 +42,23 @@
   title: Launch & Support
   subtitle: After the final approval, we move the website/application to the live hosting and domain. After launching your website/app successfully, we will support and monitor your project.
   image: /images/service/webApp.svg
+- nine:
+  category: fitness
+  title: Planning & UI/UX Designing
+  subtitle: Based on the initial info regarding project you provide, we develop an efficient fitness app development roadmap to fulfill your demand. As for UI/UX design, it's important to create a user-friendly interface that is visually appealing and easy to navigate. This can be achieved through wireframing, prototyping, and user testing.
+  image: /images/service/branding.svg
+- ten:
+  category: fitness
+  title: MVP Development & Analysis
+  subtitle: The purpose of an MVP (Minimum Viable Product) is to quickly test and validate a product idea and gather feedback from users. A minimal viable product is developed with the core set of features and presented to early adopters. Their feedback is taken and analysed for making necessary changes.
+  image: /images/service/software-dev.svg
+- eleven:
+  category: fitness
+  title: Fitness App Development & Deployment
+  subtitle: After making necessary changes, final fitness app is developed with modifications and corrections, ensuring a fully functional feature-packed fitness app. Now your app is ready to be launched on your preferred platforms - Apple App Store and Google play store.
+  image: /images/service/marketing.svg
+- twelve:
+  category: fitness
+  title: Maintenance & Support
+  subtitle: At Zeiq, we provide continuous maintenance and support services to ensure your app is fine -tuned throughout the year with security patches,functional feature addition, and more.
+  image: /images/service/webApp.svg

@@ -64,12 +64,12 @@ const HowWeWork = ({ data, content, category }) => {
                         </h3>
                       )}
                       {item.subtitle && <p className="mt-2">{item.subtitle}</p>}
-                      <ul className="d-grid gap-3 gap-md-0 text-dark mt-4">
-                        {item.list &&
-                          item.list.map((el) => (
-                            <li className="p-2">{el?.name}</li>
-                          ))}
-                      </ul>
+                      <div className="content">
+                        <ul className="d-grid gap-3 gap-md-0 text-dark mt-4 pl-0">
+                          {item.list &&
+                            item.list.map((el) => <li>{el?.name}</li>)}
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>

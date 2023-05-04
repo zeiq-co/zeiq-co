@@ -3,6 +3,7 @@ import React from 'react';
 import contactData from '../../../content/general/contact.yaml';
 import whatWeDoData from '../../../content/general/whatWeDo.yaml';
 import howWeWorkData from '../../../content/general/howWeWork.yaml';
+import featuredData from '../../../content/general/features.yaml';
 
 import Hero from '../landing/Hero';
 import WhatWeDo from '../landing/WhatWeDo';
@@ -16,7 +17,7 @@ import BookCall from '../landing/BookCall';
 const SecondaryService = ({ data, projects }) => (
   <div>
     <Hero data={data} />
-    <WhatWeDo />
+    <WhatWeDo data={featuredData} category={data.advertisementType || 'home'} />
     <HomeServices
       data={whatWeDoData}
       title="How do we work on it?"

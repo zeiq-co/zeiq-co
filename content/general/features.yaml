@@ -1,0 +1,71 @@
+- one:
+  title: Sell more online
+  category: ecommerce
+  list:
+    - title: Fully customizable online store
+    - title: 50+ payment providers
+    - title: Secure cart & checkout
+    - title: Enterprise-level security
+    - title: Dropshipping & print on demand
+    - title: Gift cards & product subscriptions
+    - title: Point of sale solution (in-store & online)
+- two:
+  title: Manage your store
+  category: ecommerce
+  list:
+    - title: Efficient inventory management
+    - title: Easy tracking of orders & fulfilment
+    - title: Multiple shipping & delivery options
+    - title: Mobile management app
+    - title: Automated sales tax
+    - title: Custom business reports & analytics
+    - title: 24/7 customer care
+  isDark: true
+- three:
+  title: Grow your business
+  category: ecommerce
+  list:
+    - title: Multiple sales channels (e.g., Facebook & Amazon)
+    - title: Run campaigns and ads on Facebook and Instagram
+    - title: Advanced SEO tools
+    - title: Email marketing
+    - title: Live chat with customers
+    - title: CRM & automation
+    - title: Branded mobile app
+- four:
+  title: User Panel
+  category: fitness
+  list:
+    - title: User Registration
+    - title: Dashboard
+    - title: Workouts
+    - title: Instructors
+    - title: Visual Workout
+    - title: Live Chat
+    - title: Track Water
+    - title: Progress Tracker
+- fifth:
+  title: Trainer Panel
+  category: fitness
+  list:
+    - title: Fitness Chart
+    - title: Subscription Packages
+    - title: BMI Calculator
+    - title: Customised Nutrition Plan
+    - title: Coupon Code
+    - title: Calorie Counter
+    - title: Amount Of Water Intake
+    - title: Diet Chart
+  isDark: true
+- sixth:
+  title: Admin Panel
+  category: fitness
+  list:
+    - title: Dashboard
+    - title: Maintain The User’s Session
+    - title: Manage Subscription Plans
+    - title: Manage Trainer
+    - title: Manage Food Plans
+    - title: Manage Nutrition
+    - title: Manage Fitness Plans
+    - title: Feedback Submission
