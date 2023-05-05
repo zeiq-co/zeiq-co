@@ -4,7 +4,6 @@ import contactData from '../../../content/general/contact.yaml';
 import whatWeDoData from '../../../content/general/whatWeDo.yaml';
 import howWeWorkData from '../../../content/general/howWeWork.yaml';
 import featuredData from '../../../content/general/features.yaml';
-
 import Hero from '../landing/Hero';
 import WhatWeDo from '../landing/WhatWeDo';
 import HowWeWork from '../landing/HowWeWork';
