@@ -17,19 +17,17 @@ import BookCall from '../landing/BookCall';
 const SecondaryService = ({ data, projects }) => (
   <div>
     <Hero data={data} />
-    <WhatWeDo data={featuredData} category={data.advertisementType || 'home'} />
-    <HomeServices
-      data={whatWeDoData}
-      title="How do we work on it?"
-      subtitle="eCommerce Development Process"
+    <WhatWeDo
+      data={data}
+      featuredData={featuredData}
       category={data.advertisementType || 'home'}
     />
-    <RecentProjects
-      projects={projects}
-      title="Glimpse of Our eCommerce Projects"
-      subtitle="Check out our latest case studies and learn about how we helped worldwide companies
-        to reach an efficient outcome for their eCommerce business."
+    <HomeServices
+      data={data}
+      whatWeDoData={whatWeDoData}
+      category={data.advertisementType || 'home'}
     />
+    <RecentProjects data={data} projects={projects} />
     <HowWeWork
       data={howWeWorkData}
       category={data.advertisementType || 'home'}
@@ -44,13 +42,10 @@ const SecondaryService = ({ data, projects }) => (
       heading="What Our Clients Says"
     />
     <ContactInfo
+      data={data}
       contactData={contactData}
       isFaq
       category={data.advertisementType || 'home'}
-      content={{
-        title: 'Contact Us',
-        subtitle: 'Want to increase your eCommerce sales? \n Get started today',
-      }}
     />
     <BookCall
       title="Book Your Free Consultation Call"

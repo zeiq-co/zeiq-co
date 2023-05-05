@@ -2,9 +2,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { filter } from 'lodash';
 
-const HomeServices = ({ data, category, isServices, title, subtitle }) => {
-  if (!data) return null;
-  const filteredData = filter(data, (item) => item.category === category);
+const HomeServices = ({ data, category, isServices, whatWeDoData }) => {
+  if (!whatWeDoData) return null;
+  const filteredData = filter(
+    whatWeDoData,
+    (item) => item.category === category,
+  );
 
   return (
     <section className="section">
@@ -12,8 +15,8 @@ const HomeServices = ({ data, category, isServices, title, subtitle }) => {
         <div className="col-12 has-anim fade">
           {!isServices && (
             <div className="section-title text-center">
-              {title && <h2 className="title text-white">{title}</h2>}
-              {subtitle && <p className="mb-2">{subtitle}</p>}
+              <h2 className="title text-white">{data.processTitle}</h2>
+              <p className="mb-2">{data.processSubTitle}</p>
             </div>
           )}
         </div>

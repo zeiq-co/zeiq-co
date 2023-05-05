@@ -161,7 +161,7 @@ const Section = styled.section`
   }
 `;
 
-const RecentProjects = ({ projects, title, subtitle }) => {
+const RecentProjects = ({ projects, data, hasProjects }) => {
   const [swiper, setSwiperLocal] = useState(null);
   const [activeStep, setActiveStep] = useState(0);
   const settings = {
@@ -197,10 +197,12 @@ const RecentProjects = ({ projects, title, subtitle }) => {
       <div className="container portfolio-carousel-fluid">
         <div className="row justify-content-center">
           <div className="col-10 has-anim fade">
-            <div className="section-title text-center">
-              {title && <h2 className="title text-dark mb-3">{title}</h2>}
-              {subtitle && <p className="mb-2">{subtitle}</p>}
-            </div>
+            {!hasProjects && (
+              <div className="section-title text-center">
+                <h2 className="title text-dark mb-3">{data?.projectTitle}</h2>
+                <p className="mb-2">{data?.projectSubTitle}</p>
+              </div>
+            )}
           </div>
         </div>
       </div>

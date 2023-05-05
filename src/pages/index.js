@@ -38,8 +38,8 @@ function Index({ projects, posts, technologies }) {
       />
       <HomeHero data={homeData} />
       <HomeAbout data={homeData} />
-      <HomeServices data={whatWeDoData} category="home" isServices />
-      <RecentProjects projects={projects} />
+      <HomeServices whatWeDoData={whatWeDoData} category="home" isServices />
+      <RecentProjects projects={projects} hasProjects />
       <WorkProcess />
       <Testimonials category="home" />
       <Technologies brandsData={technologies} />

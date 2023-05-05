@@ -3,13 +3,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, Autoplay } from 'swiper';
 import Image from 'next/image';
 
-const list = [
-  { name: 'Customizable & SEO friendly design' },
-  { name: 'Multiple shipping & delivery options' },
-  { name: 'Advanced payment solutions' },
-  { name: 'Run campaigns and ads on numerous sales channels' },
-];
-
 const LandingPageHero = ({ data }) => {
   if (!data) return null;
   return (
@@ -51,11 +44,9 @@ const LandingPageHero = ({ data }) => {
             <div className="pl-0 pl-lg-4">
               <div className="about-me-block text-white">
                 <h2 className="text-white font-weight-500 ">
-                  Start Selling <br /> Your Business Online.
+                  {data.featuredOneTitle}{' '}
                 </h2>
-                <p className="mb-3 font-weight-500 text-light">
-                  Grow Your E-Commerce Sales Quicker, Smarter &amp; Further
-                </p>
+                <p className="mb-3 font-weight-500 text-light">{data.info} </p>
 
                 {data.description && (
                   <div className="mt-4">
@@ -71,13 +62,13 @@ const LandingPageHero = ({ data }) => {
                 <div className="row text-white content content-dark">
                   <div className="col-sm-6">
                     <ul className="pl-0">
-                      {list &&
-                        list.slice(0, 2).map((item) => {
+                      {data?.heroList &&
+                        data?.heroList.slice(0, 2).map((item) => {
                           if (!item) return null;
                           return (
                             <div
                               className="content text-light content-dark"
-                              key={item.name}
+                              key={item?.name}
                             >
                               <li>{item.name}</li>
                             </div>
@@ -87,8 +78,8 @@ const LandingPageHero = ({ data }) => {
                   </div>
                   <div className="col-sm-6">
                     <ul className="pl-0">
-                      {list &&
-                        list.slice(2).map((item) => {
+                      {data.heroList &&
+                        data.heroList.slice(2).map((item) => {
                           if (!item.name) return null;
                           return (
                             <div

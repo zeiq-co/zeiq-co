@@ -1,19 +1,19 @@
 import React from 'react';
 import { filter } from 'lodash';
 
-const WhatWeDo = ({ data, category }) => {
-  if (!data) return null;
-  const filteredData = filter(data, (item) => item.category === category);
+const WhatWeDo = ({ data, featuredData, category }) => {
+  if (!featuredData) return null;
+  const filteredData = filter(
+    featuredData,
+    (item) => item.category === category,
+  );
   return (
     <section className="section pricing-plans bg-white">
       <div className="container">
         <div className="col-12 has-anim fade">
           <div className="section-title text-center">
-            <h2 className="title text-dark">How can we help?</h2>
-            <p className="font-weight-700">
-              We understand how to deliver engaging and successful eCommerce
-              experiences
-            </p>
+            <h2 className="title text-dark">{data?.serviceTitle}</h2>
+            <p className="font-weight-700">{data?.serviceSubTitle}</p>
           </div>
         </div>
         <div className="row no-gutters justify-content-center align-items-center">
