@@ -9,6 +9,9 @@ import PostHero from '../../components/blog/PostHero';
 
 const BlogPost = ({ post }) => {
   if (!post) return null;
+  const mainImage = `${config.siteUrl}/${
+    post.featuredImage ? post.featuredImage : ''
+  }`;
   return (
     <Layout>
       <NextSeo
@@ -26,18 +29,24 @@ const BlogPost = ({ post }) => {
               }`,
               width: 800,
               height: 600,
-              alt: post.title,
+              alt: post.alt || post.title,
               type: 'image/jpeg',
             },
           ],
         }}
+        additionalMetaTags={[
+          {
+            name: 'keywords',
+            content: post?.keywords,
+          },
+        ]}
       />
-      <PostHero post={post} />
+      <PostHero post={post} mainImage={mainImage} isShowSocialShare />
       <section className="section pb-0">
         <div className="container">
           <div className="row">
             {post.featuredImage && (
-              <div className="col-12 mb-n5 has-anim anim-delay-2">
+              <div className="col-12 mb-n5">
                 <Image
                   src={post.featuredImage}
                   alt={post.title}

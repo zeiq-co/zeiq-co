@@ -5,7 +5,7 @@ const Technologies = ({ brandsData }) => (
   <section className="section">
     <div className="container">
       <div className="row">
-        <div className="col-12 has-anim fade">
+        <div className="col-12">
           <div className="section-title text-center">
             <p className="mb-2 text-light">Our Tech Stack</p>
             <h2 className="title text-white">Technologies</h2>
@@ -15,18 +15,18 @@ const Technologies = ({ brandsData }) => (
 
       <div className="clients-logo-grid">
         {brandsData &&
-          brandsData.map((item, index) => {
+          brandsData.map((item) => {
             if (!item.featuredImage) return null;
             return (
               <div className="logo-item" key={item.title}>
                 <Link href={`/technology/${item?.slug}`}>
-                  <a className="has-anim fade">
+                  <a>
                     <Image
-                      priority={index}
                       src={item.featuredImage}
-                      alt={item.title}
+                      alt={item.title || 'ZEIQ'}
                       height={250}
                       width={400}
+                      loading="lazy"
                     />
                   </a>
                 </Link>

@@ -16,44 +16,40 @@ const WhatWeDo = ({ data, featuredData, category }) => {
             <p className="font-weight-700">{data?.serviceSubTitle}</p>
           </div>
         </div>
-        <div className="row no-gutters justify-content-center align-items-center">
-          {filteredData &&
-            filteredData.map((item, i) => (
-              <div
-                className="col-lg-4 col-md-6 mt-4 pt-2 mt-md-0 pt-md-0 has-anim fade anim-delay-1"
-                key={item.id || i}
-              >
-                <div
-                  className={`block border  ${item.isDark ? 'bg-dark' : ''}`}
-                >
-                  <div className="price-wrapper">
-                    <h3
-                      className={`font-weight-100 font ${
-                        item.isDark ? 'text-white' : 'text-dark'
-                      }`}
-                    >
-                      {item.title}
-                    </h3>
-                  </div>
-                  <div
-                    className={`content  ${
-                      item.isDark
-                        ? 'text-light content-dark'
-                        : 'text-dark content-light'
+      </div>
+      <div className="row no-gutters justify-content-center align-items-center">
+        {filteredData &&
+          filteredData.map((item, i) => (
+            <div
+              className="col-lg-4 col-md-6 mt-4 pt-2 mt-md-0 pt-md-0 has-anim fade anim-delay-1"
+              key={item.id || i}
+            >
+              <div className={`block border  ${item.isDark ? 'bg-dark' : ''}`}>
+                <div className="price-wrapper">
+                  <h3
+                    className={`font-weight-100 font ${
+                      item.isDark ? 'text-white' : 'text-dark'
                     }`}
                   >
-                    <ul className="pl-0">
-                      {item &&
-                        item.list &&
-                        item.list.map((el) => (
-                          <li key={el.title}>{el.title}</li>
-                        ))}
-                    </ul>
-                  </div>
+                    {item.title}
+                  </h3>
+                </div>
+                <div
+                  className={`content  ${
+                    item.isDark
+                      ? 'text-light content-dark'
+                      : 'text-dark content-light'
+                  }`}
+                >
+                  <ul className="pl-0">
+                    {item &&
+                      item.list &&
+                      item.list.map((el) => <li key={el.title}>{el.title}</li>)}
+                  </ul>
                 </div>
               </div>
-            ))}
-        </div>
+            </div>
+          ))}
       </div>
     </section>
   );

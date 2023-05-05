@@ -1,4 +1,4 @@
-import { upperFirst } from 'lodash';
+import upperFirst from 'lodash/upperFirst';
 import dayjs from 'dayjs';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -14,7 +14,7 @@ const PostItem = ({ post, bgColor }) => {
   }
   return (
     <div className="col-lg-12">
-      <article className="card blog-card blog-card-horizontal border-0 rounded-0 has-anim">
+      <article className="card blog-card blog-card-horizontal border-0 rounded-0">
         <CardBg className="card-background" bgColor={bgColor} />
         <div className="row justify-content-center align-items-center">
           <div className="col-lg-6">

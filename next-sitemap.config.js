@@ -1,4 +1,4 @@
-const siteUrl = `https://zeiq.co`;
+const siteUrl = process.env.SITEMAP_BASE_URL || 'https://www.zeiq.co';
 
 module.exports = {
   siteUrl,
@@ -18,15 +18,13 @@ module.exports = {
     '/blog/sitemap.xml',
     '/work/sitemap.xml',
     '/technology/sitemap.xml',
-    '/page/sitemap.xml',
     '/services/sitemap.xml',
   ],
   robotsTxtOptions: {
     additionalSitemaps: [
-      `${siteUrl}/page/sitemap.xml`,
       `${siteUrl}/work/sitemap.xml`,
       `${siteUrl}/technology/sitemap.xml`,
-      `${siteUrl}/blog/sitemap.xml`,
+      `${siteUrl}/posts/sitemap.xml`,
       `${siteUrl}/services/sitemap.xml`,
     ],
   },

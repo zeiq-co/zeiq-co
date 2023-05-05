@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { filter } from 'lodash';
+import filter from 'lodash/filter';
 
 const HomeServices = ({ data, category, isServices, whatWeDoData }) => {
   if (!whatWeDoData) return null;
@@ -12,7 +12,7 @@ const HomeServices = ({ data, category, isServices, whatWeDoData }) => {
   return (
     <section className="section">
       <div className="container">
-        <div className="col-12 has-anim fade">
+        <div className="col-12">
           {!isServices && (
             <div className="section-title text-center">
               <h2 className="title text-white">{data.processTitle}</h2>
@@ -23,7 +23,7 @@ const HomeServices = ({ data, category, isServices, whatWeDoData }) => {
         <div className="row">
           {filteredData &&
             filteredData.map((item) => (
-              <div className="col-lg-3 col-sm-6 has-anim fade" key={item.title}>
+              <div className="col-lg-3 col-sm-6" key={item.title}>
                 <div className="service-item text-light">
                   {item.image && (
                     <div className="service-icon text-primary mb-4">
@@ -36,9 +36,9 @@ const HomeServices = ({ data, category, isServices, whatWeDoData }) => {
                       />
                     </div>
                   )}
-                  <h4 className="font-weight-light text-white mb-3">
+                  <h1 className="is-size-4 font-weight-light text-white mb-3">
                     {item.title}
-                  </h4>
+                  </h1>
                   <p>{item.subtitle}</p>
                   {item.linkTo && (
                     <span
@@ -48,13 +48,13 @@ const HomeServices = ({ data, category, isServices, whatWeDoData }) => {
                       ━━
                     </span>
                   )}
-                  {item.linkTo && (
-                    <p>
-                      <Link href={item.linkTo}>
-                        <a>Learn more</a>
+                  <div>
+                    {item.linkTo && (
+                      <Link href={`${item.linkTo || '/'}`}>
+                        <a>{item.buttonText || 'Learn more'}</a>
                       </Link>
-                    </p>
-                  )}
+                    )}
+                  </div>
                 </div>
               </div>
             ))}

@@ -7,6 +7,7 @@ import config from '../utils/config';
 import Layout from '../components/Layout';
 import PageHero from '../components/global/PageHero';
 import PostItem from '../components/blog/PostItem';
+import seoData from '../../content/seo/blogSeo.yaml';
 
 const bgColors = ['#c11c3b', '#139090', '#d59801', '#296e4a'];
 
@@ -47,22 +48,30 @@ function BlogPage({ posts }) {
   return (
     <Layout>
       <NextSeo
-        title="Blog"
-        description="Blog, Get Updated on latest news of mobile applications Development."
+        title={seoData.seoTitle}
+        description={seoData.seoDescription}
         openGraph={{
           url: `${config.siteUrl}/blog`,
-          title: `${`${config.siteName} Blog | Software, Website, Mobile App, Ecommerce, Digital Marketing`}`,
-          description: `${`${config.siteName} Blog, Get Updated on latest news of mobile applications Development.`}`,
+          title: `${`${config.siteName} ${seoData.seoTitle}`}`,
+          description: `${`${config.siteName} ${seoData.seoDescription}`}`,
           images: [
             {
-              url: `${config.siteUrl}/images/blog-about-blogs.jpg`,
+              url:
+                `${config.siteUrl}${seoData?.seoImage}` ||
+                `${config.siteUrl}/images/blog-about-blogs.jpg`,
               width: 800,
               height: 600,
-              alt: 'Blog',
+              alt: seoData.imageAlt,
               type: 'image/jpeg',
             },
           ],
         }}
+        additionalMetaTags={[
+          {
+            name: 'keywords',
+            content: seoData?.keywords,
+          },
+        ]}
       />
       <PageHero
         title="Our Blogs"
@@ -77,7 +86,7 @@ function BlogPage({ posts }) {
               return <PostItem key={item.slug} post={item} bgColor={bgColor} />;
             })}
             <div className="col-lg-12">
-              <div className="text-center mt-5 pt-4 has-anim">
+              <div className="text-center mt-5 pt-4">
                 {hasMore ? (
                   <button
                     type="button"

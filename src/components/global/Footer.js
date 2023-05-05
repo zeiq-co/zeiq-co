@@ -1,16 +1,31 @@
 import Link from 'next/link';
 
+const servicesData = [
+  { title: 'Development', slug: '/services/development' },
+  { title: 'Design Thinking', slug: '/services/design-thinking' },
+  { title: 'E-Commerce', slug: '/services/e-commerce' },
+  { title: 'Software Development', slug: '/services/software-development' },
+];
+
+const quickLinksData = [
+  { title: 'About Us', slug: '/about' },
+  { title: 'News & Updates', slug: '/blog' },
+  { title: 'Contact Us', slug: '/contact' },
+  { title: 'Customer Support', slug: '/support' },
+];
+
 const Footer = ({ contactData }) => (
   <>
-    <footer className="section-sm pb-4 has-anim">
+    <footer className="section-sm pb-4">
       <div className="container">
         <div className="row">
           <div className="col-12">
             <div className="section-title">
               <h4 className="h3 font-weight-light text-white">
-                Have an idea, tell us about it!
+                Have an idea, tell us about it
                 <Link href="/contact">
                   <a className="text-primary">
+                    <span>!</span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="40"
@@ -45,58 +60,33 @@ const Footer = ({ contactData }) => (
             <p>{contactData.locationIndia}</p>
           </div>
           <div className="col-lg-2 col-md-2 col-sm-4 col-12 ml-auto">
+            <h4 className="h4 font-weight-light mb-3">Quick Links</h4>
             <ul className="footer-link list-unstyled">
-              <h4 className="h4 font-weight-light mb-3">Quick Links</h4>
-              <li>
-                <Link href="/about">
-                  <a>About Us</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog">
-                  <a href="">News & Updates</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact">
-                  <a>Contact Us</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/support">
-                  <a>Customer Support</a>
-                </Link>
-              </li>
+              {quickLinksData.map((element) => (
+                <li key={element.title}>
+                  <Link href={element.slug || '/'}>
+                    <a>{element.title}</a>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="col-lg-2 col-md-2 col-sm-4 col-12">
             <h4 className="h4 font-weight-light mb-3">Services</h4>
             <ul className="footer-link list-unstyled">
-              <li>
-                <Link href="/services/development">
-                  <a>Development</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/design-thinking">
-                  <a>Design Thinking</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/e-commerce">
-                  <a>E-Commerce</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/software-development">
-                  <a>Software Development</a>
-                </Link>
-              </li>
+              {servicesData &&
+                servicesData.map((el) => (
+                  <li key={el.title}>
+                    <Link href={el.slug || '/'}>
+                      <a>{el.title}</a>
+                    </Link>
+                  </li>
+                ))}
             </ul>
           </div>
           <div className="col-lg-2 col-md-3 col-sm-4 col-12">
+            <h4 className="h4 font-weight-light mb-3">Work</h4>
             <ul className="footer-link list-unstyled">
-              <h4 className="h4 font-weight-light mb-3">Work</h4>
               <li>
                 <Link href="/work">
                   <a>Recent Projects</a>

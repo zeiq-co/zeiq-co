@@ -14,7 +14,7 @@ const LatestPosts = ({ posts, content }) => {
       <div className="container">
         {content && (
           <div className="row justify-content-center">
-            <div className="col-12 has-anim fade">
+            <div className="col-12">
               <div className="section-title text-center mb-4">
                 <p className="mb-2">{content.title}</p>
                 <h2 className="title text-dark">{content.subtitle}</h2>
@@ -23,7 +23,7 @@ const LatestPosts = ({ posts, content }) => {
           </div>
         )}
         <div className="row">
-          <div className="col-lg-12 has-anim fade">
+          <div className="col-lg-12">
             <article className="card blog-card blog-card-horizontal border-0 rounded-0">
               <div
                 className="card-background"
@@ -70,7 +70,7 @@ const LatestPosts = ({ posts, content }) => {
             const randomId = random(0, bgColors.length - 1);
             const bgColor = bgColors[randomId];
             return (
-              <div className="col-lg-4 col-md-6 has-anim fade" key={post.slug}>
+              <div className="col-lg-4 col-md-6" key={post.slug}>
                 <article className="card blog-card border-0 rounded-0">
                   <div
                     className="card-background"

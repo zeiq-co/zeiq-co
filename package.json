@@ -10,7 +10,9 @@
     "start": "next start",
     "build": "next build",
     "deploy": "vercel --prod",
-    "lint": "eslint --fix --ext .jsx,.js src/**"
+    "lint": "eslint --fix --ext .jsx,.js src/**",
+    "postbuild": "next-sitemap",
+    "export": "yarn run build && next export"
   },
   "husky": {
     "hooks": {
@@ -36,10 +38,12 @@
     "next-plugin-yaml": "^1.0.1",
     "next-seo": "^5.1.0",
     "next-sitemap": "^3.1.7",
+    "nextjs-google-analytics": "^2.2.2",
     "nprogress": "^0.2.0",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-share": "^4.4.1",
     "styled-components": "^5.3.3",
     "sweetalert": "^2.1.2",
     "swiper": "^8.2.6",

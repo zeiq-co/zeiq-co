@@ -1,5 +1,7 @@
 import '../styles/main.css';
 import Head from 'next/head';
+import { GoogleAnalytics } from 'nextjs-google-analytics';
+
 import { DefaultSeo } from 'next-seo';
 import NProgress from 'nprogress';
 import Router from 'next/router';
@@ -28,18 +30,29 @@ function MyApp({ Component, pageProps }) {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1, user-scalable=0"
+          content="width=device-width, initial-scale=1, maximum-scale=5"
         />
+
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=yes"
+        />
+
         <meta name="theme-color" content={config.theme_color} />
         <meta
           name="apple-mobile-web-app-status-bar"
           content={config.theme_color}
         />
+
         <script src="/plugins/jquery.min.js" />
         <script src="/plugins/isotope.min.js" />
         <script src="/plugins/script.min.js" />
       </Head>
       <DefaultSeo {...nextSeo} />
+      <GoogleAnalytics
+        trackPageViews
+        id={process.env.NEXT_PUBLIC_ENV_SITE_NAME}
+      />
       <Component {...pageProps} />
     </>
   );

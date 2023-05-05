@@ -1,6 +1,6 @@
 const HomeAbout = ({ data }) => (
   <>
-    {/* <div className="mb-n5 has-anim fade">
+    {/* <div className="mb-n5">
       <div className="container">
         <div className="row">
           <div className="col-12">
@@ -18,12 +18,12 @@ const HomeAbout = ({ data }) => (
     <section className="section bg-white">
       <div className="container pt-5">
         <div className="row justify-content-center">
-          <div className="col-md-3 has-anim fade">
+          <div className="col-md-3">
             <h2 className="text-dark font-weight-500">
               12+ <br /> Years of <br /> Experience
             </h2>
           </div>
-          <div className="col-md-6 offset-md-1 mt-4 mt-md-0 has-anim fade anim-delay-1">
+          <div className="col-md-6 offset-md-1 mt-4 mt-md-0">
             <p className="lead">
               <span className="text-dark">{data.info}</span>. {data.details}
             </p>

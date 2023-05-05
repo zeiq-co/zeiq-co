@@ -1,40 +1,54 @@
 import { NextSeo } from 'next-seo';
 import { orderBy, filter } from 'lodash';
-import config from '../utils/config';
+import dynamic from 'next/dynamic';
 
+import config from '../utils/config';
 import { getMdxFromDir } from '../utils/helpers';
+import homeData from '../../content/general/home.yaml';
+import seoData from '../../content/seo/homeSeo.yaml';
+import whatWeDoData from '../../content/general/whatWeDo.yaml';
+
 import Layout from '../components/Layout';
 import HomeHero from '../components/home/HomeHero';
 import HomeAbout from '../components/home/HomeAbout';
 import HomeServices from '../components/home/HomeServices';
-import RecentProjects from '../components/home/RecentProjects';
+
 import WorkProcess from '../components/home/WorkProcess';
 import Testimonials from '../components/home/Testimonials';
 import Technologies from '../components/home/Technologies';
 import LatestPosts from '../components/home/LatestPosts';
-import homeData from '../../content/general/home.yaml';
-import whatWeDoData from '../../content/general/whatWeDo.yaml';
+
+const RecentProjects = dynamic(import('../components/home/RecentProjects'), {
+  loading: () => <p className="text-center">Loading...</p>,
+});
 
 function Index({ projects, posts, technologies }) {
   return (
     <Layout>
       <NextSeo
-        title={homeData.seoTitle}
-        description={homeData.details}
+        title={seoData.seoTitle}
+        description={seoData.details}
         openGraph={{
-          url: `${config.siteUrl}`,
-          title: homeData.seoTitle,
-          description: homeData.details,
+          title: seoData.seoTitle,
+          description: seoData.details,
           images: [
             {
-              url: `${config.siteUrl}/images/logo.png`,
+              url:
+                `${config.siteUrl}${seoData?.seoImage}` ||
+                `${config.siteUrl}/images/logo.png`,
               width: 1200,
               height: 800,
-              alt: 'Zeiq',
+              alt: seoData?.imageAlt,
               type: 'image/jpeg',
             },
           ],
         }}
+        additionalMetaTags={[
+          {
+            name: 'keywords',
+            content: seoData?.keywords,
+          },
+        ]}
       />
       <HomeHero data={homeData} />
       <HomeAbout data={homeData} />
@@ -64,6 +78,7 @@ export async function getStaticProps() {
 
   let posts = getMdxFromDir('content/posts');
   posts = filter(posts, (item) => item.isFeatured === true);
+  posts = orderBy(posts, ['date'], ['desc']);
 
   return {
     props: {

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styled from 'styled-components';
 
-const LogoContainer = styled.a`
+const LogoContainer = styled.div`
   display: flex;
 `;
 
@@ -51,25 +51,28 @@ const Header = () => {
           <div className="row">
             <div className="col-12">
               <nav className="navbar navbar-expand-lg navbar-dark px-0 py-3 py-lg-4">
-                <Link href="/" prefetch={false}>
-                  <LogoContainer
-                    className="navbar-brand font-weight-bold mb-0"
-                    title="Zeiq"
-                  >
-                    <Image
-                      src="/logo-1024.png"
-                      alt="Zeiq Logo"
-                      width={48}
-                      height={30}
-                    />
-                    <span>ZEIQ</span>
-                  </LogoContainer>
+                <Link href="/" prefetch={false} as="/">
+                  <a>
+                    <LogoContainer
+                      className="navbar-brand font-weight-bold mb-0"
+                      title="Zeiq"
+                    >
+                      <Image
+                        src="/logo-1024.png"
+                        alt="Zeiq Logo"
+                        width={48}
+                        height={30}
+                      />
+                      <span>ZEIQ</span>
+                    </LogoContainer>
+                  </a>
                 </Link>
 
                 <button
                   className="navbar-toggler"
                   type="button"
                   data-toggle="navbar-menu"
+                  aria-label="Open navigation menu"
                 >
                   <svg viewBox="0 0 341.333 341.333">
                     {' '}
@@ -156,7 +159,7 @@ const Header = () => {
                       >
                         {services.map((item) => (
                           <li key={item.slug}>
-                            <Link href={item.slug}>
+                            <Link href={item.slug || '/'}>
                               <a className="dropdown-item">{item.title}</a>
                             </Link>
                           </li>

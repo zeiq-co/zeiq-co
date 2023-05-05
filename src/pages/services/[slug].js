@@ -17,7 +17,6 @@ const Service = ({ data, childServices, projects }) => (
       title={data?.seoTitle || data?.title}
       description={data?.featuredOneDetails}
       openGraph={{
-        url: `${config.siteUrl}/services/${data.slug}`,
         title: data.seoTitle || data.title,
         description: data?.featuredOneDetails
           ? data?.featuredOneDetails
@@ -29,11 +28,17 @@ const Service = ({ data, childServices, projects }) => (
             }`,
             width: 960,
             height: 640,
-            alt: data.title,
+            alt: data.alt || data.title,
             type: 'image/jpeg',
           },
         ],
       }}
+      additionalMetaTags={[
+        {
+          name: 'keywords',
+          content: data?.keywords,
+        },
+      ]}
     />
     {data?.advertisementType && (
       <SecondaryService data={data} projects={projects} />

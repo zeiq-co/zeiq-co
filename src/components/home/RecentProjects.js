@@ -4,7 +4,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar } from 'swiper';
-import { random } from 'lodash';
+import random from 'lodash/random';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -196,6 +196,7 @@ const RecentProjects = ({ projects, data, hasProjects }) => {
     <Section className="section bg-white portfolio-carousel-fluid swiper-container ">
       <div className="container portfolio-carousel-fluid">
         <div className="row justify-content-center">
+<<<<<<< HEAD
           <div className="col-10 has-anim fade">
             {!hasProjects && (
               <div className="section-title text-center">
@@ -203,6 +204,13 @@ const RecentProjects = ({ projects, data, hasProjects }) => {
                 <p className="mb-2">{data?.projectSubTitle}</p>
               </div>
             )}
+=======
+          <div className="col-10">
+            <div className="section-title text-center">
+              {title && <h2 className="title text-dark mb-3">{title}</h2>}
+              {subtitle && <p className="mb-2">{subtitle}</p>}
+            </div>
+>>>>>>> f6fcb40ff72df7f44a6f68e3379c712fdf406406
           </div>
         </div>
       </div>
@@ -236,7 +244,6 @@ const RecentProjects = ({ projects, data, hasProjects }) => {
                       <div className="card portfolio-card card-overlay card-hover-zoom">
                         <span className="card-img">
                           <Image
-                            priority={index}
                             src={item.featuredImage || item.heroImage}
                             alt={item.title}
                             className="img-fluid"
@@ -244,6 +251,7 @@ const RecentProjects = ({ projects, data, hasProjects }) => {
                             height={900}
                             objectFit="contain"
                             layout="responsive"
+                            loading="lazy"
                           />
                           <span
                             className="img-overlay"
@@ -253,11 +261,11 @@ const RecentProjects = ({ projects, data, hasProjects }) => {
                         <div className="card-img-overlay text-center">
                           <div className="block">
                             {item.slug && (
-                              <h3 className="card-title mb-3">
+                              <h2 className="card-title mb-3">
                                 <Link href={`/work/${item.slug}`}>
                                   <a>{item.title}</a>
                                 </Link>
-                              </h3>
+                              </h2>
                             )}
                             <span className="card-subtitle">
                               <Link href={`/work/${item?.slug}`}>
