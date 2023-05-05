@@ -196,7 +196,6 @@ const RecentProjects = ({ projects, data, hasProjects }) => {
     <Section className="section bg-white portfolio-carousel-fluid swiper-container ">
       <div className="container portfolio-carousel-fluid">
         <div className="row justify-content-center">
-<<<<<<< HEAD
           <div className="col-10 has-anim fade">
             {!hasProjects && (
               <div className="section-title text-center">
@@ -204,13 +203,6 @@ const RecentProjects = ({ projects, data, hasProjects }) => {
                 <p className="mb-2">{data?.projectSubTitle}</p>
               </div>
             )}
-=======
-          <div className="col-10">
-            <div className="section-title text-center">
-              {title && <h2 className="title text-dark mb-3">{title}</h2>}
-              {subtitle && <p className="mb-2">{subtitle}</p>}
-            </div>
->>>>>>> f6fcb40ff72df7f44a6f68e3379c712fdf406406
           </div>
         </div>
       </div>
