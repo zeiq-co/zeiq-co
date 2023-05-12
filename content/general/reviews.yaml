@@ -55,9 +55,16 @@
   countryFlag: 🇮🇳
   category: ecommerce
 - ninth:
-  personName: Sumit Choudhary
-  personRole: Chaudhary Crockery House
-  review: We are quite satisfied with the Zeiq and our collaboration so far. We especially appreciate how they maintained the communication. The team was constantly in touch with us and available at each project step.
+  # personName: Sumit Choudhary
+  personRole: Team RG
+  review: Working with the zeiq team was an absolute pleasure. From the initial consultation to the final product, they were attentive, responsive, and professional. We are thrilled with the final product and highly recommend their services to anyone looking for a top-notch fitness app development team.
   image: /images/client/review-person-05.jpg
-  countryFlag: 🇮🇳
+  countryFlag: 🇬🇧
+  category: fitness
+- tenth:
+  # personName: Sumit Choudhary
+  personRole: Fit By Emma
+  review: I had a great experience working with zeiq company. They were able to take my initial ideas and turn them into a comprehensive and efficient fitness app that has helped me transform my business. Thankyou for this wonderful app, I have seen a significant increase in user engagement and retention.
+  image: /images/client/review-person-05.jpg
+  countryFlag: 🇬🇧
   category: fitness
