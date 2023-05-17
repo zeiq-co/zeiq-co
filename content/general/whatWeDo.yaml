@@ -48,21 +48,21 @@
   image: /images/service/webApp.svg
 - nine:
   category: fitness
-  title: Planning & UI/UX Designing
-  subtitle: Based on the initial info regarding project you provide, we develop an efficient fitness app development roadmap to fulfill your demand. As for UI/UX design, it's important to create a user-friendly interface that is visually appealing and easy to navigate. This can be achieved through wireframing, prototyping, and user testing.
+  title: Idea Conceptualization
+  subtitle: In the idea conceptualization phase, the focus is on defining the purpose of the fitness app, identifying the target audience, and determining the key features and functionalities it should offer. Researching the market and analyzing competitors can provide valuable insights to shape the app's unique selling points.
   image: /images/service/branding.svg
 - ten:
   category: fitness
-  title: MVP Development & Analysis
-  subtitle: The purpose of an MVP (Minimum Viable Product) is to quickly test and validate a product idea and gather feedback from users. A minimal viable product is developed with the core set of features and presented to early adopters. Their feedback is taken and analysed for making necessary changes.
+  title: Design and Prototyping
+  subtitle: The design and prototyping stage involves creating the user interface (UI) and user experience (UX) design. Wireframes and mockups are developed to visualize the app's layout, navigation flow, and aesthetics. Collaborating with designers, developers, and stakeholders helps ensure the design aligns with the app's goals and target audience.
   image: /images/service/software-dev.svg
 - eleven:
   category: fitness
-  title: Fitness App Development & Deployment
-  subtitle: After making necessary changes, final fitness app is developed with modifications and corrections, ensuring a fully functional feature-packed fitness app. Now your app is ready to be launched on your preferred platforms - Apple App Store and Google play store.
+  title: Development & Testing
+  subtitle: Here, the app's design and prototype are changed into a fully functional product. This process includes coding, database integration, and implementing key features such as workout tracking, exercise libraries, social sharing, and gamification elements. Thorough testing and quality assurance ensure bug-free functionality and optimal user experience.
   image: /images/service/marketing.svg
 - twelve:
   category: fitness
-  title: Maintenance & Support
-  subtitle: At Zeiq, we provide continuous maintenance and support services to ensure your app is fine -tuned throughout the year with security patches,functional feature addition, and more.
+  title: Deployment
+  subtitle: Finally, the fitness app is prepared for release on relevant platforms such as iOS and Android. App store guidelines and requirements are followed, and the necessary backend infrastructure is set up to handle user data and ensure security. Once deployed, the app's performance and user feedback are monitored for further improvements and updates.
   image: /images/service/webApp.svg
