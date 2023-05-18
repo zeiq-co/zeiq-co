@@ -7,14 +7,14 @@
     - title: Secure cart & checkout
     - title: Enterprise-level security
     - title: Dropshipping & print on demand
-    - title: Gift cards & product subscriptions
+    - title: Gift cards & product subscription plans
     - title: Point of sale solution (in-store & online)
 - two:
   title: Manage your store
   category: ecommerce
   list:
     - title: Efficient inventory management
-    - title: Easy tracking of orders & fulfilment
+    - title: Easy order tracking & fulfilment
     - title: Multiple shipping & delivery options
     - title: Mobile management app
     - title: Automated sales tax
@@ -37,35 +37,35 @@
   category: fitness
   list:
     - title: User Registration
-    - title: Dashboard
-    - title: Workouts
-    - title: Instructors
+    - title: Dedicated Dashboard
+    - title: Schedule Workouts
+    - title: Select Meal Charts
     - title: Visual Workout
     - title: Live Chat
-    - title: Track Water
-    - title: Progress Tracker
-- fifth:
-  title: Trainer Panel
-  category: fitness
-  list:
-    - title: Fitness Chart
-    - title: Subscription Packages
-    - title: BMI Calculator
-    - title: Customised Nutrition Plan
-    - title: Coupon Code
-    - title: Calorie Counter
-    - title: Amount Of Water Intake
-    - title: Diet Chart
-  isDark: true
+    - title: Alerts and Reminders
+    - title: Live Chat With Trainers
 - sixth:
   title: Admin Panel
   category: fitness
   list:
-    - title: Dashboard
-    - title: Maintain The User’s Session
+    - title: High Secured Login
+    - title: View & Manage Reports
+    - title: Trainees Management
+    - title: View & Manage Attendance
     - title: Manage Subscription Plans
-    - title: Manage Trainer
-    - title: Manage Food Plans
-    - title: Manage Nutrition
-    - title: Manage Fitness Plans
-    - title: Feedback Submission
+    - title: Manage Advertising & Promotions
+    - title: Trainers Management
+    - title: Access & View Payment Methods
+  isDark: true
+- fifth:
+  title: Additional Features
+  category: fitness
+  list:
+    - title: Real-Time Activity Tracking
+    - title: Subscription Module
+    - title: Feature Preference
+    - title: Review & Ratings
+    - title: Schedule Consultation
+    - title: Secure & Safe Onboarding
+    - title: Push Notifications
+    - title: GPS Technology
