@@ -33,7 +33,7 @@
     - title: CRM & automation
     - title: Branded mobile app
 - four:
-  title: User Panel
+  title: User App
   category: fitness
   list:
     - title: User Registration
@@ -57,15 +57,3 @@
     - title: Trainers Management
     - title: Access & View Payment Methods
   isDark: true
-# - fifth:
-#   title: Additional Features
-#   category: fitness
-#   list:
-#     - title: Real-Time Activity Tracking
-#     - title: Subscription Module
-#     - title: Feature Preference
-#     - title: Review & Ratings
-#     - title: Schedule Consultation
-#     - title: Secure & Safe Onboarding
-#     - title: Push Notifications
-#     - title: GPS Technology
