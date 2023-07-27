@@ -1,0 +1,64 @@
+---
+title: React Rendering - Anything & Everything to Know About
+seoDescription: React rendering is a fundamental concept in the React JavaScript library, which is used for building user interfaces. It's crucial to understand how React handles rendering to create efficient and performant applications.
+date: '2023-07-27'
+category: general
+author: Taniya Sharma
+featuredImage: /images/benefits-of-using-a-cms-for-your-website.jpg
+isFeatured: false
+keywords: Zeiq, React, NextJs, Web Development, 	Website, React Rendering , Virtual DOM, Productivity, Experince , Reconciliation, shouldComponentUpdate 
+alt: An image of a person writing a blog post on their computer, symbolizing the art of blogging.
+---
+
+
+
+React rendering is a fundamental concept in the React JavaScript library, which is used for building user interfaces. It's crucial to understand how React handles rendering to create efficient and performant applications. Here's everything you need to know about React rendering:
+
+ - ### Virtual DOM
+ 
+React uses a Virtual DOM (Document Object Model) to represent the actual DOM in memory. The Virtual DOM is a lightweight copy of the real DOM and allows React to perform efficient updates by minimizing direct manipulations of the actual DOM.
+
+ - ### Component-based architecture
+
+React applications are built using components, which are modular, reusable, and encapsulated units of UI. Each component can have its own state and props (properties).
+
+- ### State and Props
+
+State represents the internal data of a component, while Props are the mechanism for passing data from a parent component to its child components. When state or props change, React triggers re-rendering of the affected components.
+
+- ### Reconciliation
+
+When a component's state or props change, React performs a process called reconciliation. React determines what changes to make to the Virtual DOM to keep it in sync with the actual DOM.
+
+- ### Rendering process
+
+The rendering process in React is initiated by calling the `render` method of a component. This method returns a React element (a lightweight representation of the component's output).
+
+- ### Diffing algorithm
+
+To minimize the number of DOM updates, React uses a diffing algorithm (also known as "reconciliation algorithm") when comparing the Virtual DOM with the previous Virtual DOM. It efficiently identifies the minimal set of changes required to update the actual DOM and applies those changes in a batch.
+
+- ### React updates
+
+React provides two types of updates: synchronous and asynchronous. Synchronous updates happen immediately when a component's state or props change. Asynchronous updates are batched and occur at the end of the event loop to improve performance.
+
+- ### Rendering triggers 
+
+React components can be re-rendered in various ways. The most common triggers are:
+
+-   State changes: When you call `setState()` or use `useState` to update the state.
+-   Props changes: When the parent component passes new props to a child component.
+-   Context changes: When the context API is used to share data across components, and the context value changes.
+-   Force update: Using `forceUpdate()` method, though it is generally discouraged as it bypasses the usual update mechanism.
+
+- ### PureComponent and shouldComponentUpdate
+
+To optimize rendering, you can use `PureComponent` or implement `shouldComponentUpdate`. These help prevent unnecessary re-renders by performing shallow comparisons of props or state.
+
+### Conclusion
+
+Understanding React rendering is vital for building efficient and performant applications. Properly managing state, props, and update triggers, along with using memoization techniques, can greatly improve the performance of React applications. Remember that React's rendering mechanisms and performance optimizations may evolve over time, so always consult the official documentation and community best practices for the most up-to-date information.
+
+Have a Great Reading!
+
+Thank You!!
